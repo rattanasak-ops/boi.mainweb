@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "title": "태국 투자진흥위원회 (BOI)",
+    "description": "태국 투자 정보 센터 — 태국인 및 외국인 투자자의 투자 촉진 및 지원"
+  },
+  "nav": {
+    "discover": "태국 탐색",
+    "invest": "지금 투자",
+    "services": "서비스",
+    "resources": "자료",
+    "about": "BOI 소개",
+    "search": "검색",
+    "subscribe": "구독"
+  },
+  "hero": {
+    "headline": "Thailand Opens for You",
+    "subheadline": "투자 기회의 문 — 비즈니스 가능성을 열어드립니다",
+    "cta_eligibility": "자격 확인",
+    "cta_apply": "지금 신청",
+    "cta_consult": "상담 예약"
+  },
+  "common": {
+    "learn_more": "자세히 보기",
+    "view_all": "전체 보기",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "close": "닫기",
+    "open_menu": "메뉴 열기",
+    "close_menu": "메뉴 닫기",
+    "skip_to_main": "본문으로 건너뛰기",
+    "loading": "로딩 중..."
+  },
+  "footer": {
+    "contact": "문의하기",
+    "address": "방콕 짜뚜짝구 위파와디랑싯 555, 10900",
+    "phone": "0 2553 8111",
+    "email": "head@boi.go.th",
+    "follow_us": "팔로우",
+    "quick_links": "빠른 링크",
+    "related_sites": "관련 사이트",
+    "privacy": "개인정보처리방침",
+    "terms": "이용약관",
+    "accessibility": "접근성",
+    "sitemap": "사이트맵",
+    "copyright": "© {year} 태국 투자진흥위원회 All rights reserved."
+  },
+  "language": {
+    "th": "ไทย",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "中文",
+    "ko": "한국어",
+    "de": "Deutsch",
+    "fr": "Français",
+    "select": "언어 선택"
+  }
+}

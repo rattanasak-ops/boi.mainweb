@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "title": "Bureau de l'investissement de Thaïlande (BOI)",
+    "description": "Le centre d'information sur l'investissement en Thaïlande — promotion et facilitation des investissements pour les investisseurs thaïlandais et étrangers"
+  },
+  "nav": {
+    "discover": "Découvrir la Thaïlande",
+    "invest": "Investir maintenant",
+    "services": "Services",
+    "resources": "Ressources",
+    "about": "À propos du BOI",
+    "search": "Rechercher",
+    "subscribe": "S'abonner"
+  },
+  "hero": {
+    "headline": "Thailand Opens for You",
+    "subheadline": "Votre porte vers les opportunités d'investissement — ouvrir de nouvelles perspectives commerciales",
+    "cta_eligibility": "Vérifier l'éligibilité",
+    "cta_apply": "Postuler maintenant",
+    "cta_consult": "Réserver une consultation"
+  },
+  "common": {
+    "learn_more": "En savoir plus",
+    "view_all": "Voir tout",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "close": "Fermer",
+    "open_menu": "Ouvrir le menu",
+    "close_menu": "Fermer le menu",
+    "skip_to_main": "Aller au contenu principal",
+    "loading": "Chargement..."
+  },
+  "footer": {
+    "contact": "Contactez-nous",
+    "address": "555 Vibhavadi Rangsit Rd, Chatuchak, Bangkok 10900",
+    "phone": "0 2553 8111",
+    "email": "head@boi.go.th",
+    "follow_us": "Suivez-nous",
+    "quick_links": "Liens rapides",
+    "related_sites": "Sites associés",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "accessibility": "Accessibilité",
+    "sitemap": "Plan du site",
+    "copyright": "© {year} Bureau de l'investissement de Thaïlande. Tous droits réservés."
+  },
+  "language": {
+    "th": "ไทย",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "中文",
+    "ko": "한국어",
+    "de": "Deutsch",
+    "fr": "Français",
+    "select": "Choisir la langue"
+  }
+}

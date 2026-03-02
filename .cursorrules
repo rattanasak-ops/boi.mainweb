@@ -1,0 +1,252 @@
+# BOI Website — AI Development Rules
+# ทุก AI (Cursor, Claude, Copilot) ต้องปฏิบัติตามกฎนี้เสมอเมื่อเขียนโค้ดในโปรเจคนี้
+
+## Project Context
+- โครงการ: เว็บไซต์ BOI (boi.go.th) — Government Website
+- Tech Stack: Next.js 15 (App Router) + TypeScript + Tailwind CSS + Strapi v5 + PostgreSQL + Redis + Docker Swarm
+- มาตรฐาน: OWASP Top 10, WCAG 2.1 AA, PDPA, Lighthouse >= 80
+- เอกสาร Security หลัก: `Docs/security_master.md` — อ่านก่อนทำงานด้าน Security
+- เอกสาร Act As หลัก: `Docs/act_as_master.md` — Personas + Phased Build Plan
+
+---
+
+## Act As Personas (สำหรับ POC Demo)
+> รายละเอียด JD/JS/Experience/Skills ครบถ้วนอยู่ใน `Docs/act_as_master.md`
+
+| กลุ่ม | Persona | หน้าที่หลัก |
+|---|---|---|
+| **A — Strategy** | P1: Brand Strategist | Big Idea "Gate Opener", Tone, Headlines, CTA |
+| | P2: UX Architect | User Journey 4 Personas, 7 UX Laws, 3-click rule |
+| **B — Design** | P3: Senior UI Designer | Design System Navy+Gold, Stripe/Linear level |
+| | P4: Motion Designer | Framer Motion 11, animation "เปิด/เผย/ปรากฏ", ≤600ms |
+| **C — Engineering** | P5: Lead Frontend Architect | Next.js 15, App Router, i18n, SEO, Performance |
+| | P6: AI Integration Engineer | AI Chat (OpenRouter), Smart Search, NLP |
+| | P7: i18n Engineer | next-intl, 7 ภาษา, RTL-ready, SEO per locale |
+| **D — Quality** | P8: Security-Aware Developer | OWASP mitigations, CSP nonce, Auth patterns |
+| | P9: Gov Digital Compliance Auditor | WCAG 2.1 AA, DGA 3.0, PDPA, TOR compliance |
+| | P10: Demo QA & Performance Engineer | Lighthouse ≥ 90, Core Web Vitals, cross-browser |
+
+### วิธีใช้ Persona ใน Cursor Prompt
+```
+Act as [Persona name] — [หน้าที่]. ดู JD/JS ครบที่ Docs/act_as_master.md
+ตัวอย่าง: "Act as P3: Senior UI Designer — ออกแบบ Hero Section ของ Homepage ให้ cinematic เหนือ BUILD BOI"
+```
+
+---
+
+## กฎเหล็กด้าน Security (ห้ามละเมิด)
+
+### 1. Authentication & Authorization
+- ทุก Admin route (/admin/*) ต้องมี Auth middleware — ห้ามเปิดให้เข้าโดยไม่ login
+- ใช้ NextAuth.js สำหรับ authentication — ห้ามสร้าง auth system เอง
+- Password ต้อง hash ด้วย bcrypt (cost factor >= 12) — ห้ามเก็บ plaintext
+- Session ต้องเป็น HTTP-only + Secure + SameSite=Strict cookies
+- ทุก API endpoint ที่ต้อง authorize ต้องตรวจ role (RBAC) — ห้ามตรวจแค่ login
+- Session timeout: 30 นาที inactive
+
+### 2. Input Validation
+- ทุก API route ต้องมี input validation ด้วย Zod schema — ห้ามรับ input โดยไม่ validate
+- Validate ทั้ง request body, query params, path params
+- ห้ามใช้ user input ใน SQL query โดยตรง — ใช้ Prisma parameterized queries เสมอ
+- ห้ามใช้ user input ใน file path โดยตรง — ใช้ path.basename() + whitelist
+- Sanitize HTML content ด้วย DOMPurify ก่อน render — ห้าม dangerouslySetInnerHTML กับ user input
+- File upload: whitelist MIME types + extensions + max size — ห้ามรับทุกประเภท
+
+### 3. Content Security Policy (CSP)
+- ห้ามใช้ 'unsafe-inline' ใน CSP — ใช้ nonce-based แทน
+- ห้ามใช้ 'unsafe-eval' ใน CSP — หาวิธีอื่นแทน eval
+- ทุก external script ต้องอยู่ใน CSP whitelist
+- ใช้ nonce ที่ generate ใหม่ทุก request
+
+### 4. Rate Limiting
+- ทุก API endpoint ต้องมี rate limit — ห้ามเปิด unlimited
+- Auth endpoints (login/register): max 10 req/min per IP
+- Contact form: max 5 req/min per IP
+- Public API: max 100 req/min per IP
+- ใช้ Redis-based rate limiting
+- Return 429 + Retry-After header เมื่อถึง limit
+
+### 5. CSRF Protection
+- ทุก form ที่ทำ mutation (POST/PUT/DELETE) ต้องมี CSRF token
+- ใช้ SameSite=Strict cookies
+- Server Actions ใน Next.js 15 มี CSRF protection built-in — ใช้ Server Actions เมื่อเป็นไปได้
+
+### 6. File Security
+- ทุก file path ต้อง validate ด้วย path.basename() — ป้องกัน Path Traversal
+- ห้ามใช้ user input สร้าง file path โดยตรง
+- File upload: rename เป็น UUID, store นอก web root
+- ห้ามรับ file types ที่อันตราย (.exe, .sh, .bat, .php, .js, .html)
+- Max file size: 10MB images, 50MB documents
+
+### 7. Error Handling
+- ห้าม expose stack trace, internal paths, DB schema ใน error response
+- Production: return generic error message + error code
+- Log full error details server-side (Winston)
+- Custom error pages (404, 500) — ไม่แสดงข้อมูล internal
+
+### 8. Logging (Audit Log)
+- ทุก action สำคัญต้อง log: login, role change, content CRUD, account actions
+- Log ต้องมี: user_id, timestamp, action, IP, user_agent, resource, before/after
+- เก็บ log >= 365 วัน (ตาม TOR)
+- ห้ามเก็บ sensitive data ใน log (password, tokens, credit card)
+
+### 9. API Security
+- ทุก API response ต้อง filter fields — ห้าม return ทั้ง object จาก DB
+- ใช้ HTTPS เสมอ — ห้าม HTTP
+- Set Security Headers ทุก response:
+  - X-Content-Type-Options: nosniff
+  - X-Frame-Options: DENY (หรือ SAMEORIGIN)
+  - X-XSS-Protection: 0 (ใช้ CSP แทน)
+  - Referrer-Policy: strict-origin-when-cross-origin
+  - Permissions-Policy: camera=(), microphone=(), geolocation=()
+- CORS: whitelist specific origins — ห้าม Access-Control-Allow-Origin: *
+
+### 10. Secrets & Environment
+- ห้ามเก็บ secrets (API keys, passwords, tokens) ใน source code
+- ใช้ environment variables (.env) — .env ต้องอยู่ใน .gitignore
+- Production: ใช้ Docker secrets หรือ secret manager
+- Rotate API keys เป็นประจำ
+
+---
+
+## กฎด้าน Code Quality
+
+### TypeScript
+- ใช้ strict mode เสมอ
+- ห้าม any — ใช้ proper types
+- ทุก API response ต้องมี type definition
+
+### Testing (TOR กำหนด)
+- Unit test coverage >= 80% ในโมดูลหลัก
+- E2E test ครอบคลุม: Login, Feed, ค้นหา/กรอง, ลงทะเบียน
+- Load test: 1,000 concurrent users, p95/p99, < 1% error rate
+
+### Accessibility (WCAG 2.1 AA)
+- เอกสาร WCAG Widget: `Docs/WCAG.md` — อ่านก่อนสร้าง/แก้ Accessibility Widget
+- ทุกรูปต้องมี alt text
+- ทุก interactive element ต้องใช้ keyboard ได้
+- Color contrast >= 4.5:1
+- Semantic HTML (heading hierarchy, landmark regions)
+- aria-label สำหรับ icon-only buttons
+- WCAG Widget ต้อง compatible กับ CSP nonce (ห้าม inject inline `<style>` — ใช้ CSS file + `a11y-` prefix)
+- Lighthouse Accessibility target: >= 90 (TOR ขั้นต่ำ 80)
+
+### SEO
+- ทุกหน้าต้องมี: title, meta description, og:tags
+- Structured data (JSON-LD) สำหรับ organization + articles
+- sitemap.xml + robots.txt
+
+---
+
+## กฎด้าน Infrastructure
+
+### Docker
+- ใช้ non-root user ใน container
+- Multi-stage build (ลด image size)
+- Health checks ทุก service
+- Resource limits (CPU/Memory)
+- Docker secrets สำหรับ sensitive data
+
+### Deployment
+- แยก environment: Dev / UAT / Prod
+- CI/CD: lint → type check → test → SAST → build → deploy
+- ห้าม deploy โดยไม่ผ่าน tests
+- Dependency audit ใน CI pipeline
+
+---
+
+## Patterns ที่ต้องใช้
+
+### API Route Pattern (Next.js 15)
+```typescript
+// ทุก API route ต้องเป็นแบบนี้:
+import { z } from 'zod';
+import { NextRequest, NextResponse } from 'next/server';
+import { getServerSession } from 'next-auth';
+import { rateLimit } from '@/lib/rate-limit';
+import { auditLog } from '@/lib/audit';
+
+const schema = z.object({
+  // define input schema
+});
+
+export async function POST(req: NextRequest) {
+  // 1. Rate limit
+  const rateLimitResult = await rateLimit(req);
+  if (!rateLimitResult.success) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 });
+  }
+
+  // 2. Auth check (ถ้าต้อง authorize)
+  const session = await getServerSession();
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  // 3. Input validation
+  const body = await req.json();
+  const parsed = schema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json({ error: 'Invalid input' }, { status: 400 });
+  }
+
+  // 4. Business logic
+  try {
+    const result = await doSomething(parsed.data);
+
+    // 5. Audit log
+    await auditLog({
+      userId: session.user.id,
+      action: 'ACTION_NAME',
+      resource: 'resource_type',
+      details: { /* ... */ },
+    });
+
+    // 6. Return filtered response
+    return NextResponse.json({ data: filterFields(result) });
+  } catch (error) {
+    // 7. Safe error handling
+    console.error('Internal error:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  }
+}
+```
+
+### Middleware Pattern (Auth + RBAC)
+```typescript
+// middleware.ts
+import { withAuth } from 'next-auth/middleware';
+
+export default withAuth({
+  callbacks: {
+    authorized({ req, token }) {
+      const path = req.nextUrl.pathname;
+
+      // Admin routes require admin role
+      if (path.startsWith('/admin')) {
+        return token?.role === 'admin' || token?.role === 'super_admin';
+      }
+
+      // Protected routes require any auth
+      if (path.startsWith('/member')) {
+        return !!token;
+      }
+
+      return true;
+    },
+  },
+});
+
+export const config = {
+  matcher: ['/admin/:path*', '/member/:path*', '/api/admin/:path*'],
+};
+```
+
+---
+
+## เมื่อไม่แน่ใจ
+- อ่าน `Docs/security_master.md` ก่อนตัดสินใจ
+- ถ้ามีตัวเลือกระหว่าง "เร็วแต่ไม่ปลอดภัย" กับ "ช้าแต่ปลอดภัย" — เลือกปลอดภัยเสมอ
+- ถ้าไม่แน่ใจว่าต้อง validate input หรือไม่ — validate เสมอ
+- ถ้าไม่แน่ใจว่าต้อง log หรือไม่ — log เสมอ
+- ถ้าไม่แน่ใจว่าต้อง rate limit หรือไม่ — rate limit เสมอ

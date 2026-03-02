@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "title": "泰国投资促进委员会 (BOI)",
+    "description": "泰国投资信息中心 — 促进和协助泰国及外国投资者的投资"
+  },
+  "nav": {
+    "discover": "发现泰国",
+    "invest": "立即投资",
+    "services": "服务",
+    "resources": "资源",
+    "about": "关于BOI",
+    "search": "搜索",
+    "subscribe": "订阅"
+  },
+  "hero": {
+    "headline": "Thailand Opens for You",
+    "subheadline": "通往投资机遇之门 — 为您的商业机会开启新篇章",
+    "cta_eligibility": "检查资格",
+    "cta_apply": "立即申请",
+    "cta_consult": "预约咨询"
+  },
+  "common": {
+    "learn_more": "了解更多",
+    "view_all": "查看全部",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "close": "关闭",
+    "open_menu": "打开菜单",
+    "close_menu": "关闭菜单",
+    "skip_to_main": "跳至主要内容",
+    "loading": "加载中..."
+  },
+  "footer": {
+    "contact": "联系我们",
+    "address": "曼谷乍都乍区维巴瓦迪兰实路555号 10900",
+    "phone": "0 2553 8111",
+    "email": "head@boi.go.th",
+    "follow_us": "关注我们",
+    "quick_links": "快速链接",
+    "related_sites": "相关网站",
+    "privacy": "隐私政策",
+    "terms": "使用条款",
+    "accessibility": "无障碍访问",
+    "sitemap": "网站地图",
+    "copyright": "© {year} 泰国投资促进委员会 版权所有"
+  },
+  "language": {
+    "th": "ไทย",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "中文",
+    "ko": "한국어",
+    "de": "Deutsch",
+    "fr": "Français",
+    "select": "选择语言"
+  }
+}

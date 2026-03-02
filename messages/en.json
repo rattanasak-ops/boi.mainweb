@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "title": "Board of Investment of Thailand (BOI)",
+    "description": "Thailand's central investment hub — promoting and facilitating investment for Thai and foreign investors"
+  },
+  "nav": {
+    "discover": "Discover Thailand",
+    "invest": "Invest Now",
+    "services": "Services",
+    "resources": "Resources",
+    "about": "About BOI",
+    "search": "Search",
+    "subscribe": "Subscribe"
+  },
+  "hero": {
+    "headline": "Thailand Opens for You",
+    "subheadline": "Your gateway to investment opportunities in the Land of Smiles",
+    "cta_eligibility": "Check Eligibility",
+    "cta_apply": "Apply Now",
+    "cta_consult": "Book Consultation"
+  },
+  "common": {
+    "learn_more": "Learn More",
+    "view_all": "View All",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu",
+    "skip_to_main": "Skip to main content",
+    "loading": "Loading..."
+  },
+  "footer": {
+    "contact": "Contact Us",
+    "address": "555 Vibhavadi Rangsit Rd, Chatuchak, Bangkok 10900",
+    "phone": "0 2553 8111",
+    "email": "head@boi.go.th",
+    "follow_us": "Follow Us",
+    "quick_links": "Quick Links",
+    "related_sites": "Related Sites",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "accessibility": "Accessibility",
+    "sitemap": "Sitemap",
+    "copyright": "© {year} Board of Investment of Thailand. All rights reserved."
+  },
+  "language": {
+    "th": "ไทย",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "中文",
+    "ko": "한국어",
+    "de": "Deutsch",
+    "fr": "Français",
+    "select": "Select language"
+  }
+}

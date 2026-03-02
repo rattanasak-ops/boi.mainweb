@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "title": "タイ投資委員会 (BOI)",
+    "description": "タイの投資情報センター — タイ人および外国人投資家の投資を促進・支援"
+  },
+  "nav": {
+    "discover": "タイを知る",
+    "invest": "今すぐ投資",
+    "services": "サービス",
+    "resources": "資料",
+    "about": "BOIについて",
+    "search": "検索",
+    "subscribe": "登録"
+  },
+  "hero": {
+    "headline": "Thailand Opens for You",
+    "subheadline": "投資機会への扉 — あなたのビジネスチャンスを広げます",
+    "cta_eligibility": "適格性を確認",
+    "cta_apply": "今すぐ申請",
+    "cta_consult": "相談を予約"
+  },
+  "common": {
+    "learn_more": "詳しく見る",
+    "view_all": "すべて見る",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "close": "閉じる",
+    "open_menu": "メニューを開く",
+    "close_menu": "メニューを閉じる",
+    "skip_to_main": "メインコンテンツへ",
+    "loading": "読み込み中..."
+  },
+  "footer": {
+    "contact": "お問い合わせ",
+    "address": "555 ビバワディランシット通り、チャトゥチャック区、バンコク 10900",
+    "phone": "0 2553 8111",
+    "email": "head@boi.go.th",
+    "follow_us": "フォロー",
+    "quick_links": "クイックリンク",
+    "related_sites": "関連サイト",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "accessibility": "アクセシビリティ",
+    "sitemap": "サイトマップ",
+    "copyright": "© {year} タイ投資委員会 無断転載禁止"
+  },
+  "language": {
+    "th": "ไทย",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "中文",
+    "ko": "한국어",
+    "de": "Deutsch",
+    "fr": "Français",
+    "select": "言語を選択"
+  }
+}
