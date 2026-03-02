@@ -19,6 +19,7 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   basePath: process.env.BASE_PATH || "",
   async headers() {
     return [

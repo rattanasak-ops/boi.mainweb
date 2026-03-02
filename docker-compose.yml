@@ -1,0 +1,9 @@
+services:
+  boi-web:
+    build: .
+    container_name: boi-mainweb
+    restart: unless-stopped
+    ports:
+      - "4100:3000"
+    environment:
+      - NODE_ENV=production
