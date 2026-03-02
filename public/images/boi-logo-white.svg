@@ -1,0 +1,12 @@
+<svg width="200" height="48" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shield emblem -->
+  <g transform="translate(0, 2)">
+    <path d="M22 2L40 8V22C40 32 32 40 22 44C12 40 4 32 4 22V8L22 2Z" fill="rgba(255,255,255,0.1)" stroke="#C5A572" stroke-width="1.5"/>
+    <path d="M22 6L36 11V22C36 30 29 37 22 40C15 37 8 30 8 22V11L22 6Z" fill="rgba(255,255,255,0.05)"/>
+    <path d="M22 12L24.5 17.5L30 18L26 22L27 28L22 25L17 28L18 22L14 18L19.5 17.5L22 12Z" fill="#C5A572"/>
+    <line x1="14" y1="32" x2="30" y2="32" stroke="#C5A572" stroke-width="0.8"/>
+    <line x1="16" y1="34" x2="28" y2="34" stroke="#C5A572" stroke-width="0.6"/>
+  </g>
+  <text x="52" y="22" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#ffffff" letter-spacing="1">BOI</text>
+  <text x="52" y="38" font-family="'Noto Sans Thai', Inter, system-ui, sans-serif" font-size="9" font-weight="400" fill="rgba(255,255,255,0.6)">Board of Investment of Thailand</text>
+</svg>

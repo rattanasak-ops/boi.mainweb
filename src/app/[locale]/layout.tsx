@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { inter, notoSansThai } from "@/lib/fonts";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import "../globals.css";
 
 export async function generateStaticParams() {
@@ -54,18 +55,20 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${inter.variable} ${notoSansThai.variable}`}>
       <body className="min-h-screen flex flex-col antialiased">
         <NextIntlClientProvider messages={messages}>
-          {/* Skip to main content — WCAG 2.4.1 */}
-          <a href="#main-content" className="skip-to-main">
-            Skip to main content
-          </a>
+          <SmoothScrollProvider>
+            {/* Skip to main content — WCAG 2.4.1 */}
+            <a href="#main-content" className="skip-to-main">
+              Skip to main content
+            </a>
 
-          <Header />
+            <Header />
 
-          <main id="main-content" className="flex-1" role="main">
-            {children}
-          </main>
+            <main id="main-content" className="flex-1" role="main">
+              {children}
+            </main>
 
-          <Footer />
+            <Footer />
+          </SmoothScrollProvider>
         </NextIntlClientProvider>
       </body>
     </html>
