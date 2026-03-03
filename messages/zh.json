@@ -25,7 +25,39 @@
     "trust_since": "创立于1966年",
     "search_placeholder": "搜索优惠政策、服务或投资信息...",
     "search_button": "搜索",
-    "scroll": "向下滚动"
+    "scroll": "向下滚动",
+    "slides": {
+      "gateway": {
+        "badge": "泰国投资促进委员会",
+        "headline_1": "Thailand",
+        "headline_2": "Opens for You",
+        "subheadline": "通往投资机遇之门 — 为您的商业机会开启新篇章"
+      },
+      "manufacturing": {
+        "badge": "制造业卓越中心",
+        "headline_1": "Your",
+        "headline_2": "Manufacturing Hub",
+        "subheadline": "世界级设施、具有竞争力的成本、位于亚洲中心的战略供应链"
+      },
+      "digital": {
+        "badge": "创新与科技",
+        "headline_1": "Asia's",
+        "headline_2": "Digital Gateway",
+        "subheadline": "领先的数字基础设施、智能产业和蓬勃发展的科技生态系统"
+      },
+      "lifestyle": {
+        "badge": "文化与生活品质",
+        "headline_1": "Where Culture",
+        "headline_2": "Meets Opportunity",
+        "subheadline": "享誉全球的热情好客、多彩文化和卓越的生活品质"
+      },
+      "growth": {
+        "badge": "经济强国",
+        "headline_1": "Asia's",
+        "headline_2": "Growth Engine",
+        "subheadline": "位于东盟中心的战略位置，覆盖7亿多消费者"
+      }
+    }
   },
   "stats": {
     "subtitle": "投资影响",

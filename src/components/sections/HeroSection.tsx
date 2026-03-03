@@ -1,9 +1,19 @@
 "use client";
 
-import { useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslations } from "next-intl";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import {
+  ArrowRight,
+  CheckCircle,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import Image from "next/image";
 import FloatingOrbs from "@/components/ui/FloatingOrbs";
 import NoiseGrain from "@/components/ui/NoiseGrain";
@@ -12,40 +22,121 @@ import NoiseGrain from "@/components/ui/NoiseGrain";
 const GATE_EASE = [0.65, 0, 0.25, 1] as [number, number, number, number];
 const EASE_OUT = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
-/* ── BOI Brand Shape ──
-   Chamfered bottom-right corner = "opening gate" motif
-   Used on buttons, badges, and cards throughout the site */
+/* ── BOI Brand Shape — chamfered corner motif ── */
 const BRAND_SHAPE =
   "polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%)";
 const BRAND_SHAPE_SM =
   "polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%)";
 
+const SLIDE_INTERVAL = 6000; // 6s per slide
+
+/* ── Slide data ── */
+type Slide = {
+  key: string;
+  image: string;
+  zoomOrigin: string; // Ken Burns zoom direction variety
+};
+
+const SLIDES: Slide[] = [
+  {
+    key: "gateway",
+    image: "/images/hero/bangkok-skytrain.jpg",
+    zoomOrigin: "center center",
+  },
+  {
+    key: "manufacturing",
+    image: "/images/why-thailand/factory.jpg",
+    zoomOrigin: "left center",
+  },
+  {
+    key: "digital",
+    image: "/images/why-thailand/digital-tech.jpg",
+    zoomOrigin: "right top",
+  },
+  {
+    key: "lifestyle",
+    image: "/images/why-thailand/temple.jpg",
+    zoomOrigin: "center bottom",
+  },
+  {
+    key: "growth",
+    image: "/images/why-thailand/aerial-city.jpg",
+    zoomOrigin: "right center",
+  },
+];
+
 export default function HeroSection() {
   const t = useTranslations("hero");
   const sectionRef = useRef<HTMLElement>(null);
+  const [current, setCurrent] = useState(0);
+  const [gateComplete, setGateComplete] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  /* Parallax — Ken Burns scale + vertical drift */
+  /* Gate opening complete — enable carousel after reveal */
+  useEffect(() => {
+    const timer = setTimeout(() => setGateComplete(true), 2200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  /* Auto-advance carousel */
+  const startTimer = useCallback(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % SLIDES.length);
+    }, SLIDE_INTERVAL);
+  }, []);
+
+  useEffect(() => {
+    if (!gateComplete || paused) {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      return;
+    }
+    startTimer();
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [gateComplete, paused, startTimer]);
+
+  const goTo = useCallback(
+    (i: number) => {
+      setCurrent(i);
+      startTimer();
+    },
+    [startTimer]
+  );
+
+  const goNext = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % SLIDES.length);
+    startTimer();
+  }, [startTimer]);
+
+  const goPrev = useCallback(() => {
+    setCurrent((prev) => (prev - 1 + SLIDES.length) % SLIDES.length);
+    startTimer();
+  }, [startTimer]);
+
+  /* Parallax — content fades on scroll */
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const bgScale = useTransform(scrollYProgress, [0, 1], [1.15, 1.3]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
   const contentY = useTransform(scrollYProgress, [0, 0.6], ["0%", "15%"]);
+
+  const slide = SLIDES[current];
 
   return (
     <section
       ref={sectionRef}
       className="relative h-screen min-h-[700px] overflow-hidden"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
     >
       {/* ================================================
           GATE OPENING REVEAL — BOI Signature Entrance
           Two diagonal panels split apart like opening gates
-          Inspired by EEC's cinematic loading screen
           ================================================ */}
-
-      {/* Left gate — diagonal trapezoid */}
       <motion.div
         className="absolute inset-0 z-50 bg-navy-950"
         style={{ clipPath: "polygon(0 0, 55% 0, 45% 100%, 0 100%)" }}
@@ -54,8 +145,6 @@ export default function HeroSection() {
         transition={{ duration: 1.4, delay: 0.5, ease: GATE_EASE }}
         aria-hidden="true"
       />
-
-      {/* Right gate — diagonal trapezoid */}
       <motion.div
         className="absolute inset-0 z-50 bg-navy-950"
         style={{ clipPath: "polygon(45% 0, 100% 0, 100% 100%, 55% 100%)" }}
@@ -64,8 +153,6 @@ export default function HeroSection() {
         transition={{ duration: 1.4, delay: 0.5, ease: GATE_EASE }}
         aria-hidden="true"
       />
-
-      {/* Gold center seam — the gate hinge line */}
       <motion.div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-full z-[51]"
         style={{
@@ -79,25 +166,43 @@ export default function HeroSection() {
       />
 
       {/* ================================================
-          BACKGROUND — Parallax + Ken Burns zoom
+          BACKGROUND — Crossfade carousel with Ken Burns zoom
+          Each slide zooms from a different origin for variety
           ================================================ */}
-      <motion.div
-        className="absolute inset-0"
-        style={{ y: bgY, scale: bgScale }}
-      >
-        <Image
-          src="/images/hero/bangkok-skytrain.jpg"
-          alt="Modern Bangkok skyline"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-      </motion.div>
+      <AnimatePresence initial={false}>
+        <motion.div
+          key={current}
+          className="absolute inset-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+        >
+          <motion.div
+            className="absolute inset-0"
+            style={{ transformOrigin: slide.zoomOrigin }}
+            initial={{ scale: 1.0 }}
+            animate={{ scale: 1.2 }}
+            transition={{
+              duration: SLIDE_INTERVAL / 1000 + 1.5,
+              ease: "linear",
+            }}
+          >
+            <Image
+              src={slide.image}
+              alt=""
+              fill
+              priority={current === 0}
+              className="object-cover"
+              sizes="100vw"
+            />
+          </motion.div>
+        </motion.div>
+      </AnimatePresence>
 
-      {/* Dark cinematic overlay — simplified from 7 layers to 2 */}
-      <div className="absolute inset-0 bg-navy-950/65" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,rgba(7,11,23,0.5)_100%)]" />
+      {/* Dark cinematic overlay */}
+      <div className="absolute inset-0 bg-navy-950/65 z-[1]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,rgba(7,11,23,0.5)_100%)] z-[1]" />
 
       {/* Atmospheric depth */}
       <FloatingOrbs variant="hero" />
@@ -105,7 +210,6 @@ export default function HeroSection() {
 
       {/* ================================================
           ANIMATED GOLD LINE — perpetual left-edge accent
-          Inspired by EEC's animated decorative lines
           ================================================ */}
       <div
         className="absolute left-8 sm:left-12 lg:left-20 top-0 w-px h-full z-10 bg-gold-500/[0.08]"
@@ -124,52 +228,64 @@ export default function HeroSection() {
       </div>
 
       {/* ================================================
-          CONTENT — Cinematic center layout
-          Max-width 1600px (wider than template 1280px)
+          CONTENT — Per-slide text with cinematic transitions
           ================================================ */}
       <motion.div
         className="relative z-20 h-full flex flex-col items-center justify-center mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20 text-center"
         style={{ opacity: contentOpacity, y: contentY }}
       >
-        {/* Badge — polygon clip-path (BOI brand shape) */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2.0, ease: EASE_OUT }}
-        >
-          <span
-            className="inline-flex items-center gap-2.5 px-6 py-2.5 bg-white/[0.08] border border-white/15 text-gold-300 text-sm font-medium backdrop-blur-md"
-            style={{ clipPath: BRAND_SHAPE_SM }}
+        {/* Badge — changes per slide */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={`badge-${current}`}
+            initial={{ opacity: 0, y: -15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={{ duration: 0.5, ease: EASE_OUT }}
           >
-            <span className="h-2 w-2 rounded-full bg-gold-400 animate-pulse" />
-            {t("badge")}
-          </span>
-        </motion.div>
+            <span
+              className="inline-flex items-center gap-2.5 px-6 py-2.5 bg-white/[0.08] border border-white/15 text-gold-300 text-sm font-medium backdrop-blur-md"
+              style={{ clipPath: BRAND_SHAPE_SM }}
+            >
+              <span className="h-2 w-2 rounded-full bg-gold-400 animate-pulse" />
+              {t(`slides.${slide.key}.badge`)}
+            </span>
+          </motion.div>
+        </AnimatePresence>
 
-        {/* ── HEADLINE — Massive typography ── */}
-        <h1 className="mt-6 sm:mt-8">
-          {/* "Thailand" — blur-deblur reveal (EEC hero text technique) */}
-          <motion.span
-            className="block text-[clamp(3.5rem,10vw,9rem)] font-bold text-white leading-[0.95] tracking-[-0.02em]"
-            initial={{ opacity: 0, filter: "blur(20px)", scale: 0.95 }}
-            animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-            transition={{ duration: 1.2, delay: 1.8, ease: EASE_OUT }}
+        {/* ── HEADLINE — blur-deblur + clip-path expand per slide ── */}
+        <AnimatePresence mode="wait">
+          <motion.h1
+            key={`h1-${current}`}
+            className="mt-6 sm:mt-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
           >
-            Thailand
-          </motion.span>
+            {/* Line 1 — blur reveal */}
+            <motion.span
+              className="block text-[clamp(3.5rem,10vw,9rem)] font-bold text-white leading-[0.95] tracking-[-0.02em]"
+              initial={{ opacity: 0, filter: "blur(14px)", y: 30 }}
+              animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+              transition={{ duration: 0.8, ease: EASE_OUT }}
+            >
+              {t(`slides.${slide.key}.headline_1`)}
+            </motion.span>
 
-          {/* "Opens for You" — clip-path expand from center (gate opening motif) */}
-          <motion.span
-            className="block text-[clamp(2.5rem,7vw,6.5rem)] font-bold leading-[1.05] tracking-[-0.01em] mt-1 sm:mt-3 bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 bg-clip-text text-transparent"
-            initial={{ clipPath: "inset(0 50% 0 50%)" }}
-            animate={{ clipPath: "inset(0 0% 0 0%)" }}
-            transition={{ duration: 1.0, delay: 2.2, ease: EASE_OUT }}
-          >
-            Opens for You
-          </motion.span>
-        </h1>
+            {/* Line 2 — clip-path expand from center (gate opening motif) */}
+            <motion.span
+              className="block text-[clamp(2.5rem,7vw,6.5rem)] font-bold leading-[1.05] tracking-[-0.01em] mt-1 sm:mt-3 bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 bg-clip-text text-transparent"
+              initial={{ clipPath: "inset(0 50% 0 50%)" }}
+              animate={{ clipPath: "inset(0 0% 0 0%)" }}
+              transition={{ duration: 0.8, delay: 0.15, ease: EASE_OUT }}
+            >
+              {t(`slides.${slide.key}.headline_2`)}
+            </motion.span>
+          </motion.h1>
+        </AnimatePresence>
 
-        {/* Decorative gold line — section accent */}
+        {/* Decorative gold line */}
         <motion.div
           className="mt-6 sm:mt-8 h-[2px] bg-gradient-to-r from-transparent via-gold-500/60 to-transparent"
           initial={{ width: 0 }}
@@ -178,15 +294,19 @@ export default function HeroSection() {
           aria-hidden="true"
         />
 
-        {/* Subheadline */}
-        <motion.p
-          className="mt-6 text-base sm:text-lg lg:text-xl text-white/60 max-w-xl mx-auto leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2.8 }}
-        >
-          {t("subheadline")}
-        </motion.p>
+        {/* Subheadline — changes per slide */}
+        <AnimatePresence mode="wait">
+          <motion.p
+            key={`sub-${current}`}
+            className="mt-6 text-base sm:text-lg lg:text-xl text-white/60 max-w-xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            {t(`slides.${slide.key}.subheadline`)}
+          </motion.p>
+        </AnimatePresence>
 
         {/* ── CTA BUTTONS — Polygon Brand Shape ── */}
         <motion.div
@@ -222,10 +342,67 @@ export default function HeroSection() {
       </motion.div>
 
       {/* ================================================
+          CAROUSEL CONTROLS — Progress bars + arrows
+          Positioned above the diagonal transition
+          ================================================ */}
+      <div className="absolute bottom-[100px] sm:bottom-[120px] lg:bottom-[150px] left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
+        {/* Prev */}
+        <button
+          onClick={goPrev}
+          className="p-2 rounded-full border border-white/20 text-white/50 hover:text-white hover:border-gold-400/50 backdrop-blur-sm transition-all duration-300"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="h-4 w-4" />
+        </button>
+
+        {/* Progress bars */}
+        <div className="flex items-center gap-2">
+          {SLIDES.map((s, i) => (
+            <button
+              key={s.key}
+              onClick={() => goTo(i)}
+              className={`relative h-1 rounded-full overflow-hidden transition-all duration-500 ${
+                i === current
+                  ? "w-12 bg-white/20"
+                  : "w-6 bg-white/10 hover:bg-white/20"
+              }`}
+              aria-label={`Slide ${i + 1}`}
+            >
+              {i === current && (
+                <motion.div
+                  className="absolute inset-y-0 left-0 bg-gradient-to-r from-gold-400 to-gold-500 rounded-full"
+                  initial={{ width: "0%" }}
+                  animate={{ width: "100%" }}
+                  transition={{
+                    duration: SLIDE_INTERVAL / 1000,
+                    ease: "linear",
+                  }}
+                  key={`prog-${current}`}
+                />
+              )}
+            </button>
+          ))}
+        </div>
+
+        {/* Next */}
+        <button
+          onClick={goNext}
+          className="p-2 rounded-full border border-white/20 text-white/50 hover:text-white hover:border-gold-400/50 backdrop-blur-sm transition-all duration-300"
+          aria-label="Next slide"
+        >
+          <ChevronRight className="h-4 w-4" />
+        </button>
+
+        {/* Slide counter */}
+        <span className="text-xs text-white/30 font-mono tracking-wider ml-2">
+          {String(current + 1).padStart(2, "0")}
+          <span className="mx-1 text-gold-500/40">/</span>
+          {String(SLIDES.length).padStart(2, "0")}
+        </span>
+      </div>
+
+      {/* ================================================
           BOTTOM DIAGONAL TRANSITION
-          Navy triangle at bottom-right, creating non-flat
-          transition into the next section (StatsSection)
-          Inspired by EEC's 75vw border-triangle technique
           ================================================ */}
       <div className="absolute bottom-0 left-0 right-0 z-30 pointer-events-none">
         <svg
@@ -234,33 +411,9 @@ export default function HeroSection() {
           className="block w-full h-[80px] sm:h-[100px] lg:h-[120px]"
           aria-hidden="true"
         >
-          <polygon
-            points="0,120 1600,120 1600,0"
-            className="fill-navy-900"
-          />
+          <polygon points="0,120 1600,120 1600,0" className="fill-navy-900" />
         </svg>
       </div>
-
-      {/* ================================================
-          SCROLL INDICATOR
-          ================================================ */}
-      <motion.div
-        className="absolute bottom-[110px] sm:bottom-[130px] lg:bottom-[150px] left-1/2 -translate-x-1/2 z-30"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 3.5, duration: 1 }}
-      >
-        <motion.div
-          className="flex flex-col items-center gap-2"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <span className="text-[10px] text-white/35 tracking-[0.35em] uppercase font-medium">
-            {t("scroll")}
-          </span>
-          <div className="h-10 w-px bg-gradient-to-b from-gold-400/50 to-transparent" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

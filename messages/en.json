@@ -25,7 +25,39 @@
     "trust_since": "Since 1966",
     "search_placeholder": "Search incentives, services, or investment info...",
     "search_button": "Search",
-    "scroll": "Scroll"
+    "scroll": "Scroll",
+    "slides": {
+      "gateway": {
+        "badge": "Board of Investment of Thailand",
+        "headline_1": "Thailand",
+        "headline_2": "Opens for You",
+        "subheadline": "Your gateway to investment opportunities in the Land of Smiles"
+      },
+      "manufacturing": {
+        "badge": "Manufacturing Excellence",
+        "headline_1": "Your",
+        "headline_2": "Manufacturing Hub",
+        "subheadline": "World-class facilities, competitive costs, and a strategic supply chain at the heart of Asia"
+      },
+      "digital": {
+        "badge": "Innovation & Technology",
+        "headline_1": "Asia's",
+        "headline_2": "Digital Gateway",
+        "subheadline": "Leading digital infrastructure, smart industries, and a thriving tech ecosystem"
+      },
+      "lifestyle": {
+        "badge": "Culture & Quality of Life",
+        "headline_1": "Where Culture",
+        "headline_2": "Meets Opportunity",
+        "subheadline": "World-renowned hospitality, vibrant culture, and an exceptional quality of life"
+      },
+      "growth": {
+        "badge": "Economic Powerhouse",
+        "headline_1": "Asia's",
+        "headline_2": "Growth Engine",
+        "subheadline": "Strategic location at the heart of ASEAN with access to 700M+ consumers"
+      }
+    }
   },
   "stats": {
     "subtitle": "Investment Impact",

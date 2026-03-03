@@ -25,7 +25,39 @@
     "trust_since": "1966년 설립",
     "search_placeholder": "인센티브, 서비스 또는 투자 정보 검색...",
     "search_button": "검색",
-    "scroll": "스크롤"
+    "scroll": "스크롤",
+    "slides": {
+      "gateway": {
+        "badge": "태국 투자진흥위원회",
+        "headline_1": "Thailand",
+        "headline_2": "Opens for You",
+        "subheadline": "투자 기회의 문 — 비즈니스 가능성을 열어드립니다"
+      },
+      "manufacturing": {
+        "badge": "제조업 우수성",
+        "headline_1": "Your",
+        "headline_2": "Manufacturing Hub",
+        "subheadline": "세계적 수준의 시설, 경쟁력 있는 비용, 아시아 중심의 전략적 공급망"
+      },
+      "digital": {
+        "badge": "혁신 & 기술",
+        "headline_1": "Asia's",
+        "headline_2": "Digital Gateway",
+        "subheadline": "최첨단 디지털 인프라, 스마트 산업, 성장하는 테크 생태계"
+      },
+      "lifestyle": {
+        "badge": "문화 & 삶의 질",
+        "headline_1": "Where Culture",
+        "headline_2": "Meets Opportunity",
+        "subheadline": "세계적으로 유명한 환대, 활기찬 문화, 탁월한 삶의 질"
+      },
+      "growth": {
+        "badge": "경제 강국",
+        "headline_1": "Asia's",
+        "headline_2": "Growth Engine",
+        "subheadline": "아세안 중심의 전략적 위치, 7억 이상의 소비자 접근"
+      }
+    }
   },
   "stats": {
     "subtitle": "투자 영향력",

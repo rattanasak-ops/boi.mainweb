@@ -25,7 +25,39 @@
     "trust_since": "ตั้งแต่ พ.ศ. 2509",
     "search_placeholder": "ค้นหาสิทธิประโยชน์ บริการ หรือข้อมูลการลงทุน...",
     "search_button": "ค้นหา",
-    "scroll": "เลื่อนลง"
+    "scroll": "เลื่อนลง",
+    "slides": {
+      "gateway": {
+        "badge": "สำนักงานคณะกรรมการส่งเสริมการลงทุน",
+        "headline_1": "Thailand",
+        "headline_2": "Opens for You",
+        "subheadline": "ประตูสู่การลงทุนที่เปิดกว้าง เพื่อทุกโอกาสทางธุรกิจ"
+      },
+      "manufacturing": {
+        "badge": "ศูนย์กลางการผลิตระดับโลก",
+        "headline_1": "Your",
+        "headline_2": "Manufacturing Hub",
+        "subheadline": "โรงงานระดับโลก ต้นทุนแข่งขันได้ ซัพพลายเชนยุทธศาสตร์ใจกลางเอเชีย"
+      },
+      "digital": {
+        "badge": "นวัตกรรม & เทคโนโลยี",
+        "headline_1": "Asia's",
+        "headline_2": "Digital Gateway",
+        "subheadline": "โครงสร้างพื้นฐานดิจิทัลชั้นนำ อุตสาหกรรมอัจฉริยะ และระบบนิเวศเทคโนโลยีที่เติบโต"
+      },
+      "lifestyle": {
+        "badge": "วัฒนธรรม & คุณภาพชีวิต",
+        "headline_1": "Where Culture",
+        "headline_2": "Meets Opportunity",
+        "subheadline": "การต้อนรับระดับโลก วัฒนธรรมอันมีชีวิตชีวา และคุณภาพชีวิตที่เหนือกว่า"
+      },
+      "growth": {
+        "badge": "มหาอำนาจเศรษฐกิจ",
+        "headline_1": "Asia's",
+        "headline_2": "Growth Engine",
+        "subheadline": "ทำเลยุทธศาสตร์ใจกลางอาเซียน เข้าถึงผู้บริโภคกว่า 700 ล้านคน"
+      }
+    }
   },
   "stats": {
     "subtitle": "ผลกระทบการลงทุน",

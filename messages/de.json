@@ -25,7 +25,39 @@
     "trust_since": "Seit 1966",
     "search_placeholder": "Anreize, Dienstleistungen oder Investitionsinfos suchen...",
     "search_button": "Suchen",
-    "scroll": "Scrollen"
+    "scroll": "Scrollen",
+    "slides": {
+      "gateway": {
+        "badge": "Thailands Investitionsförderungsbehörde",
+        "headline_1": "Thailand",
+        "headline_2": "Opens for You",
+        "subheadline": "Ihr Tor zu Investitionsmöglichkeiten im Land des Lächelns"
+      },
+      "manufacturing": {
+        "badge": "Fertigungsexzellenz",
+        "headline_1": "Your",
+        "headline_2": "Manufacturing Hub",
+        "subheadline": "Erstklassige Einrichtungen, wettbewerbsfähige Kosten und eine strategische Lieferkette im Herzen Asiens"
+      },
+      "digital": {
+        "badge": "Innovation & Technologie",
+        "headline_1": "Asia's",
+        "headline_2": "Digital Gateway",
+        "subheadline": "Führende digitale Infrastruktur, intelligente Industrien und ein florierendes Tech-Ökosystem"
+      },
+      "lifestyle": {
+        "badge": "Kultur & Lebensqualität",
+        "headline_1": "Where Culture",
+        "headline_2": "Meets Opportunity",
+        "subheadline": "Weltbekannte Gastfreundschaft, lebendige Kultur und außergewöhnliche Lebensqualität"
+      },
+      "growth": {
+        "badge": "Wirtschaftsmacht",
+        "headline_1": "Asia's",
+        "headline_2": "Growth Engine",
+        "subheadline": "Strategische Lage im Herzen der ASEAN mit Zugang zu über 700 Millionen Verbrauchern"
+      }
+    }
   },
   "stats": {
     "subtitle": "Investitionsauswirkung",
