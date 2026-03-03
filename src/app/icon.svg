@@ -1,0 +1,16 @@
+<svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle for visibility on any tab bar -->
+  <circle cx="24" cy="24" r="24" fill="#1B2A4A"/>
+  <!-- Shield shape -->
+  <path d="M24 6L38 12V25C38 34 31 40 24 44C17 40 10 34 10 25V12L24 6Z" fill="#1B2A4A" stroke="#C5A572" stroke-width="1.5"/>
+  <!-- Inner gold border -->
+  <path d="M24 9L35 14V25C35 32 30 37 24 41C18 37 13 32 13 25V14L24 9Z" fill="none" stroke="#C5A572" stroke-width="0.6" opacity="0.5"/>
+  <!-- Garuda star -->
+  <path d="M24 14L27 20H32L28 24L29.5 30L24 26.5L18.5 30L20 24L16 20H21L24 14Z" fill="#C5A572"/>
+  <!-- Wings -->
+  <path d="M13 21C13 21 17 17 21 18.5" stroke="#C5A572" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M35 21C35 21 31 17 27 18.5" stroke="#C5A572" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <!-- Base decorative lines -->
+  <line x1="16" y1="33" x2="32" y2="33" stroke="#C5A572" stroke-width="0.8" opacity="0.5"/>
+  <line x1="18" y1="36" x2="30" y2="36" stroke="#C5A572" stroke-width="0.6" opacity="0.3"/>
+</svg>

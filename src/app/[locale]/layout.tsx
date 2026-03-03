@@ -6,6 +6,9 @@ import { inter, notoSansThai } from "@/lib/fonts";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
+import AnimatedFavicon from "@/components/ui/AnimatedFavicon";
+import GrandGateLoading from "@/components/ui/GrandGateLoading";
+import ScrollNavigator from "@/components/ui/ScrollNavigator";
 import "../globals.css";
 
 export async function generateStaticParams() {
@@ -54,7 +57,9 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${inter.variable} ${notoSansThai.variable}`}>
       <body className="min-h-screen flex flex-col antialiased">
+        <AnimatedFavicon />
         <NextIntlClientProvider messages={messages}>
+          <GrandGateLoading />
           <SmoothScrollProvider>
             {/* Skip to main content — WCAG 2.4.1 */}
             <a href="#main-content" className="skip-to-main">
@@ -68,6 +73,7 @@ export default async function LocaleLayout({
             </main>
 
             <Footer />
+            <ScrollNavigator />
           </SmoothScrollProvider>
         </NextIntlClientProvider>
       </body>

@@ -17,10 +17,10 @@
  *   npm run optimize -- --no-grade — optimize only, skip color grading
  *
  * Sizing rules:
- *   hero/   → max 3840px width (2x of 1920px full-bleed)
- *   stats/  → max 3840px width (full-bleed background)
- *   cta/    → max 3840px width (full-bleed background)
- *   others  → max 2400px width (2x of 1200px card/section)
+ *   hero/   → max 1920px width (full-bleed, Next.js handles responsive)
+ *   stats/  → max 1920px width (full-bleed background)
+ *   cta/    → max 1920px width (full-bleed background)
+ *   others  → max 1200px width (card/section images)
  *
  * Quality: JPG 85 (visually lossless on Retina)
  */
@@ -38,8 +38,8 @@ const SKIP_GRADE = process.argv.includes("--no-grade");
 /* ── Sizing rules per folder ── */
 function getMaxWidth(filePath) {
   const rel = relative(ROOT, filePath);
-  if (rel.startsWith("hero/") || rel.startsWith("stats/") || rel.startsWith("cta/")) return 3840;
-  return 2400;
+  if (rel.startsWith("hero/") || rel.startsWith("stats/") || rel.startsWith("cta/")) return 1920;
+  return 1200;
 }
 
 /* ── EEC-Style Color Grading Profile ──

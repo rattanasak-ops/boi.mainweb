@@ -51,8 +51,7 @@ const EASE_OUT = [0.22, 1, 0.36, 1] as [number, number, number, number];
    Based on sitemap_new.md — 5 main sections
    ────────────────────────────────────────── */
 type MenuItem = {
-  name: string;
-  desc: string;
+  tKey: string;
   href: string;
   icon: React.ComponentType<{ className?: string }>;
 };
@@ -61,10 +60,7 @@ type MegaMenuSection = {
   key: string;
   featured: {
     image: string;
-    title: string;
-    desc: string;
     href: string;
-    cta: string;
   };
   items: MenuItem[];
 };
@@ -74,105 +70,90 @@ const megaMenuData: MegaMenuSection[] = [
     key: "discover",
     featured: {
       image: "/images/why-thailand/shipping-port.jpg",
-      title: "Explore Investment Opportunities",
-      desc: "Discover why Thailand is Southeast Asia's top investment destination",
       href: "/discover",
-      cta: "Explore Now",
     },
     items: [
-      { name: "Thailand Overview", desc: "Economic data & competitive advantages", href: "/discover/thailand-overview", icon: Globe2 },
-      { name: "Target Industries", desc: "10 promoted industry sectors", href: "/discover/industries", icon: Factory },
-      { name: "Special Economic Zones", desc: "EEC, SEZ & industrial estates", href: "/discover/special-zones", icon: MapPin },
-      { name: "Success Stories", desc: "Real investor experiences", href: "/discover/success-stories", icon: Star },
-      { name: "Advertorials", desc: "Latest articles & insights", href: "/discover/advertorials", icon: FileText },
+      { tKey: "thailand_overview", href: "/discover/thailand-overview", icon: Globe2 },
+      { tKey: "target_industries", href: "/discover/industries", icon: Factory },
+      { tKey: "special_zones", href: "/discover/special-zones", icon: MapPin },
+      { tKey: "success_stories", href: "/discover/success-stories", icon: Star },
+      { tKey: "advertorials", href: "/discover/advertorials", icon: FileText },
     ],
   },
   {
     key: "invest",
     featured: {
       image: "/images/why-thailand/investment-growth.jpg",
-      title: "Start Your Investment Journey",
-      desc: "Step-by-step guide from eligibility to approval",
       href: "/invest/getting-started",
-      cta: "Get Started",
     },
     items: [
-      { name: "Getting Started", desc: "Investment journey overview & checklist", href: "/invest/getting-started", icon: Rocket },
-      { name: "Eligibility Checker", desc: "Interactive eligibility assessment", href: "/invest/eligibility-checker", icon: CheckCircle },
-      { name: "Investment Incentives", desc: "Tax & non-tax benefits", href: "/invest/incentives", icon: TrendingUp },
-      { name: "Procedures & Timeline", desc: "Application process step-by-step", href: "/invest/procedures", icon: CalendarClock },
-      { name: "Forms & Downloads", desc: "Application & operating forms", href: "/invest/forms", icon: FileText },
-      { name: "Eligible Activities", desc: "Searchable list of activities", href: "/invest/eligible-activities", icon: Zap },
+      { tKey: "getting_started", href: "/invest/getting-started", icon: Rocket },
+      { tKey: "eligibility_checker", href: "/invest/eligibility-checker", icon: CheckCircle },
+      { tKey: "incentives", href: "/invest/incentives", icon: TrendingUp },
+      { tKey: "procedures", href: "/invest/procedures", icon: CalendarClock },
+      { tKey: "forms", href: "/invest/forms", icon: FileText },
+      { tKey: "eligible_activities", href: "/invest/eligible-activities", icon: Zap },
     ],
   },
   {
     key: "services",
     featured: {
       image: "/images/why-thailand/digital-workforce.jpg",
-      title: "One-Stop Investment Services",
-      desc: "Apply online, track applications, manage permits",
       href: "/services/apply",
-      cta: "Apply Online",
     },
     items: [
-      { name: "e-Investment", desc: "Online promotion application", href: "/services/e-investment", icon: FileText },
-      { name: "Visa & Work Permit", desc: "For BOI-promoted companies", href: "/services/visa", icon: Stamp },
-      { name: "Smart Visa", desc: "For talents & experts", href: "/services/smart-visa", icon: Sparkles },
-      { name: "OSOS", desc: "One Start One Stop center", href: "/services/osos", icon: Building2 },
-      { name: "Business Matching", desc: "Find partners & suppliers", href: "/services/matchmaking", icon: Handshake },
-      { name: "Book Consultation", desc: "Schedule with BOI advisor", href: "/services/consultation", icon: Phone },
+      { tKey: "e_investment", href: "/services/e-investment", icon: FileText },
+      { tKey: "visa", href: "/services/visa", icon: Stamp },
+      { tKey: "smart_visa", href: "/services/smart-visa", icon: Sparkles },
+      { tKey: "osos", href: "/services/osos", icon: Building2 },
+      { tKey: "matchmaking", href: "/services/matchmaking", icon: Handshake },
+      { tKey: "consultation", href: "/services/consultation", icon: Phone },
     ],
   },
   {
     key: "resources",
     featured: {
       image: "/images/why-thailand/industrial-estate.jpg",
-      title: "Investment Data Dashboard",
-      desc: "Interactive charts, statistics & export tools",
       href: "/resources/data",
-      cta: "View Dashboard",
     },
     items: [
-      { name: "News & Updates", desc: "Latest BOI announcements", href: "/resources/news", icon: Newspaper },
-      { name: "Events Calendar", desc: "Seminars, exhibitions & webinars", href: "/resources/events", icon: CalendarClock },
-      { name: "Data & Statistics", desc: "Interactive investment data", href: "/resources/data", icon: BarChart3 },
-      { name: "Company Database", desc: "Search promoted companies", href: "/resources/company-database", icon: Users },
-      { name: "Publications", desc: "Reports, reviews & brochures", href: "/resources/publications", icon: BookOpen },
-      { name: "FAQ", desc: "Frequently asked questions", href: "/resources/faq", icon: HelpCircle },
+      { tKey: "news", href: "/resources/news", icon: Newspaper },
+      { tKey: "events", href: "/resources/events", icon: CalendarClock },
+      { tKey: "data", href: "/resources/data", icon: BarChart3 },
+      { tKey: "company_database", href: "/resources/company-database", icon: Users },
+      { tKey: "publications", href: "/resources/publications", icon: BookOpen },
+      { tKey: "faq", href: "/resources/faq", icon: HelpCircle },
     ],
   },
   {
     key: "about",
     featured: {
       image: "/images/hero/golden-arch.jpg",
-      title: "About BOI Thailand",
-      desc: "Promoting investment since 1966",
       href: "/about/overview",
-      cta: "Learn More",
     },
     items: [
-      { name: "Overview & Mission", desc: "Vision, strategy & board members", href: "/about/overview", icon: Shield },
-      { name: "Our Offices", desc: "Head office, regional & overseas", href: "/about/offices", icon: MapPin },
-      { name: "Careers", desc: "Join the BOI team", href: "/about/careers", icon: Briefcase },
-      { name: "Press Center", desc: "Press kit & media contact", href: "/about/press-center", icon: Newspaper },
+      { tKey: "overview", href: "/about/overview", icon: Shield },
+      { tKey: "offices", href: "/about/offices", icon: MapPin },
+      { tKey: "careers", href: "/about/careers", icon: Briefcase },
+      { tKey: "press_center", href: "/about/press-center", icon: Newspaper },
     ],
   },
 ];
 
 /* ── Search quick actions ── */
 const searchQuickActions = [
-  { name: "Check Eligibility", icon: CheckCircle, href: "/invest/eligibility-checker", color: "text-emerald-500" },
-  { name: "Calculate Incentives", icon: Calculator, href: "/services/incentive-calculator", color: "text-gold-500" },
-  { name: "Apply Online", icon: FileText, href: "/services/apply", color: "text-blue-500" },
-  { name: "Book Consultation", icon: CalendarClock, href: "/services/consultation", color: "text-purple-500" },
+  { tKey: "check_eligibility", icon: CheckCircle, href: "/invest/eligibility-checker", color: "text-emerald-500" },
+  { tKey: "calculate_incentives", icon: Calculator, href: "/services/incentive-calculator", color: "text-gold-500" },
+  { tKey: "apply_online", icon: FileText, href: "/services/apply", color: "text-blue-500" },
+  { tKey: "book_consultation", icon: CalendarClock, href: "/services/consultation", color: "text-purple-500" },
 ];
 
-const searchTrending = [
-  "EV Industry Incentives",
-  "Smart Visa Application",
-  "Tax Holiday 13 Years",
-  "EEC Special Zone",
-  "Work Permit Process",
+const searchTrendingKeys = [
+  "trending_ev",
+  "trending_smart_visa",
+  "trending_tax",
+  "trending_eec",
+  "trending_work_permit",
 ];
 
 /* ──────────────────────────────────────────
@@ -181,6 +162,7 @@ const searchTrending = [
 export default function Header() {
   const t = useTranslations("nav");
   const tCommon = useTranslations("common");
+  const tMega = useTranslations("mega_menu");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -367,10 +349,10 @@ export default function Header() {
                                   </div>
                                   <div>
                                     <p className="text-sm font-semibold text-navy-700 group-hover:text-gold-700 transition-colors">
-                                      {item.name}
+                                      {tMega(`${menu.key}.${item.tKey}`)}
                                     </p>
                                     <p className="text-xs text-navy-400 mt-0.5 leading-relaxed">
-                                      {item.desc}
+                                      {tMega(`${menu.key}.${item.tKey}_desc`)}
                                     </p>
                                   </div>
                                 </Link>
@@ -393,7 +375,7 @@ export default function Header() {
                           >
                             <Image
                               src={menu.featured.image}
-                              alt={menu.featured.title}
+                              alt={tMega(`${menu.key}.featured_title`)}
                               fill
                               className="object-cover transition-transform duration-700 group-hover:scale-105"
                               sizes="400px"
@@ -401,11 +383,11 @@ export default function Header() {
                             <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/40 to-transparent" />
                             <div className="absolute bottom-0 left-0 right-0 p-6">
                               <h4 className="text-lg font-bold text-white group-hover:text-gold-200 transition-colors">
-                                {menu.featured.title}
+                                {tMega(`${menu.key}.featured_title`)}
                               </h4>
-                              <p className="mt-1 text-sm text-white/60">{menu.featured.desc}</p>
+                              <p className="mt-1 text-sm text-white/60">{tMega(`${menu.key}.featured_desc`)}</p>
                               <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-gold-400 group-hover:text-gold-300 transition-colors">
-                                {menu.featured.cta}
+                                {tMega(`${menu.key}.featured_cta`)}
                                 <ArrowUpRight className="h-4 w-4" />
                               </span>
                             </div>
@@ -532,12 +514,12 @@ export default function Header() {
                 className="w-full mt-6"
               >
                 <p className="text-xs font-semibold text-white/30 uppercase tracking-[0.2em] mb-4">
-                  Quick Actions
+                  {tMega("search.quick_actions_label")}
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {searchQuickActions.map((action, i) => (
                     <motion.a
-                      key={action.name}
+                      key={action.tKey}
                       href={action.href}
                       initial={{ opacity: 0, y: 15 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -547,7 +529,7 @@ export default function Header() {
                     >
                       <action.icon className={`h-6 w-6 ${action.color}`} />
                       <span className="text-xs font-medium text-white/60 group-hover:text-white/90 text-center transition-colors">
-                        {action.name}
+                        {tMega(`search.${action.tKey}`)}
                       </span>
                     </motion.a>
                   ))}
@@ -563,19 +545,19 @@ export default function Header() {
               >
                 <p className="text-xs font-semibold text-white/30 uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
                   <TrendingUp className="h-3.5 w-3.5" />
-                  Trending Searches
+                  {tMega("search.trending_label")}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {searchTrending.map((term, i) => (
+                  {searchTrendingKeys.map((key, i) => (
                     <motion.button
-                      key={term}
+                      key={key}
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.3, delay: 0.35 + i * 0.05 }}
                       className="px-4 py-2 text-sm text-white/50 bg-white/[0.05] border border-white/[0.08] rounded-full hover:bg-gold-500/10 hover:border-gold-500/20 hover:text-gold-300 transition-all duration-300"
                       style={{ clipPath: BRAND_SHAPE_SM }}
                     >
-                      {term}
+                      {tMega(`search.${key}`)}
                     </motion.button>
                   ))}
                 </div>
@@ -589,7 +571,7 @@ export default function Header() {
                 className="mt-8 flex items-center gap-2 text-xs text-white/25"
               >
                 <Sparkles className="h-3.5 w-3.5 text-gold-500/50" />
-                <span>AI-powered search coming soon — find the right incentives instantly</span>
+                <span>{tMega("search.ai_hint")}</span>
               </motion.div>
             </div>
           </motion.div>

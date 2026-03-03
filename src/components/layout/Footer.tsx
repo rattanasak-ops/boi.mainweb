@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Phone, Mail, MapPin } from "lucide-react";
 import BOILogo from "@/components/ui/BOILogo";
+import FooterCanvas from "@/components/ui/FooterCanvas";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -11,8 +12,15 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy-600 text-white" role="contentinfo">
-      <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
+    <footer
+      className="relative overflow-hidden bg-gradient-to-b from-navy-600 via-navy-700 to-navy-800 text-white"
+      role="contentinfo"
+    >
+      {/* Interactive Golden Network background */}
+      <FooterCanvas />
+
+      {/* Content layer — above canvas */}
+      <div className="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
         {/* Logo + divider */}
         <div className="pt-12 pb-8 border-b border-navy-500/50">
           <Link href="/" aria-label="BOI Thailand - Home">

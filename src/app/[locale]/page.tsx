@@ -8,12 +8,24 @@ import CTASection from "@/components/sections/CTASection";
 export default function HomePage() {
   return (
     <div className="flex flex-col">
-      <HeroSection />
-      <StatsSection />
-      <WhyThailandSection />
-      <QuickServicesSection />
-      <LatestNewsSection />
-      <CTASection />
+      <div id="section-hero">
+        <HeroSection />
+      </div>
+      <div id="section-stats">
+        <StatsSection />
+      </div>
+      <div id="section-why-thailand">
+        <WhyThailandSection />
+      </div>
+      <div id="section-services">
+        <QuickServicesSection />
+      </div>
+      <div id="section-news">
+        <LatestNewsSection />
+      </div>
+      <div id="section-cta">
+        <CTASection />
+      </div>
     </div>
   );
 }
