@@ -73,7 +73,7 @@ const megaMenuData: MegaMenuSection[] = [
   {
     key: "discover",
     featured: {
-      image: "/images/why-thailand/aerial-city.jpg",
+      image: "/images/why-thailand/shipping-port.jpg",
       title: "Explore Investment Opportunities",
       desc: "Discover why Thailand is Southeast Asia's top investment destination",
       href: "/discover",
@@ -90,7 +90,7 @@ const megaMenuData: MegaMenuSection[] = [
   {
     key: "invest",
     featured: {
-      image: "/images/why-thailand/finance.jpg",
+      image: "/images/why-thailand/investment-growth.jpg",
       title: "Start Your Investment Journey",
       desc: "Step-by-step guide from eligibility to approval",
       href: "/invest/getting-started",
@@ -108,7 +108,7 @@ const megaMenuData: MegaMenuSection[] = [
   {
     key: "services",
     featured: {
-      image: "/images/why-thailand/handshake.jpg",
+      image: "/images/why-thailand/digital-workforce.jpg",
       title: "One-Stop Investment Services",
       desc: "Apply online, track applications, manage permits",
       href: "/services/apply",
@@ -126,7 +126,7 @@ const megaMenuData: MegaMenuSection[] = [
   {
     key: "resources",
     featured: {
-      image: "/images/why-thailand/digital-tech.jpg",
+      image: "/images/why-thailand/industrial-estate.jpg",
       title: "Investment Data Dashboard",
       desc: "Interactive charts, statistics & export tools",
       href: "/resources/data",
@@ -144,7 +144,7 @@ const megaMenuData: MegaMenuSection[] = [
   {
     key: "about",
     featured: {
-      image: "/images/why-thailand/temple.jpg",
+      image: "/images/hero/golden-arch.jpg",
       title: "About BOI Thailand",
       desc: "Promoting investment since 1966",
       href: "/about/overview",

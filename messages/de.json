@@ -26,6 +26,7 @@
     "search_placeholder": "Anreize, Dienstleistungen oder Investitionsinfos suchen...",
     "search_button": "Suchen",
     "scroll": "Scrollen",
+    "tagline": "Thailand Opens for You",
     "slides": {
       "gateway": {
         "badge": "Thailands Investitionsförderungsbehörde",
@@ -35,37 +36,42 @@
       },
       "manufacturing": {
         "badge": "Fertigungsexzellenz",
-        "headline_1": "Your",
-        "headline_2": "Manufacturing Hub",
+        "headline_1": "Open Your",
+        "headline_2": "Manufacturing Future",
         "subheadline": "Erstklassige Einrichtungen, wettbewerbsfähige Kosten und eine strategische Lieferkette im Herzen Asiens"
       },
       "digital": {
         "badge": "Innovation & Technologie",
-        "headline_1": "Asia's",
-        "headline_2": "Digital Gateway",
+        "headline_1": "Open",
+        "headline_2": "Digital Frontiers",
         "subheadline": "Führende digitale Infrastruktur, intelligente Industrien und ein florierendes Tech-Ökosystem"
       },
       "lifestyle": {
         "badge": "Kultur & Lebensqualität",
-        "headline_1": "Where Culture",
-        "headline_2": "Meets Opportunity",
+        "headline_1": "Open a Life",
+        "headline_2": "Beyond Business",
         "subheadline": "Weltbekannte Gastfreundschaft, lebendige Kultur und außergewöhnliche Lebensqualität"
       },
       "growth": {
         "badge": "Wirtschaftsmacht",
-        "headline_1": "Asia's",
-        "headline_2": "Growth Engine",
+        "headline_1": "Open",
+        "headline_2": "Limitless Growth",
         "subheadline": "Strategische Lage im Herzen der ASEAN mit Zugang zu über 700 Millionen Verbrauchern"
       }
     }
   },
   "stats": {
-    "subtitle": "Investitionsauswirkung",
-    "title": "Wachstum in ganz Thailand vorantreiben",
+    "subtitle": "Die Zahlen sprechen",
+    "title": "Investitionswirkung in ganz Thailand",
     "promoted_projects": "Geförderte Projekte",
     "total_investment": "Gesamtinvestition",
     "countries": "Investierende Länder",
-    "jobs": "Geschaffene Arbeitsplätze"
+    "jobs": "Geschaffene Arbeitsplätze",
+    "context_projects": "23% Wachstum pro Jahr",
+    "context_investment": "Größter FDI-Hub auf dem ASEAN-Festland",
+    "context_countries": "Aus allen großen Volkswirtschaften",
+    "context_jobs": "Hochqualifizierte Positionen geschaffen",
+    "bottom_line": "Daten von 2025 — Thailands Investitionsförderungsbehörde"
   },
   "why_thailand": {
     "subtitle": "Thailand entdecken",

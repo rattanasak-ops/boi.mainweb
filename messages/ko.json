@@ -26,6 +26,7 @@
     "search_placeholder": "인센티브, 서비스 또는 투자 정보 검색...",
     "search_button": "검색",
     "scroll": "스크롤",
+    "tagline": "Thailand Opens for You",
     "slides": {
       "gateway": {
         "badge": "태국 투자진흥위원회",
@@ -35,37 +36,42 @@
       },
       "manufacturing": {
         "badge": "제조업 우수성",
-        "headline_1": "Your",
-        "headline_2": "Manufacturing Hub",
+        "headline_1": "Open Your",
+        "headline_2": "Manufacturing Future",
         "subheadline": "세계적 수준의 시설, 경쟁력 있는 비용, 아시아 중심의 전략적 공급망"
       },
       "digital": {
         "badge": "혁신 & 기술",
-        "headline_1": "Asia's",
-        "headline_2": "Digital Gateway",
+        "headline_1": "Open",
+        "headline_2": "Digital Frontiers",
         "subheadline": "최첨단 디지털 인프라, 스마트 산업, 성장하는 테크 생태계"
       },
       "lifestyle": {
         "badge": "문화 & 삶의 질",
-        "headline_1": "Where Culture",
-        "headline_2": "Meets Opportunity",
+        "headline_1": "Open a Life",
+        "headline_2": "Beyond Business",
         "subheadline": "세계적으로 유명한 환대, 활기찬 문화, 탁월한 삶의 질"
       },
       "growth": {
         "badge": "경제 강국",
-        "headline_1": "Asia's",
-        "headline_2": "Growth Engine",
+        "headline_1": "Open",
+        "headline_2": "Limitless Growth",
         "subheadline": "아세안 중심의 전략적 위치, 7억 이상의 소비자 접근"
       }
     }
   },
   "stats": {
-    "subtitle": "투자 영향력",
-    "title": "태국 전역의 성장 견인",
+    "subtitle": "숫자가 말하다",
+    "title": "태국 전역의 투자 임팩트",
     "promoted_projects": "촉진 프로젝트",
     "total_investment": "총 투자액",
     "countries": "투자 국가",
-    "jobs": "창출 일자리"
+    "jobs": "창출 일자리",
+    "context_projects": "전년 대비 23% 성장",
+    "context_investment": "아세안 본토 최대 FDI 거점",
+    "context_countries": "세계 주요 경제국에서",
+    "context_jobs": "고급 인재 일자리 창출",
+    "bottom_line": "2025년 데이터 — 태국 투자진흥위원회"
   },
   "why_thailand": {
     "subtitle": "태국 발견",

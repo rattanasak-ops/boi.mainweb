@@ -26,6 +26,7 @@
     "search_placeholder": "Rechercher des incitations, services ou informations d'investissement...",
     "search_button": "Rechercher",
     "scroll": "Défiler",
+    "tagline": "Thailand Opens for You",
     "slides": {
       "gateway": {
         "badge": "Bureau de l'investissement de Thaïlande",
@@ -35,37 +36,42 @@
       },
       "manufacturing": {
         "badge": "Excellence manufacturière",
-        "headline_1": "Your",
-        "headline_2": "Manufacturing Hub",
+        "headline_1": "Open Your",
+        "headline_2": "Manufacturing Future",
         "subheadline": "Installations de classe mondiale, coûts compétitifs et chaîne d'approvisionnement stratégique au cœur de l'Asie"
       },
       "digital": {
         "badge": "Innovation & Technologie",
-        "headline_1": "Asia's",
-        "headline_2": "Digital Gateway",
+        "headline_1": "Open",
+        "headline_2": "Digital Frontiers",
         "subheadline": "Infrastructure numérique de pointe, industries intelligentes et écosystème tech en plein essor"
       },
       "lifestyle": {
         "badge": "Culture & Qualité de vie",
-        "headline_1": "Where Culture",
-        "headline_2": "Meets Opportunity",
+        "headline_1": "Open a Life",
+        "headline_2": "Beyond Business",
         "subheadline": "Hospitalité de renommée mondiale, culture vibrante et qualité de vie exceptionnelle"
       },
       "growth": {
         "badge": "Puissance économique",
-        "headline_1": "Asia's",
-        "headline_2": "Growth Engine",
+        "headline_1": "Open",
+        "headline_2": "Limitless Growth",
         "subheadline": "Emplacement stratégique au cœur de l'ASEAN avec accès à plus de 700 millions de consommateurs"
       }
     }
   },
   "stats": {
-    "subtitle": "Impact des investissements",
-    "title": "Stimuler la croissance à travers la Thaïlande",
+    "subtitle": "Les chiffres parlent",
+    "title": "Impact des investissements à travers la Thaïlande",
     "promoted_projects": "Projets promus",
     "total_investment": "Investissement total",
     "countries": "Pays investisseurs",
-    "jobs": "Emplois créés"
+    "jobs": "Emplois créés",
+    "context_projects": "Croissance de 23% par an",
+    "context_investment": "Plus grand hub d'IDE en ASEAN continentale",
+    "context_countries": "De toutes les grandes économies mondiales",
+    "context_jobs": "Postes hautement qualifiés créés",
+    "bottom_line": "Données de 2025 — Bureau de l'investissement de Thaïlande"
   },
   "why_thailand": {
     "subtitle": "Découvrir la Thaïlande",

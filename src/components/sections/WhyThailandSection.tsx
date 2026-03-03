@@ -7,54 +7,134 @@ import {
   Cpu,
   BadgePercent,
   GraduationCap,
-  ShieldCheck,
   Plane,
 } from "lucide-react";
 import Image from "next/image";
 
-/* ── Advantages data with varied layout roles ── */
+/* ── 5 Advantages — mapped to approved Freepik images ── */
 const advantages = [
   {
     icon: MapPin,
     titleKey: "strategic_location",
     descKey: "strategic_location_desc",
-    image: "/images/why-thailand/aerial-city.jpg",
-  },
-  {
-    icon: Cpu,
-    titleKey: "digital_infra",
-    descKey: "digital_infra_desc",
-    image: "/images/why-thailand/digital-tech.jpg",
-  },
-  {
-    icon: BadgePercent,
-    titleKey: "incentives",
-    descKey: "incentives_desc",
-    image: "/images/why-thailand/finance.jpg",
+    image: "/images/why-thailand/shipping-port.jpg",
   },
   {
     icon: GraduationCap,
     titleKey: "workforce",
     descKey: "workforce_desc",
-    image: "/images/why-thailand/workforce.jpg",
+    image: "/images/why-thailand/digital-workforce.jpg",
   },
   {
-    icon: ShieldCheck,
-    titleKey: "investor_protection",
-    descKey: "investor_protection_desc",
-    image: "/images/why-thailand/handshake.jpg",
+    icon: Cpu,
+    titleKey: "digital_infra",
+    descKey: "digital_infra_desc",
+    image: "/images/why-thailand/industrial-estate.jpg",
+  },
+  {
+    icon: BadgePercent,
+    titleKey: "incentives",
+    descKey: "incentives_desc",
+    image: "/images/why-thailand/investment-growth.jpg",
   },
   {
     icon: Plane,
     titleKey: "quality_of_life",
     descKey: "quality_of_life_desc",
-    image: "/images/why-thailand/temple.jpg",
+    image: "/images/why-thailand/lifestyle-livability.jpg",
   },
 ];
 
 const EASE_OUT = [0.22, 1, 0.36, 1] as [number, number, number, number];
 const BRAND_SHAPE =
   "polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%)";
+
+/* ── Card component — reusable for all bento items ── */
+function BentoCard({
+  item,
+  t,
+  tCommon,
+  delay,
+  className,
+  tall,
+}: {
+  item: (typeof advantages)[number];
+  t: ReturnType<typeof useTranslations>;
+  tCommon: ReturnType<typeof useTranslations>;
+  delay: number;
+  className?: string;
+  tall?: boolean;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.7, delay, ease: EASE_OUT }}
+      className={className}
+    >
+      <div
+        className="group relative h-full overflow-hidden bg-navy-900"
+        style={{ clipPath: BRAND_SHAPE }}
+      >
+        {/* Full-bleed image with zoom on hover */}
+        <Image
+          src={item.image}
+          alt={t(item.titleKey)}
+          fill
+          className="object-cover transition-transform duration-[800ms] ease-out group-hover:scale-110"
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+        />
+
+        {/* Dark gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/40 to-transparent" />
+
+        {/* Editorial inset shadow */}
+        <div className="absolute inset-0 shadow-[inset_0_-60px_80px_rgba(7,11,23,0.3)]" />
+
+        {/* Content — bottom overlay */}
+        <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500/20 border border-gold-400/30 backdrop-blur-sm mb-3">
+            <item.icon className="h-5 w-5 text-gold-400" aria-hidden="true" />
+          </div>
+          <h3
+            className={`font-bold text-white mb-2 group-hover:text-gold-200 transition-colors duration-300 ${
+              tall ? "text-2xl sm:text-3xl" : "text-lg sm:text-xl"
+            }`}
+          >
+            {t(item.titleKey)}
+          </h3>
+          <p
+            className={`text-white/60 leading-relaxed ${
+              tall ? "text-base max-w-md" : "text-sm max-w-xs line-clamp-2"
+            }`}
+          >
+            {t(item.descKey)}
+          </p>
+
+          {/* Learn more — hover reveal */}
+          <div className="mt-3 flex items-center gap-1.5 text-sm font-semibold text-gold-400 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+            {tCommon("learn_more")}
+            <svg
+              className="h-4 w-4 transition-transform group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function WhyThailandSection() {
   const t = useTranslations("why_thailand");
@@ -68,7 +148,6 @@ export default function WhyThailandSection() {
       <div className="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
         {/* ================================================
             SECTION HEADER — Left-aligned editorial style
-            NOT centered (breaks the template pattern)
             ================================================ */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16 sm:mb-20 lg:mb-28">
           <motion.div
@@ -87,8 +166,6 @@ export default function WhyThailandSection() {
                 {t("title_2")}
               </span>
             </h2>
-
-            {/* Decorative gold line — left accent */}
             <div className="mt-6 h-[2px] w-20 bg-gradient-to-r from-gold-500 to-transparent" />
           </motion.div>
 
@@ -106,135 +183,122 @@ export default function WhyThailandSection() {
         </div>
 
         {/* ================================================
-            FEATURE HERO — First 2 items as large showcase
-            Asymmetric layout: big image left + text right
-            Inspired by EEC's full-bleed image panels
+            EEC-INSPIRED BENTO GRID
+            ─────────────────────────────────────────────
+            Desktop layout (3-column asymmetric):
+
+            ┌────────────────────┬──────────┐
+            │                    │ Workforce│
+            │  Location (hero)   ├──────────┤
+            │  spans 2 cols      │  Infra   │
+            │  spans 2 rows      │          │
+            ├──────────┬─────────┴──────────┤
+            │Incentives│  Livability (wide) │
+            │          │  spans 2 cols      │
+            └──────────┴───────────────────┘
+
+            Mobile: stacked vertically
+            Tablet: 2-column simplified
             ================================================ */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-8">
-          {advantages.slice(0, 2).map((item, i) => (
-            <motion.div
-              key={item.titleKey}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{
-                duration: 0.7,
-                delay: i * 0.15,
-                ease: EASE_OUT,
-              }}
-            >
-              <div
-                className="group relative h-[400px] sm:h-[450px] lg:h-[500px] overflow-hidden bg-navy-900"
-                style={{ clipPath: BRAND_SHAPE }}
-              >
-                {/* Full-bleed image with zoom on hover */}
-                <Image
-                  src={item.image}
-                  alt={t(item.titleKey)}
-                  fill
-                  className="object-cover transition-transform duration-[800ms] ease-out group-hover:scale-110"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
 
-                {/* Dark gradient overlay — content readable */}
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/40 to-transparent" />
+        {/* ── Desktop Bento (lg+) ── */}
+        <div className="hidden lg:grid grid-cols-3 grid-rows-[260px_260px_320px] gap-5">
+          {/* Item 1 — Location (hero: col 1-2, row 1-2) */}
+          <BentoCard
+            item={advantages[0]}
+            t={t}
+            tCommon={tCommon}
+            delay={0}
+            className="col-span-2 row-span-2"
+            tall
+          />
 
-                {/* Editorial shadow on image (EEC: box-shadow: 50px 50px 100px) */}
-                <div className="absolute inset-0 shadow-[inset_0_-60px_80px_rgba(7,11,23,0.3)]" />
+          {/* Item 2 — Workforce (col 3, row 1) */}
+          <BentoCard
+            item={advantages[1]}
+            t={t}
+            tCommon={tCommon}
+            delay={0.1}
+          />
 
-                {/* Content — bottom overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 sm:p-10">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-500/20 border border-gold-400/30 backdrop-blur-sm mb-4">
-                    <item.icon
-                      className="h-6 w-6 text-gold-400"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 group-hover:text-gold-200 transition-colors duration-300">
-                    {t(item.titleKey)}
-                  </h3>
-                  <p className="text-base text-white/60 leading-relaxed max-w-md">
-                    {t(item.descKey)}
-                  </p>
+          {/* Item 3 — Infrastructure (col 3, row 2) */}
+          <BentoCard
+            item={advantages[2]}
+            t={t}
+            tCommon={tCommon}
+            delay={0.2}
+          />
 
-                  {/* Learn more — hover reveal */}
-                  <div className="mt-4 flex items-center gap-1.5 text-sm font-semibold text-gold-400 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                    {tCommon("learn_more")}
-                    <svg
-                      className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+          {/* Item 4 — Incentives (col 1, row 3) */}
+          <BentoCard
+            item={advantages[3]}
+            t={t}
+            tCommon={tCommon}
+            delay={0.25}
+          />
+
+          {/* Item 5 — Livability (col 2-3, row 3) */}
+          <BentoCard
+            item={advantages[4]}
+            t={t}
+            tCommon={tCommon}
+            delay={0.3}
+            className="col-span-2"
+          />
         </div>
 
-        {/* ================================================
-            FEATURE GRID — Remaining 4 items as smaller cards
-            Different layout from the top 2 = visual variety
-            ================================================ */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
-          {advantages.slice(2).map((item, i) => (
-            <motion.div
+        {/* ── Tablet Bento (md only) ── */}
+        <div className="hidden md:grid lg:hidden grid-cols-2 gap-5">
+          <BentoCard
+            item={advantages[0]}
+            t={t}
+            tCommon={tCommon}
+            delay={0}
+            className="col-span-2 h-[400px]"
+            tall
+          />
+          <BentoCard
+            item={advantages[1]}
+            t={t}
+            tCommon={tCommon}
+            delay={0.1}
+            className="h-[280px]"
+          />
+          <BentoCard
+            item={advantages[2]}
+            t={t}
+            tCommon={tCommon}
+            delay={0.15}
+            className="h-[280px]"
+          />
+          <BentoCard
+            item={advantages[3]}
+            t={t}
+            tCommon={tCommon}
+            delay={0.2}
+            className="h-[280px]"
+          />
+          <BentoCard
+            item={advantages[4]}
+            t={t}
+            tCommon={tCommon}
+            delay={0.25}
+            className="h-[280px]"
+          />
+        </div>
+
+        {/* ── Mobile Stack ── */}
+        <div className="flex flex-col gap-5 md:hidden">
+          {advantages.map((item, i) => (
+            <BentoCard
               key={item.titleKey}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{
-                duration: 0.6,
-                delay: i * 0.1,
-                ease: EASE_OUT,
-              }}
-            >
-              <div className="group relative h-full bg-white border border-border hover:border-gold-300/60 transition-all duration-500 overflow-hidden hover:shadow-xl hover:shadow-gold-500/[0.06]"
-                style={{ clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%)" }}
-              >
-                {/* Top accent line */}
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-gold-500 to-gold-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                {/* Image — compact */}
-                <div className="relative h-40 overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={t(item.titleKey)}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900/50 to-transparent" />
-
-                  {/* Icon badge */}
-                  <div className="absolute bottom-3 left-4 flex h-10 w-10 items-center justify-center rounded-lg bg-white/90 backdrop-blur-sm shadow-lg">
-                    <item.icon
-                      className="h-5 w-5 text-gold-600"
-                      aria-hidden="true"
-                    />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-5 sm:p-6">
-                  <h3 className="text-base font-semibold text-navy-600 group-hover:text-navy-700 leading-snug">
-                    {t(item.titleKey)}
-                  </h3>
-                  <p className="mt-2 text-sm text-text-secondary leading-relaxed line-clamp-3">
-                    {t(item.descKey)}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+              item={item}
+              t={t}
+              tCommon={tCommon}
+              delay={i * 0.1}
+              className={i === 0 ? "h-[380px]" : "h-[280px]"}
+              tall={i === 0}
+            />
           ))}
         </div>
       </div>

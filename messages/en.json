@@ -26,6 +26,7 @@
     "search_placeholder": "Search incentives, services, or investment info...",
     "search_button": "Search",
     "scroll": "Scroll",
+    "tagline": "Thailand Opens for You",
     "slides": {
       "gateway": {
         "badge": "Board of Investment of Thailand",
@@ -35,37 +36,42 @@
       },
       "manufacturing": {
         "badge": "Manufacturing Excellence",
-        "headline_1": "Your",
-        "headline_2": "Manufacturing Hub",
+        "headline_1": "Open Your",
+        "headline_2": "Manufacturing Future",
         "subheadline": "World-class facilities, competitive costs, and a strategic supply chain at the heart of Asia"
       },
       "digital": {
         "badge": "Innovation & Technology",
-        "headline_1": "Asia's",
-        "headline_2": "Digital Gateway",
+        "headline_1": "Open",
+        "headline_2": "Digital Frontiers",
         "subheadline": "Leading digital infrastructure, smart industries, and a thriving tech ecosystem"
       },
       "lifestyle": {
         "badge": "Culture & Quality of Life",
-        "headline_1": "Where Culture",
-        "headline_2": "Meets Opportunity",
+        "headline_1": "Open a Life",
+        "headline_2": "Beyond Business",
         "subheadline": "World-renowned hospitality, vibrant culture, and an exceptional quality of life"
       },
       "growth": {
         "badge": "Economic Powerhouse",
-        "headline_1": "Asia's",
-        "headline_2": "Growth Engine",
+        "headline_1": "Open",
+        "headline_2": "Limitless Growth",
         "subheadline": "Strategic location at the heart of ASEAN with access to 700M+ consumers"
       }
     }
   },
   "stats": {
-    "subtitle": "Investment Impact",
-    "title": "Driving Growth Across Thailand",
+    "subtitle": "The Numbers Speak",
+    "title": "Opening Impact Across Thailand",
     "promoted_projects": "Promoted Projects",
     "total_investment": "Total Investment",
     "countries": "Countries Investing",
-    "jobs": "Jobs Created"
+    "jobs": "Jobs Created",
+    "context_projects": "Growing 23% year-over-year",
+    "context_investment": "Largest FDI hub in mainland ASEAN",
+    "context_countries": "From every major economy worldwide",
+    "context_jobs": "High-skilled positions created",
+    "bottom_line": "Data as of 2025 — Board of Investment of Thailand"
   },
   "why_thailand": {
     "subtitle": "Discover Thailand",

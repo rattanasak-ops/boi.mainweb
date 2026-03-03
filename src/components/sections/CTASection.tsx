@@ -44,7 +44,7 @@ export default function CTASection() {
           Creates emotional "come to Thailand" feeling
           ================================================ */}
       <Image
-        src="/images/why-thailand/temple.jpg"
+        src="/images/hero/golden-arch.jpg"
         alt=""
         fill
         className="object-cover"

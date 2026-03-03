@@ -26,6 +26,7 @@
     "search_placeholder": "優遇措置、サービス、投資情報を検索...",
     "search_button": "検索",
     "scroll": "スクロール",
+    "tagline": "Thailand Opens for You",
     "slides": {
       "gateway": {
         "badge": "タイ投資委員会",
@@ -35,37 +36,42 @@
       },
       "manufacturing": {
         "badge": "製造業の卓越性",
-        "headline_1": "Your",
-        "headline_2": "Manufacturing Hub",
+        "headline_1": "Open Your",
+        "headline_2": "Manufacturing Future",
         "subheadline": "世界クラスの施設、競争力のあるコスト、アジアの中心に位置する戦略的サプライチェーン"
       },
       "digital": {
         "badge": "イノベーション＆テクノロジー",
-        "headline_1": "Asia's",
-        "headline_2": "Digital Gateway",
+        "headline_1": "Open",
+        "headline_2": "Digital Frontiers",
         "subheadline": "最先端のデジタルインフラ、スマート産業、そして成長するテックエコシステム"
       },
       "lifestyle": {
         "badge": "文化＆生活の質",
-        "headline_1": "Where Culture",
-        "headline_2": "Meets Opportunity",
+        "headline_1": "Open a Life",
+        "headline_2": "Beyond Business",
         "subheadline": "世界に名高いおもてなし、活気ある文化、そして卓越した生活の質"
       },
       "growth": {
         "badge": "経済大国",
-        "headline_1": "Asia's",
-        "headline_2": "Growth Engine",
+        "headline_1": "Open",
+        "headline_2": "Limitless Growth",
         "subheadline": "ASEAN中心の戦略的立地、7億人以上の消費者へのアクセス"
       }
     }
   },
   "stats": {
-    "subtitle": "投資インパクト",
-    "title": "タイ全土の成長を推進",
+    "subtitle": "数字が語る",
+    "title": "タイ全土に広がる投資インパクト",
     "promoted_projects": "促進プロジェクト",
     "total_investment": "総投資額",
     "countries": "投資国数",
-    "jobs": "創出雇用"
+    "jobs": "創出雇用",
+    "context_projects": "前年比23%増",
+    "context_investment": "ASEAN本土最大のFDI拠点",
+    "context_countries": "世界の主要経済国から",
+    "context_jobs": "高度人材ポジションを創出",
+    "bottom_line": "2025年データ — タイ投資委員会"
   },
   "why_thailand": {
     "subtitle": "タイを発見",

@@ -26,6 +26,7 @@
     "search_placeholder": "ค้นหาสิทธิประโยชน์ บริการ หรือข้อมูลการลงทุน...",
     "search_button": "ค้นหา",
     "scroll": "เลื่อนลง",
+    "tagline": "Thailand Opens for You",
     "slides": {
       "gateway": {
         "badge": "สำนักงานคณะกรรมการส่งเสริมการลงทุน",
@@ -35,37 +36,42 @@
       },
       "manufacturing": {
         "badge": "ศูนย์กลางการผลิตระดับโลก",
-        "headline_1": "Your",
-        "headline_2": "Manufacturing Hub",
+        "headline_1": "Open Your",
+        "headline_2": "Manufacturing Future",
         "subheadline": "โรงงานระดับโลก ต้นทุนแข่งขันได้ ซัพพลายเชนยุทธศาสตร์ใจกลางเอเชีย"
       },
       "digital": {
         "badge": "นวัตกรรม & เทคโนโลยี",
-        "headline_1": "Asia's",
-        "headline_2": "Digital Gateway",
+        "headline_1": "Open",
+        "headline_2": "Digital Frontiers",
         "subheadline": "โครงสร้างพื้นฐานดิจิทัลชั้นนำ อุตสาหกรรมอัจฉริยะ และระบบนิเวศเทคโนโลยีที่เติบโต"
       },
       "lifestyle": {
         "badge": "วัฒนธรรม & คุณภาพชีวิต",
-        "headline_1": "Where Culture",
-        "headline_2": "Meets Opportunity",
+        "headline_1": "Open a Life",
+        "headline_2": "Beyond Business",
         "subheadline": "การต้อนรับระดับโลก วัฒนธรรมอันมีชีวิตชีวา และคุณภาพชีวิตที่เหนือกว่า"
       },
       "growth": {
         "badge": "มหาอำนาจเศรษฐกิจ",
-        "headline_1": "Asia's",
-        "headline_2": "Growth Engine",
+        "headline_1": "Open",
+        "headline_2": "Limitless Growth",
         "subheadline": "ทำเลยุทธศาสตร์ใจกลางอาเซียน เข้าถึงผู้บริโภคกว่า 700 ล้านคน"
       }
     }
   },
   "stats": {
-    "subtitle": "ผลกระทบการลงทุน",
-    "title": "ขับเคลื่อนการเติบโตทั่วประเทศไทย",
+    "subtitle": "ตัวเลขพูดแทน",
+    "title": "เปิดผลกระทบการลงทุนทั่วประเทศไทย",
     "promoted_projects": "โครงการที่ได้รับการส่งเสริม",
     "total_investment": "มูลค่าการลงทุนรวม",
     "countries": "ประเทศที่เข้ามาลงทุน",
-    "jobs": "ตำแหน่งงานที่สร้างขึ้น"
+    "jobs": "ตำแหน่งงานที่สร้างขึ้น",
+    "context_projects": "เติบโต 23% ต่อปี",
+    "context_investment": "ศูนย์กลาง FDI ที่ใหญ่ที่สุดในอาเซียนแผ่นดินใหญ่",
+    "context_countries": "จากทุกมหาอำนาจเศรษฐกิจทั่วโลก",
+    "context_jobs": "ตำแหน่งงานทักษะสูงที่ถูกสร้างขึ้น",
+    "bottom_line": "ข้อมูล ณ ปี 2568 — สำนักงานคณะกรรมการส่งเสริมการลงทุน"
   },
   "why_thailand": {
     "subtitle": "ค้นพบประเทศไทย",

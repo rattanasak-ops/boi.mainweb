@@ -26,6 +26,7 @@
     "search_placeholder": "搜索优惠政策、服务或投资信息...",
     "search_button": "搜索",
     "scroll": "向下滚动",
+    "tagline": "Thailand Opens for You",
     "slides": {
       "gateway": {
         "badge": "泰国投资促进委员会",
@@ -35,37 +36,42 @@
       },
       "manufacturing": {
         "badge": "制造业卓越中心",
-        "headline_1": "Your",
-        "headline_2": "Manufacturing Hub",
+        "headline_1": "Open Your",
+        "headline_2": "Manufacturing Future",
         "subheadline": "世界级设施、具有竞争力的成本、位于亚洲中心的战略供应链"
       },
       "digital": {
         "badge": "创新与科技",
-        "headline_1": "Asia's",
-        "headline_2": "Digital Gateway",
+        "headline_1": "Open",
+        "headline_2": "Digital Frontiers",
         "subheadline": "领先的数字基础设施、智能产业和蓬勃发展的科技生态系统"
       },
       "lifestyle": {
         "badge": "文化与生活品质",
-        "headline_1": "Where Culture",
-        "headline_2": "Meets Opportunity",
+        "headline_1": "Open a Life",
+        "headline_2": "Beyond Business",
         "subheadline": "享誉全球的热情好客、多彩文化和卓越的生活品质"
       },
       "growth": {
         "badge": "经济强国",
-        "headline_1": "Asia's",
-        "headline_2": "Growth Engine",
+        "headline_1": "Open",
+        "headline_2": "Limitless Growth",
         "subheadline": "位于东盟中心的战略位置，覆盖7亿多消费者"
       }
     }
   },
   "stats": {
-    "subtitle": "投资影响",
-    "title": "推动泰国全面增长",
+    "subtitle": "数据说话",
+    "title": "泰国全境投资影响力",
     "promoted_projects": "促进项目",
     "total_investment": "总投资额",
     "countries": "投资国家",
-    "jobs": "创造就业"
+    "jobs": "创造就业",
+    "context_projects": "年增长率23%",
+    "context_investment": "东盟大陆最大FDI中心",
+    "context_countries": "来自全球主要经济体",
+    "context_jobs": "创造高技能岗位",
+    "bottom_line": "2025年数据 — 泰国投资促进委员会"
   },
   "why_thailand": {
     "subtitle": "发现泰国",
