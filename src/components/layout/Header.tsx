@@ -37,6 +37,7 @@ import {
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import LanguageSwitcher from "./LanguageSwitcher";
+import BOILogo from "@/components/ui/BOILogo";
 
 /* ── Brand Shape ── */
 const BRAND_SHAPE_SM =
@@ -240,22 +241,9 @@ export default function Header() {
 
         <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
           <div className="flex h-16 lg:h-[72px] items-center justify-between">
-            {/* ── Logo ── */}
-            <Link href="/" className="flex items-center gap-3 shrink-0" aria-label="BOI Thailand - Home">
-              <motion.div
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              >
-                <Image
-                  src="/images/boi-logo.svg"
-                  alt="BOI Thailand"
-                  width={160}
-                  height={44}
-                  priority
-                  className="h-10 w-auto"
-                />
-              </motion.div>
+            {/* ── Logo — Interactive BOI Mark ── */}
+            <Link href="/" className="flex items-center shrink-0" aria-label="BOI Thailand - Home">
+              <BOILogo variant="header" className="h-11 w-auto" />
             </Link>
 
             {/* ── Desktop Navigation with Mega Menu triggers ── */}

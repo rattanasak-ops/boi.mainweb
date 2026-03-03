@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Phone, Mail, MapPin } from "lucide-react";
+import BOILogo from "@/components/ui/BOILogo";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -11,9 +12,16 @@ export default function Footer() {
 
   return (
     <footer className="bg-navy-600 text-white" role="contentinfo">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
+        {/* Logo + divider */}
+        <div className="pt-12 pb-8 border-b border-navy-500/50">
+          <Link href="/" aria-label="BOI Thailand - Home">
+            <BOILogo variant="footer" />
+          </Link>
+        </div>
+
         {/* Main footer */}
-        <div className="grid grid-cols-1 gap-8 py-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 py-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Contact */}
           <div>
             <h2 className="text-lg font-semibold text-gold-400 mb-4">
