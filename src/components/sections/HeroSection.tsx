@@ -375,6 +375,7 @@ export default function HeroSection() {
                 autoPlay
                 muted
                 playsInline
+                preload="metadata"
                 poster={slide.image}
                 className="absolute inset-0 w-full h-full object-cover"
               >
@@ -547,12 +548,13 @@ export default function HeroSection() {
             >
               <MagneticCTA
                 variant="primary"
+                href="/invest/eligibility-checker"
                 icon={<CheckCircle className="h-5 w-5" />}
               >
                 {t("cta_eligibility")}
               </MagneticCTA>
 
-              <MagneticCTA variant="secondary">
+              <MagneticCTA variant="secondary" href="/services/apply">
                 {t("cta_apply")}
               </MagneticCTA>
             </motion.div>

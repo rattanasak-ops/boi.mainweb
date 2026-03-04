@@ -86,7 +86,7 @@ export default function IndustriesGrid() {
               }}
               className="group"
             >
-              <Link href={`/discover/industries/${industry.key}`}>
+              <Link href="/discover/industries">
                 <div
                   className="relative p-8 sm:p-10 lg:p-12 bg-navy-950 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-navy-950/30"
                   style={{ clipPath: BRAND_SHAPE }}
@@ -163,7 +163,7 @@ export default function IndustriesGrid() {
               }}
               className="group"
             >
-              <Link href={`/discover/industries/${industry.key}`}>
+              <Link href="/discover/industries">
                 <div
                   className="relative p-6 sm:p-8 bg-white border border-border hover:border-gold-300/60 transition-all duration-500 hover:shadow-lg hover:shadow-gold-500/[0.06] overflow-hidden h-full"
                   style={{ clipPath: BRAND_SHAPE }}

@@ -177,7 +177,7 @@ const services: ServiceConfig[] = [
     statusKey: "incentive_calc_status",
     statKey: "incentive_calc_stat",
     ctaKey: "incentive_calc_cta",
-    href: "/services/incentive-calculator",
+    href: "/invest/incentives",
     variant: "calculator",
     imageSrc: "/images/services/incentive-calculator.jpg",
   },

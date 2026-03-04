@@ -166,31 +166,34 @@ export default function AnimatedFavicon() {
     }
     linkRef.current = link;
 
-    // Animation timing
-    const CYCLE = 3000; // one shimmer sweep every 3s
-    const SWEEP_DURATION = 600; // shimmer takes 600ms to cross
+    const CYCLE = 3000;
+    const SWEEP_DURATION = 600;
+    const THROTTLE_MS = 100;
     let animId: number;
     let startTime: number | null = null;
+    let lastFrameTime = 0;
 
     function animate(timestamp: number) {
       if (!startTime) startTime = timestamp;
-      const elapsed = (timestamp - startTime) % CYCLE;
 
-      ctx!.clearRect(0, 0, SIZE, SIZE);
-      drawShield(ctx!);
+      if (timestamp - lastFrameTime >= THROTTLE_MS) {
+        lastFrameTime = timestamp;
+        const elapsed = (timestamp - startTime) % CYCLE;
 
-      // Shimmer sweep during first SWEEP_DURATION ms of each cycle
-      if (elapsed < SWEEP_DURATION) {
-        const progress = elapsed / SWEEP_DURATION;
-        const shimmerX = -12 + progress * (SIZE + 24); // sweep full width
-        const opacity = 0.35 * Math.sin(progress * Math.PI); // fade in/out
-        drawShimmer(ctx!, shimmerX, opacity);
-      }
+        ctx!.clearRect(0, 0, SIZE, SIZE);
+        drawShield(ctx!);
 
-      // Update favicon
-      if (linkRef.current) {
-        linkRef.current.type = "image/png";
-        linkRef.current.href = canvas.toDataURL("image/png");
+        if (elapsed < SWEEP_DURATION) {
+          const progress = elapsed / SWEEP_DURATION;
+          const shimmerX = -12 + progress * (SIZE + 24);
+          const opacity = 0.35 * Math.sin(progress * Math.PI);
+          drawShimmer(ctx!, shimmerX, opacity);
+        }
+
+        if (linkRef.current) {
+          linkRef.current.type = "image/png";
+          linkRef.current.href = canvas.toDataURL("image/png");
+        }
       }
 
       animId = requestAnimationFrame(animate);

@@ -132,7 +132,7 @@ function FeaturedCard({ item, t }: { item: (typeof news)[0]; t: ReturnType<typeo
         className="relative"
       >
         <a
-          href="#"
+          href="/resources/news"
           className="block h-full overflow-hidden border border-border transition-all duration-500"
           style={{ clipPath: BRAND_SHAPE }}
         >
@@ -316,7 +316,7 @@ function SideCard({
         }}
       >
         <a
-          href="#"
+          href="/resources/news"
           className="flex gap-5 p-5 h-full border border-border bg-white transition-all duration-300 relative overflow-hidden"
           style={{ clipPath: BRAND_SHAPE_SM }}
         >
@@ -457,7 +457,7 @@ export default function LatestNewsSection() {
             />
           </div>
           <motion.a
-            href="#"
+            href="/resources/news"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
             className="hidden sm:inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-gold-600 border border-gold-400/30 hover:border-gold-400 hover:bg-gold-50 hover:shadow-lg hover:shadow-gold-500/10 transition-all duration-300"
@@ -493,7 +493,7 @@ export default function LatestNewsSection() {
           className="mt-10 text-center sm:hidden"
         >
           <a
-            href="#"
+            href="/resources/news"
             className="inline-flex items-center gap-2 text-gold-600 font-semibold text-sm"
           >
             {tCommon("view_all")}

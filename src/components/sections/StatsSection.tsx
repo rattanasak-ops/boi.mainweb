@@ -345,7 +345,7 @@ export default function StatsSection() {
           transition={{ duration: 0.7, delay: 1.5, ease: EASE_OUT }}
         >
           <a
-            href="#"
+            href="/resources/data"
             className="group/cta inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 text-white font-semibold text-sm shadow-lg shadow-gold-500/20 hover:shadow-xl hover:shadow-gold-500/30 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 relative overflow-hidden"
           >
             {/* Shimmer sweep on hover */}

@@ -28,7 +28,7 @@ interface MagneticCTAProps {
 
 export default function MagneticCTA({
   children,
-  href = "#",
+  href = "/invest/getting-started",
   variant = "primary",
   className = "",
   icon,

@@ -110,7 +110,7 @@ export default function SuccessStoriesGrid() {
                 transition={{ duration: 0.7, delay: 0.1 * i, ease: EASE_OUT }}
               >
                 <Link
-                  href={`/discover/success-stories/${story.slug}`}
+                  href="/discover/success-stories"
                   className="group block h-full"
                 >
                   <div
@@ -188,14 +188,14 @@ export default function SuccessStoriesGrid() {
               transition={{ duration: 0.6, delay: 0.08 * i, ease: EASE_OUT }}
             >
               <Link
-                href={`/discover/success-stories/${story.slug}`}
-                className="group block h-full"
-              >
-                <div
-                  className="relative h-full overflow-hidden bg-white border border-border hover:border-gold-500/30 hover:shadow-[0_20px_60px_rgba(27,42,74,0.08)] transition-all duration-500"
-                  style={{ clipPath: BRAND_SHAPE }}
+                  href="/discover/success-stories"
+                  className="group block h-full"
                 >
-                  <div className="relative h-48 overflow-hidden">
+                  <div
+                    className="relative h-full overflow-hidden bg-white border border-border hover:border-gold-500/30 hover:shadow-[0_20px_60px_rgba(27,42,74,0.08)] transition-all duration-500"
+                    style={{ clipPath: BRAND_SHAPE }}
+                  >
+                    <div className="relative h-48 overflow-hidden">
                     <Image
                       src={story.image}
                       alt=""

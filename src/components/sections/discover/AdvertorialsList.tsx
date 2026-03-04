@@ -174,7 +174,7 @@ export default function AdvertorialsList() {
                   transition={{ duration: 0.7, ease: EASE_OUT }}
                   className="lg:col-span-3 group"
                 >
-                  <Link href="#">
+                  <Link href="/discover/advertorials">
                     <div
                       className="relative h-full min-h-[380px] sm:min-h-[440px] lg:min-h-[500px] overflow-hidden border border-border hover:border-gold-300/60 transition-all duration-500 hover:shadow-2xl hover:shadow-gold-500/[0.06]"
                       style={{ clipPath: BRAND_SHAPE }}
@@ -250,7 +250,7 @@ export default function AdvertorialsList() {
                       }}
                       className="group"
                     >
-                      <Link href="#">
+                      <Link href="/discover/advertorials">
                         <div
                           className="flex gap-4 sm:gap-5 p-4 sm:p-5 h-full bg-white border border-border hover:border-gold-300/60 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/[0.04]"
                           style={{ clipPath: BRAND_SHAPE_SM }}
@@ -320,7 +320,7 @@ export default function AdvertorialsList() {
                     }}
                     className="group"
                   >
-                    <Link href="#">
+                    <Link href="/discover/advertorials">
                       <div
                         className="relative overflow-hidden bg-white border border-border hover:border-gold-300/60 transition-all duration-500 hover:shadow-lg hover:shadow-gold-500/[0.06]"
                         style={{ clipPath: BRAND_SHAPE }}

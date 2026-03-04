@@ -41,6 +41,9 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   output: "standalone",
   basePath: process.env.BASE_PATH || "",
+  experimental: {
+    optimizePackageImports: ["lucide-react"],
+  },
   async headers() {
     return [
       {

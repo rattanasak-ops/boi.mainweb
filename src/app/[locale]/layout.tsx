@@ -6,12 +6,10 @@ import { inter, notoSansThai } from "@/lib/fonts";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
+import MotionProvider from "@/components/providers/MotionProvider";
+import ClientWidgets from "@/components/providers/ClientWidgets";
 import AnimatedFavicon from "@/components/ui/AnimatedFavicon";
 import GrandGateLoading from "@/components/ui/GrandGateLoading";
-import ScrollNavigator from "@/components/ui/ScrollNavigator";
-import AccessibilityWidget from "@/components/ui/AccessibilityWidget";
-import CookieConsent from "@/components/ui/CookieConsent";
-import ChatWidget from "@/components/ui/ChatWidget";
 import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/seo/JsonLd";
 import "../globals.css";
 
@@ -86,6 +84,7 @@ export default async function LocaleLayout({
         <AnimatedFavicon />
         <NextIntlClientProvider messages={messages}>
           <GrandGateLoading />
+          <MotionProvider>
           <SmoothScrollProvider>
             {/* Skip to main content — WCAG 2.4.1 */}
             <a href="#main-content" className="skip-to-main">
@@ -99,11 +98,9 @@ export default async function LocaleLayout({
             </main>
 
             <Footer />
-            <ScrollNavigator />
-            <AccessibilityWidget />
-            <CookieConsent />
-            <ChatWidget />
+            <ClientWidgets />
           </SmoothScrollProvider>
+          </MotionProvider>
         </NextIntlClientProvider>
       </body>
     </html>

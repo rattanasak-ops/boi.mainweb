@@ -128,7 +128,7 @@ export default function EventsListSection() {
                 }}
               >
                 <Link
-                  href={`/resources/events/${event.slug}`}
+                  href="/resources/events"
                   className="group block"
                 >
                   <div
@@ -235,9 +235,9 @@ export default function EventsListSection() {
               }}
             >
               <Link
-                href={`/resources/events/${event.slug}`}
-                className="group block h-full"
-              >
+                  href="/resources/events"
+                  className="group block h-full"
+                >
                 <div
                   className="relative h-full overflow-hidden bg-white border border-border hover:border-gold-500/30 hover:shadow-[0_20px_60px_rgba(27,42,74,0.08)] transition-all duration-500"
                   style={{ clipPath: BRAND_SHAPE }}
