@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Clock, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 import { useRef, useState, useCallback, type MouseEvent } from "react";
 
 /* ────────────────────────────────────────────
@@ -131,7 +132,7 @@ function FeaturedCard({ item, t }: { item: (typeof news)[0]; t: ReturnType<typeo
         }}
         className="relative"
       >
-        <a
+        <Link
           href="/resources/news"
           className="block h-full overflow-hidden border border-border transition-all duration-500"
           style={{ clipPath: BRAND_SHAPE }}
@@ -233,7 +234,7 @@ function FeaturedCard({ item, t }: { item: (typeof news)[0]; t: ReturnType<typeo
               </div>
             </div>
           </div>
-        </a>
+        </Link>
 
         {/* ── Hover border glow (outside clip-path) ── */}
         <motion.div
@@ -315,7 +316,7 @@ function SideCard({
           transformPerspective: 600,
         }}
       >
-        <a
+        <Link
           href="/resources/news"
           className="flex gap-5 p-5 h-full border border-border bg-white transition-all duration-300 relative overflow-hidden"
           style={{ clipPath: BRAND_SHAPE_SM }}
@@ -409,7 +410,7 @@ function SideCard({
               </motion.div>
             </div>
           </div>
-        </a>
+        </Link>
       </motion.div>
     </motion.article>
   );
@@ -492,13 +493,13 @@ export default function LatestNewsSection() {
           transition={{ duration: 0.5, delay: 0.4, ease: EASE_OUT }}
           className="mt-10 text-center sm:hidden"
         >
-          <a
+          <Link
             href="/resources/news"
             className="inline-flex items-center gap-2 text-gold-600 font-semibold text-sm"
           >
             {tCommon("view_all")}
             <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { MapPin, Building2, Zap, ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { Link } from "@/i18n/navigation";
 
 const EASE_OUT = [0.22, 1, 0.36, 1] as [number, number, number, number];
 const BRAND_SHAPE =

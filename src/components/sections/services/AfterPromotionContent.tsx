@@ -7,7 +7,6 @@ import {
   FileCheck,
   BarChart3,
   Settings,
-  CheckCircle,
   AlertTriangle,
 } from "lucide-react";
 

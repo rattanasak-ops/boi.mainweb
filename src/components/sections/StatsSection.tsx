@@ -10,6 +10,7 @@ import {
 } from "framer-motion";
 import { TrendingUp, Landmark, Globe2, Users, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 import { useRef } from "react";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import RadialProgress from "@/components/ui/RadialProgress";
@@ -344,7 +345,7 @@ export default function StatsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 1.5, ease: EASE_OUT }}
         >
-          <a
+          <Link
             href="/resources/data"
             className="group/cta inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 text-white font-semibold text-sm shadow-lg shadow-gold-500/20 hover:shadow-xl hover:shadow-gold-500/30 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 relative overflow-hidden"
           >
@@ -355,7 +356,7 @@ export default function StatsSection() {
             />
             <span className="relative">{t("cta")}</span>
             <ArrowRight className="relative w-4 h-4 group-hover/cta:translate-x-1 transition-transform duration-300" />
-          </a>
+          </Link>
         </motion.div>
       </div>
 

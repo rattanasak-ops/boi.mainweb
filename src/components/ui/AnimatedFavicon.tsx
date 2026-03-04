@@ -14,7 +14,6 @@ import { useEffect, useRef } from "react";
 const SIZE = 64; // canvas resolution (retina-friendly)
 const NAVY = "#1B2A4A";
 const GOLD = "#C5A572";
-const GOLD_LIGHT = "#E8D5A8";
 
 function drawShield(ctx: CanvasRenderingContext2D) {
   const cx = SIZE / 2;

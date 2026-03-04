@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
-  CheckCircle,
   LogIn,
   UserPlus,
   FileText,

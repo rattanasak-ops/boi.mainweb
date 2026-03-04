@@ -23,8 +23,6 @@ import MagneticCTA from "@/components/ui/MagneticCTA";
 const EASE_OUT = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 /* ── BOI Brand Shape — chamfered corner motif ── */
-const BRAND_SHAPE =
-  "polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%)";
 const BRAND_SHAPE_SM =
   "polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%)";
 
