@@ -16,7 +16,6 @@ const cspDirectives = [
   "base-uri 'self'",
   "form-action 'self'",
   "frame-ancestors 'none'",
-  "upgrade-insecure-requests",
 ].join("; ");
 
 const securityHeaders = [
@@ -28,10 +27,11 @@ const securityHeaders = [
     key: "Permissions-Policy",
     value: "camera=(), microphone=(), geolocation=()",
   },
-  {
-    key: "Strict-Transport-Security",
-    value: "max-age=63072000; includeSubDomains; preload",
-  },
+  // HSTS — enable when HTTPS is configured on production
+  // {
+  //   key: "Strict-Transport-Security",
+  //   value: "max-age=63072000; includeSubDomains; preload",
+  // },
   {
     key: "Content-Security-Policy",
     value: cspDirectives,
