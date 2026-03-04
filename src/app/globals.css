@@ -236,9 +236,7 @@ html[data-theme="dark"] [class*="border-navy-100/"] {
 }
 
 /* --- E. SHADOWS: Adjust for dark backgrounds --- */
-html[data-theme="dark"] [class*="shadow-"] {
-  --tw-shadow-color: rgba(0, 0, 0, 0.5);
-}
+/* Shadow color tuning is handled per-component; no global override needed. */
 
 /* --- F. GRADIENTS: Light gradients → subtle dark variants --- */
 /* Navy dark gradients — keep/deepen */
@@ -349,67 +347,9 @@ html[data-layout="dashboard"] {
   --layout-columns: 12;
 }
 
-/* ===== Mood — Apply to real elements ===== */
-/* Cards & panels — mood radius */
-html[data-mood] :is(
-  [class*="rounded-lg"],
-  [class*="rounded-xl"],
-  [class*="rounded-2xl"]
-) {
-  border-radius: var(--mood-card-radius);
-  transition: border-radius 0.3s ease;
-}
-
-/* Buttons — mood radius */
-html[data-mood] button:not([class*="rounded-full"]) {
-  border-radius: var(--mood-button-radius);
-  transition: border-radius 0.3s ease;
-}
-
-/* Sections — mood padding */
-html[data-mood] main > section {
-  padding-block: var(--mood-section-padding);
-  transition: padding 0.3s ease;
-}
-
-/* Shadows — mood shadow on elevated elements */
-html[data-mood] [class*="shadow-lg"],
-html[data-mood] [class*="shadow-xl"],
-html[data-mood] [class*="shadow-2xl"] {
-  box-shadow: var(--mood-shadow-lg);
-  transition: box-shadow 0.3s ease;
-}
-
-html[data-mood] [class*="shadow-md"],
-html[data-mood] [class*="shadow-sm"] {
-  box-shadow: var(--mood-shadow);
-  transition: box-shadow 0.3s ease;
-}
-
-/* Border width — mood border */
-html[data-mood] [class*="border"]:not([class*="border-0"]) {
-  border-width: var(--mood-border-width);
-}
-
-/* ===== Layout — Apply to real elements ===== */
-/* Content max-width — affects main container */
-html[data-layout] main > section > div:first-child {
-  max-width: var(--layout-max-width);
-  margin-inline: auto;
-  transition: max-width 0.4s ease;
-}
-
-/* Hero section height */
-html[data-layout] main > section:first-child {
-  min-height: var(--layout-hero-height);
-  transition: min-height 0.4s ease;
-}
-
-/* Grid gap */
-html[data-layout] [class*="grid"] {
-  gap: var(--layout-gap);
-  transition: gap 0.3s ease;
-}
+/* ===== Mood & Layout — Opt-in classes ===== */
+/* Components use mood-* tokens via explicit utility classes, not global overrides.
+   The CSS custom properties above are available for components to consume directly. */
 
 /* ===== Base styles ===== */
 body {

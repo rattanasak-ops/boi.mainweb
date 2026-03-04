@@ -20,7 +20,7 @@ export default function Footer() {
       <div className="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
         {/* Logo + divider */}
         <div className="pt-12 pb-8 border-b border-navy-500/50">
-          <Link href="/" aria-label="BOI Thailand - Home">
+          <Link href="/" aria-label="BOI Thailand - Home" className="inline-block">
             <BOILogo variant="footer" />
           </Link>
         </div>

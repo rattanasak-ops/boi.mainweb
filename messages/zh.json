@@ -1019,17 +1019,18 @@
     "always_on": "始终开启"
   },
   "chat": {
-    "title": "BOI助手",
-    "subtitle": "AI投资指南",
-    "welcome": "您好！有什么可以帮您？",
-    "welcome_desc": "欢迎咨询泰国投资相关问题。",
-    "quick_eligibility": "我是否符合BOI促进条件？",
-    "quick_incentives": "有哪些优惠政策？",
+    "title": "Arai (阿莱)",
+    "subtitle": "BOI AI投资指南",
+    "welcome": "您好！我是Arai",
+    "welcome_desc": "欢迎咨询有关BOI和泰国投资的任何问题。",
+    "demo_notice": "这是演示版本 — 信息可能不完整。",
+    "quick_eligibility": "我的企业是否有资格获得BOI促进？",
+    "quick_incentives": "有哪些投资优惠？",
     "quick_apply": "如何申请BOI？",
-    "placeholder": "咨询泰国投资...",
+    "placeholder": "询问有关泰国投资...",
     "send": "发送",
-    "disclaimer": "AI回复仅供参考，请向BOI官员核实。",
-    "demo_response": "感谢您的提问！作为BOI AI助手，我可以为您提供泰国投资促进的相关信息。BOI提供全面的优惠套餐，包括最长13年的企业所得税减免、进口关税减免以及外资控股许可等非税收优惠。您想了解更多具体优惠政策或申请流程吗？"
+    "disclaimer": "AI回答仅供参考，请向BOI官员确认。",
+    "error_response": "抱歉，连接出错。请重试。"
   },
   "language": {
     "th": "ไทย",
@@ -2096,6 +2097,8 @@
   "sitemap_page": {
     "title": "网站地图",
     "description": "BOI泰国网站所有页面和栏目的完整概览。",
+    "eyebrow": "网站地图",
+    "breadcrumb_home": "首页",
     "sections": {
       "discover": "了解泰国",
       "invest": "投资",
@@ -2126,6 +2129,8 @@
       "matchmaking": "商业配对",
       "apply": "在线申请",
       "consultation": "咨询服务",
+      "after_promotion": "促进后服务",
+      "hq_portal": "HQ Portal",
       "news": "新闻",
       "events": "活动",
       "data": "数据与统计",
@@ -2143,6 +2148,83 @@
       "privacy": "隐私政策",
       "terms": "使用条款",
       "accessibility": "无障碍访问"
+    }
+  },
+  "quick_menu": {
+    "button": "Quick Menu",
+    "button_label": "打开快捷菜单",
+    "panel_label": "快速访问BOI核心服务",
+    "title": "快捷菜单",
+    "subtitle": "一键访问BOI核心服务",
+    "hint": "按ESC关闭",
+    "invest_promote": {
+      "title": "投资与促进",
+      "subtitle": "优惠政策 · 流程 · 统计",
+      "eligible_activities": "符合条件的活动",
+      "criteria": "投资促进标准",
+      "how_to_apply": "如何申请BOI促进",
+      "announcement": "BOI公告",
+      "statistics": "统计数据",
+      "publications": "出版物"
+    },
+    "explore_learn": {
+      "title": "探索与学习",
+      "subtitle": "泰国信息 · 商业机会",
+      "know_boi": "了解BOI",
+      "cost_of_business": "经商成本",
+      "business_opportunities": "商业机会",
+      "how_to_do_business": "如何经商"
+    },
+    "services_support": {
+      "title": "服务与支持",
+      "subtitle": "在线 · 指南 · 联系我们",
+      "fastpass": "Thailand FastPass",
+      "e_services": "e-Services",
+      "boi_guide": "BOI指南",
+      "faq": "常见问题",
+      "contact_us": "联系我们"
+    }
+  },
+  "related_content": {
+    "eyebrow": "Explore More",
+    "title": "Continue Your Journey",
+    "explore": "Learn More",
+    "items": {
+      "thailand_overview": { "title": "Thailand Overview", "description": "Discover Thailand, Asia's premier investment destination" },
+      "industries": { "title": "Target Industries", "description": "Explore BOI-promoted industries and sectors" },
+      "special_zones": { "title": "Special Economic Zones", "description": "Areas with enhanced incentives for investors" },
+      "success_stories": { "title": "Success Stories", "description": "Learn from investors who succeeded in Thailand" },
+      "advertorials": { "title": "Advertorials", "description": "In-depth articles on investment opportunities" },
+      "getting_started": { "title": "Getting Started", "description": "Step-by-step guide to investing in Thailand" },
+      "eligibility_checker": { "title": "Check Eligibility", "description": "See if your project qualifies for BOI incentives" },
+      "eligible_activities": { "title": "Eligible Activities", "description": "List of activities eligible for investment promotion" },
+      "incentives": { "title": "Incentives", "description": "Tax and non-tax incentives for investors" },
+      "procedures": { "title": "Procedures", "description": "Application and processing procedures" },
+      "forms": { "title": "Forms & Downloads", "description": "Download required application forms" },
+      "guide": { "title": "Investment Guide", "description": "Comprehensive guide to investing in Thailand" },
+      "announcements": { "title": "Announcements", "description": "Latest announcements and updates from BOI" },
+      "e_investment": { "title": "e-Investment", "description": "Online investment application system" },
+      "visa": { "title": "Visa & Work Permit", "description": "Visa and work permit services for investors" },
+      "smart_visa": { "title": "SMART Visa", "description": "Special visa for tech experts and investors" },
+      "osos": { "title": "One Start One Stop (OSOS)", "description": "All-in-one service center for investors" },
+      "matchmaking": { "title": "Business Matchmaking", "description": "Connect with Thai and international partners" },
+      "apply": { "title": "Apply Online", "description": "Submit your investment promotion application" },
+      "consultation": { "title": "Consultation", "description": "Get free expert consultation from BOI" },
+      "after_promotion": { "title": "After Promotion Services", "description": "Support services for promoted businesses" },
+      "hq_portal": { "title": "HQ Portal", "description": "Services for regional headquarters" },
+      "news": { "title": "News", "description": "Latest news from BOI and investment sector" },
+      "events": { "title": "Events", "description": "BOI-organized events and seminars" },
+      "data": { "title": "Data & Statistics", "description": "Investment statistics and economic data" },
+      "publications": { "title": "Publications", "description": "Reports, analyses, and BOI publications" },
+      "multimedia": { "title": "Multimedia", "description": "Videos, infographics, and promotional media" },
+      "company_database": { "title": "Company Database", "description": "Search BOI-promoted companies" },
+      "faq": { "title": "FAQ", "description": "Answers to commonly asked investor questions" },
+      "overview": { "title": "About BOI", "description": "History, vision, and mission of BOI" },
+      "offices": { "title": "Offices", "description": "BOI offices in Thailand and worldwide" },
+      "careers": { "title": "Careers", "description": "Career opportunities at BOI" },
+      "press_center": { "title": "Press Center", "description": "Press releases and media information" },
+      "procurement": { "title": "Procurement", "description": "Procurement announcements and results" },
+      "contact": { "title": "Contact Us", "description": "Contact BOI headquarters and branches" }
     }
   }
 }

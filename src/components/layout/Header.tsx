@@ -38,6 +38,7 @@ import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion"
 import Image from "next/image";
 import LanguageSwitcher from "./LanguageSwitcher";
 import BOILogo from "@/components/ui/BOILogo";
+import QuickMenu from "./QuickMenu";
 
 /* ── Brand Shape ── */
 const BRAND_SHAPE_SM =
@@ -212,7 +213,7 @@ export default function Header() {
   return (
     <>
       <header
-        className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-border/80 shadow-sm"
+        className="sticky top-0 z-50 bg-white/95 dark:bg-navy-900/95 backdrop-blur-xl border-b border-border/80 dark:border-navy-700/80 shadow-sm"
         role="banner"
       >
         {/* Scroll progress — gold gradient */}
@@ -257,6 +258,9 @@ export default function Header() {
 
             {/* ── Right actions ── */}
             <div className="flex items-center gap-2">
+              {/* Quick Menu — 3-group shortcut panel */}
+              <QuickMenu />
+
               {/* Search — shows Cmd+K hint */}
               <motion.button
                 type="button"
@@ -323,7 +327,7 @@ export default function Header() {
               {/* Top gold accent line */}
               <div className="h-[2px] bg-gradient-to-r from-gold-500/60 via-gold-400 to-gold-500/60" />
 
-              <div className="bg-white/98 backdrop-blur-xl border-b border-border shadow-2xl shadow-navy-900/10">
+              <div className="bg-white/98 dark:bg-navy-900/98 backdrop-blur-xl border-b border-border dark:border-navy-700 shadow-2xl shadow-navy-900/10 dark:shadow-black/30">
                 <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20 py-8">
                   {megaMenuData
                     .filter((m) => m.key === activeMenu)
@@ -409,7 +413,7 @@ export default function Header() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: EASE_OUT }}
-              className="lg:hidden overflow-hidden border-t border-border bg-white"
+              className="lg:hidden overflow-hidden border-t border-border dark:border-navy-700 bg-white dark:bg-navy-900"
               role="navigation"
             >
               <div className="mx-auto max-w-7xl px-4 py-4 space-y-1">
