@@ -7,6 +7,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import MotionProvider from "@/components/providers/MotionProvider";
+import ThemeProvider, { ThemeScript } from "@/components/providers/ThemeProvider";
 import ClientWidgets from "@/components/providers/ClientWidgets";
 import AnimatedFavicon from "@/components/ui/AnimatedFavicon";
 import GrandGateLoading from "@/components/ui/GrandGateLoading";
@@ -75,14 +76,16 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${inter.variable} ${notoSansThai.variable}`}>
+    <html lang={locale} className={`${inter.variable} ${notoSansThai.variable}`} suppressHydrationWarning>
       <head>
+        <ThemeScript />
         <OrganizationJsonLd />
         <WebSiteJsonLd />
       </head>
       <body className="min-h-screen flex flex-col antialiased">
         <AnimatedFavicon />
         <NextIntlClientProvider messages={messages}>
+          <ThemeProvider>
           <GrandGateLoading />
           <MotionProvider>
           <SmoothScrollProvider>
@@ -101,6 +104,7 @@ export default async function LocaleLayout({
             <ClientWidgets />
           </SmoothScrollProvider>
           </MotionProvider>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

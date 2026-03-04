@@ -1,28 +1,19 @@
 import HeroSection from "@/components/sections/HeroSection";
-import StatsSection from "@/components/sections/StatsSection";
-import WhyThailandSection from "@/components/sections/WhyThailandSection";
-import QuickServicesSection from "@/components/sections/QuickServicesSection";
-import LatestNewsSection from "@/components/sections/LatestNewsSection";
+import HomeSections from "@/components/sections/HomeSections";
 import CTASection from "@/components/sections/CTASection";
 
 export default function HomePage() {
   return (
     <div className="flex flex-col">
+      {/* Locked: Hero — always first */}
       <div id="section-hero">
         <HeroSection />
       </div>
-      <div id="section-stats">
-        <StatsSection />
-      </div>
-      <div id="section-why-thailand">
-        <WhyThailandSection />
-      </div>
-      <div id="section-services">
-        <QuickServicesSection />
-      </div>
-      <div id="section-news">
-        <LatestNewsSection />
-      </div>
+
+      {/* Reorderable sections — user can drag to rearrange */}
+      <HomeSections />
+
+      {/* Locked: CTA — always last */}
       <div id="section-cta">
         <CTASection />
       </div>

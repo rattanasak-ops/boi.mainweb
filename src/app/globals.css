@@ -89,6 +89,9 @@
   100% { background-position: 200% center; }
 }
 
+/* ===== Hide scrollbar utility ===== */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
 /* ===== CTA Section — Glow Pulse + Shimmer ===== */
 @keyframes cta-glow-pulse {
   0%, 100% { box-shadow: 0 0 20px rgba(197,165,114,0.3), 0 0 60px rgba(197,165,114,0.1); }
@@ -115,6 +118,207 @@ html.lenis, html.lenis body {
 
 .lenis.lenis-stopped {
   overflow: hidden;
+}
+
+/* ===== Theme Transition ===== */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== Dark Mode Tokens (TOR 4.2.12) ===== */
+html[data-theme="dark"] {
+  --color-primary: #8BA3CF;
+  --color-primary-light: #A3B8DA;
+  --color-accent: #D4B882;
+  --color-accent-light: #E0C997;
+  --color-surface: #0F172A;
+  --color-surface-alt: #1E293B;
+  --color-text-primary: #E2E8F0;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted: #64748B;
+  --color-border: #334155;
+
+  color-scheme: dark;
+}
+
+/* Dark mode — targeted visual overrides */
+/* bg-white cards/panels → dark surface */
+html[data-theme="dark"] :is(.bg-white, .bg-gray-50, .bg-gray-100) {
+  background-color: #1E293B !important;
+}
+
+/* bg-navy-50, bg-surface sections → darker background */
+html[data-theme="dark"] :is(.bg-navy-50, .bg-\[\\#f0f2f6\]) {
+  background-color: #0F172A !important;
+}
+
+/* Text on formerly-white backgrounds needs to be light */
+html[data-theme="dark"] :is(.bg-white, .bg-gray-50, .bg-gray-100) :is(.text-navy-600, .text-navy-700, .text-navy-800, .text-navy-900, .text-navy-950) {
+  color: #E2E8F0 !important;
+}
+
+html[data-theme="dark"] :is(.text-gray-600, .text-gray-700, .text-gray-800, .text-gray-900) {
+  color: #94A3B8 !important;
+}
+
+/* Border adjustments for dark mode */
+html[data-theme="dark"] :is(.border-border, .border-gray-200, .border-gray-100, .border-navy-600\/10) {
+  border-color: #334155 !important;
+}
+
+/* Shadow adjustments — darker/more prominent on dark bg */
+html[data-theme="dark"] [class*="shadow-"] {
+  --tw-shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Gold stays prominent in dark mode */
+html[data-theme="dark"] .text-gold-500 { color: #D4B882 !important; }
+html[data-theme="dark"] .bg-gold-500 { background-color: #D4B882 !important; }
+
+/* Gradient backgrounds in dark mode */
+html[data-theme="dark"] .from-navy-600 { --tw-gradient-from: #162240 !important; }
+html[data-theme="dark"] .to-navy-800 { --tw-gradient-to: #0c1226 !important; }
+
+/* ===== Mood Tokens (TOR 4.2.11 — Visual Mood) ===== */
+/* Corporate: Sharp & professional */
+html[data-mood="corporate"] {
+  --mood-radius: 0.375rem;
+  --mood-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  --mood-shadow-lg: 0 4px 20px rgba(0,0,0,0.08);
+  --mood-card-radius: 0.5rem;
+  --mood-button-radius: 0.375rem;
+  --mood-section-padding: 4rem;
+  --mood-border-width: 1px;
+}
+
+/* Modern: Soft & approachable */
+html[data-mood="modern"] {
+  --mood-radius: 0.75rem;
+  --mood-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  --mood-shadow-lg: 0 8px 30px rgba(0,0,0,0.1);
+  --mood-card-radius: 1rem;
+  --mood-button-radius: 0.75rem;
+  --mood-section-padding: 5rem;
+  --mood-border-width: 1px;
+}
+
+/* Elegant: Premium & refined */
+html[data-mood="elegant"] {
+  --mood-radius: 1rem;
+  --mood-shadow: 0 2px 12px rgba(197,165,114,0.06);
+  --mood-shadow-lg: 0 12px 40px rgba(197,165,114,0.1);
+  --mood-card-radius: 1.5rem;
+  --mood-button-radius: 2rem;
+  --mood-section-padding: 6rem;
+  --mood-border-width: 1.5px;
+}
+
+/* ===== Layout Template Tokens (TOR 4.2.11 — >=3 templates) ===== */
+/* Standard: Balanced default */
+html[data-layout="standard"] {
+  --layout-max-width: 1200px;
+  --layout-hero-height: 80vh;
+  --layout-sidebar-width: 280px;
+  --layout-gap: 1.5rem;
+  --layout-columns: 12;
+}
+
+/* Wide: Expansive */
+html[data-layout="wide"] {
+  --layout-max-width: 1400px;
+  --layout-hero-height: 90vh;
+  --layout-sidebar-width: 320px;
+  --layout-gap: 2rem;
+  --layout-columns: 12;
+}
+
+/* Compact: Dense information */
+html[data-layout="compact"] {
+  --layout-max-width: 1000px;
+  --layout-hero-height: 60vh;
+  --layout-sidebar-width: 240px;
+  --layout-gap: 1rem;
+  --layout-columns: 12;
+}
+
+/* Magazine: Editorial style */
+html[data-layout="magazine"] {
+  --layout-max-width: 1300px;
+  --layout-hero-height: 85vh;
+  --layout-sidebar-width: 300px;
+  --layout-gap: 2rem;
+  --layout-columns: 8;
+}
+
+/* Dashboard: Card-based grid */
+html[data-layout="dashboard"] {
+  --layout-max-width: 1440px;
+  --layout-hero-height: 50vh;
+  --layout-sidebar-width: 260px;
+  --layout-gap: 1.25rem;
+  --layout-columns: 12;
+}
+
+/* ===== Mood — Apply to real elements ===== */
+/* Cards & panels — mood radius */
+html[data-mood] :is(
+  [class*="rounded-lg"],
+  [class*="rounded-xl"],
+  [class*="rounded-2xl"]
+) {
+  border-radius: var(--mood-card-radius);
+  transition: border-radius 0.3s ease;
+}
+
+/* Buttons — mood radius */
+html[data-mood] button:not([class*="rounded-full"]) {
+  border-radius: var(--mood-button-radius);
+  transition: border-radius 0.3s ease;
+}
+
+/* Sections — mood padding */
+html[data-mood] main > section {
+  padding-block: var(--mood-section-padding);
+  transition: padding 0.3s ease;
+}
+
+/* Shadows — mood shadow on elevated elements */
+html[data-mood] [class*="shadow-lg"],
+html[data-mood] [class*="shadow-xl"],
+html[data-mood] [class*="shadow-2xl"] {
+  box-shadow: var(--mood-shadow-lg);
+  transition: box-shadow 0.3s ease;
+}
+
+html[data-mood] [class*="shadow-md"],
+html[data-mood] [class*="shadow-sm"] {
+  box-shadow: var(--mood-shadow);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Border width — mood border */
+html[data-mood] [class*="border"]:not([class*="border-0"]) {
+  border-width: var(--mood-border-width);
+}
+
+/* ===== Layout — Apply to real elements ===== */
+/* Content max-width — affects main container */
+html[data-layout] main > section > div:first-child {
+  max-width: var(--layout-max-width);
+  margin-inline: auto;
+  transition: max-width 0.4s ease;
+}
+
+/* Hero section height */
+html[data-layout] main > section:first-child {
+  min-height: var(--layout-hero-height);
+  transition: min-height 0.4s ease;
+}
+
+/* Grid gap */
+html[data-layout] [class*="grid"] {
+  gap: var(--layout-gap);
+  transition: gap 0.3s ease;
 }
 
 /* ===== Base styles ===== */
