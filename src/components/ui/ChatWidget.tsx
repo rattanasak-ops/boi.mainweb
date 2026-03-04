@@ -44,6 +44,21 @@ export default function ChatWidget() {
   const inputRef = useRef<HTMLInputElement>(null);
   const modelSelectorRef = useRef<HTMLDivElement>(null);
   const abortRef = useRef<AbortController | null>(null);
+  const hasGreeted = useRef(false);
+
+  // Auto-greeting: inject Arai's welcome message when chat first opens
+  useEffect(() => {
+    if (isOpen && !hasGreeted.current && messages.length === 0) {
+      hasGreeted.current = true;
+      const greetingMsg: ChatMessage = {
+        id: "greeting",
+        role: "assistant",
+        content: t("greeting"),
+        timestamp: new Date(),
+      };
+      setMessages([greetingMsg]);
+    }
+  }, [isOpen, messages.length, t]);
 
   // Auto-scroll to bottom
   useEffect(() => {
@@ -325,96 +340,78 @@ export default function ChatWidget() {
               ref={scrollRef}
               className="flex-1 overflow-y-auto p-4 space-y-4 min-h-[280px]"
             >
-              {messages.length === 0 && !streamingContent ? (
-                /* Empty state */
-                <div className="flex flex-col items-center justify-center h-full text-center py-8">
-                  <div className="h-12 w-12 rounded-2xl bg-gold-500/10 border border-gold-400/20 flex items-center justify-center mb-4">
-                    <Bot className="h-6 w-6 text-gold-500" />
-                  </div>
-                  <p className="text-sm font-semibold text-navy-600 mb-1">
-                    {t("welcome")}
-                  </p>
-                  <p className="text-xs text-text-secondary mb-1">
-                    {t("welcome_desc")}
-                  </p>
-                  <p className="text-[10px] text-gold-500/70 mb-4">
-                    {t("demo_notice")}
-                  </p>
-
-                  {/* Quick actions */}
-                  <div className="space-y-2 w-full">
-                    {quickActions.map((action) => (
-                      <button
-                        key={action.key}
-                        onClick={() => sendMessage(action.label)}
-                        className="w-full px-4 py-2.5 text-left text-xs font-medium text-navy-600 bg-navy-600/5 border border-navy-600/10 hover:border-gold-500/30 hover:bg-gold-500/5 transition-all rounded-lg"
-                      >
-                        {action.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <>
-                  {/* Messages list */}
-                  {messages.map((msg) => (
-                    <motion.div
-                      key={msg.id}
-                      className={`flex gap-2 ${
-                        msg.role === "user" ? "justify-end" : "justify-start"
-                      }`}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3, ease: EASE_OUT }}
-                    >
-                      {msg.role === "assistant" && (
-                        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-gold-500/10 border border-gold-400/20">
-                          <Bot className="h-3.5 w-3.5 text-gold-500" />
-                        </div>
-                      )}
-                      <div className="max-w-[75%]">
-                        <div
-                          className={`px-3.5 py-2.5 text-xs leading-relaxed whitespace-pre-wrap ${
-                            msg.role === "user"
-                              ? "bg-navy-600 text-white rounded-2xl rounded-br-md"
-                              : "bg-navy-600/5 text-navy-600 border border-border rounded-2xl rounded-bl-md"
-                          }`}
-                        >
-                          {msg.content}
-                        </div>
-                        {msg.model && (
-                          <p className="text-[9px] text-text-secondary/50 mt-1 ml-1">
-                            {msg.model}
-                          </p>
-                        )}
-                      </div>
-                      {msg.role === "user" && (
-                        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-navy-600/10">
-                          <User className="h-3.5 w-3.5 text-navy-600" />
-                        </div>
-                      )}
-                    </motion.div>
-                  ))}
-
-                  {/* Streaming response */}
-                  {streamingContent && (
-                    <motion.div
-                      className="flex gap-2 justify-start"
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                    >
-                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-gold-500/10 border border-gold-400/20">
-                        <Bot className="h-3.5 w-3.5 text-gold-500" />
-                      </div>
-                      <div className="max-w-[75%]">
-                        <div className="px-3.5 py-2.5 text-xs leading-relaxed whitespace-pre-wrap bg-navy-600/5 text-navy-600 border border-border rounded-2xl rounded-bl-md">
-                          {streamingContent}
-                          <span className="inline-block w-1.5 h-3.5 bg-gold-500 ml-0.5 animate-pulse rounded-sm" />
-                        </div>
-                      </div>
-                    </motion.div>
+                {/* Messages list */}
+              {messages.map((msg) => (
+                <motion.div
+                  key={msg.id}
+                  className={`flex gap-2 ${
+                    msg.role === "user" ? "justify-end" : "justify-start"
+                  }`}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, ease: EASE_OUT }}
+                >
+                  {msg.role === "assistant" && (
+                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-gold-500/10 border border-gold-400/20">
+                      <Bot className="h-3.5 w-3.5 text-gold-500" />
+                    </div>
                   )}
-                </>
+                  <div className="max-w-[80%]">
+                    <div
+                      className={`px-3.5 py-2.5 text-xs leading-relaxed whitespace-pre-wrap ${
+                        msg.role === "user"
+                          ? "bg-navy-600 text-white rounded-2xl rounded-br-md"
+                          : "bg-navy-600/5 text-navy-600 border border-border rounded-2xl rounded-bl-md"
+                      }`}
+                    >
+                      {msg.content}
+                    </div>
+                    {msg.model && (
+                      <p className="text-[9px] text-text-secondary/50 mt-1 ml-1">
+                        {msg.model}
+                      </p>
+                    )}
+                  </div>
+                  {msg.role === "user" && (
+                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-navy-600/10">
+                      <User className="h-3.5 w-3.5 text-navy-600" />
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+
+              {/* Quick actions — show after greeting, before user sends first message */}
+              {messages.length === 1 && messages[0].id === "greeting" && !isLoading && (
+                <div className="space-y-2 mt-2">
+                  {quickActions.map((action) => (
+                    <button
+                      key={action.key}
+                      onClick={() => sendMessage(action.label)}
+                      className="w-full px-4 py-2.5 text-left text-xs font-medium text-navy-600 bg-navy-600/5 border border-navy-600/10 hover:border-gold-500/30 hover:bg-gold-500/5 transition-all rounded-lg"
+                    >
+                      {action.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {/* Streaming response */}
+              {streamingContent && (
+                <motion.div
+                  className="flex gap-2 justify-start"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                >
+                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-gold-500/10 border border-gold-400/20">
+                    <Bot className="h-3.5 w-3.5 text-gold-500" />
+                  </div>
+                  <div className="max-w-[80%]">
+                    <div className="px-3.5 py-2.5 text-xs leading-relaxed whitespace-pre-wrap bg-navy-600/5 text-navy-600 border border-border rounded-2xl rounded-bl-md">
+                      {streamingContent}
+                      <span className="inline-block w-1.5 h-3.5 bg-gold-500 ml-0.5 animate-pulse rounded-sm" />
+                    </div>
+                  </div>
+                </motion.div>
               )}
 
               {/* Loading (before streaming starts) */}

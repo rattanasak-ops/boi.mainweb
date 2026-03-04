@@ -1021,9 +1021,7 @@
   "chat": {
     "title": "Arai (阿莱)",
     "subtitle": "BOI AI投资指南",
-    "welcome": "您好！我是Arai",
-    "welcome_desc": "欢迎咨询有关BOI和泰国投资的任何问题。",
-    "demo_notice": "这是演示版本 — 信息可能不完整。",
+    "greeting": "您好！欢迎访问BOI（泰国投资促进委员会）网站。\n\n我叫\"Arai\"，这是泰语中\"什么\"的意思——因为您可以问我任何关于BOI的问题！\n\n我会尽力回答您的问题，但只能提供本网站上的信息。如果有我无法回答的问题，请通过BOI的官方渠道联系。\n\n那么，今天有什么可以帮您的吗？",
     "quick_eligibility": "我的企业是否有资格获得BOI促进？",
     "quick_incentives": "有哪些投资优惠？",
     "quick_apply": "如何申请BOI？",

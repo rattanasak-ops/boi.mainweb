@@ -1021,9 +1021,7 @@
   "chat": {
     "title": "Arai",
     "subtitle": "BOI AI Investment Guide",
-    "welcome": "Hi! I'm Arai",
-    "welcome_desc": "Ask me anything about BOI and investing in Thailand.",
-    "demo_notice": "This is a Demo Version — information may be limited.",
+    "greeting": "Hello! Welcome to the BOI — Thailand Board of Investment website.\n\nMy name is \"Arai\", which is a Thai word meaning \"What?\" — because you can ask me anything about BOI!\n\nI'm here to help answer your questions, but I can only provide information available on this website. If there's something I can't answer, please feel free to contact BOI through their official channels.\n\nSo, how can I help you today?",
     "quick_eligibility": "Am I eligible for BOI promotion?",
     "quick_incentives": "What incentives are available?",
     "quick_apply": "How do I apply for BOI?",
