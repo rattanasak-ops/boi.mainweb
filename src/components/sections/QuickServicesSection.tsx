@@ -27,6 +27,7 @@ import {
   Calculator,
   ArrowRight,
 } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 
 /* ═══════════════════════════════════════════════════════════════
    Constants & Types
@@ -462,6 +463,8 @@ function FloatingParticles() {
 /* ═══════════════════════════════════════════════════════════════
    Portal Card — 3D tilt + spotlight + variant-specific visuals
    ═══════════════════════════════════════════════════════════════ */
+const MotionLink = motion.create(Link);
+
 function PortalCard({
   service,
   t,
@@ -550,7 +553,7 @@ function PortalCard({
         style={{ perspective: 800 }}
       >
         {/* Layer 3: 3D tilt + card lift */}
-        <motion.a
+        <MotionLink
           ref={cardRef}
           href={service.href}
           onMouseMove={handleMouseMove}
@@ -959,7 +962,7 @@ function PortalCard({
             `}
             aria-hidden="true"
           />
-        </motion.a>
+        </MotionLink>
       </div>
     </motion.div>
   );

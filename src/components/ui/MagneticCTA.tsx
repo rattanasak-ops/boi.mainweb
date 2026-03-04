@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
+import { Link } from "@/i18n/navigation";
 
 /**
  * MagneticCTA — Refined Luxury Button
@@ -40,8 +41,10 @@ export default function MagneticCTA({
 
   const isPrimary = variant === "primary";
 
+  const MotionLink = motion.create(Link);
+
   return (
-    <motion.a
+    <MotionLink
       href={href}
       className={`group relative inline-flex items-center justify-center gap-2.5 overflow-hidden ${
         isPrimary
@@ -154,6 +157,6 @@ export default function MagneticCTA({
         </motion.span>
       )}
 
-    </motion.a>
+    </MotionLink>
   );
 }

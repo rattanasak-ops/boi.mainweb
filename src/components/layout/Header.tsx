@@ -522,20 +522,23 @@ export default function Header() {
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {searchQuickActions.map((action, i) => (
-                    <motion.a
+                    <motion.div
                       key={action.tKey}
-                      href={action.href}
                       initial={{ opacity: 0, y: 15 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, delay: 0.2 + i * 0.06 }}
-                      className="group flex flex-col items-center gap-3 p-4 rounded-xl bg-white/[0.05] border border-white/[0.06] hover:bg-white/[0.1] hover:border-gold-500/20 transition-all duration-300"
-                      onClick={() => setSearchOpen(false)}
                     >
-                      <action.icon className={`h-6 w-6 ${action.color}`} />
-                      <span className="text-xs font-medium text-white/60 group-hover:text-white/90 text-center transition-colors">
-                        {tMega(`search.${action.tKey}`)}
-                      </span>
-                    </motion.a>
+                      <Link
+                        href={action.href}
+                        className="group flex flex-col items-center gap-3 p-4 rounded-xl bg-white/[0.05] border border-white/[0.06] hover:bg-white/[0.1] hover:border-gold-500/20 transition-all duration-300 h-full"
+                        onClick={() => setSearchOpen(false)}
+                      >
+                        <action.icon className={`h-6 w-6 ${action.color}`} />
+                        <span className="text-xs font-medium text-white/60 group-hover:text-white/90 text-center transition-colors">
+                          {tMega(`search.${action.tKey}`)}
+                        </span>
+                      </Link>
+                    </motion.div>
                   ))}
                 </div>
               </motion.div>

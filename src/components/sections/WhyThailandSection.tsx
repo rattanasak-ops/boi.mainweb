@@ -20,6 +20,7 @@ import {
   Plane,
 } from "lucide-react";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 
 /* ══════════════════════════════════════════════════════════
    CONSTANTS
@@ -34,6 +35,7 @@ const advantages = [
     descKey: "strategic_location_desc",
     statKey: "strategic_location_stat",
     image: "/images/why-thailand/shipping-port.jpg",
+    href: "/discover/thailand-overview" as const,
   },
   {
     icon: GraduationCap,
@@ -41,6 +43,7 @@ const advantages = [
     descKey: "workforce_desc",
     statKey: "workforce_stat",
     image: "/images/why-thailand/digital-workforce.jpg",
+    href: "/discover/thailand-overview" as const,
   },
   {
     icon: Cpu,
@@ -48,6 +51,7 @@ const advantages = [
     descKey: "digital_infra_desc",
     statKey: "digital_infra_stat",
     image: "/images/why-thailand/industrial-estate.jpg",
+    href: "/discover/special-zones" as const,
   },
   {
     icon: BadgePercent,
@@ -55,6 +59,7 @@ const advantages = [
     descKey: "incentives_desc",
     statKey: "incentives_stat",
     image: "/images/why-thailand/investment-growth.jpg",
+    href: "/invest/incentives" as const,
   },
   {
     icon: Plane,
@@ -62,6 +67,7 @@ const advantages = [
     descKey: "quality_of_life_desc",
     statKey: "quality_of_life_stat",
     image: "/images/why-thailand/lifestyle-livability.jpg",
+    href: "/discover/thailand-overview" as const,
   },
 ] as const;
 
@@ -292,7 +298,7 @@ function TiltCard({
         {/* Layer 3 — 3D tilt transforms */}
         <motion.div
           ref={cardRef}
-          className="group relative h-full cursor-pointer"
+          className="group relative h-full"
           style={{
             rotateX: prefersReducedMotion ? 0 : rotateX,
             rotateY: prefersReducedMotion ? 0 : rotateY,
@@ -302,6 +308,10 @@ function TiltCard({
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
+        {/* ── Clickable overlay link ── */}
+        <Link href={item.href} className="absolute inset-0 z-[10]" aria-label={t(item.titleKey)}>
+          <span className="sr-only">{tCommon("learn_more")}</span>
+        </Link>
         {/* ── Full-bleed image with parallax ── */}
         <motion.div
           className="absolute inset-[-20px]"

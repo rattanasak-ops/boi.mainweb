@@ -457,16 +457,14 @@ export default function LatestNewsSection() {
               className="mt-4 h-[2px] w-16 bg-gradient-to-r from-gold-500 to-transparent origin-left"
             />
           </div>
-          <motion.a
+          <Link
             href="/resources/news"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.98 }}
-            className="hidden sm:inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-gold-600 border border-gold-400/30 hover:border-gold-400 hover:bg-gold-50 hover:shadow-lg hover:shadow-gold-500/10 transition-all duration-300"
+            className="hidden sm:inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-gold-600 border border-gold-400/30 hover:border-gold-400 hover:bg-gold-50 hover:shadow-lg hover:shadow-gold-500/10 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300"
             style={{ clipPath: BRAND_SHAPE_SM }}
           >
             {tCommon("view_all")}
             <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-          </motion.a>
+          </Link>
         </motion.div>
 
         {/* ================================================

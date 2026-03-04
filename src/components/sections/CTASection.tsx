@@ -10,6 +10,7 @@ import {
 } from "framer-motion";
 import { ArrowRight, TrendingUp, Globe2, ThumbsUp } from "lucide-react";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import FloatingOrbs from "@/components/ui/FloatingOrbs";
 import NoiseGrain from "@/components/ui/NoiseGrain";
@@ -386,11 +387,9 @@ export default function CTASection() {
                     animation: "cta-glow-pulse 3s ease-in-out infinite",
                   }}
                 />
-                <motion.a
+                <Link
                   href="/invest/getting-started"
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="group relative inline-flex items-center justify-center gap-3 px-12 py-6 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-950 font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-gold-500/30"
+                  className="group relative inline-flex items-center justify-center gap-3 px-12 py-6 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-950 font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-gold-500/30 hover:scale-[1.03] active:scale-[0.97]"
                   style={{ clipPath: BRAND_SHAPE }}
                 >
                   {t("cta_button")}
@@ -398,7 +397,7 @@ export default function CTASection() {
                     className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1.5"
                     aria-hidden="true"
                   />
-                </motion.a>
+                </Link>
               </div>
             </motion.div>
           </motion.div>
