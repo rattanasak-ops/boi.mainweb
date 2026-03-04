@@ -197,9 +197,11 @@ export default function ChatWidget() {
   );
 
   const quickActions = [
+    { key: "quick_invest_start", label: t("quick_invest_start") },
     { key: "quick_eligibility", label: t("quick_eligibility") },
-    { key: "quick_incentives", label: t("quick_incentives") },
-    { key: "quick_apply", label: t("quick_apply") },
+    { key: "quick_benefits_process", label: t("quick_benefits_process") },
+    { key: "quick_latest_policy", label: t("quick_latest_policy") },
+    { key: "quick_contact", label: t("quick_contact") },
   ];
 
   return (
