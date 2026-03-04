@@ -12,7 +12,6 @@ const EASE_OUT = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 export default function AboutHeroSection() {
   const t = useTranslations("about_page.hero");
-  const tNav = useTranslations("nav");
   const sectionRef = useRef<HTMLElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -65,7 +64,7 @@ export default function AboutHeroSection() {
           <ol className="flex items-center gap-2 text-sm text-white/50">
             <li>
               <Link href="/" className="hover:text-gold-400 transition-colors">
-                {tNav("about") === "เกี่ยวกับ BOI" ? "หน้าแรก" : "Home"}
+                {t("breadcrumb_home")}
               </Link>
             </li>
             <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />

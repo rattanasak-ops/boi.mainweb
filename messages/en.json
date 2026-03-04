@@ -428,6 +428,7 @@
   },
   "about_page": {
     "hero": {
+      "breadcrumb_home": "Home",
       "breadcrumb": "About BOI",
       "eyebrow": "Open Our Story",
       "title_1": "Promoting Investment,",
@@ -926,6 +927,32 @@
       "security_text": "We implement appropriate technical and organizational measures to protect your personal data, including encryption, access controls, and regular security assessments in compliance with OWASP standards.",
       "contact_title": "Contact Us",
       "contact_text": "For privacy-related inquiries or to exercise your PDPA rights, please contact our Data Protection Officer at: dpo@boi.go.th or visit our Contact page."
+    }
+  },
+  "terms_page": {
+    "breadcrumb_home": "Home",
+    "breadcrumb": "Terms of Use",
+    "eyebrow": "Legal",
+    "title": "Terms of Use",
+    "subtitle": "Please read these terms carefully before using the Board of Investment of Thailand website.",
+    "last_updated": "Last updated: March 1, 2026",
+    "sections": {
+      "acceptance_title": "Acceptance of Terms",
+      "acceptance_text": "By accessing and using this website, you accept and agree to be bound by these Terms of Use. If you do not agree with any part of the terms, you may not access the website.",
+      "use_title": "Use of Website",
+      "use_text": "This website is provided to disseminate information about investment promotion in Thailand. You agree to use the website only for lawful purposes and not in a manner that infringes upon the rights of others.",
+      "ip_title": "Intellectual Property",
+      "ip_text": "All content on this website, including text, graphics, logos, images, and software, is the property of BOI or its licensors and is protected by Thai intellectual property laws.",
+      "disclaimer_title": "Disclaimer",
+      "disclaimer_text": "The information on this website is provided for general informational purposes only. While we endeavor to keep the information accurate and current, we make no representations or warranties of any kind, express or implied.",
+      "links_title": "External Links",
+      "links_text": "This website may contain links to external websites not operated by BOI. We have no control over the content of those external sites and shall not be responsible for their content or privacy policies.",
+      "changes_title": "Changes to Terms",
+      "changes_text": "BOI reserves the right to modify or replace these terms at any time. Changes are effective immediately upon posting on the website. Continued use of the website after changes constitutes acceptance of the revised terms.",
+      "governing_title": "Governing Law",
+      "governing_text": "These terms are governed by the laws of the Kingdom of Thailand. Any disputes arising from the use of the website shall be subject to the jurisdiction of Thai courts.",
+      "contact_title": "Contact Us",
+      "contact_text": "If you have any questions about these Terms of Use, please contact us at: head@boi.go.th or visit our Contact page."
     }
   },
   "accessibility_page": {

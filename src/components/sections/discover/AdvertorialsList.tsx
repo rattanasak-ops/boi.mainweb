@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useFormatter } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Clock, ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -28,7 +28,7 @@ const articles = [
   {
     id: 1,
     category: "investment",
-    date: "28 Feb 2026",
+    date: new Date(2026, 1, 28),
     titleKey: "article_1_title",
     excerptKey: "article_1_excerpt",
     gradient: "from-navy-800 via-navy-900 to-navy-950",
@@ -37,7 +37,7 @@ const articles = [
   {
     id: 2,
     category: "industry",
-    date: "25 Feb 2026",
+    date: new Date(2026, 1, 25),
     titleKey: "article_2_title",
     excerptKey: "article_2_excerpt",
     gradient: "from-gold-600/30 via-navy-900 to-navy-950",
@@ -46,7 +46,7 @@ const articles = [
   {
     id: 3,
     category: "policy",
-    date: "22 Feb 2026",
+    date: new Date(2026, 1, 22),
     titleKey: "article_3_title",
     excerptKey: "article_3_excerpt",
     gradient: "from-navy-700 via-navy-800 to-navy-950",
@@ -55,7 +55,7 @@ const articles = [
   {
     id: 4,
     category: "investment",
-    date: "18 Feb 2026",
+    date: new Date(2026, 1, 18),
     titleKey: "article_4_title",
     excerptKey: "article_4_excerpt",
     gradient: "from-gold-700/20 via-navy-900 to-navy-950",
@@ -64,7 +64,7 @@ const articles = [
   {
     id: 5,
     category: "industry",
-    date: "15 Feb 2026",
+    date: new Date(2026, 1, 15),
     titleKey: "article_5_title",
     excerptKey: "article_5_excerpt",
     gradient: "from-navy-800 via-navy-900 to-navy-950",
@@ -73,16 +73,17 @@ const articles = [
   {
     id: 6,
     category: "policy",
-    date: "10 Feb 2026",
+    date: new Date(2026, 1, 10),
     titleKey: "article_6_title",
     excerptKey: "article_6_excerpt",
     gradient: "from-navy-700/80 via-navy-800 to-navy-950",
     featured: false,
   },
-] as const;
+];
 
 export default function AdvertorialsList() {
   const t = useTranslations("advertorials_page.list");
+  const format = useFormatter();
   const [activeFilter, setActiveFilter] = useState("all");
 
   const filteredArticles =
@@ -221,7 +222,7 @@ export default function AdvertorialsList() {
                         <div className="mt-5 flex items-center justify-between">
                           <div className="flex items-center gap-2 text-xs text-white/35">
                             <Clock className="h-3.5 w-3.5" aria-hidden="true" />
-                            {featuredArticle.date}
+                            {format.dateTime(featuredArticle.date, { year: "numeric", month: "short", day: "numeric" })}
                           </div>
 
                           <span className="flex items-center gap-1.5 text-sm font-semibold text-gold-400 opacity-0 translate-x-[-8px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
@@ -286,7 +287,7 @@ export default function AdvertorialsList() {
                             <div className="mt-2 flex items-center justify-between">
                               <div className="flex items-center gap-1.5 text-xs text-text-muted">
                                 <Clock className="h-3 w-3" aria-hidden="true" />
-                                {article.date}
+                                {format.dateTime(article.date, { year: "numeric", month: "short", day: "numeric" })}
                               </div>
                               <span className="text-xs font-semibold text-gold-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 {t("read_more")}
@@ -362,7 +363,7 @@ export default function AdvertorialsList() {
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-1.5 text-xs text-text-muted">
                               <Clock className="h-3 w-3" aria-hidden="true" />
-                              {article.date}
+                              {format.dateTime(article.date, { year: "numeric", month: "short", day: "numeric" })}
                             </div>
                             <span className="flex items-center gap-1 text-sm font-semibold text-gold-600 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                               {t("read_more")}

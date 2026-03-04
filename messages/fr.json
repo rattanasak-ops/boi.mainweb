@@ -428,6 +428,7 @@
   },
   "about_page": {
     "hero": {
+      "breadcrumb_home": "Accueil",
       "breadcrumb": "À propos du BOI",
       "eyebrow": "Découvrir notre histoire",
       "title_1": "Promouvoir l'investissement,",
@@ -926,6 +927,32 @@
       "security_text": "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées, incluant le chiffrement, le contrôle d'accès et des évaluations de sécurité régulières conformes aux normes OWASP.",
       "contact_title": "Nous contacter",
       "contact_text": "Pour toute question relative à la confidentialité ou pour exercer vos droits PDPA, contactez notre DPO : dpo@boi.go.th ou visitez notre page de contact."
+    }
+  },
+  "terms_page": {
+    "breadcrumb_home": "Accueil",
+    "breadcrumb": "Conditions d'utilisation",
+    "eyebrow": "Juridique",
+    "title": "Conditions d'utilisation",
+    "subtitle": "Veuillez lire attentivement ces conditions avant d'utiliser le site web du Board of Investment of Thailand.",
+    "last_updated": "Dernière mise à jour : 1er mars 2026",
+    "sections": {
+      "acceptance_title": "Acceptation des conditions",
+      "acceptance_text": "En accédant et en utilisant ce site web, vous acceptez d'être lié par ces conditions d'utilisation. Si vous n'êtes pas d'accord avec une partie des conditions, vous ne pouvez pas accéder au site web.",
+      "use_title": "Utilisation du site web",
+      "use_text": "Ce site web est fourni pour diffuser des informations sur la promotion de l'investissement en Thaïlande. Vous acceptez d'utiliser le site uniquement à des fins légales et de ne pas l'utiliser d'une manière qui porte atteinte aux droits d'autrui.",
+      "ip_title": "Propriété intellectuelle",
+      "ip_text": "Tout le contenu de ce site web, y compris les textes, graphiques, logos, images et logiciels, est la propriété du BOI ou de ses concédants et est protégé par les lois thaïlandaises sur la propriété intellectuelle.",
+      "disclaimer_title": "Avertissement",
+      "disclaimer_text": "Les informations sur ce site web sont fournies uniquement à titre d'information générale. Bien que nous nous efforcions de maintenir l'exactitude et l'actualité des informations, nous ne faisons aucune déclaration ou garantie d'aucune sorte, expresse ou implicite.",
+      "links_title": "Liens externes",
+      "links_text": "Ce site web peut contenir des liens vers des sites web externes non exploités par le BOI. Nous n'avons aucun contrôle sur le contenu de ces sites externes et ne sommes pas responsables de leur contenu ou de leurs politiques de confidentialité.",
+      "changes_title": "Modifications des conditions",
+      "changes_text": "Le BOI se réserve le droit de modifier ou de remplacer ces conditions à tout moment. Les modifications prennent effet immédiatement dès leur publication sur le site web. L'utilisation continue du site après les modifications vaut acceptation des conditions révisées.",
+      "governing_title": "Droit applicable",
+      "governing_text": "Ces conditions sont régies par les lois du Royaume de Thaïlande. Tout litige découlant de l'utilisation du site web sera soumis à la juridiction des tribunaux thaïlandais.",
+      "contact_title": "Nous contacter",
+      "contact_text": "Si vous avez des questions concernant ces conditions d'utilisation, veuillez nous contacter à : head@boi.go.th ou visiter notre page Contact."
     }
   },
   "accessibility_page": {

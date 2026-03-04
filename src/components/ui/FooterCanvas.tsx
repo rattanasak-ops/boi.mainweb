@@ -20,6 +20,11 @@ const GOLD = [197, 165, 114] as const;
 const GOLD_WARM = [235, 215, 175] as const;
 const GOLD_HOT = [255, 230, 180] as const;
 
+// Thai flag colors
+const TH_RED = [234, 47, 55] as const;
+const TH_WHITE = [255, 250, 245] as const;
+const TH_BLUE = [0, 70, 175] as const;
+
 const rgba = (c: readonly number[], a: number) =>
   `rgba(${c[0]},${c[1]},${c[2]},${Math.max(0, Math.min(1, a))})`;
 
@@ -61,6 +66,13 @@ interface Wave {
   max: number;
   opacity: number;
 }
+interface AssemblyDot {
+  tx: number;
+  ty: number;
+  color: readonly number[];
+  delay: number;
+  size: number;
+}
 
 // --- Bezier point ---
 const bezPt = (
@@ -91,6 +103,8 @@ export default function FooterCanvas() {
   const cps = useRef<{ cx: number; cy: number }[]>([]);
   const pulses = useRef<Pulse[]>([]);
   const wave = useRef<Wave | null>(null);
+  const assemblyDots = useRef<AssemblyDot[]>([]);
+  const asmProg = useRef(0);
   const raf = useRef(0);
   const vis = useRef(false);
   const dim = useRef({ w: 0, h: 0 });
@@ -211,6 +225,39 @@ export default function FooterCanvas() {
         }
       }
       pulses.current = ps;
+
+      // Assembly targets — Thai flag particles
+      const flagW = mob ? 70 : 100;
+      const flagH = Math.round(flagW * 2 / 3);
+      const aStep = mob ? 6 : 4;
+      const flagOffY = -15;
+      const aDots: AssemblyDot[] = [];
+
+      for (let fy = 0; fy < flagH; fy += aStep) {
+        for (let fx = 0; fx < flagW; fx += aStep) {
+          const ry = fy / flagH;
+          let col: readonly number[];
+          if (ry < 1 / 6) col = TH_RED;
+          else if (ry < 2 / 6) col = TH_WHITE;
+          else if (ry < 4 / 6) col = TH_BLUE;
+          else if (ry < 5 / 6) col = TH_WHITE;
+          else col = TH_RED;
+
+          const dtx = fx - flagW / 2;
+          const dty = fy - flagH / 2 + flagOffY;
+          const dist = Math.sqrt(dtx * dtx + dty * dty);
+          const maxDist = Math.sqrt((flagW / 2) ** 2 + (flagH / 2) ** 2);
+
+          aDots.push({
+            tx: dtx,
+            ty: dty,
+            color: col,
+            delay: dist / maxDist,
+            size: mob ? 2 : 2.5,
+          });
+        }
+      }
+      assemblyDots.current = aDots;
     };
     fit();
 
@@ -324,8 +371,8 @@ export default function FooterCanvas() {
       const damp = 0.88;
 
       if (m.in) {
-        const tx = s.cBaseX + (m.x - s.cBaseX) * 0.2;
-        const ty = s.cBaseY + (m.y - s.cBaseY) * 0.2;
+        const tx = s.cBaseX + (m.x - s.cBaseX) * 0.4;
+        const ty = s.cBaseY + (m.y - s.cBaseY) * 0.4;
         s.cVx += (tx - s.cX) * spring;
         s.cVy += (ty - s.cY) * spring;
       } else {
@@ -441,7 +488,117 @@ export default function FooterCanvas() {
       c.stroke();
       c.globalAlpha = 1;
 
-      // --- 5. Pulse wave (click) ---
+      // --- 5. Flag Assembly (Particle Assembly) ---
+      const asmSpeed = m.in ? 0.03 : 0.06;
+      const tgtAsm = m.in ? 1.0 : 0.0;
+      asmProg.current += (tgtAsm - asmProg.current) * asmSpeed;
+      const ap = asmProg.current;
+
+      if (ap > 0.005) {
+        const aDots = assemblyDots.current;
+        const { w: dw } = dim.current;
+        const isMob = dw < 768;
+        const flagW = isMob ? 70 : 100;
+        const flagH = Math.round(flagW * 2 / 3);
+        const flagOffY = -15;
+        const isScattering = !m.in && ap > 0.01;
+
+        // Soft glow behind flag
+        if (ap > 0.15) {
+          const ga = Math.min(1, (ap - 0.15) / 0.5) * 0.2;
+          const aGrad = c.createRadialGradient(
+            s.cX, s.cY + flagOffY, 0,
+            s.cX, s.cY + flagOffY, Math.max(flagW, flagH) * 0.8
+          );
+          aGrad.addColorStop(0, rgba(GOLD_WARM, ga));
+          aGrad.addColorStop(1, rgba(GOLD, 0));
+          c.fillStyle = aGrad;
+          c.fillRect(
+            s.cX - flagW, s.cY + flagOffY - flagH,
+            flagW * 2, flagH * 2
+          );
+        }
+
+        // Flag particles
+        for (const d of aDots) {
+          const ep = Math.max(0, Math.min(1, (ap - d.delay * 0.4) * 2.0));
+          if (ep <= 0) continue;
+
+          const ease = ep * ep * (3 - 2 * ep);
+
+          // Gentle flag wave
+          const waveX = Math.sin(time * 1.5 + d.ty * 0.1) * 2 * ease;
+
+          // Scatter motion during disassembly
+          let scX = 0, scY = 0;
+          if (isScattering && ease < 0.8) {
+            const sc = (1 - ease / 0.8) * 6;
+            scX = sc * Math.sin(time * 3 + d.tx * 0.5 + d.ty * 0.3);
+            scY = sc * Math.cos(time * 2.7 + d.ty * 0.5 + d.tx * 0.3);
+          }
+
+          const px = s.cX + d.tx * ease + waveX + scX;
+          const py = s.cY + d.ty * ease + scY;
+
+          // Gold → flag color transition
+          const pr = GOLD_WARM[0] + (d.color[0] - GOLD_WARM[0]) * ease;
+          const pg = GOLD_WARM[1] + (d.color[1] - GOLD_WARM[1]) * ease;
+          const pb = GOLD_WARM[2] + (d.color[2] - GOLD_WARM[2]) * ease;
+
+          // Shimmer when fully assembled
+          const shimmer = ease > 0.8
+            ? 1 + 0.12 * Math.sin(time * 3 + d.tx * 0.2 + d.ty * 0.3)
+            : 1;
+
+          c.globalAlpha = ep * 0.85 * shimmer;
+          c.beginPath();
+          c.arc(px, py, d.size, 0, Math.PI * 2);
+          c.fillStyle = `rgba(${Math.round(pr)},${Math.round(pg)},${Math.round(pb)},0.9)`;
+          c.fill();
+        }
+
+        // Gold border frame
+        if (ap > 0.6) {
+          const ba = Math.min(1, (ap - 0.6) / 0.25) * 0.35;
+          c.globalAlpha = ba;
+          c.strokeStyle = rgba(GOLD, 0.6);
+          c.lineWidth = 1;
+          c.strokeRect(
+            s.cX - flagW / 2 - 4,
+            s.cY - flagH / 2 + flagOffY - 4,
+            flagW + 8,
+            flagH + 8
+          );
+        }
+
+        // "THAILAND" text
+        if (ap > 0.45) {
+          const ta = Math.min(1, (ap - 0.45) / 0.3);
+          const fontSize = isMob ? 11 : 14;
+          const textY = s.cY + flagH / 2 + flagOffY + 8;
+
+          c.globalAlpha = ta * 0.9;
+          c.font = `600 ${fontSize}px 'Inter', system-ui, sans-serif`;
+          c.textAlign = "center";
+          c.textBaseline = "top";
+          c.fillStyle = rgba(GOLD_WARM, 0.95);
+          c.fillText("T H A I L A N D", s.cX, textY);
+
+          // Decorative underline
+          const tw = c.measureText("T H A I L A N D").width;
+          c.globalAlpha = ta * 0.25;
+          c.beginPath();
+          c.moveTo(s.cX - tw / 2, textY + fontSize + 4);
+          c.lineTo(s.cX + tw / 2, textY + fontSize + 4);
+          c.strokeStyle = rgba(GOLD, 0.5);
+          c.lineWidth = 0.8;
+          c.stroke();
+        }
+
+        c.globalAlpha = 1;
+      }
+
+      // --- 6. Pulse wave (click) ---
       if (wv && wv.opacity > 0.01) {
         wv.radius += 5;
         wv.opacity = Math.max(0, 1 - wv.radius / wv.max);

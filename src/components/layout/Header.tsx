@@ -143,7 +143,7 @@ const megaMenuData: MegaMenuSection[] = [
 /* ── Search quick actions ── */
 const searchQuickActions = [
   { tKey: "check_eligibility", icon: CheckCircle, href: "/invest/eligibility-checker", color: "text-emerald-500" },
-  { tKey: "calculate_incentives", icon: Calculator, href: "/services/incentive-calculator", color: "text-gold-500" },
+  { tKey: "calculate_incentives", icon: Calculator, href: "/invest/incentives", color: "text-gold-500" },
   { tKey: "apply_online", icon: FileText, href: "/services/apply", color: "text-blue-500" },
   { tKey: "book_consultation", icon: CalendarClock, href: "/services/consultation", color: "text-purple-500" },
 ];

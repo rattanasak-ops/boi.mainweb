@@ -428,6 +428,7 @@
   },
   "about_page": {
     "hero": {
+      "breadcrumb_home": "首页",
       "breadcrumb": "关于BOI",
       "eyebrow": "开启我们的故事",
       "title_1": "促进投资，",
@@ -926,6 +927,32 @@
       "security_text": "我们采取适当的技术和组织措施保护您的个人数据，包括加密、访问控制和符合OWASP标准的定期安全评估。",
       "contact_title": "联系我们",
       "contact_text": "如有隐私相关咨询或行使PDPA权利，请联系我们的数据保护官：dpo@boi.go.th 或访问我们的联系页面。"
+    }
+  },
+  "terms_page": {
+    "breadcrumb_home": "首页",
+    "breadcrumb": "使用条款",
+    "eyebrow": "法律",
+    "title": "使用条款",
+    "subtitle": "在使用泰国投资促进委员会网站之前，请仔细阅读这些条款。",
+    "last_updated": "最后更新：2026年3月1日",
+    "sections": {
+      "acceptance_title": "条款接受",
+      "acceptance_text": "通过访问和使用本网站，您即接受并同意受这些使用条款的约束。如果您不同意条款的任何部分，则不得访问本网站。",
+      "use_title": "网站使用",
+      "use_text": "本网站旨在传播有关泰国投资促进的信息。您同意仅将网站用于合法目的，且不以侵犯他人权利的方式使用。",
+      "ip_title": "知识产权",
+      "ip_text": "本网站上的所有内容，包括文字、图形、标志、图像和软件，均为BOI或其许可方的财产，受泰国知识产权法保护。",
+      "disclaimer_title": "免责声明",
+      "disclaimer_text": "本网站上的信息仅供一般参考之用。虽然我们努力保持信息的准确性和时效性，但我们不作任何明示或暗示的陈述或保证。",
+      "links_title": "外部链接",
+      "links_text": "本网站可能包含指向非BOI运营的外部网站的链接。我们无法控制这些外部网站的内容，也不对其内容或隐私政策负责。",
+      "changes_title": "条款变更",
+      "changes_text": "BOI保留随时修改或替换这些条款的权利。变更在网站上发布后立即生效。变更后继续使用网站即表示接受修订后的条款。",
+      "governing_title": "适用法律",
+      "governing_text": "这些条款受泰王国法律管辖。因使用本网站而产生的任何争议均受泰国法院管辖。",
+      "contact_title": "联系我们",
+      "contact_text": "如果您对这些使用条款有任何疑问，请通过 head@boi.go.th 联系我们或访问我们的联系页面。"
     }
   },
   "accessibility_page": {

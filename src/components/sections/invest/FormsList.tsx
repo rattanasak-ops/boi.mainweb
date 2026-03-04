@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useFormatter } from "next-intl";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import {
@@ -43,61 +43,62 @@ const MOCK_FORMS = [
     category: "application",
     fileType: "pdf",
     fileSize: "2.4 MB",
-    updatedDate: "2025-12-15",
+    updatedDate: new Date(2025, 11, 15),
   },
   {
     key: "form_2",
     category: "application",
     fileType: "pdf",
     fileSize: "1.8 MB",
-    updatedDate: "2025-11-20",
+    updatedDate: new Date(2025, 10, 20),
   },
   {
     key: "form_3",
     category: "reporting",
     fileType: "xlsx",
     fileSize: "856 KB",
-    updatedDate: "2026-01-10",
+    updatedDate: new Date(2026, 0, 10),
   },
   {
     key: "form_4",
     category: "reporting",
     fileType: "pdf",
     fileSize: "1.2 MB",
-    updatedDate: "2025-10-05",
+    updatedDate: new Date(2025, 9, 5),
   },
   {
     key: "form_5",
     category: "customs",
     fileType: "pdf",
     fileSize: "3.1 MB",
-    updatedDate: "2026-02-01",
+    updatedDate: new Date(2026, 1, 1),
   },
   {
     key: "form_6",
     category: "customs",
     fileType: "xlsx",
     fileSize: "420 KB",
-    updatedDate: "2025-09-18",
+    updatedDate: new Date(2025, 8, 18),
   },
   {
     key: "form_7",
     category: "general",
     fileType: "docx",
     fileSize: "680 KB",
-    updatedDate: "2026-01-25",
+    updatedDate: new Date(2026, 0, 25),
   },
   {
     key: "form_8",
     category: "general",
     fileType: "pdf",
     fileSize: "1.5 MB",
-    updatedDate: "2025-12-01",
+    updatedDate: new Date(2025, 11, 1),
   },
 ];
 
 export default function FormsList() {
   const t = useTranslations("forms_page.list");
+  const format = useFormatter();
   const [activeFilter, setActiveFilter] = useState("all");
 
   const filteredForms = MOCK_FORMS.filter(
@@ -235,7 +236,7 @@ export default function FormsList() {
                               className="h-3.5 w-3.5"
                               aria-hidden="true"
                             />
-                            <span>{form.updatedDate}</span>
+                            <span>{format.dateTime(form.updatedDate, { year: "numeric", month: "short", day: "numeric" })}</span>
                           </div>
                           <span className="uppercase font-bold text-navy-600/50">
                             .{form.fileType}
