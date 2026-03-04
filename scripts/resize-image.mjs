@@ -9,10 +9,16 @@
  *   npm run resize freepik-download.jpg public/images/hero/new-image.jpg
  *   npm run resize freepik-download.jpg                  # overwrites original
  *
+ * Chat mode (for sharing screenshots with AI):
+ *   npm run resize <input-path> -- --for-chat
+ *   npm run resize ~/Desktop/screenshot.png -- --for-chat
+ *   → Auto outputs to /tmp/chat-ready.jpg (< 3.5MB, base64 < 5MB)
+ *
  * Options:
+ *   --for-chat       Resize for chat sharing (auto quality + max 3.5MB output)
  *   --max-width=N    Max width in px (default: auto by output folder)
  *   --quality=N      JPEG quality 1-100 (default: 85)
- *   --no-grade       Skip EEC color grading
+ *   --grade          Apply EEC color grading (off by default)
  *
  * Auto-sizing rules (same as optimize-images.mjs):
  *   hero/, stats/, cta/ folders → max 1920px width
@@ -36,17 +42,23 @@ const args = process.argv.slice(2);
 const flags = args.filter((a) => a.startsWith("--"));
 const positional = args.filter((a) => !a.startsWith("--"));
 
-const inputPath = positional[0] ? resolve(positional[0]) : null;
-const outputPath = positional[1] ? resolve(positional[1]) : inputPath;
-
 const getFlag = (name) => {
   const f = flags.find((a) => a.startsWith(`--${name}=`));
   return f ? f.split("=")[1] : null;
 };
 
-const SKIP_GRADE = flags.includes("--no-grade");
+const FOR_CHAT = flags.includes("--for-chat");
+const APPLY_GRADE = flags.includes("--grade");
 const CUSTOM_MAX_W = getFlag("max-width") ? parseInt(getFlag("max-width")) : null;
-const QUALITY = getFlag("quality") ? parseInt(getFlag("quality")) : 85;
+const QUALITY = getFlag("quality") ? parseInt(getFlag("quality")) : (FOR_CHAT ? 70 : 85);
+const CHAT_MAX_BYTES = 3_500_000; // 3.5MB → base64 ~4.8MB (under 5MB limit)
+
+const inputPath = positional[0] ? resolve(positional[0]) : null;
+const outputPath = FOR_CHAT
+  ? resolve("/tmp/chat-ready.jpg")
+  : positional[1]
+    ? resolve(positional[1])
+    : inputPath;
 
 /* ── Sizing rules ── */
 function getMaxWidth(filePath) {
@@ -86,6 +98,10 @@ async function main() {
     npm run resize ~/Downloads/freepik-image.jpg public/images/hero/new.jpg
     npm run resize public/images/hero/big-image.jpg
     npm run resize photo.jpg public/images/news/article.jpg --quality=80
+
+  Chat mode (resize screenshot for AI chat):
+    npm run resize ~/Desktop/screenshot.png -- --for-chat
+    → Output: /tmp/chat-ready.jpg (< 3.5MB, base64 < 5MB)
     `);
     process.exit(1);
   }
@@ -119,56 +135,105 @@ async function main() {
     `  Base64 estimate: ~${fmt(Math.ceil(beforeSize * 1.37))} ${beforeSize * 1.37 > 5_000_000 ? "(EXCEEDS 5MB LIMIT)" : "(OK)"}`
   );
   console.log(
-    `  Color Grade: ${SKIP_GRADE ? "OFF" : "ON (EEC cinematic)"}`
+    `  Color Grade: ${APPLY_GRADE ? "ON (EEC cinematic)" : "OFF (use --grade to enable)"}`
   );
+  if (FOR_CHAT) {
+    console.log(`  Mode: CHAT (auto-fit under ${fmt(CHAT_MAX_BYTES)} for AI sharing)`);
+  }
 
   // Determine max width
-  const maxW = CUSTOM_MAX_W || getMaxWidth(outputPath);
+  let maxW = CUSTOM_MAX_W || (FOR_CHAT ? 1920 : getMaxWidth(outputPath));
   const needsResize = meta.width && meta.width > maxW;
 
   console.log(
     `  Resize: ${needsResize ? `${meta.width}px → ${maxW}px` : `${meta.width}px (already within ${maxW}px)`}`
   );
 
-  // Build pipeline
-  let pipeline = sharp(inputPath).rotate(); // auto-rotate EXIF
+  // For chat mode: auto-reduce until under limit
+  if (FOR_CHAT) {
+    let quality = QUALITY;
+    let width = Math.min(meta.width || 1920, maxW);
+    let outputBuffer;
+    let attempts = 0;
 
-  if (needsResize) {
-    pipeline = pipeline.resize({ width: maxW, withoutEnlargement: true });
-  }
+    while (attempts < 8) {
+      attempts++;
+      let pipeline = sharp(inputPath).rotate();
+      pipeline = pipeline.resize({ width, withoutEnlargement: true });
 
-  // Apply color grading
-  if (!SKIP_GRADE) {
-    pipeline = applyColorGrade(pipeline);
-  }
+      if (APPLY_GRADE) {
+        pipeline = applyColorGrade(pipeline);
+      }
 
-  // Output format
-  const outExt = extname(outputPath).toLowerCase();
-  if (outExt === ".png") {
-    pipeline = pipeline.png({ quality: QUALITY, compressionLevel: 9 });
+      pipeline = pipeline.jpeg({ quality, mozjpeg: true });
+      outputBuffer = await pipeline.toBuffer();
+
+      console.log(
+        `  Attempt ${attempts}: ${width}px, q${quality} → ${fmt(outputBuffer.length)} (base64 ~${fmt(Math.ceil(outputBuffer.length * 1.37))})`
+      );
+
+      if (outputBuffer.length <= CHAT_MAX_BYTES) break;
+
+      // Reduce: first drop quality, then drop width
+      if (quality > 50) {
+        quality -= 10;
+      } else {
+        width = Math.floor(width * 0.75);
+        quality = 70; // reset quality for smaller size
+      }
+    }
+
+    await sharp(outputBuffer).toFile(outputPath);
+
+    const afterSize = outputBuffer.length;
+    const saved = beforeSize - afterSize;
+    const pct = ((saved / beforeSize) * 100).toFixed(0);
+    const newMeta = await sharp(outputPath).metadata();
+
+    console.log(`\n  Result: ${newMeta.width}x${newMeta.height} — ${fmt(afterSize)}`);
+    console.log(
+      `  Base64: ~${fmt(Math.ceil(afterSize * 1.37))} ${afterSize * 1.37 > 5_000_000 ? "⚠️  STILL EXCEEDS 5MB!" : "✅ OK, under 5MB"}`
+    );
+    console.log(`  Saved: ${fmt(saved)} (-${pct}%)`);
+    console.log(`\n  Output: ${outputPath}`);
+    console.log(`  → Paste this file into the chat!\n`);
   } else {
-    pipeline = pipeline.jpeg({ quality: QUALITY, mozjpeg: true });
+    // Normal mode (existing behavior)
+    let pipeline = sharp(inputPath).rotate();
+
+    if (needsResize) {
+      pipeline = pipeline.resize({ width: maxW, withoutEnlargement: true });
+    }
+
+    if (APPLY_GRADE) {
+      pipeline = applyColorGrade(pipeline);
+    }
+
+    const outExt = extname(outputPath).toLowerCase();
+    if (outExt === ".png") {
+      pipeline = pipeline.png({ quality: QUALITY, compressionLevel: 9 });
+    } else {
+      pipeline = pipeline.jpeg({ quality: QUALITY, mozjpeg: true });
+    }
+
+    const outputBuffer = await pipeline.toBuffer();
+    const afterSize = outputBuffer.length;
+
+    await sharp(outputBuffer).toFile(outputPath);
+
+    const saved = beforeSize - afterSize;
+    const pct = ((saved / beforeSize) * 100).toFixed(0);
+    const newMeta = await sharp(outputPath).metadata();
+
+    console.log(`\n  Result: ${newMeta.width}x${newMeta.height} — ${fmt(afterSize)}`);
+    console.log(
+      `  Base64 estimate: ~${fmt(Math.ceil(afterSize * 1.37))} ${afterSize * 1.37 > 5_000_000 ? "(STILL EXCEEDS 5MB!)" : "(OK, under 5MB)"}`
+    );
+    console.log(
+      `  Saved: ${fmt(saved)} (${saved > 0 ? "-" + pct + "%" : "increased"})`
+    );
+    console.log(`\n  Done!\n`);
   }
-
-  // Process
-  const outputBuffer = await pipeline.toBuffer();
-  const afterSize = outputBuffer.length;
-
-  // Write
-  await sharp(outputBuffer).toFile(outputPath);
-
-  const saved = beforeSize - afterSize;
-  const pct = ((saved / beforeSize) * 100).toFixed(0);
-  const newMeta = await sharp(outputPath).metadata();
-
-  console.log(`\n  Result: ${newMeta.width}x${newMeta.height} — ${fmt(afterSize)}`);
-  console.log(
-    `  Base64 estimate: ~${fmt(Math.ceil(afterSize * 1.37))} ${afterSize * 1.37 > 5_000_000 ? "(STILL EXCEEDS 5MB!)" : "(OK, under 5MB)"}`
-  );
-  console.log(
-    `  Saved: ${fmt(saved)} (${saved > 0 ? "-" + pct + "%" : "increased"})`
-  );
-  console.log(`\n  Done!\n`);
 }
 
 main().catch((err) => {

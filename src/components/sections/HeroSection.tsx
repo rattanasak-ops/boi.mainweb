@@ -124,6 +124,7 @@ export default function HeroSection() {
   });
   const [paused, setPaused] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   /* ── Slide 5 sub-carousel state ── */
   const [subSlide, setSubSlide] = useState(0);
@@ -163,6 +164,33 @@ export default function HeroSection() {
     },
     []
   );
+
+  /* ── Seamless video loop — seek back before end to avoid gray flash ── */
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleTimeUpdate = () => {
+      // When video is within 0.3s of the end, seek back to start
+      if (video.duration && video.currentTime >= video.duration - 0.3) {
+        video.currentTime = 0;
+        video.play().catch(() => {});
+      }
+    };
+
+    // Also handle the 'ended' event as a fallback
+    const handleEnded = () => {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    };
+
+    video.addEventListener("timeupdate", handleTimeUpdate);
+    video.addEventListener("ended", handleEnded);
+    return () => {
+      video.removeEventListener("timeupdate", handleTimeUpdate);
+      video.removeEventListener("ended", handleEnded);
+    };
+  }, [current]);
 
   /* Gate opening complete — wait for GrandGateLoading to finish, then enable carousel */
   useEffect(() => {
@@ -343,9 +371,9 @@ export default function HeroSection() {
             /* Video background slide (Slide 1 — Gateway) */
             <div className="absolute inset-0">
               <video
+                ref={videoRef}
                 autoPlay
                 muted
-                loop
                 playsInline
                 poster={slide.image}
                 className="absolute inset-0 w-full h-full object-cover"
@@ -376,6 +404,7 @@ export default function HeroSection() {
               />
             </motion.div>
           )}
+
         </motion.div>
       </AnimatePresence>
 

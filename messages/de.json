@@ -79,22 +79,32 @@
     "bottom_line": "Daten von 2025 — Thailands Investitionsförderungsbehörde"
   },
   "why_thailand": {
-    "subtitle": "Thailand entdecken",
-    "title_1": "Warum führende Unternehmen",
-    "title_2": "Thailand wählen",
-    "description": "Unter den Top-Investitionszielen Südostasiens — mit erstklassiger Infrastruktur, wettbewerbsfähigen Anreizen und einer strategischen Lage im Herzen der ASEAN.",
-    "strategic_location": "Strategische Lage",
-    "strategic_location_desc": "Tor zur ASEAN — Zugang zu 700 Mio.+ Verbrauchern, angebunden an wichtige Handelsrouten im asiatisch-pazifischen Raum",
-    "digital_infra": "Digitale Infrastruktur",
-    "digital_infra_desc": "Landesweites 5G, EEC Digital Park, Smart Industrial Estates und Weltklasse-Logistiknetze",
-    "incentives": "Wettbewerbsfähige Anreize",
-    "incentives_desc": "Körperschaftsteuerbefreiung bis zu 13 Jahre, zollfreier Maschinenimport und Nicht-Steuer-Vorteile",
-    "workforce": "Qualifizierte Arbeitskräfte",
-    "workforce_desc": "MINT-Absolventen, wettbewerbsfähige Arbeitskosten und staatlich unterstützte Schulungsprogramme",
+    "subtitle": "Öffnen Sie Ihre Zukunft",
+    "title_1": "Die weltweit führenden Investoren",
+    "title_2": "haben Thailand bereits gewählt",
+    "description": "2024 investierten über 3.137 Unternehmen 33 Milliarden Dollar in Thailand — ein 10-Jahres-Rekord. Hier erfahren Sie, warum sie nicht gezögert haben.",
+    "strategic_location": "700 Mio.+ Kunden erschließen",
+    "strategic_location_desc": "Sie betreten nicht nur Thailand — Sie öffnen die Tür zum am schnellsten wachsenden Verbrauchermarkt der Welt. ASEAN gehört Ihnen.",
+    "strategic_location_stat": "700M+",
+    "workforce": "500.000 MINT-Absolventen. Jedes Jahr.",
+    "workforce_desc": "Weltklasse-Talente zu wettbewerbsfähigen Kosten. Ihr zukünftiges Team ist bereits hier, ausgebildet und bereit.",
+    "workforce_stat": "500K+",
+    "digital_infra": "Landesweites 5G. Zukunftsfähig gebaut.",
+    "digital_infra_desc": "Von EEC-Smartzonen bis landesweitem 5G — die Infrastruktur unterstützt Ihre Ambitionen nicht nur, sie beschleunigt sie.",
+    "digital_infra_stat": "99.9%",
+    "incentives": "13 Jahre. Null Körperschaftsteuer.",
+    "incentives_desc": "Steuerbefreiung bis zu 13 Jahre, zollfreie Importe, 100% ausländisches Eigentum. Ihre Gewinne gehören Ihnen.",
+    "incentives_stat": "13yr",
+    "quality_of_life": "Leben, wo die Welt hinreisen will",
+    "quality_of_life_desc": "Internationale Schulen, erstklassige Gesundheitsversorgung und Lebenshaltungskosten, die Ihre Talente gedeihen lassen — nicht nur überleben.",
+    "quality_of_life_stat": "#1",
+    "stats_invested_label": "Investiert in 2024",
+    "stats_projects_label": "Genehmigte Projekte",
+    "stats_fdi_label": "FDI-Anteil",
+    "stats_growth_label": "Wachstum im Jahresvergleich",
+    "social_proof_title": "Schließen Sie sich 3.137+ Unternehmen an, die 2024 Thailand gewählt haben",
     "investor_protection": "Investorenschutz",
-    "investor_protection_desc": "Starke IP-Gesetze, bilaterale Investitionsabkommen mit 40+ Ländern und transparente Vorschriften",
-    "quality_of_life": "Lebensqualität",
-    "quality_of_life_desc": "Weltbekannte Gastfreundschaft, internationale Schulen, modernes Gesundheitswesen und lebendige Kultur"
+    "investor_protection_desc": "Starke IP-Gesetze, bilaterale Investitionsabkommen mit 40+ Ländern und transparente Vorschriften"
   },
   "news": {
     "subtitle": "Aktuelles",
@@ -113,20 +123,41 @@
     "news_4_excerpt": "Eine 50-Milliarden-Yen-Erweiterung unter Nutzung von BOI-Anreizen für intelligente Automobilherstellung."
   },
   "services": {
-    "subtitle": "Schnellzugriff",
-    "title": "e-Dienste",
+    "subtitle": "Alle Gateways öffnen",
+    "title": "Digitale Service-Gateways",
+    "tagline": "Jeder Service. Jederzeit. Überall.",
     "einvestment": "e-Investment",
-    "einvestment_desc": "Online Investitionsförderung beantragen",
+    "einvestment_desc": "Online Investitionsförderung mit Echtzeit-Tracking beantragen",
+    "einvestment_status": "Sofort verfügbar",
+    "einvestment_stat": "10.000+ Anträge/Jahr",
+    "einvestment_counter_label": "Anträge pro Jahr",
+    "einvestment_cta": "Antrag starten",
     "visa": "Visum & Arbeitserlaubnis",
-    "visa_desc": "Visum- und Arbeitserlaubnis-Service",
+    "visa_desc": "Kompletter Visum- und Arbeitserlaubnis-Service für Investoren",
+    "visa_status": "Verfügbar",
+    "visa_stat": "Online 24/7",
+    "visa_cta": "Jetzt starten",
     "smart_visa": "Smart Visa",
-    "smart_visa_desc": "Spezialvisum für Talente und Experten",
+    "smart_visa_desc": "Spezialvisum für Experten, Führungskräfte und Investoren",
+    "smart_visa_status": "Bewerbung offen",
+    "smart_visa_stat": "Fast Track 30 Tage",
+    "smart_visa_cta": "Jetzt bewerben",
     "osos": "OSOS",
-    "osos_desc": "One Start One Stop Investitionszentrum",
+    "osos_desc": "One Start One Stop — alle Services an einem Ort",
+    "osos_status": "Alles aus einer Hand",
+    "osos_stat": "One-Stop-Service",
+    "osos_cta": "Zum Servicecenter",
     "matchmaking": "Business Matching",
-    "matchmaking_desc": "Geschäftspartner und Lieferanten vermitteln",
+    "matchmaking_desc": "Die richtigen Partner und Lieferanten für Ihr Unternehmen finden",
+    "matchmaking_status": "Auto-Matching",
+    "matchmaking_stat": "500+ Partner",
+    "matchmaking_cta": "Partner finden",
     "incentive_calc": "Incentive Calculator",
-    "incentive_calc_desc": "Berechnen Sie Ihre Investitionsvorteile"
+    "incentive_calc_desc": "Berechnen Sie Ihre Investitionsvorteile in nur 2 Minuten",
+    "incentive_calc_status": "Kostenloses Tool",
+    "incentive_calc_stat": "Nur 2 Minuten",
+    "incentive_calc_placeholder": "Geschäftsart...",
+    "incentive_calc_cta": "Jetzt berechnen"
   },
   "cta": {
     "subtitle": "Starten Sie Ihre Investition",
@@ -465,6 +496,514 @@
       "address_short": "Vibhavadi Rangsit Rd, Bangkok"
     }
   },
+  "news_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_resources": "Ressourcen",
+      "breadcrumb": "Nachrichten & Aktuelles",
+      "eyebrow": "Neueste Meldungen",
+      "title_1": "Nachrichten &",
+      "title_2": "Aktuelles",
+      "subtitle": "Bleiben Sie informiert über die neuesten BOI-Ankündigungen, Politikänderungen und Investitionsnachrichten aus Thailand."
+    },
+    "list": {
+      "search_placeholder": "Nachrichtenartikel suchen...",
+      "category_all": "Alle",
+      "category_announcement": "Ankündigung",
+      "category_policy": "Politik",
+      "category_investment": "Investition",
+      "category_event": "Veranstaltung",
+      "category_industry": "Industrie",
+      "featured": "Empfohlen",
+      "read_more": "Weiterlesen",
+      "prev_page": "Vorherige Seite",
+      "next_page": "Nächste Seite",
+      "articles": {
+        "boi-approves-new-ev-incentives-2026": {
+          "title": "BOI genehmigt neues EV-Anreizpaket für 2026",
+          "excerpt": "Erweiterte Steuervorteile und ausgebaute Unterstützung für Elektrofahrzeughersteller und Lieferkettenpartner in Thailands wachsendem EV-Ökosystem.",
+          "date": "28. Februar 2026"
+        },
+        "digital-economy-zone-expansion": {
+          "title": "Digitale Wirtschaftszone expandiert auf 5 neue Provinzen",
+          "excerpt": "BOI kündigt Erweiterung der Digitalen Wirtschaftszone auf Chiang Mai, Khon Kaen, Phuket, Songkhla und Nakhon Ratchasima an.",
+          "date": "25. Februar 2026"
+        },
+        "thailand-auto-manufacturing-milestone": {
+          "title": "Thailand erreicht Meilenstein in der Automobilproduktion",
+          "excerpt": "Thailands Automobilindustrie überschreitet die Marke von 2 Millionen jährlich produzierten Fahrzeugen und festigt seine Position als Detroit Asiens.",
+          "date": "20. Februar 2026"
+        },
+        "international-investment-conference-2026": {
+          "title": "Internationale Investitionskonferenz 2026 angekündigt",
+          "excerpt": "BOI veranstaltet im April die jährliche Thailand-Investitionskonferenz in Bangkok mit Keynotes von führenden Branchenvertretern weltweit.",
+          "date": "15. Februar 2026"
+        },
+        "foreign-investment-q4-2025-report": {
+          "title": "Ausländische Investitionen steigen um 25% im Q4 2025",
+          "excerpt": "Neueste BOI-Daten zeigen starkes Wachstum bei ausländischen Direktinvestitionen, angetrieben durch den EV-Sektor und Digitaltechnologie-Projekte.",
+          "date": "10. Februar 2026"
+        },
+        "smart-visa-program-updates": {
+          "title": "Smart-Visa-Programm aktualisiert: Neue Vorteile für 2026",
+          "excerpt": "Das Smart-Visa-Programm umfasst nun erweiterte Berechtigung für KI- und Robotikfachkräfte sowie verbesserte Familienleistungen.",
+          "date": "5. Februar 2026"
+        }
+      }
+    },
+    "detail": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_news": "Nachrichten & Aktuelles",
+      "sample_title": "BOI genehmigt neues EV-Anreizpaket für 2026",
+      "sample_category": "Politik",
+      "sample_date": "28. Februar 2026",
+      "reading_time": "5 Min. Lesezeit",
+      "sample_lead": "Das Board of Investment of Thailand hat ein umfassendes neues Anreizpaket genehmigt, das das Wachstum der Elektrofahrzeugindustrie beschleunigen soll und erweiterte Steuervorteile sowie ausgebaute Unterstützungsmaßnahmen für Hersteller und Lieferkettenpartner bietet.",
+      "sample_heading_1": "Wichtigste Neuerungen des Pakets",
+      "sample_paragraph_1": "Das neue EV-Anreizpaket umfasst eine Verlängerung der Körperschaftsteuerbefreiung auf bis zu 13 Jahre für qualifizierte Investitionen sowie Einfuhrzollbefreiungen für Maschinen und Rohstoffe, die für die EV-Produktion unerlässlich sind. Das Paket führt außerdem zusätzliche Abzüge für Forschungs- und Entwicklungsaktivitäten in der Batterietechnologie und Ladeinfrastruktur ein.",
+      "highlight_label": "Schlüsselzahl",
+      "sample_highlight": "Das neue Paket soll in den nächsten fünf Jahren über 150 Milliarden Baht an Neuinvestitionen anziehen und mehr als 30.000 hochqualifizierte Arbeitsplätze im EV-Sektor schaffen.",
+      "sample_heading_2": "Erweiterte Unterstützungsmaßnahmen",
+      "sample_paragraph_2": "Über Steueranreize hinaus führt das BOI eine Reihe von nicht-steuerlichen Maßnahmen ein, darunter eine vereinfachte Genehmigungsbearbeitung für EV-bezogene Projekte, spezielle Visaerleichterungen für ausländische Experten und eine verbesserte Koordination mit Regierungsbehörden zur Beschleunigung von Projektgenehmigungen.",
+      "sample_paragraph_3": "Das Paket spiegelt Thailands Engagement wider, ein regionaler Hub für die Herstellung und Innovation von Elektrofahrzeugen zu werden, und unterstützt das Ziel des Landes, bis 2030 30% der heimischen Fahrzeugproduktion elektrisch zu gestalten.",
+      "tags_label": "Tags",
+      "back_to_news": "Zurück zu allen Nachrichten",
+      "share_label": "Diesen Artikel teilen",
+      "related_topics": "Verwandte Themen",
+      "topic_incentives": "Übersicht Investitionsanreize",
+      "topic_ev": "EV-Industrie in Thailand",
+      "topic_activities": "Förderfähige Geschäftsaktivitäten",
+      "newsletter_eyebrow": "Bleiben Sie informiert",
+      "newsletter_title": "BOI-Newsletter abonnieren",
+      "newsletter_desc": "Erhalten Sie die neuesten Investitionsnachrichten und Updates direkt in Ihr Postfach.",
+      "newsletter_placeholder": "E-Mail-Adresse eingeben",
+      "newsletter_cta": "Jetzt abonnieren"
+    },
+    "related": {
+      "eyebrow": "Weiterlesen",
+      "title": "Verwandte Artikel",
+      "view_all": "Alle Nachrichten anzeigen"
+    }
+  },
+  "events_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_resources": "Ressourcen",
+      "breadcrumb": "Veranstaltungen & Seminare",
+      "eyebrow": "Kommende Veranstaltungen",
+      "title_1": "Veranstaltungen &",
+      "title_2": "Seminare",
+      "subtitle": "Nehmen Sie an BOI-Veranstaltungen, Seminaren und Konferenzen teil, um sich mit Branchenführern zu vernetzen und Investitionsmöglichkeiten zu entdecken."
+    },
+    "list": {
+      "filter_all": "Alle Veranstaltungen",
+      "filter_upcoming": "Bevorstehend",
+      "filter_seminar": "Seminare",
+      "filter_workshop": "Workshops",
+      "filter_conference": "Konferenzen",
+      "upcoming": "Bevorstehend",
+      "view_details": "Details ansehen",
+      "events": {
+        "thailand-investment-conference-2026": {
+          "title": "Thailand-Investitionskonferenz 2026",
+          "description": "Das jährliche Spitzenereignis, das globale Investoren, Entscheidungsträger und Branchenführer zusammenbringt, um Thailands Investitionslandschaft zu erkunden.",
+          "date": "15.–17. April 2026",
+          "time": "09:00 – 17:00",
+          "location": "QSNCC, Bangkok",
+          "capacity": "500+ Teilnehmer"
+        },
+        "ev-industry-workshop": {
+          "title": "EV-Industrie-Investitionsworkshop",
+          "description": "Praxisworkshop zu EV-Anreizpaketen, Lieferkettenchancen und dem Antragsverfahren für die BOI-Förderung.",
+          "date": "8. April 2026",
+          "time": "13:00 – 16:30",
+          "location": "BOI-Zentrale",
+          "capacity": "80 Plätze"
+        },
+        "digital-economy-seminar": {
+          "title": "Seminar zur Investition in die Digitalwirtschaft",
+          "description": "Erfahren Sie mehr über Thailands Anreize für die Digitalwirtschaft, Sonderzonen und Investitionsmöglichkeiten in KI, Cloud und Rechenzentren.",
+          "date": "25. März 2026",
+          "time": "09:30 – 12:00",
+          "location": "Online (Zoom)",
+          "capacity": "Unbegrenzt"
+        },
+        "smart-manufacturing-expo": {
+          "title": "Smart Manufacturing Expo 2026",
+          "description": "Entdecken Sie die neuesten Entwicklungen in Automatisierung, Robotik und Industrie-4.0-Technologien, die Thailands Fertigungszukunft gestalten.",
+          "date": "18.–20. März 2026",
+          "time": "10:00 – 18:00",
+          "location": "BITEC, Bangkok",
+          "capacity": "1.000+ Besucher"
+        },
+        "investor-briefing-q1-2026": {
+          "title": "Quartals-Investoren-Briefing — Q1 2026",
+          "description": "Umfassender Überblick über Thailands Investitionsleistung, neue Richtlinien und wirtschaftliche Aussichten für das Quartal.",
+          "date": "10. März 2026",
+          "time": "14:00 – 15:30",
+          "location": "Online (Zoom)",
+          "capacity": "300 Plätze"
+        },
+        "boi-international-roadshow": {
+          "title": "BOI Internationale Investitions-Roadshow",
+          "description": "Mehrstädtige Roadshow mit Einzelgesprächen mit BOI-Beauftragten und Präsentationen zu Thailands Investitionsvorteilen.",
+          "date": "28. Februar – 5. März 2026",
+          "time": "Ganztägig",
+          "location": "Tokio, Seoul, Singapur",
+          "capacity": "Nur auf Einladung"
+        }
+      }
+    }
+  },
+  "faq_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb": "FAQ",
+      "eyebrow": "Hilfezentrum",
+      "title_1": "Häufig gestellte",
+      "title_2": "Fragen",
+      "subtitle": "Finden Sie Antworten auf die häufigsten Fragen zur BOI-Investitionsförderung, Anreizen und zum Antragsverfahren.",
+      "search_placeholder": "Nach Antworten suchen..."
+    },
+    "content": {
+      "categories_label": "Kategorien",
+      "cat_general": "Allgemein",
+      "cat_eligibility": "Berechtigung",
+      "cat_application": "Antrag",
+      "cat_incentives": "Anreize",
+      "cat_compliance": "Compliance",
+      "general": {
+        "what_is_boi_q": "Was ist das Board of Investment (BOI)?",
+        "what_is_boi_a": "Das Board of Investment of Thailand (BOI) ist eine Regierungsbehörde unter dem Büro des Premierministers, die in- und ausländische Investitionen in Thailand fördert und erleichtert. 1966 gegründet, bietet das BOI steuerliche und nicht-steuerliche Anreize für berechtigte Unternehmen in verschiedenen Branchen.",
+        "who_can_apply_q": "Wer kann BOI-Investitionsförderung beantragen?",
+        "who_can_apply_a": "Sowohl thailändische als auch ausländische Investoren können BOI-Investitionsförderung beantragen. Antragsteller müssen ein in Thailand eingetragenes Unternehmen haben oder sich im Gründungsprozess befinden. Die Geschäftstätigkeit muss in der Liste der förderfähigen Aktivitäten des BOI enthalten sein.",
+        "how_long_q": "Wie lange dauert das BOI-Antragsverfahren?",
+        "how_long_a": "Die Standardbearbeitungszeit beträgt etwa 40–60 Arbeitstage ab Einreichung eines vollständigen Antrags. Komplexe Projekte oder solche, die eine zusätzliche Prüfung erfordern, können länger dauern. Das BOI bietet für bestimmte vorrangige Projekte ein beschleunigtes Verfahren an."
+      },
+      "eligibility": {
+        "eligible_activities_q": "Welche Geschäftsaktivitäten sind für die BOI-Förderung berechtigt?",
+        "eligible_activities_a": "Das BOI fördert eine Vielzahl von Geschäftsaktivitäten in den Bereichen Landwirtschaft, Fertigung, Dienstleistungen und Technologie. Die Liste der förderfähigen Aktivitäten wird regelmäßig aktualisiert und nach dem Umfang der angebotenen Anreize in Kategorien (A1+, A1, A2, A3, A4, B1, B2) eingeteilt.",
+        "minimum_investment_q": "Gibt es einen Mindestinvestitionsbetrag?",
+        "minimum_investment_a": "Ja, das Mindestinvestitionskapital (ohne Grundstück und Betriebskapital) beträgt in der Regel 1 Million Baht. Einige Aktivitäten können jedoch je nach Kategorie und Art des Unternehmens höhere Mindestanforderungen haben.",
+        "foreign_ownership_q": "Können ausländische Investoren 100% des Unternehmens besitzen?",
+        "foreign_ownership_a": "Ja, BOI-geförderte Unternehmen in der Fertigung und bestimmten Dienstleistungssektoren können zu 100% in ausländischem Besitz sein. Dies ist einer der wesentlichen Vorteile der BOI-Förderung, da sie eine Ausnahme von den Beschränkungen des thailändischen Gesetzes über ausländische Geschäftstätigkeit bietet."
+      },
+      "application": {
+        "how_to_apply_q": "Wie beantrage ich die BOI-Förderung?",
+        "how_to_apply_a": "Anträge können online über das e-Investment-System oder persönlich bei BOI-Büros eingereicht werden. Sie müssen das Antragsformular ausfüllen, eine Machbarkeitsstudie vorlegen und Belege wie Finanzprognosen und Firmenregistrierungsunterlagen einreichen.",
+        "documents_needed_q": "Welche Unterlagen werden für den Antrag benötigt?",
+        "documents_needed_a": "Erforderliche Unterlagen umfassen das ausgefüllte BOI-Antragsformular, eine Machbarkeitsstudie, Finanzprognosen, Firmenregistrierungsunterlagen (oder Vorgründungsvereinbarung), einen Projektumsetzungsplan und eine Umweltverträglichkeitsprüfung (für relevante Aktivitäten).",
+        "processing_time_q": "Kann ich den Status meines Antrags verfolgen?",
+        "processing_time_a": "Ja, Sie können den Antragsstatus über das e-Investment-Portal verfolgen. Das BOI weist außerdem einen Projektbeauftragten zu, der Ihr Ansprechpartner während des gesamten Prozesses ist und Statusaktualisierungen bereitstellt."
+      },
+      "incentives": {
+        "tax_exemption_q": "Welche steuerlichen Anreize sind verfügbar?",
+        "tax_exemption_a": "Das BOI bietet je nach Aktivitätskategorie eine Körperschaftsteuerbefreiung von 3–13 Jahren, Einfuhrzollbefreiungen für Maschinen und Rohstoffe sowie zusätzliche Abzüge für F&E-, Schulungs- und Infrastrukturentwicklungsausgaben.",
+        "non_tax_benefits_q": "Welche nicht-steuerlichen Anreize bietet das BOI?",
+        "non_tax_benefits_a": "Nicht-steuerliche Anreize umfassen die Genehmigung für ausländische Mehrheitsbeteiligung, die Erlaubnis zum Grunderwerb, erleichterte Arbeitserlaubnisse und Visa für ausländische Experten, die Genehmigung zur Devisenübertragung ins Ausland und den Schutz vor Verstaatlichung.",
+        "zone_benefits_q": "Gibt es zusätzliche Vorteile für Investitionen in Sonderzonen?",
+        "zone_benefits_a": "Ja, Investitionen in Sonderzonen wie dem Eastern Economic Corridor (EEC), Sonderwirtschaftszonen (SEZ) und Wissenschafts- und Technologieparks erhalten erweiterte Anreize, darunter verlängerte Steuerbefreiungen, zusätzliche Körperschaftsteuerermäßigungen und Infrastrukturunterstützung."
+      },
+      "compliance": {
+        "reporting_q": "Welche Berichtspflichten bestehen nach Erhalt der Förderung?",
+        "reporting_a": "BOI-geförderte Unternehmen müssen jährliche Betriebsberichte einreichen und die in der Förderungsurkunde genannten Bedingungen einhalten. Dazu gehören die Einhaltung des Mindestinvestitionsniveaus, der Produktionskapazitätsanforderungen und der Beschäftigungsbedingungen.",
+        "revocation_q": "Unter welchen Umständen kann die BOI-Förderung widerrufen werden?",
+        "revocation_a": "Die Förderung kann widerrufen werden, wenn das Unternehmen die Bedingungen der Förderungsurkunde nicht einhält, falsche Angaben im Antrag macht, erforderliche Berichte nicht einreicht oder den Betrieb nicht innerhalb des festgelegten Zeitraums aufnimmt.",
+        "extension_q": "Kann ich meinen BOI-Anreizzeitraum verlängern?",
+        "extension_a": "In bestimmten Fällen kann das BOI Verlängerungen für bestimmte Anreize genehmigen. Unternehmen, die in genehmigte Wissenschafts- und Technologieaktivitäten investieren oder in Zielprovinzen ansässig sind, können für zusätzliche Jahre der Körperschaftsteuerbefreiung berechtigt sein."
+      }
+    },
+    "cta": {
+      "eyebrow": "Noch Fragen?",
+      "title": "Wir helfen Ihnen gerne",
+      "description": "Unser Expertenteam steht bereit, um Ihnen bei allen Fragen zur Investitionsförderung in Thailand zu helfen.",
+      "cta_contact": "Kontaktieren Sie uns",
+      "cta_call": "Anrufen: 0 2553 8111"
+    }
+  },
+  "contact_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb": "Kontakt",
+      "eyebrow": "Kontakt aufnehmen",
+      "title_1": "Kontaktieren Sie",
+      "title_2": "das BOI",
+      "subtitle": "Unser Expertenteam begleitet Sie bei jedem Schritt des Investitionsförderungsverfahrens.",
+      "phone_label": "Telefon",
+      "phone_value": "0 2553 8111",
+      "email_label": "E-Mail",
+      "email_value": "head@boi.go.th",
+      "address_label": "Adresse",
+      "address_value": "555 Vibhavadi Rangsit Rd, Chatuchak, Bangkok 10900",
+      "hours_label": "Öffnungszeiten",
+      "hours_value": "Mo–Fr: 08:30–16:30"
+    },
+    "form": {
+      "eyebrow": "Nachricht senden",
+      "title": "Wie können wir Ihnen helfen?",
+      "description": "Füllen Sie das Formular aus und unser Team meldet sich innerhalb von 2 Werktagen bei Ihnen.",
+      "map_label": "Google Maps — BOI-Zentrale",
+      "name_label": "Vollständiger Name",
+      "name_placeholder": "Geben Sie Ihren vollständigen Namen ein",
+      "email_label": "E-Mail-Adresse",
+      "email_placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+      "company_label": "Firmenname",
+      "company_placeholder": "Geben Sie Ihren Firmennamen ein",
+      "subject_label": "Betreff",
+      "subject_placeholder": "Betreff auswählen",
+      "subject_general": "Allgemeine Anfrage",
+      "subject_incentives": "Investitionsanreize",
+      "subject_application": "Antragsverfahren",
+      "subject_visa": "Visum & Arbeitserlaubnis",
+      "subject_other": "Sonstiges",
+      "message_label": "Nachricht",
+      "message_placeholder": "Teilen Sie uns mit, wie wir helfen können...",
+      "required_note": "* Pflichtfelder",
+      "submit": "Nachricht senden"
+    },
+    "offices": {
+      "eyebrow": "Unsere Büros",
+      "title": "BOI-Büros weltweit",
+      "description": "Mit Büros auf der ganzen Welt sind wir immer in Ihrer Nähe, um Ihre Investition in Thailand zu unterstützen.",
+      "hq_badge": "Hauptsitz",
+      "headquarters_name": "BOI-Zentrale, Bangkok",
+      "headquarters_address": "555 Vibhavadi Rangsit Road, Chatuchak, Bangkok 10900, Thailand",
+      "headquarters_phone": "0 2553 8111",
+      "headquarters_email": "head@boi.go.th",
+      "tokyo_name": "Büro Tokio",
+      "tokyo_address": "8th Floor, Fukuda Building West, 2-11-3 Akasaka, Minato-ku, Tokyo 107-0052",
+      "tokyo_phone": "+81 3 3582 1806",
+      "beijing_name": "Büro Peking",
+      "beijing_address": "Royal Thai Embassy, No. 21, Guang Hua Road, Beijing 100600",
+      "beijing_phone": "+86 10 6532 3775",
+      "new_york_name": "Büro New York",
+      "new_york_address": "7 World Trade Center, 250 Greenwich St, 35th Floor, New York 10007",
+      "new_york_phone": "+1 212 422 9009",
+      "frankfurt_name": "Büro Frankfurt",
+      "frankfurt_address": "Bethmannstraße 58, 5. OG, 60311 Frankfurt am Main, Deutschland",
+      "frankfurt_phone": "+49 69 9291 230",
+      "seoul_name": "Büro Seoul",
+      "seoul_address": "Royal Thai Embassy, 42 Daesagwan-ro, Yongsan-gu, Seoul 04401",
+      "seoul_phone": "+82 2 795 2484"
+    }
+  },
+  "success_stories_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_discover": "Thailand entdecken",
+      "breadcrumb": "Erfolgsgeschichten",
+      "eyebrow": "Investorenerfolge",
+      "title_1": "Erfolgs-",
+      "title_2": "geschichten",
+      "subtitle": "Erfahren Sie, wie führende Unternehmen aus aller Welt mit der BOI-Investitionsförderung in Thailand erfolgreich sind."
+    },
+    "grid": {
+      "filter_all": "Alle Branchen",
+      "filter_ev": "EV & Automobil",
+      "filter_digital": "Digital & Technologie",
+      "filter_manufacturing": "Fertigung",
+      "filter_food": "Lebensmittel & Landwirtschaft",
+      "filter_medical": "Medizin & Gesundheitswesen",
+      "read_story": "Vollständige Geschichte lesen",
+      "stories": {
+        "toyota-ev-manufacturing": {
+          "title": "Toyotas EV-Fertigungszentrum in Thailand",
+          "excerpt": "Wie Toyota BOI-Anreize nutzte, um Südostasiens größte Produktionsstätte für Elektrofahrzeuge im Eastern Economic Corridor zu errichten.",
+          "investment": "45 Mrd. ฿ Investition",
+          "jobs": "5.000+ Arbeitsplätze"
+        },
+        "delta-electronics-smart-factory": {
+          "title": "Delta Electronics: Smart Factory 4.0",
+          "excerpt": "Delta Electronics hat seine Thailand-Aktivitäten mit dem A1+-Förderpaket des BOI in ein vollautomatisiertes Industrie-4.0-Vorzeigeprojekt verwandelt.",
+          "investment": "12 Mrd. ฿ Investition",
+          "jobs": "2.200 Arbeitsplätze"
+        },
+        "google-cloud-data-center": {
+          "title": "Google Cloud Region Thailand",
+          "excerpt": "Google wählte Thailand für seine erste Cloud-Region auf dem südostasiatischen Festland, unterstützt durch BOI-Anreize für die Digitalwirtschaft.",
+          "investment": "35 Mrd. ฿ Investition",
+          "jobs": "800+ Arbeitsplätze"
+        },
+        "cp-foods-innovation-center": {
+          "title": "CP Foods Innovations- & Nachhaltigkeitszentrum",
+          "excerpt": "CP Foods errichtete ein erstklassiges Lebensmittel-Innovationszentrum mit Schwerpunkt auf nachhaltiger Proteinproduktion und Smart-Farming-Technologie.",
+          "investment": "8 Mrd. ฿ Investition",
+          "jobs": "1.500 Arbeitsplätze"
+        },
+        "siemens-healthineers-hub": {
+          "title": "Siemens Healthineers Regionaler Hub",
+          "excerpt": "Siemens Healthineers wählte Thailand als ASEAN-Drehscheibe für Medizingerätevertrieb und -service im Rahmen der BOI-Medizintechnikförderung.",
+          "investment": "5 Mrd. ฿ Investition",
+          "jobs": "600 Arbeitsplätze"
+        },
+        "byd-ev-assembly-plant": {
+          "title": "BYDs erstes EV-Montagewerk in der ASEAN",
+          "excerpt": "BYD errichtete sein erstes Elektrofahrzeug-Montagewerk in der ASEAN in Rayong mit einer Zielproduktion von 150.000 Fahrzeugen jährlich.",
+          "investment": "18 Mrd. ฿ Investition",
+          "jobs": "3.000+ Arbeitsplätze"
+        }
+      }
+    }
+  },
+  "services_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb": "E-Services",
+      "eyebrow": "Digitale Dienstleistungen",
+      "title_1": "E-Services",
+      "title_2": "Hub",
+      "subtitle": "Nutzen Sie die digitalen Dienste und Online-Plattformen des BOI für vereinfachte Investitionsförderungsanträge und Unterstützung."
+    },
+    "grid": {
+      "eyebrow": "Verfügbare Dienste",
+      "title": "Alle Dienste auf einen Klick",
+      "access_service": "Dienst nutzen",
+      "e_investment_name": "e-Investment",
+      "e_investment_desc": "Reichen Sie Ihre BOI-Förderanträge online ein und verfolgen Sie diese. Die umfassende digitale Plattform erledigt alles — vom Erstantrag bis zur Berichterstattung nach der Genehmigung.",
+      "visa_work_permit_name": "Visum & Arbeitserlaubnis",
+      "visa_work_permit_desc": "Beantragen und verwalten Sie Visaverlängerungen und Arbeitserlaubnisse für ausländische Mitarbeiter von BOI-geförderten Unternehmen über unser vereinfachtes Online-System.",
+      "smart_visa_name": "Smart Visa",
+      "smart_visa_desc": "Beantragen Sie das Smart-Visa-Programm für hochqualifizierte Fachkräfte, Investoren, Führungskräfte und Startup-Gründer.",
+      "osos_name": "One Start One Stop (OSOS)",
+      "osos_desc": "Zugang zu mehreren Regierungsdiensten an einem Ort. OSOS bietet koordinierte Unterstützung bei Genehmigungen, Lizenzen und Registrierungen.",
+      "hq_portal_name": "HQ Business Portal",
+      "hq_portal_desc": "Spezielles Portal für regionale Betriebszentralen (ROH) und internationale Hauptquartiere (IHQ) in Thailand.",
+      "after_promotion_name": "Post-Promotion-Services",
+      "after_promotion_desc": "Verwalten Sie Ihre geförderten Projekte einschließlich Verlängerungen, Änderungen und Jahresberichte über das BOI-Serviceportal nach der Genehmigung.",
+      "consultation_name": "Beratung buchen",
+      "consultation_desc": "Vereinbaren Sie eine kostenlose Beratung mit BOI-Investitionsberatern, um Ihre Projektpläne und förderfähigen Anreizpakete zu besprechen.",
+      "tax_calculator_name": "Anreiz-Rechner",
+      "tax_calculator_desc": "Schätzen Sie Ihre potenziellen Steuerersparnisse und Anreizvorteile basierend auf Investitionsart, -betrag und -standort."
+    },
+    "cta": {
+      "eyebrow": "Benötigen Sie Hilfe?",
+      "title": "Wir stehen Ihnen zur Verfügung",
+      "description": "Unser Team von Investitionsberatern steht Ihnen bei jedem digitalen Service und Antragsverfahren zur Seite.",
+      "cta_consult": "Beratung buchen",
+      "cta_faq": "FAQ durchsuchen"
+    }
+  },
+  "search": {
+    "breadcrumb_home": "Startseite",
+    "breadcrumb": "Suchergebnisse",
+    "title": "Suchergebnisse",
+    "placeholder": "Anreize, Dienstleistungen, Nachrichten suchen...",
+    "clear": "Suche löschen",
+    "filter_all": "Alle",
+    "filter_incentives": "Anreize",
+    "filter_services": "Dienstleistungen",
+    "filter_news": "Nachrichten",
+    "filter_events": "Veranstaltungen",
+    "filter_faq": "FAQ",
+    "results_count": "{count} Ergebnisse gefunden",
+    "results_for": "für",
+    "no_results_title": "Keine Ergebnisse gefunden",
+    "no_results_desc": "Versuchen Sie andere Suchbegriffe oder durchsuchen Sie unsere Kategorien"
+  },
+  "privacy": {
+    "breadcrumb_home": "Startseite",
+    "breadcrumb": "Datenschutzerklärung",
+    "eyebrow": "Rechtliches",
+    "title": "Datenschutzerklärung",
+    "subtitle": "Wie wir Ihre persönlichen Daten gemäß PDPA erheben, verwenden und schützen",
+    "last_updated": "Letzte Aktualisierung: 1. März 2026",
+    "sections": {
+      "intro_title": "Einleitung",
+      "intro_text": "Das Thailand Board of Investment (BOI) ist dem Schutz der Privatsphäre von Website-Besuchern verpflichtet. Diese Datenschutzerklärung erläutert, wie wir Ihre Informationen gemäß dem thailändischen Datenschutzgesetz (PDPA) erheben, verwenden, offenlegen und schützen.",
+      "collection_title": "Erhobene Informationen",
+      "collection_text": "Wir erheben persönliche Informationen, die Sie freiwillig bei der Nutzung unserer Dienste angeben: Name, E-Mail, Telefonnummer, Unternehmensinformationen und investitionsbezogene Anfragen über Kontaktformulare.",
+      "auto_title": "Automatisch erhobene Informationen",
+      "auto_text": "Bei Ihrem Besuch erfassen wir automatisch bestimmte Informationen wie IP-Adresse, Browsertyp, Betriebssystem, Verweis-URLs, besuchte Seiten und Zeitstempel. Diese Daten werden durch Cookies und ähnliche Technologien erhoben.",
+      "use_title": "Verwendung Ihrer Informationen",
+      "use_text": "Wir verwenden die erhobenen Informationen für: Bereitstellung und Verbesserung unserer Dienste, Beantwortung von Anfragen, Versand relevanter Investitionsinformationen, Analyse der Website-Nutzung und Erfüllung gesetzlicher Pflichten.",
+      "sharing_title": "Weitergabe von Informationen",
+      "sharing_text": "Wir verkaufen Ihre persönlichen Daten nicht. Wir können Informationen an gesetzlich vorgeschriebene Behörden, autorisierte Dienstleister und im Rahmen von Gerichtsbeschlüssen weitergeben.",
+      "retention_title": "Datenspeicherung",
+      "retention_text": "Personenbezogene Daten werden nur so lange aufbewahrt, wie es für die Zwecke der Erhebung erforderlich ist. Audit-Protokolle werden mindestens 365 Tage aufbewahrt.",
+      "rights_title": "Ihre Rechte nach PDPA",
+      "rights_text": "Nach PDPA haben Sie das Recht auf: Zugang zu Ihren Daten, Berichtigung, Löschung, Widerruf der Einwilligung, Datenübertragbarkeit und Beschwerde bei der Datenschutzkommission.",
+      "security_title": "Datensicherheit",
+      "security_text": "Wir setzen angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer Daten ein, einschließlich Verschlüsselung, Zugangskontrolle und regelmäßiger OWASP-konformer Sicherheitsbewertungen.",
+      "contact_title": "Kontakt",
+      "contact_text": "Für datenschutzbezogene Anfragen oder zur Ausübung Ihrer PDPA-Rechte kontaktieren Sie unseren Datenschutzbeauftragten: dpo@boi.go.th oder besuchen Sie unsere Kontaktseite."
+    }
+  },
+  "accessibility_page": {
+    "breadcrumb_home": "Startseite",
+    "breadcrumb": "Barrierefreiheitserklärung",
+    "eyebrow": "Verpflichtung",
+    "title": "Barrierefreiheitserklärung",
+    "subtitle": "Unser Engagement, Investitionsinformationen für alle zugänglich zu machen",
+    "last_updated": "Letzte Aktualisierung: 1. März 2026",
+    "sections": {
+      "commitment_title": "Unser Engagement",
+      "commitment_text": "Das BOI setzt sich für digitale Barrierefreiheit für Menschen mit unterschiedlichen Fähigkeiten ein. Wir verbessern kontinuierlich die Benutzererfahrung und wenden relevante Barrierefreiheitsstandards an.",
+      "standards_title": "Standards und Konformität",
+      "standards_text": "Diese Website strebt die Konformität mit den Web Content Accessibility Guidelines (WCAG) 2.1 Level AA an. Wir erfüllen auch die digitalen Barrierefreiheitsstandards der thailändischen DGA.",
+      "features_title": "Barrierefreiheitsfunktionen",
+      "features_text": "Anpassbare Textgröße und Abstände, Hochkontrast- und Dunkelmodus, Tastaturnavigation, Screenreader-Kompatibilität, Alternativtexte, ARIA-Landmarks, Fokusindikatoren und ein umfassendes Barrierefreiheits-Widget.",
+      "widget_title": "Barrierefreiheits-Widget",
+      "widget_text": "Nutzen Sie unser Widget (unten links) zur Anpassung: Inhaltsskalierung, Schriftgröße, Zeilenhöhe, Zeichenabstand, Überschriften-/Link-Hervorhebung, Kontrastmodi, Graustufen, Cursor-Hervorhebung und Sprachausgabe.",
+      "feedback_title": "Feedback",
+      "feedback_text": "Wir freuen uns über Ihr Feedback zur Barrierefreiheit. Kontaktieren Sie uns unter: accessibility@boi.go.th oder nutzen Sie unser Kontaktformular.",
+      "ongoing_title": "Laufende Bemühungen",
+      "ongoing_text": "Regelmäßige Barrierefreiheits-Audits, Mitarbeiterschulungen zur barrierefreien Inhaltserstellung und Tests mit assistiven Technologien."
+    }
+  },
+  "a11y": {
+    "title": "Barrierefreiheit",
+    "subtitle": "Anzeigeeinstellungen anpassen",
+    "reset": "Auf Standard zurücksetzen",
+    "close": "Schließen",
+    "contentSize": "Inhaltsgröße",
+    "fontSize": "Schriftgröße",
+    "lineHeight": "Zeilenhöhe",
+    "letterSpacing": "Zeichenabstand",
+    "highlightHeadings": "Überschriften hervorheben",
+    "highlightLinks": "Links hervorheben",
+    "darkContrast": "Dunkler Kontrast",
+    "lightContrast": "Heller Kontrast",
+    "grayscale": "Graustufen",
+    "highContrast": "Hoher Kontrast",
+    "highSaturation": "Hohe Sättigung",
+    "lowSaturation": "Niedrige Sättigung",
+    "highlightHover": "Cursor hervorheben",
+    "textToSpeech": "Sprachausgabe",
+    "ttsActive": "Text auswählen zum Vorlesen",
+    "default": "Standard"
+  },
+  "cookie_consent": {
+    "title": "Cookie-Einstellungen",
+    "description": "Wir verwenden Cookies zur Verbesserung Ihres Erlebnisses. Durch Fortfahren stimmen Sie der Verwendung von Cookies zu.",
+    "privacy_link": "Datenschutzerklärung",
+    "close": "Schließen",
+    "manage_preferences": "Cookie-Einstellungen verwalten",
+    "accept_all": "Alle akzeptieren",
+    "accept_selected": "Ausgewählte akzeptieren",
+    "reject_optional": "Optionale ablehnen",
+    "necessary_label": "Notwendig",
+    "necessary_desc": "Erforderlich für Kernfunktionen und Sicherheit der Website.",
+    "analytics_label": "Analyse",
+    "analytics_desc": "Hilft uns zu verstehen, wie Besucher mit unserer Website interagieren.",
+    "marketing_label": "Marketing",
+    "marketing_desc": "Wird zur Bereitstellung personalisierter Inhalte und Werbung verwendet.",
+    "functional_label": "Funktional",
+    "functional_desc": "Aktiviert erweiterte Funktionen wie gespeicherte Einstellungen.",
+    "always_on": "Immer aktiv"
+  },
+  "chat": {
+    "title": "BOI-Assistent",
+    "subtitle": "KI-gestützter Investitionsberater",
+    "welcome": "Hallo! Wie kann ich Ihnen helfen?",
+    "welcome_desc": "Fragen Sie mich alles über Investitionen in Thailand.",
+    "quick_eligibility": "Bin ich für BOI-Förderung berechtigt?",
+    "quick_incentives": "Welche Anreize gibt es?",
+    "quick_apply": "Wie beantrage ich BOI?",
+    "placeholder": "Fragen zu Investitionen in Thailand...",
+    "send": "Senden",
+    "disclaimer": "KI-Antworten dienen nur zur Orientierung. Bitte bei BOI-Beamten verifizieren.",
+    "demo_response": "Vielen Dank für Ihre Frage! Als BOI-KI-Assistent kann ich Ihnen Informationen zur Investitionsförderung in Thailand geben. Das BOI bietet umfassende Anreizpakete, darunter bis zu 13 Jahre Befreiung von der Körperschaftsteuer, Befreiung von Einfuhrzöllen und nicht-steuerliche Vorteile wie die Genehmigung für ausländisches Eigentum. Möchten Sie mehr über bestimmte Anreize oder das Bewerbungsverfahren erfahren?"
+  },
   "language": {
     "th": "ไทย",
     "en": "English",
@@ -474,5 +1013,782 @@
     "de": "Deutsch",
     "fr": "Français",
     "select": "Sprache wählen"
+  },
+  "thailand_overview": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_discover": "Thailand entdecken",
+      "breadcrumb": "Thailand im Überblick",
+      "eyebrow": "Länderprofil",
+      "title": "Thailand auf einen Blick",
+      "subtitle": "Eine dynamische Volkswirtschaft im Herzen der ASEAN mit erstklassiger Infrastruktur und qualifizierten Fachkräften"
+    },
+    "content": {
+      "stat_gdp": "BIP",
+      "stat_gdp_value": "$574B",
+      "stat_population": "Bevölkerung",
+      "stat_population_value": "71.8M",
+      "stat_fdi": "FDI-Ranking",
+      "stat_fdi_value": "Top 3 ASEAN",
+      "stat_ease": "Geschäftsfreundlichkeit",
+      "stat_ease_value": "21. weltweit",
+      "economy_title": "Robuste Wirtschaft",
+      "economy_desc": "Thailands BIP übersteigt 574 Milliarden US-Dollar und macht es zur zweitgrößten Volkswirtschaft der ASEAN. Mit einem konstanten Wachstum von durchschnittlich 3,5 % pro Jahr und einer diversifizierten industriellen Basis in den Bereichen Automobil, Elektronik und Landwirtschaft.",
+      "strategic_title": "Strategische Lage",
+      "strategic_desc": "Im Herzen des 680 Millionen Verbraucher umfassenden ASEAN-Marktes gelegen, bietet Thailand einen unvergleichlichen Zugang zu den wichtigsten asiatischen Märkten. Innerhalb von 5 Flugstunden erreichen Sie die Hälfte der Weltbevölkerung.",
+      "infrastructure_title": "Erstklassige Infrastruktur",
+      "infrastructure_desc": "Thailand verfügt über 38 Tiefseehäfen, 6 internationale Flughäfen, ein umfassendes Autobahnnetz und wachsende Hochgeschwindigkeits-Schienenverbindungen zwischen Bangkok und regionalen Knotenpunkten.",
+      "workforce_title": "Qualifizierte Fachkräfte",
+      "workforce_desc": "Über 500.000 MINT-Absolventen jährlich bei einer Erwerbsbevölkerung von 39 Millionen. Thailand investiert intensiv in Weiterqualifizierung durch öffentlich-private Partnerschaften und technische Institute.",
+      "quality_title": "Lebensqualität",
+      "quality_desc": "Thailand zählt zu den lebenswertesten Ländern Asiens mit erstklassiger Gesundheitsversorgung, internationalen Schulen, lebendiger Kultur und erschwinglichen Lebenshaltungskosten für Expatriates."
+    }
+  },
+  "industries_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_discover": "Thailand entdecken",
+      "breadcrumb": "Zielbranchen",
+      "eyebrow": "Investitionssektoren",
+      "title": "Zielbranchen",
+      "subtitle": "Entdecken Sie Thailands Schwerpunktsektoren mit erweiterten BOI-Anreizen für förderfähige Aktivitäten"
+    },
+    "grid": {
+      "eyebrow": "10 Schwerpunktsektoren",
+      "title": "Branchen, die Thailands Zukunft gestalten",
+      "agriculture_food_name": "Landwirtschaft & Lebensmittel",
+      "agriculture_food_desc": "Vom Feld bis auf den Tisch — Thailand ist die Küche der Welt, ein globaler Marktführer in Lebensmittelverarbeitung und Agrarinnovation mit BCG-getriebener Nachhaltigkeit.",
+      "medical_name": "Medizin & Wellness",
+      "medical_desc": "Asiens medizinisches Zentrum mit erstklassigen Krankenhäusern, pharmazeutischer Fertigung und einer florierenden Medizintechnikindustrie.",
+      "automotive_name": "Automobil & EV",
+      "automotive_desc": "Das Detroit Asiens — ASEANs größter Automobilhersteller vollzieht den Wandel zum regionalen EV-Fertigungszentrum mit speziellen Anreizpaketen.",
+      "electronics_name": "Elektronik & Smart Devices",
+      "electronics_desc": "Ein bedeutendes globales Zentrum für Festplattenlaufwerke, Halbleiter und integrierte Schaltkreise mit wachsenden Fertigungskapazitäten für Smart Devices.",
+      "metals_name": "Metalle & Werkstoffe",
+      "metals_desc": "Umfassende Lieferkette für Stahl, Aluminium und Hochleistungswerkstoffe zur Unterstützung von Thailands Fertigungs-Ökosystem.",
+      "chemicals_name": "Chemie & Petrochemie",
+      "chemicals_desc": "Südostasiens größte Petrochemieindustrie mit Schwerpunkt an der Ostküste mit integrierten Industriekomplexen.",
+      "utilities_name": "Öffentliche Versorgung & Energie",
+      "utilities_desc": "Transformation hin zu sauberer Energie mit Solar-, Wind- und Biomasseprojekten, unterstützt durch erweiterte BOI-Anreize für grüne Technologie.",
+      "digital_name": "Digital & Technologie",
+      "digital_desc": "Thailands Digitalwirtschaft boomt — Rechenzentren, Fintech, KI/ML, Cloud-Dienste und Softwareentwicklung treiben die neue Wirtschaft voran.",
+      "creative_name": "Kreativwirtschaft",
+      "creative_desc": "Animation, Gaming, Filmproduktion und Design — Thailands Kreativbranche wächst rasant mit gezielten Fördermaßnahmen.",
+      "services_name": "Hochwertige Dienstleistungen",
+      "services_desc": "Regionale Hauptsitze, internationale Handelsunternehmen und Business Process Outsourcing mit besonderen nicht-steuerlichen Anreizen.",
+      "learn_more": "Mehr erfahren"
+    }
+  },
+  "special_zones": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_discover": "Thailand entdecken",
+      "breadcrumb": "Sonderwirtschaftszonen",
+      "eyebrow": "Strategische Zonen",
+      "title": "Sonderwirtschaftszonen",
+      "subtitle": "Erweiterte Anreize und vereinfachte Verfahren in Thailands ausgewiesenen Wirtschaftskorridoren"
+    },
+    "content": {
+      "zones_eyebrow": "Investitionsstandorte",
+      "zones_title": "Wählen Sie Ihren strategischen Standort",
+      "zone_count": "Wirtschaftszonen",
+      "zone_count_value": "15+",
+      "province_count": "Abgedeckte Provinzen",
+      "province_count_value": "30+",
+      "eec_title": "Eastern Economic Corridor (EEC)",
+      "eec_desc": "Thailands Flaggschiff-Entwicklungszone über die Provinzen Chachoengsao, Chonburi und Rayong — das Epizentrum fortschrittlicher Fertigung und Innovation.",
+      "eec_benefits": "Bis zu 15 Jahre Körperschaftsteuerbefreiung, Grundstückseigentum für Ausländer, Beschleunigte Genehmigungen, EECi-Innovationszone, EECd-Digitalpark",
+      "sez_title": "Sonderwirtschaftszonen (SEZ)",
+      "sez_desc": "10 Grenzzonen zur Förderung von grenzüberschreitendem Handel und Investitionen mit Nachbarländern wie Myanmar, Laos, Kambodscha und Malaysia.",
+      "sez_benefits": "Zusätzliche 3 Jahre Körperschaftsteuerermäßigung, Doppelte Transportkostenabzüge, Unterstützung der Versorgungsinfrastruktur, Vereinfachte Zollverfahren",
+      "industrial_title": "Industriegebiete",
+      "industrial_desc": "Über 60 verwaltete Industriegebiete in ganz Thailand mit bezugsfertigen Einrichtungen, Versorgungsanschlüssen und umfassenden Unterstützungsleistungen.",
+      "industrial_benefits": "Schlüsselfertige Infrastruktur, One-Stop-Servicezentren, Unterstützung bei Umweltauflagen, Unterkünfte für Arbeitskräfte"
+    }
+  },
+  "advertorials_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_discover": "Thailand entdecken",
+      "breadcrumb": "Advertorials",
+      "eyebrow": "Ausgewählte Artikel",
+      "title": "Advertorials & Einblicke",
+      "subtitle": "Vertiefende Artikel zur Investitionslandschaft Thailands, Branchentrends und Erfolgsfaktoren"
+    },
+    "list": {
+      "eyebrow": "Aktuelle Artikel",
+      "title": "Ausgewählte Einblicke",
+      "filter_all": "Alle",
+      "filter_investment": "Investitionen",
+      "filter_industry": "Branchen",
+      "filter_policy": "Politik",
+      "read_more": "Artikel lesen",
+      "article_1_title": "Thailand verzeichnet Rekord bei ausländischen Direktinvestitionen 2025",
+      "article_1_excerpt": "Thailand verzeichnete einen Anstieg der FDI-Anträge um 23 %, getrieben durch die Sektoren EV, Digital und grüne Energie in den Sonderwirtschaftszonen.",
+      "article_2_title": "EV-Branchenboom: Thailand als ASEANs Elektrofahrzeug-Zentrum",
+      "article_2_excerpt": "Große Automobilhersteller verlagern ihre EV-Produktion nach Thailand und nutzen die Anreize und qualifizierten Fachkräfte im Eastern Economic Corridor.",
+      "article_3_title": "Neue BOI-Anreizpakete für die BCG-Wirtschaft",
+      "article_3_excerpt": "BOI kündigt erweiterte Steueranreize für Bio-Circular-Green-Projekte an und unterstützt damit Thailands nachhaltige Entwicklungsziele.",
+      "article_4_title": "Smart Electronics: Thailands nächste Wachstumsgrenze",
+      "article_4_excerpt": "Investitionen in Halbleiter und Hochleistungselektronik steigen, da globale Lieferketten in Richtung Südostasien diversifizieren.",
+      "article_5_title": "Ausbau der digitalen Infrastruktur fördert Technologie-Investitionen",
+      "article_5_excerpt": "Thailands 5G-Ausbau und die Expansion von Rechenzentren schaffen neue Chancen für Technologieunternehmen und digitale Dienstleistungen.",
+      "article_6_title": "BOI aktualisiert Regelungen für ausländische Unternehmen 2026",
+      "article_6_excerpt": "Vereinfachte Verfahren und erweiterte förderfähige Aktivitäten sollen Thailand für internationale Investoren wettbewerbsfähiger machen."
+    }
+  },
+  "getting_started": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_invest": "Jetzt investieren",
+      "breadcrumb": "Erste Schritte",
+      "eyebrow": "Investitionsweg",
+      "title": "Erste Schritte",
+      "subtitle": "Ihr schrittweiser Leitfaden für Investitionen in Thailand mit BOI-Förderung"
+    },
+    "content": {
+      "journey_eyebrow": "Ihr Investitionsweg",
+      "journey_title": "Von der Anfrage zum Betrieb in 5 Schritten",
+      "step1_title": "Recherche & Planung",
+      "step1_desc": "Erkunden Sie förderfähige Aktivitäten, verstehen Sie die Anreizpakete und prüfen Sie, ob Ihr Projekt den BOI-Förderkategorien entspricht.",
+      "step2_title": "Eignungsprüfung",
+      "step2_desc": "Nutzen Sie unser Eignungsprüfungs-Tool oder konsultieren Sie BOI-Berater, um die Förderfähigkeit Ihres Projekts zu überprüfen.",
+      "step3_title": "Antragstellung",
+      "step3_desc": "Reichen Sie Ihren Antrag über das e-Investment-Portal ein, einschließlich der erforderlichen Unterlagen und der Projektstudie.",
+      "step4_title": "Genehmigung durch das Board",
+      "step4_desc": "Ihr Antrag wird vom BOI-Ausschuss geprüft. Die Standardbearbeitungszeit beträgt 60–90 Geschäftstage.",
+      "step5_title": "Zertifikat & Betriebsaufnahme",
+      "step5_desc": "Erhalten Sie Ihr Förderzertifikat und nehmen Sie den Betrieb auf — mit BOI-unterstützten Genehmigungen, Visa und fortlaufender Compliance-Betreuung.",
+      "checklist_title": "Wichtige Checkliste",
+      "checklist_items": "Unternehmensregistrierungsunterlagen, Projektstudie (Feasibility Study), Finanzprognosen (3–5 Jahre), Technische Spezifikationen, Umweltverträglichkeitsprüfung, Informationen zum Managementteam",
+      "timeline_title": "Typischer Zeitrahmen",
+      "timeline_desc": "Von der Antragstellung bis zum Förderzertifikat: 60–90 Geschäftstage. Beschleunigtes Verfahren für EEC und Schwerpunktbranchen verfügbar."
+    }
+  },
+  "eligibility_checker": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_invest": "Jetzt investieren",
+      "breadcrumb": "Eignungsprüfung",
+      "eyebrow": "Interaktives Tool",
+      "title": "Prüfen Sie Ihre Förderfähigkeit",
+      "subtitle": "Finden Sie in wenigen Minuten heraus, ob Ihr Investitionsprojekt für eine BOI-Förderung in Frage kommt"
+    },
+    "checker": {
+      "step1_title": "Branche wählen",
+      "step1_desc": "Wählen Sie den Wirtschaftssektor, der am besten zu Ihrem Investitionsprojekt passt.",
+      "step2_title": "Aktivität wählen",
+      "step2_desc": "Wählen Sie die konkrete Geschäftstätigkeit, die Sie ausüben möchten.",
+      "step3_title": "Ergebnisse anzeigen",
+      "step3_desc": "Sehen Sie Ihren Förderstatus, die Förderkategorie und die verfügbaren Anreize.",
+      "select_industry": "Branche auswählen...",
+      "select_activity": "Aktivität auswählen...",
+      "check_button": "Förderfähigkeit prüfen",
+      "result_eligible": "Förderfähig für BOI-Förderung!",
+      "result_category": "Förderkategorie",
+      "result_incentives": "Wichtige Anreize",
+      "result_cta": "Jetzt beantragen",
+      "result_consult": "Beratung buchen",
+      "industries": "Landwirtschaft & Lebensmittel, Automobil & EV, Digital & Technologie, Elektronik, Medizin & Wellness, Metalle & Werkstoffe, Chemie, Kreativwirtschaft, Energie & Versorgung, Hochwertige Dienstleistungen"
+    }
+  },
+  "eligible_activities": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_invest": "Jetzt investieren",
+      "breadcrumb": "Förderfähige Aktivitäten",
+      "eyebrow": "Aktivitätenliste",
+      "title": "Förderfähige Aktivitäten",
+      "subtitle": "Umfassende Liste der Geschäftstätigkeiten, die für eine BOI-Investitionsförderung in Frage kommen"
+    },
+    "list": {
+      "eyebrow": "Aktivitäten durchsuchen",
+      "title": "Finden Sie Ihre Aktivität",
+      "search_placeholder": "Nach Aktivitätsname oder Stichwort suchen...",
+      "filter_all": "Alle Kategorien",
+      "filter_a1": "Kategorie A1",
+      "filter_a2": "Kategorie A2",
+      "filter_a3": "Kategorie A3",
+      "filter_a4": "Kategorie A4",
+      "filter_b1": "Kategorie B1",
+      "filter_b2": "Kategorie B2",
+      "category": "Kategorie",
+      "cit_exemption": "Körperschaftsteuerbefreiung",
+      "import_duty": "Einfuhrzoll",
+      "results_count": "{count} Aktivitäten gefunden",
+      "view_details": "Details anzeigen"
+    }
+  },
+  "procedures_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_invest": "Jetzt investieren",
+      "breadcrumb": "Verfahren",
+      "eyebrow": "Antragsverfahren",
+      "title": "Investitionsverfahren",
+      "subtitle": "Detaillierter Leitfaden zum BOI-Antragsverfahren, erforderlichen Unterlagen und Genehmigungsfristen"
+    },
+    "content": {
+      "process_eyebrow": "Schritt für Schritt",
+      "process_title": "Übersicht des Antragsverfahrens",
+      "step1_title": "Beratung vor Antragstellung",
+      "step1_desc": "Vereinbaren Sie eine Beratung mit BOI-Mitarbeitern, um Ihr Projekt zu besprechen und die Förderfähigkeit vor der Einreichung zu bestätigen.",
+      "step2_title": "Online-Antragstellung",
+      "step2_desc": "Reichen Sie Ihren Antrag über das e-Investment-Portal mit allen erforderlichen Unterlagen und Projektdetails ein.",
+      "step3_title": "Prüfung durch den Ausschuss",
+      "step3_desc": "Ihr Antrag wird vom zuständigen BOI-Unterausschuss auf Grundlage von Investitionshöhe und Branche geprüft.",
+      "step4_title": "Beschluss des Board",
+      "step4_desc": "Das BOI-Board tagt monatlich zur Genehmigung von Förderanträgen. Die Ergebnisse werden innerhalb von 7 Geschäftstagen mitgeteilt.",
+      "step5_title": "Förderzertifikat",
+      "step5_desc": "Nach Genehmigung erhalten Sie Ihr Förderzertifikat und können Ihre BOI-Anreize und -Vorteile nutzen.",
+      "documents_title": "Erforderliche Unterlagen",
+      "documents_list": "Antragsformular (BOI-Format), Unternehmensregistrierungsbescheinigung, Gesellschafterinformationen, Projektstudie (Feasibility Study), Jahresabschlüsse (3 Jahre), Technische Spezifikationen, Umweltverträglichkeitsprüfung, Werklayoutpläne",
+      "timeline_title": "Bearbeitungsfristen",
+      "timeline_standard": "Standard: 60–90 Geschäftstage",
+      "timeline_fast": "Beschleunigt (EEC/Schwerpunkt): 30–45 Geschäftstage",
+      "timeline_large": "Großprojekte (>750 Mio. THB): Board-Genehmigung erforderlich"
+    }
+  },
+  "forms_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_invest": "Jetzt investieren",
+      "breadcrumb": "Formulare & Downloads",
+      "eyebrow": "Dokumente",
+      "title": "Formulare & Downloads",
+      "subtitle": "Laden Sie offizielle BOI-Antragsformulare, Richtlinien und Begleitdokumente herunter"
+    },
+    "list": {
+      "eyebrow": "Offizielle Formulare",
+      "title": "Download-Center",
+      "filter_all": "Alle Formulare",
+      "filter_application": "Antragstellung",
+      "filter_operating": "Betrieb",
+      "filter_report": "Berichterstattung",
+      "filter_other": "Sonstiges",
+      "download": "Herunterladen",
+      "file_size": "Dateigröße",
+      "last_updated": "Aktualisiert"
+    }
+  },
+  "announcements_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_invest": "Jetzt investieren",
+      "breadcrumb": "Bekanntmachungen",
+      "eyebrow": "Offizielle Mitteilungen",
+      "title": "BOI-Bekanntmachungen",
+      "subtitle": "Offizielle Bekanntmachungen, Richtlinienaktualisierungen und regulatorische Änderungen des Board of Investment"
+    },
+    "list": {
+      "eyebrow": "Aktuelle Meldungen",
+      "title": "Offizielle Bekanntmachungen",
+      "filter_all": "Alle",
+      "filter_board": "Board-Bekanntmachungen",
+      "filter_secretary": "Generalsekretär",
+      "filter_office": "Amtliche Mitteilungen",
+      "read_more": "Vollständige Bekanntmachung lesen",
+      "published": "Veröffentlicht"
+    }
+  },
+  "guide_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_invest": "Jetzt investieren",
+      "breadcrumb": "Investitionsleitfaden",
+      "eyebrow": "Umfassender Leitfaden",
+      "title": "Leitfaden zur Investitionsförderung",
+      "subtitle": "Ihr vollständiges Nachschlagewerk für BOI-Investitionsförderungsrichtlinien, Anreize und Antragsverfahren"
+    },
+    "content": {
+      "overview_title": "Leitfaden im Überblick",
+      "overview_desc": "Dieser umfassende Leitfaden deckt alles ab, was Sie über Investitionen in Thailand mit BOI-Förderung wissen müssen — von förderfähigen Aktivitäten über Anreizpakete bis hin zu Antragsverfahren.",
+      "chapters_title": "Inhaltsverzeichnis",
+      "ch1_title": "Einführung in das BOI",
+      "ch1_desc": "Überblick über das Board of Investment, Auftrag und Rahmenwerk der Investitionsförderung.",
+      "ch2_title": "Förderfähige Aktivitäten & Kategorien",
+      "ch2_desc": "Vollständige Liste der geförderten Aktivitäten, gegliedert nach Förderkategorie (A1–A4, B1–B2).",
+      "ch3_title": "Steuerliche Anreize",
+      "ch3_desc": "Körperschaftsteuerbefreiungen, Einfuhrzollbefreiungen und weitere steuerliche Vorteile nach Kategorie.",
+      "ch4_title": "Nicht-steuerliche Anreize",
+      "ch4_desc": "Auslandsbeteiligungen, Grundstückseigentum, Arbeitsgenehmigungen und Visa-Erleichterungen.",
+      "ch5_title": "Antragsverfahren",
+      "ch5_desc": "Schritt-für-Schritt-Antragsverfahren, erforderliche Unterlagen und Bearbeitungsfristen.",
+      "ch6_title": "Nach der Förderung",
+      "ch6_desc": "Compliance-Anforderungen, Berichtspflichten und fortlaufende BOI-Unterstützungsleistungen.",
+      "download_pdf": "Vollständigen Leitfaden herunterladen (PDF)",
+      "download_size": "12.5 MB"
+    }
+  },
+  "apply_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_services": "Dienstleistungen",
+      "breadcrumb": "Online beantragen",
+      "eyebrow": "e-Investment-Portal",
+      "title": "BOI-Förderung beantragen",
+      "subtitle": "Reichen Sie Ihren Investitionsförderungsantrag über unser einheitliches Online-Portal ein und verfolgen Sie den Bearbeitungsstand"
+    },
+    "content": {
+      "portal_title": "e-Investment-Portal",
+      "portal_desc": "Das e-Investment-System ist Ihr zentraler Zugangspunkt für alle BOI-Förderanträge. Reichen Sie Investitionsprojekte online ein, verfolgen und verwalten Sie diese.",
+      "features_title": "Portal-Funktionen",
+      "feature1": "Online-Antragstellung",
+      "feature2": "Statusverfolgung in Echtzeit",
+      "feature3": "Dokumenten-Upload und -Verwaltung",
+      "feature4": "Automatische Benachrichtigungen und Erinnerungen",
+      "feature5": "Integration mit Visa- und Arbeitsgenehmigungssystemen",
+      "login_button": "Bei e-Investment anmelden",
+      "register_button": "Neues Konto registrieren",
+      "guide_title": "Anleitung zur Antragstellung",
+      "guide_step1": "Registrieren Sie ein e-Investment-Konto",
+      "guide_step2": "Füllen Sie das Antragsformular online aus",
+      "guide_step3": "Laden Sie die erforderlichen Unterlagen hoch",
+      "guide_step4": "Reichen Sie den Antrag ein und erhalten Sie eine Bestätigungsnummer",
+      "guide_step5": "Verfolgen Sie den Fortschritt über Ihr Dashboard"
+    }
+  },
+  "e_investment_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_services": "Dienstleistungen",
+      "breadcrumb": "e-Investment",
+      "eyebrow": "Digitaler Service",
+      "title": "e-Investment-System",
+      "subtitle": "BOIs umfassende Digitalplattform für das Investitionsförderungsmanagement"
+    },
+    "content": {
+      "about_title": "Über e-Investment",
+      "about_desc": "Das e-Investment-System ist BOIs zentrale digitale Serviceplattform, die es Investoren ermöglicht, ihren gesamten Förderungszyklus online zu verwalten — von der Erstantragsstellung bis zur Compliance nach der Förderung.",
+      "services_title": "Verfügbare Dienste",
+      "service1_title": "Förderungsantrag",
+      "service1_desc": "Reichen Sie neue Investitionsförderungsanträge mit allen erforderlichen Unterlagen ein.",
+      "service2_title": "Betriebsgenehmigungen",
+      "service2_desc": "Beantragen Sie Maschinenimportgenehmigungen, Rohstoffimportlisten und Produktionskapazitätsänderungen.",
+      "service3_title": "Ausländische Arbeitskräfte",
+      "service3_desc": "Verwalten Sie Kontingente für ausländische Arbeitskräfte, Visa-Verlängerungen und Arbeitsgenehmigungsanträge.",
+      "service4_title": "Jahresberichterstattung",
+      "service4_desc": "Reichen Sie die erforderlichen Jahresberichte über den Projektbetrieb und den Compliance-Status ein.",
+      "faq_title": "Häufig gestellte Fragen",
+      "faq1_q": "Wie registriere ich mich für e-Investment?",
+      "faq1_a": "Besuchen Sie das e-Investment-Portal, klicken Sie auf 'Registrieren' und füllen Sie das Registrierungsformular mit Ihren Unternehmensdaten aus.",
+      "faq2_q": "Welche Unterlagen benötige ich?",
+      "faq2_a": "Unternehmensregistrierungsbescheinigung, Unterlagen zur Zeichnungsberechtigung und Projektdetails.",
+      "faq3_q": "Wie lange dauert die Bearbeitung?",
+      "faq3_a": "Standardanträge werden innerhalb von 60–90 Geschäftstagen nach vollständiger Einreichung bearbeitet."
+    }
+  },
+  "visa_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_services": "Dienstleistungen",
+      "breadcrumb": "Visum & Arbeitsgenehmigung",
+      "eyebrow": "Einreisedienste",
+      "title": "Visum & Arbeitsgenehmigung",
+      "subtitle": "Beschleunigte Visa- und Arbeitsgenehmigungsdienste für BOI-geförderte Unternehmen und deren Mitarbeiter"
+    },
+    "content": {
+      "overview_title": "BOI-Visadienste",
+      "overview_desc": "BOI-geförderte Unternehmen profitieren von einer beschleunigten Visa- und Arbeitsgenehmigungsbearbeitung über unseren Einheitlichen-Schalter-Service, der die Bearbeitungszeit und den Dokumentationsaufwand erheblich reduziert.",
+      "types_title": "Visakategorien",
+      "type1_title": "Non-Immigrant B (Geschäftlich)",
+      "type1_desc": "Für Führungskräfte, Manager und Fachkräfte in BOI-geförderten Unternehmen. Gültig bis zu 2 Jahre mit jährlicher Verlängerung.",
+      "type2_title": "Non-Immigrant IB (Investition)",
+      "type2_desc": "Für ausländische Investoren und Vorstandsmitglieder von BOI-geförderten Unternehmen. Ermöglicht Mehrfacheinreise.",
+      "type3_title": "Arbeitsgenehmigung",
+      "type3_desc": "BOI-Arbeitsgenehmigungen werden innerhalb von 3 Geschäftstagen über das One Start One Stop-Servicezentrum bearbeitet.",
+      "benefits_title": "BOI-Visavorteile",
+      "benefit1": "Beschleunigte Bearbeitung (3 Geschäftstage)",
+      "benefit2": "Einheitlicher-Schalter-Service in der BOI-Abteilung",
+      "benefit3": "Kein separater Besuch bei der Einwanderungsbehörde erforderlich",
+      "benefit4": "Visa-Unterstützung für Familienangehörige",
+      "benefit5": "Jährliche Meldepflicht vereinfacht über e-Investment"
+    }
+  },
+  "smart_visa_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_services": "Dienstleistungen",
+      "breadcrumb": "SMART Visa",
+      "eyebrow": "Talentgewinnung",
+      "title": "SMART Visa",
+      "subtitle": "Spezielles 4-Jahres-Visum für hochqualifizierte Fachkräfte, Investoren, Führungskräfte und Start-up-Unternehmer"
+    },
+    "content": {
+      "about_title": "Über das SMART Visa",
+      "about_desc": "Das SMART Visa wurde entwickelt, um Spitzenkräfte und Investoren für Thailands Zielbranchen zu gewinnen. Es bietet ein 4-Jahres-Visum mit Befreiung von der Arbeitsgenehmigungspflicht und besonderen Vergünstigungen für Familienangehörige.",
+      "categories_title": "SMART Visa-Kategorien",
+      "cat_t_title": "Smart T (Talent)",
+      "cat_t_desc": "Hochqualifizierte Fachkräfte mit Expertise in Zielbranchen und einem Einkommen von mindestens 200.000 THB/Monat.",
+      "cat_i_title": "Smart I (Investor)",
+      "cat_i_desc": "Ausländische Investoren mit Investitionen von mindestens 20 Millionen THB in Zielbranchen.",
+      "cat_e_title": "Smart E (Executive)",
+      "cat_e_desc": "Führungskräfte von Unternehmen mit Investitionen von mindestens 50 Millionen THB in Technologie oder Zielbranchen.",
+      "cat_s_title": "Smart S (Startup)",
+      "cat_s_desc": "Unternehmer, die über akkreditierte Inkubatoren oder Akzeleratoren am thailändischen Start-up-Ökosystem teilnehmen.",
+      "cat_o_title": "Smart O (Sonstige)",
+      "cat_o_desc": "Ehepartner und Angehörige von SMART Visa-Inhabern mit Arbeitsgenehmigung in Thailand.",
+      "benefits_title": "Wesentliche Vorteile",
+      "benefit1": "4 Jahre Visumlaufzeit",
+      "benefit2": "Keine Arbeitsgenehmigung erforderlich",
+      "benefit3": "Keine 90-Tage-Meldepflicht (stattdessen jährlich)",
+      "benefit4": "Befreiung vom Re-Entry-Permit",
+      "benefit5": "Ehepartner und Angehörige dürfen arbeiten"
+    }
+  },
+  "osos_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_services": "Dienstleistungen",
+      "breadcrumb": "OSOS",
+      "eyebrow": "One-Stop-Service",
+      "title": "One Start One Stop",
+      "subtitle": "Zentrale Anlaufstelle für alle investitionsbezogenen Genehmigungen und behördlichen Zulassungen"
+    },
+    "content": {
+      "about_title": "Über OSOS",
+      "about_desc": "Das One Start One Stop (OSOS) Investment Center bietet Investoren einen zentralen Standort, um Genehmigungen, Lizenzen und Zulassungen von verschiedenen Behörden zu erhalten — alles unter einem Dach.",
+      "services_title": "Verfügbare Dienste",
+      "service1": "Unternehmensregistrierung und Gewerbeanmeldung",
+      "service2": "Visa- und Arbeitsgenehmigungsbearbeitung",
+      "service3": "Fabrikgenehmigungsanträge",
+      "service4": "Zoll- und Import-/Exportverfahren",
+      "service5": "Steuerliche Registrierung und Compliance",
+      "service6": "Umweltgenehmigungen",
+      "location_title": "Standort & Öffnungszeiten",
+      "location_address": "18. Etage, Chamchuri Square Building, Phayathai Road, Pathumwan, Bangkok 10330",
+      "location_hours": "Montag – Freitag: 08:30 – 16:30 Uhr",
+      "location_phone": "+66-2-209-1100",
+      "agencies_title": "Partnerbehörden",
+      "agencies_list": "Abteilung für Unternehmensentwicklung, Finanzamt, Zollbehörde, Arbeitsbehörde, Einwanderungsbehörde, Industriegebietsbehörde, Abteilung für Industriewerke"
+    }
+  },
+  "consultation_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_services": "Dienstleistungen",
+      "breadcrumb": "Beratung",
+      "eyebrow": "Fachberatung",
+      "title": "Beratung buchen",
+      "subtitle": "Vereinbaren Sie eine persönliche Beratung mit BOI-Investitionsberatern nach Ihrem Zeitplan"
+    },
+    "content": {
+      "booking_title": "Termin vereinbaren",
+      "booking_desc": "Unsere Investitionsberater stehen Ihnen für persönliche Gespräche in der BOI-Zentrale, Videoberatungen oder Telefonate zur Verfügung. Wählen Sie Ihren bevorzugten Termin und Ihr Thema.",
+      "topics_title": "Beratungsthemen",
+      "topic1": "Allgemeine Investitionsanfrage",
+      "topic2": "Eignungsbewertung",
+      "topic3": "Prüfung des Anreizpakets",
+      "topic4": "Antragsberatung",
+      "topic5": "Compliance nach Förderung",
+      "topic6": "Visa- und Arbeitsgenehmigungshilfe",
+      "form_name": "Vollständiger Name",
+      "form_email": "E-Mail-Adresse",
+      "form_company": "Unternehmensname",
+      "form_topic": "Thema wählen",
+      "form_date": "Wunschtermin",
+      "form_time": "Wunschzeit",
+      "form_message": "Weitere Angaben",
+      "form_submit": "Beratung buchen",
+      "note": "Beratungen sind kostenfrei. Sie erhalten innerhalb eines Geschäftstages eine Bestätigungs-E-Mail."
+    }
+  },
+  "matchmaking_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_services": "Dienstleistungen",
+      "breadcrumb": "Matchmaking",
+      "eyebrow": "Geschäftsverbindungen",
+      "title": "Investment-Matchmaking",
+      "subtitle": "Knüpfen Sie über das BOI-Netzwerk Kontakte zu thailändischen Partnern, Zulieferern und Joint-Venture-Möglichkeiten"
+    },
+    "content": {
+      "about_title": "BOI-Matchmaking-Service",
+      "about_desc": "BOI vermittelt Geschäftsverbindungen zwischen ausländischen Investoren und thailändischen Unternehmen und unterstützt Sie dabei, die richtigen Partner für Joint Ventures, Lieferkettenintegration und den lokalen Markteintritt zu finden.",
+      "services_title": "Angebotene Dienste",
+      "service1_title": "Zulieferer-Matching",
+      "service1_desc": "Finden Sie qualifizierte thailändische Zulieferer und Hersteller für Ihre Lieferkettenbedürfnisse.",
+      "service2_title": "Joint-Venture-Partner",
+      "service2_desc": "Verbinden Sie sich mit etablierten thailändischen Unternehmen, die ausländische Investitionspartnerschaften suchen.",
+      "service3_title": "Besichtigungen von Industriegebieten",
+      "service3_desc": "Organisierte Besuche in Industriegebieten und potenziellen Fabrikstandorten.",
+      "service4_title": "Networking-Veranstaltungen",
+      "service4_desc": "Regelmäßige Branchen-Netzwerkveranstaltungen und Investitionsseminare, organisiert durch BOI.",
+      "cta_title": "Matchmaking anfordern",
+      "cta_desc": "Übermitteln Sie Ihre Anforderungen und unser Team identifiziert geeignete Partner innerhalb von 5 Geschäftstagen.",
+      "cta_button": "Anfrage einreichen"
+    }
+  },
+  "after_promotion_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_services": "Dienstleistungen",
+      "breadcrumb": "Nach der Förderung",
+      "eyebrow": "Nach der Förderung",
+      "title": "Leistungen nach der Förderung",
+      "subtitle": "Fortlaufende Unterstützung und Compliance-Management für BOI-geförderte Unternehmen"
+    },
+    "content": {
+      "overview_title": "Unterstützung nach der Förderung",
+      "overview_desc": "Nach Erhalt Ihres BOI-Förderzertifikats unterstützt unser Team Sie weiterhin bei Genehmigungsmanagement, Compliance-Beratung und Verwaltungsleistungen.",
+      "services_title": "Verfügbare Dienste",
+      "service1_title": "Betriebsgenehmigungen",
+      "service1_desc": "Beantragen und verwalten Sie Maschinenimportgenehmigungen, Rohstofflisten und Änderungen der Produktionskapazität.",
+      "service2_title": "Kontingente für ausländische Arbeitskräfte",
+      "service2_desc": "Verwalten Sie genehmigte Positionen, holen Sie ausländische Experten und bearbeiten Sie Visa-/Arbeitsgenehmigungsverlängerungen.",
+      "service3_title": "Jahresberichterstattung",
+      "service3_desc": "Reichen Sie die erforderlichen Betriebsberichte ein und wahren Sie die Einhaltung der Förderbedingungen.",
+      "service4_title": "Projektänderungen",
+      "service4_desc": "Beantragen Sie Änderungen an Ihrem Förderzertifikat, einschließlich Kapazitätserweiterung, Produktergänzungen oder Fristverlängerungen.",
+      "compliance_title": "Compliance-Anforderungen",
+      "compliance1": "Jährliche Betriebsberichte einreichen",
+      "compliance2": "Mindestquoten für thailändische Beschäftigte einhalten",
+      "compliance3": "Investitionskapitalzusagen erfüllen",
+      "compliance4": "Maschinen- und Materialimporte melden",
+      "compliance5": "Buchhaltungsunterlagen für Prüfungen vorhalten"
+    }
+  },
+  "hq_portal_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_services": "Dienstleistungen",
+      "breadcrumb": "HQ-Portal",
+      "eyebrow": "Regionale Hauptsitze",
+      "title": "HQ Business Portal",
+      "subtitle": "Besondere Anreize für Unternehmen, die ihren regionalen Hauptsitz in Thailand errichten"
+    },
+    "content": {
+      "about_title": "Anreize für regionale Hauptsitze",
+      "about_desc": "Thailand bietet attraktive Pakete für Unternehmen, die Internationale Hauptsitze (IHQ), Regionale Betriebshauptsitze (ROH) und Internationale Handelszentren (ITC) im Land errichten.",
+      "types_title": "HQ-Kategorien",
+      "type1_title": "Internationaler Hauptsitz (IHQ)",
+      "type1_desc": "Vollständige Körperschaftsteueranreize für Management-, Technik- und Supportleistungen an verbundene Unternehmen.",
+      "type2_title": "Regionaler Betriebshauptsitz (ROH)",
+      "type2_desc": "Ermäßigte Körperschaftsteuersätze für regionales Management und Supportleistungen im ASEAN-Raum.",
+      "type3_title": "Internationales Handelszentrum (ITC)",
+      "type3_desc": "Besondere Anreize für internationalen Einkauf, Vertrieb und Distribution mit Sitz in Thailand.",
+      "benefits_title": "Wesentliche Vorteile",
+      "benefit1": "Ermäßigte Körperschaftsteuersätze",
+      "benefit2": "Einkommensteuerbefreiungen für Expatriates",
+      "benefit3": "Ausländische Beteiligung bis zu 100 %",
+      "benefit4": "Beschleunigte Visa- und Arbeitsgenehmigungsbearbeitung",
+      "benefit5": "Keine Devisenkontrollen für qualifizierte Transaktionen"
+    }
+  },
+  "data_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_resources": "Ressourcen",
+      "breadcrumb": "Investitionsdaten",
+      "eyebrow": "Statistiken & Analysen",
+      "title": "Investitionsdaten-Dashboard",
+      "subtitle": "Erkunden Sie Thailands Investitionsstatistiken, Trends und Wirtschaftsindikatoren"
+    },
+    "dashboard": {
+      "overview_title": "Investitionsüberblick 2025",
+      "stat1_label": "Anträge gesamt",
+      "stat1_value": "1,857",
+      "stat2_label": "Gesamtwert (THB)",
+      "stat2_value": "832B",
+      "stat3_label": "Ausländische Projekte",
+      "stat3_value": "1,247",
+      "stat4_label": "Thailändische Projekte",
+      "stat4_value": "610",
+      "chart_title": "Investitionstrends",
+      "by_industry": "Nach Branche",
+      "by_country": "Nach Land",
+      "by_zone": "Nach Zone",
+      "by_year": "Nach Jahr",
+      "top_industries": "Top-Branchen",
+      "top_countries": "Wichtigste Investorländer",
+      "export_data": "Daten exportieren"
+    }
+  },
+  "company_db_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_resources": "Ressourcen",
+      "breadcrumb": "Unternehmensdatenbank",
+      "eyebrow": "Geförderte Unternehmen",
+      "title": "Unternehmensdatenbank",
+      "subtitle": "Suchen und entdecken Sie BOI-geförderte Unternehmen in Thailand"
+    },
+    "search": {
+      "title": "Unternehmen suchen",
+      "search_placeholder": "Nach Unternehmensname suchen...",
+      "filter_industry": "Nach Branche filtern",
+      "filter_country": "Nach Land filtern",
+      "filter_province": "Nach Provinz filtern",
+      "results_count": "{count} Unternehmen gefunden",
+      "company_name": "Unternehmensname",
+      "industry": "Branche",
+      "country": "Land",
+      "province": "Provinz",
+      "promotion_year": "Gefördert seit",
+      "view_details": "Details anzeigen"
+    }
+  },
+  "publications_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_resources": "Ressourcen",
+      "breadcrumb": "Publikationen",
+      "eyebrow": "Wissenszentrum",
+      "title": "Publikationen & Berichte",
+      "subtitle": "Jahresberichte, Investitionsübersichten, Branchenbroschüren und Forschungsberichte"
+    },
+    "list": {
+      "eyebrow": "Dokumentenbibliothek",
+      "title": "Publikationen durchsuchen",
+      "filter_all": "Alle",
+      "filter_annual": "Jahresberichte",
+      "filter_review": "Investitionsübersichten",
+      "filter_brochure": "Broschüren",
+      "filter_research": "Forschungsberichte",
+      "download": "PDF herunterladen",
+      "pages": "Seiten",
+      "published": "Veröffentlicht"
+    }
+  },
+  "multimedia_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_resources": "Ressourcen",
+      "breadcrumb": "Multimedia",
+      "eyebrow": "Mediengalerie",
+      "title": "Multimedia-Galerie",
+      "subtitle": "Videos, Präsentationen, Fotos und Infografiken zum Investitionspotenzial Thailands"
+    },
+    "gallery": {
+      "filter_all": "Alle",
+      "filter_video": "Videos",
+      "filter_photo": "Fotos",
+      "filter_infographic": "Infografiken",
+      "filter_presentation": "Präsentationen",
+      "play_video": "Video abspielen",
+      "view_image": "In voller Größe anzeigen",
+      "download": "Herunterladen"
+    }
+  },
+  "offices_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_about": "Über BOI",
+      "breadcrumb": "Büros",
+      "eyebrow": "Globale Präsenz",
+      "title": "BOI-Büros",
+      "subtitle": "Hauptsitz, Regionalbüros in ganz Thailand und Auslandsvertretungen weltweit"
+    },
+    "content": {
+      "hq_title": "Hauptsitz — Bangkok",
+      "hq_address": "555 Vibhavadi-Rangsit Road, Chatuchak, Bangkok 10900",
+      "hq_phone": "+66-2-553-8111",
+      "hq_fax": "+66-2-553-8222",
+      "hq_email": "head@boi.go.th",
+      "hq_hours": "Montag – Freitag: 08:30 – 16:30 Uhr",
+      "regional_title": "Regionalbüros",
+      "regional_desc": "7 regionale Investitionszentren in ganz Thailand bieten lokale Unterstützung und Beratung.",
+      "region1": "Chiang Mai (Nordregion)",
+      "region2": "Nakhon Ratchasima (Nordostregion)",
+      "region3": "Khon Kaen (Nordostregion)",
+      "region4": "Chonburi (Ostregion / EEC)",
+      "region5": "Surat Thani (Südregion)",
+      "region6": "Songkhla (Südliche Grenzregion)",
+      "region7": "Nakhon Sawan (Zentralregion)",
+      "overseas_title": "Auslandsbüros",
+      "overseas_desc": "15 Auslandsbüros in Asien, Europa, Amerika und Ozeanien.",
+      "office_tokyo": "Tokio, Japan",
+      "office_osaka": "Osaka, Japan",
+      "office_beijing": "Peking, China",
+      "office_shanghai": "Shanghai, China",
+      "office_guangzhou": "Guangzhou, China",
+      "office_taipei": "Taipeh, Taiwan",
+      "office_seoul": "Seoul, Südkorea",
+      "office_mumbai": "Mumbai, Indien",
+      "office_stockholm": "Stockholm, Schweden",
+      "office_frankfurt": "Frankfurt, Deutschland",
+      "office_paris": "Paris, Frankreich",
+      "office_new_york": "New York, USA",
+      "office_los_angeles": "Los Angeles, USA",
+      "office_sydney": "Sydney, Australien",
+      "office_riyadh": "Riad, Saudi-Arabien"
+    }
+  },
+  "careers_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_about": "Über BOI",
+      "breadcrumb": "Karriere",
+      "eyebrow": "Werden Sie Teil unseres Teams",
+      "title": "Karriere beim BOI",
+      "subtitle": "Werden Sie Teil von Thailands führender Investitionsförderungsagentur und gestalten Sie die Zukunft ausländischer Investitionen mit"
+    },
+    "content": {
+      "why_title": "Warum beim BOI arbeiten",
+      "why_desc": "Werden Sie Teil einer Organisation, die Thailands Wirtschaftswachstum vorantreibt, indem sie globale Investitionen anzieht und unterstützt.",
+      "benefit1_title": "Wirkungsvolle Arbeit",
+      "benefit1_desc": "Gestalten Sie Thailands Investitionslandschaft und wirtschaftliche Entwicklung direkt mit.",
+      "benefit2_title": "Internationale Erfahrung",
+      "benefit2_desc": "Arbeiten Sie mit internationalen Investoren, nehmen Sie an globalen Veranstaltungen teil und sammeln Sie interkulturelle Erfahrung.",
+      "benefit3_title": "Berufliche Entwicklung",
+      "benefit3_desc": "Kontinuierliche Weiterbildungsmöglichkeiten, Auslandsschulungen und Karriereentwicklungspfade.",
+      "benefit4_title": "Öffentliche Dienstleistungen",
+      "benefit4_desc": "Umfassende Leistungen einschließlich Pension, Krankenversicherung und Familienunterstützung.",
+      "openings_title": "Aktuelle Stellenangebote",
+      "opening1_title": "Investitionsförderungsbeauftragter",
+      "opening1_dept": "Büro für Investitionsdienstleistungen",
+      "opening2_title": "Spezialist für Digitale Dienste",
+      "opening2_dept": "Abteilung Informationstechnologie",
+      "opening3_title": "Beauftragter für Internationale Beziehungen",
+      "opening3_dept": "Büro für Internationale Angelegenheiten",
+      "apply_button": "Jetzt bewerben",
+      "how_to_title": "Bewerbungsverfahren",
+      "how_to_desc": "Reichen Sie Ihre Bewerbung über das staatliche Einstellungsportal ein oder kontaktieren Sie unsere Personalabteilung unter hr@boi.go.th"
+    }
+  },
+  "press_center_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_about": "Über BOI",
+      "breadcrumb": "Pressezentrum",
+      "eyebrow": "Medienarbeit",
+      "title": "Pressezentrum",
+      "subtitle": "Pressemitteilungen, Medienkontakte, Pressemappen und Informationen zur Medienakkreditierung"
+    },
+    "content": {
+      "releases_title": "Aktuelle Pressemitteilungen",
+      "releases_desc": "Offizielle Pressemitteilungen des Board of Investment of Thailand.",
+      "kit_title": "Pressemappe",
+      "kit_desc": "Laden Sie unsere Pressemappe herunter, einschließlich BOI-Logos, Factsheets, Fotos der Führungsebene und Markenrichtlinien.",
+      "kit_download": "Pressemappe herunterladen",
+      "contact_title": "Medienkontakt",
+      "contact_name": "Abteilung Öffentlichkeitsarbeit",
+      "contact_email": "pr@boi.go.th",
+      "contact_phone": "+66-2-553-8111 Durchwahl 1180–1184",
+      "accreditation_title": "Medienakkreditierung",
+      "accreditation_desc": "Pressevertreter, die eine Akkreditierung für BOI-Veranstaltungen beantragen möchten, reichen bitte ihre Unterlagen mindestens 5 Geschäftstage vor der Veranstaltung ein."
+    }
+  },
+  "procurement_page": {
+    "hero": {
+      "breadcrumb_home": "Startseite",
+      "breadcrumb_about": "Über BOI",
+      "breadcrumb": "Beschaffung",
+      "eyebrow": "Transparenz",
+      "title": "Beschaffung",
+      "subtitle": "Öffentliche Ausschreibungen, Preisreferenzen und Vergabeinformationen"
+    },
+    "content": {
+      "announcements_title": "Aktuelle Ausschreibungen",
+      "announcements_desc": "Laufende Ausschreibungen und Vergabemöglichkeiten des BOI.",
+      "archive_title": "Archiv",
+      "archive_desc": "Vergangene Ausschreibungsergebnisse und Auftragsvergaben.",
+      "price_title": "Preisreferenzen",
+      "price_desc": "Standardpreisreferenzen für öffentliche Beschaffungsgüter.",
+      "transparency_title": "Transparenzverpflichtung",
+      "transparency_desc": "BOI verpflichtet sich zu fairen und transparenten Beschaffungsverfahren gemäß dem Gesetz über öffentliche Beschaffung und Vorratsverwaltung B.E. 2560.",
+      "no_items": "Derzeit sind keine aktiven Ausschreibungen vorhanden.",
+      "check_back": "Bitte schauen Sie regelmäßig nach Aktualisierungen."
+    }
   }
 }

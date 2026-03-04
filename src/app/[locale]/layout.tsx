@@ -9,6 +9,10 @@ import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import AnimatedFavicon from "@/components/ui/AnimatedFavicon";
 import GrandGateLoading from "@/components/ui/GrandGateLoading";
 import ScrollNavigator from "@/components/ui/ScrollNavigator";
+import AccessibilityWidget from "@/components/ui/AccessibilityWidget";
+import CookieConsent from "@/components/ui/CookieConsent";
+import ChatWidget from "@/components/ui/ChatWidget";
+import { OrganizationJsonLd, WebSiteJsonLd } from "@/components/seo/JsonLd";
 import "../globals.css";
 
 export async function generateStaticParams() {
@@ -29,12 +33,30 @@ export async function generateMetadata({
       default: t("title"),
     },
     description: t("description"),
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_BASE_URL || "https://www.boi.go.th"
+    ),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        th: "/th",
+        en: "/en",
+        ja: "/ja",
+        zh: "/zh",
+        ko: "/ko",
+        de: "/de",
+        fr: "/fr",
+      },
+    },
     openGraph: {
       title: t("title"),
       description: t("description"),
       siteName: "BOI Thailand",
       locale,
       type: "website",
+    },
+    other: {
+      "theme-color": "#1B2A4A",
     },
   };
 }
@@ -56,6 +78,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${inter.variable} ${notoSansThai.variable}`}>
+      <head>
+        <OrganizationJsonLd />
+        <WebSiteJsonLd />
+      </head>
       <body className="min-h-screen flex flex-col antialiased">
         <AnimatedFavicon />
         <NextIntlClientProvider messages={messages}>
@@ -74,6 +100,9 @@ export default async function LocaleLayout({
 
             <Footer />
             <ScrollNavigator />
+            <AccessibilityWidget />
+            <CookieConsent />
+            <ChatWidget />
           </SmoothScrollProvider>
         </NextIntlClientProvider>
       </body>

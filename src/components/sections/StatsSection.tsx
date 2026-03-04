@@ -99,7 +99,7 @@ export default function StatsSection() {
         style={{ y: bgY }}
       >
         <Image
-          src="/images/stats/bangkok-night.jpg"
+          src="/images/hero/bangkok-aerial-night.jpg"
           alt=""
           fill
           className="object-cover"
@@ -207,8 +207,17 @@ export default function StatsSection() {
                   delay: 0.3 + i * 0.2,
                   ease: EASE_OUT,
                 }}
-                className="group text-center relative"
+                className="group text-center relative py-6 px-2 rounded-2xl transition-all duration-500 hover:bg-white/[0.04]"
               >
+                {/* Hover glow — radial spotlight behind card */}
+                <div
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{
+                    background: "radial-gradient(ellipse at 50% 30%, rgba(197,165,114,0.12) 0%, transparent 70%)",
+                  }}
+                  aria-hidden="true"
+                />
+
                 {/* Radial ring + Icon */}
                 <RadialProgress
                   percent={stat.ringPercent}
@@ -216,43 +225,41 @@ export default function StatsSection() {
                   duration={2}
                 >
                   <stat.icon
-                    className="h-7 w-7 sm:h-8 sm:w-8 text-gold-400 transition-all duration-500 group-hover:text-gold-300 group-hover:scale-110"
+                    className="h-7 w-7 sm:h-8 sm:w-8 text-gold-400 transition-all duration-500 group-hover:text-gold-200 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(197,165,114,0.5)]"
                     aria-hidden="true"
                   />
                 </RadialProgress>
 
-                {/* Number — Gate Opening reveal + Gold gradient text */}
-                <motion.div
-                  initial={{ clipPath: "inset(0 50% 0 50%)" }}
-                  whileInView={{ clipPath: "inset(0 0% 0 0%)" }}
+                {/* Number — animated count-up */}
+                <motion.p
+                  className="mt-5 sm:mt-6 text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight leading-none text-gold-100 transition-transform duration-500 group-hover:scale-105"
+                  style={{ textShadow: "0 0 20px rgba(197,165,114,0.15)" }}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{
-                    duration: 0.5,
+                    duration: 0.6,
                     delay: 0.5 + i * 0.2,
                     ease: EASE_OUT,
                   }}
                 >
-                  <p className="mt-5 sm:mt-6 text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight leading-none">
-                    <span className="inline-block bg-gradient-to-b from-gold-200 via-white via-60% to-gold-200 bg-clip-text text-transparent">
-                      <AnimatedCounter
-                        target={stat.target}
-                        prefix={stat.prefix}
-                        suffix={stat.suffix}
-                        duration={2.5}
-                        delay={0.6 + i * 0.2}
-                      />
-                    </span>
-                  </p>
-                </motion.div>
+                  <AnimatedCounter
+                    target={stat.target}
+                    prefix={stat.prefix}
+                    suffix={stat.suffix}
+                    duration={2.5}
+                    delay={0.6 + i * 0.2}
+                  />
+                </motion.p>
 
                 {/* Label */}
-                <p className="mt-2 text-sm sm:text-base text-white/50 font-medium group-hover:text-gold-300/80 transition-colors duration-300">
+                <p className="mt-2 text-sm sm:text-base text-white/50 font-medium transition-all duration-300 group-hover:text-white group-hover:tracking-wide">
                   {t(stat.labelKey)}
                 </p>
 
                 {/* Context line — data storytelling */}
                 <motion.p
-                  className="mt-2 text-[11px] sm:text-xs text-white/25 leading-snug"
+                  className="mt-2 text-[11px] sm:text-xs text-white/25 leading-snug transition-colors duration-300 group-hover:text-white/50"
                   initial={{ opacity: 0, y: 8 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -265,10 +272,12 @@ export default function StatsSection() {
                   {t(stat.contextKey)}
                 </motion.p>
 
-                {/* Hover comparison — reveals on hover */}
-                <p className="mt-1.5 text-[11px] sm:text-xs text-gold-300/80 font-medium opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                  {t(stat.hoverKey)}
-                </p>
+                {/* Hover comparison — reveals on hover with gold pill */}
+                <div className="mt-3 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400">
+                  <span className="inline-block px-3 py-1 rounded-full bg-gold-500/15 border border-gold-400/20 text-xs sm:text-sm text-gold-300 font-semibold tracking-wide">
+                    {t(stat.hoverKey)}
+                  </span>
+                </div>
 
                 {/* Vertical divider — enhanced with glow dots */}
                 {i < stats.length - 1 && (

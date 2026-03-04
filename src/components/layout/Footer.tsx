@@ -13,13 +13,10 @@ export default function Footer() {
 
   return (
     <footer
-      className="relative overflow-hidden bg-gradient-to-b from-navy-600 via-navy-700 to-navy-800 text-white"
+      className="relative overflow-hidden bg-gradient-to-b from-navy-700 via-navy-800 to-navy-900 text-white"
       role="contentinfo"
     >
-      {/* Interactive Golden Network background */}
       <FooterCanvas />
-
-      {/* Content layer — above canvas */}
       <div className="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
         {/* Logo + divider */}
         <div className="pt-12 pb-8 border-b border-navy-500/50">

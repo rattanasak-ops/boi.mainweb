@@ -79,22 +79,32 @@
     "bottom_line": "2025年データ — タイ投資委員会"
   },
   "why_thailand": {
-    "subtitle": "タイを発見",
-    "title_1": "なぜ大手企業は",
-    "title_2": "タイを選ぶのか",
-    "description": "世界クラスのインフラ、競争力のあるインセンティブ、ASEANの中心という戦略的立地で、東南アジアトップの投資先に選ばれています。",
-    "strategic_location": "戦略的立地",
-    "strategic_location_desc": "ASEANのゲートウェイ — 7億人以上の消費者にアクセス、アジア太平洋の主要貿易ルートと接続",
-    "digital_infra": "デジタルインフラ",
-    "digital_infra_desc": "全国5G、EECデジタルパーク、スマート工業団地、世界クラスの物流ネットワーク",
-    "incentives": "競争力のあるインセンティブ",
-    "incentives_desc": "最長13年の法人税免除、機械の無関税輸入、非税制優遇措置",
-    "workforce": "高度な人材",
-    "workforce_desc": "STEM卒業生、競争力のある人件費、政府支援の研修プログラム",
+    "subtitle": "未来を開く",
+    "title_1": "世界のトップ投資家が",
+    "title_2": "すでにタイを選んだ",
+    "description": "2024年、3,137社以上の企業がタイに330億ドルを投じました — 10年間で最高記録。彼らが迷わなかった理由がここにあります。",
+    "strategic_location": "7億人以上の市場を解放",
+    "strategic_location_desc": "タイに進出するだけではありません — 世界で最も急成長する消費市場への扉を開くのです。ASEANはあなたのものです。",
+    "strategic_location_stat": "700M+",
+    "workforce": "毎年50万人のSTEM卒業生",
+    "workforce_desc": "世界クラスの人材を競争力のあるコストで。あなたの未来のチームはすでにここで、訓練を受けて待っています。",
+    "workforce_stat": "500K+",
+    "digital_infra": "全国5G。未来に対応済み。",
+    "digital_infra_desc": "EECスマートゾーンから全国5Gまで — インフラはあなたの野心を支えるだけでなく、加速させます。",
+    "digital_infra_stat": "99.9%",
+    "incentives": "13年間。法人税ゼロ。",
+    "incentives_desc": "最長13年の税制優遇、機械の無関税輸入、100%外資所有。利益はすべてあなたのものです。",
+    "incentives_stat": "13yr",
+    "quality_of_life": "世界が訪れたい場所に住む",
+    "quality_of_life_desc": "インターナショナルスクール、世界クラスの医療、そして人材が生き生きと働ける生活コスト — ただ生き延びるだけではなく。",
+    "quality_of_life_stat": "#1",
+    "stats_invested_label": "2024年の投資額",
+    "stats_projects_label": "承認プロジェクト",
+    "stats_fdi_label": "FDI比率",
+    "stats_growth_label": "前年比成長率",
+    "social_proof_title": "2024年にタイを選んだ3,137社以上の仲間入り",
     "investor_protection": "投資家保護",
-    "investor_protection_desc": "強力な知的財産法、40カ国以上との二国間投資協定、透明な規制",
-    "quality_of_life": "生活の質",
-    "quality_of_life_desc": "世界的に有名なおもてなし、インターナショナルスクール、近代的な医療、活気ある文化"
+    "investor_protection_desc": "強力な知的財産法、40カ国以上との二国間投資協定、透明な規制"
   },
   "news": {
     "subtitle": "最新情報",
@@ -113,20 +123,41 @@
     "news_4_excerpt": "500億円の拡大投資、BOIのスマート自動車製造インセンティブを活用。"
   },
   "services": {
-    "subtitle": "クイックアクセス",
-    "title": "電子サービス",
+    "subtitle": "すべてのゲートウェイを開く",
+    "title": "デジタルサービスゲートウェイ",
+    "tagline": "すべてのサービス、いつでも、どこでも",
     "einvestment": "e-Investment",
-    "einvestment_desc": "オンラインで投資促進を申請",
+    "einvestment_desc": "オンラインで投資促進を申請、リアルタイムで追跡",
+    "einvestment_status": "即時申請可能",
+    "einvestment_stat": "年間10,000+件",
+    "einvestment_counter_label": "件/年",
+    "einvestment_cta": "申請システムを開く",
     "visa": "ビザ＆ワークパーミット",
-    "visa_desc": "ビザ・就労許可サービス",
+    "visa_desc": "外国人投資家向けビザ・就労許可の総合サービス",
+    "visa_status": "サービス提供中",
+    "visa_stat": "24時間対応",
+    "visa_cta": "今すぐ開始",
     "smart_visa": "スマートビザ",
-    "smart_visa_desc": "人材・専門家向け特別ビザ",
+    "smart_visa_desc": "専門家・経営者・投資家向け特別ビザ",
+    "smart_visa_status": "受付中",
+    "smart_visa_stat": "ファストトラック30日",
+    "smart_visa_cta": "今すぐ申請",
     "osos": "OSOS",
-    "osos_desc": "ワンスタートワンストップ投資センター",
+    "osos_desc": "ワンスタートワンストップ — すべてのサービスを一箇所で",
+    "osos_status": "ワンストップ",
+    "osos_stat": "ワンストップサービス",
+    "osos_cta": "センターへ",
     "matchmaking": "Business Matching",
-    "matchmaking_desc": "ビジネスパートナーやサプライヤーとのマッチング",
+    "matchmaking_desc": "最適なパートナーとサプライヤーを見つける",
+    "matchmaking_status": "自動マッチング",
+    "matchmaking_stat": "500+パートナー",
+    "matchmaking_cta": "パートナーを探す",
     "incentive_calc": "Incentive Calculator",
-    "incentive_calc_desc": "投資優遇措置を計算する"
+    "incentive_calc_desc": "わずか2分で投資優遇措置を計算",
+    "incentive_calc_status": "無料ツール",
+    "incentive_calc_stat": "わずか2分",
+    "incentive_calc_placeholder": "事業タイプ...",
+    "incentive_calc_cta": "今すぐ計算"
   },
   "cta": {
     "subtitle": "投資を始めましょう",
@@ -465,6 +496,514 @@
       "address_short": "ビバワディランシット通り、バンコク"
     }
   },
+  "news_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_resources": "資料",
+      "breadcrumb": "ニュース＆更新情報",
+      "eyebrow": "最新の更新情報",
+      "title_1": "ニュース＆",
+      "title_2": "更新情報",
+      "subtitle": "BOIの最新発表、政策変更、タイの投資ニュースをお届けします。"
+    },
+    "list": {
+      "search_placeholder": "ニュース記事を検索...",
+      "category_all": "すべて",
+      "category_announcement": "お知らせ",
+      "category_policy": "政策",
+      "category_investment": "投資",
+      "category_event": "イベント",
+      "category_industry": "産業",
+      "featured": "注目",
+      "read_more": "続きを読む",
+      "prev_page": "前のページ",
+      "next_page": "次のページ",
+      "articles": {
+        "boi-approves-new-ev-incentives-2026": {
+          "title": "BOI、2026年新EVインセンティブパッケージを承認",
+          "excerpt": "タイの成長するEVエコシステムにおける電気自動車メーカーおよびサプライチェーンパートナーへの税制優遇強化と支援拡大。",
+          "date": "2026年2月28日"
+        },
+        "digital-economy-zone-expansion": {
+          "title": "デジタルエコノミーゾーンが5つの新県に拡大",
+          "excerpt": "BOIはデジタルエコノミーゾーンをチェンマイ、コンケン、プーケット、ソンクラー、ナコンラチャシマに拡大することを発表。",
+          "date": "2026年2月25日"
+        },
+        "thailand-auto-manufacturing-milestone": {
+          "title": "タイ、自動車製造のマイルストーンを達成",
+          "excerpt": "タイの自動車産業が年間200万台の生産を突破し、「アジアのデトロイト」としての地位を強化。",
+          "date": "2026年2月20日"
+        },
+        "international-investment-conference-2026": {
+          "title": "2026年国際投資カンファレンス開催決定",
+          "excerpt": "BOIは今年4月にバンコクで年次タイ投資カンファレンスを開催、世界の産業リーダーによる基調講演を予定。",
+          "date": "2026年2月15日"
+        },
+        "foreign-investment-q4-2025-report": {
+          "title": "2025年第4四半期の外国投資が25%急増",
+          "excerpt": "BOIの最新データにより、EVセクターとデジタル技術プロジェクトが牽引する外国直接投資の力強い成長が明らかに。",
+          "date": "2026年2月10日"
+        },
+        "smart-visa-program-updates": {
+          "title": "スマートビザプログラム更新：2026年の新特典",
+          "excerpt": "スマートビザプログラムはAIおよびロボティクス専門家への適格性拡大と、家族向け特典の強化を含むようになりました。",
+          "date": "2026年2月5日"
+        }
+      }
+    },
+    "detail": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_news": "ニュース＆更新情報",
+      "sample_title": "BOI、2026年新EVインセンティブパッケージを承認",
+      "sample_category": "政策",
+      "sample_date": "2026年2月28日",
+      "reading_time": "読了時間5分",
+      "sample_lead": "タイ投資委員会は、電気自動車産業の成長を加速させるための包括的な新インセンティブパッケージを承認しました。メーカーおよびサプライチェーンパートナーへの税制優遇強化と支援措置の拡大を提供します。",
+      "sample_heading_1": "新パッケージの主要ポイント",
+      "sample_paragraph_1": "新EVインセンティブパッケージには、対象投資に対する法人税免除期間の最長13年への延長、EV生産に不可欠な機械および原材料の輸入関税免除が含まれます。また、バッテリー技術および充電インフラに関する研究開発活動への追加控除も導入されます。",
+      "highlight_label": "注目の数字",
+      "sample_highlight": "新パッケージにより、今後5年間で1,500億バーツ以上の新規投資を誘致し、EVセクターで30,000人以上の高度人材の雇用を創出する見込みです。",
+      "sample_heading_2": "拡大された支援措置",
+      "sample_paragraph_2": "税制インセンティブに加え、BOIはEV関連プロジェクトの許可手続きの迅速化、外国人専門家向けのビザ手続きの簡素化、プロジェクト承認を迅速化するための政府機関との連携強化など、一連の非税制措置を導入します。",
+      "sample_paragraph_3": "このパッケージは、電気自動車の製造とイノベーションの地域ハブとなるタイのコミットメントを反映しており、2030年までに国内自動車生産の30%を電気自動車とする目標を支援するものです。",
+      "tags_label": "タグ",
+      "back_to_news": "ニュース一覧に戻る",
+      "share_label": "この記事をシェア",
+      "related_topics": "関連トピック",
+      "topic_incentives": "投資インセンティブ概要",
+      "topic_ev": "タイのEV産業",
+      "topic_activities": "対象事業活動",
+      "newsletter_eyebrow": "最新情報を受け取る",
+      "newsletter_title": "BOIニュースレターに登録",
+      "newsletter_desc": "最新の投資ニュースと更新情報をメールでお届けします。",
+      "newsletter_placeholder": "メールアドレスを入力",
+      "newsletter_cta": "今すぐ登録"
+    },
+    "related": {
+      "eyebrow": "関連記事",
+      "title": "関連記事",
+      "view_all": "すべてのニュースを見る"
+    }
+  },
+  "events_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_resources": "資料",
+      "breadcrumb": "イベント＆セミナー",
+      "eyebrow": "開催予定のイベント",
+      "title_1": "イベント＆",
+      "title_2": "セミナー",
+      "subtitle": "BOIのイベント、セミナー、カンファレンスに参加し、業界リーダーとつながり、投資機会を発見しましょう。"
+    },
+    "list": {
+      "filter_all": "すべてのイベント",
+      "filter_upcoming": "開催予定",
+      "filter_seminar": "セミナー",
+      "filter_workshop": "ワークショップ",
+      "filter_conference": "カンファレンス",
+      "upcoming": "開催予定",
+      "view_details": "詳細を見る",
+      "events": {
+        "thailand-investment-conference-2026": {
+          "title": "タイ投資カンファレンス2026",
+          "description": "世界の投資家、政策立案者、業界リーダーが集結し、タイの投資環境を探る年間最大のイベント。",
+          "date": "2026年4月15日〜17日",
+          "time": "09:00 – 17:00",
+          "location": "QSNCC（クイーンシリキット国際会議場）、バンコク",
+          "capacity": "500名以上"
+        },
+        "ev-industry-workshop": {
+          "title": "EV産業投資ワークショップ",
+          "description": "EVインセンティブパッケージ、サプライチェーンの機会、BOI促進申請手続きに関する実践的ワークショップ。",
+          "date": "2026年4月8日",
+          "time": "13:00 – 16:30",
+          "location": "BOI本部",
+          "capacity": "80席"
+        },
+        "digital-economy-seminar": {
+          "title": "デジタルエコノミー投資セミナー",
+          "description": "タイのデジタルエコノミーインセンティブ、特別ゾーン、AI・クラウド・データセンター投資の機会について学びます。",
+          "date": "2026年3月25日",
+          "time": "09:30 – 12:00",
+          "location": "オンライン（Zoom）",
+          "capacity": "定員なし"
+        },
+        "smart-manufacturing-expo": {
+          "title": "スマートマニュファクチャリングエキスポ2026",
+          "description": "タイの製造業の未来を形作る最新のオートメーション、ロボティクス、インダストリー4.0技術を探索。",
+          "date": "2026年3月18日〜20日",
+          "time": "10:00 – 18:00",
+          "location": "BITEC、バンコク",
+          "capacity": "1,000名以上"
+        },
+        "investor-briefing-q1-2026": {
+          "title": "四半期投資家ブリーフィング — 2026年第1四半期",
+          "description": "タイの投資実績、新政策、四半期の経済見通しに関する包括的な概要。",
+          "date": "2026年3月10日",
+          "time": "14:00 – 15:30",
+          "location": "オンライン（Zoom）",
+          "capacity": "300席"
+        },
+        "boi-international-roadshow": {
+          "title": "BOI国際投資ロードショー",
+          "description": "BOI担当官との個別相談やタイの投資優位性に関するプレゼンテーションを含む多都市ロードショー。",
+          "date": "2026年2月28日〜3月5日",
+          "time": "終日",
+          "location": "東京、ソウル、シンガポール",
+          "capacity": "招待制"
+        }
+      }
+    }
+  },
+  "faq_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb": "よくある質問",
+      "eyebrow": "ヘルプセンター",
+      "title_1": "よくある",
+      "title_2": "質問",
+      "subtitle": "BOI投資促進、インセンティブ、申請手続きに関するよくある質問の回答をご覧ください。",
+      "search_placeholder": "回答を検索..."
+    },
+    "content": {
+      "categories_label": "カテゴリー",
+      "cat_general": "一般",
+      "cat_eligibility": "適格性",
+      "cat_application": "申請",
+      "cat_incentives": "インセンティブ",
+      "cat_compliance": "コンプライアンス",
+      "general": {
+        "what_is_boi_q": "タイ投資委員会（BOI）とは何ですか？",
+        "what_is_boi_a": "タイ投資委員会（BOI）は、首相官邸の下にある政府機関で、タイにおける国内外の投資を促進・支援しています。1966年に設立され、BOIはさまざまな産業の対象企業に税制および非税制のインセンティブを提供しています。",
+        "who_can_apply_q": "BOI投資促進に申請できるのは誰ですか？",
+        "who_can_apply_a": "タイ人および外国人投資家の両方がBOI投資促進に申請できます。申請者はタイで法人登記済み、または法人設立手続き中である必要があります。事業活動はBOIの対象活動リストに該当する必要があります。",
+        "how_long_q": "BOI申請手続きにはどのくらいの時間がかかりますか？",
+        "how_long_a": "標準的な処理期間は、完全な申請書提出日から約40〜60営業日です。複雑なプロジェクトや追加審査が必要な案件はさらに時間がかかる場合があります。BOIは特定の優先度の高いプロジェクトに対して迅速処理を提供しています。"
+      },
+      "eligibility": {
+        "eligible_activities_q": "BOI促進の対象となる事業活動は何ですか？",
+        "eligible_activities_a": "BOIは、農業、製造業、サービス業、テクノロジーなど幅広い分野の事業活動を促進しています。対象活動リストは定期的に更新され、提供されるインセンティブの水準に基づきカテゴリー（A1+、A1、A2、A3、A4、B1、B2）に分類されています。",
+        "minimum_investment_q": "最低投資額はありますか？",
+        "minimum_investment_a": "はい、最低投資額（土地および運転資本を除く）は一般的に100万バーツです。ただし、カテゴリーや事業の種類によっては、より高い最低要件が設定されている場合があります。",
+        "foreign_ownership_q": "外国人投資家は会社の100%を所有できますか？",
+        "foreign_ownership_a": "はい、BOI促進企業は製造業および特定のサービス分野において100%外国資本所有が可能です。これはBOI促進の主な利点の一つであり、タイの外国事業法の制限に対する例外規定を提供しています。"
+      },
+      "application": {
+        "how_to_apply_q": "BOI促進にはどのように申請しますか？",
+        "how_to_apply_a": "申請はe-Investmentシステムを通じてオンラインで提出するか、BOIオフィスで対面で行うことができます。申請書の記入、フィージビリティスタディの提供、財務計画や会社登記書類などの証明書類の提出が必要です。",
+        "documents_needed_q": "申請に必要な書類は何ですか？",
+        "documents_needed_a": "必要書類には、BOI申請書、フィージビリティスタディ、財務計画、会社登記書類（または設立前合意書）、事業実施計画、環境影響評価（該当する活動の場合）が含まれます。",
+        "processing_time_q": "申請状況を追跡できますか？",
+        "processing_time_a": "はい、e-Investmentポータルを通じて申請状況を追跡できます。BOIはまた、手続き全体を通じて連絡窓口となるプロジェクトオフィサーを割り当て、状況の更新を提供します。"
+      },
+      "incentives": {
+        "tax_exemption_q": "どのような税制インセンティブがありますか？",
+        "tax_exemption_a": "BOIは活動カテゴリーに応じて3年〜13年の法人税免除、機械および原材料の輸入関税免除、R&D・研修・インフラ開発費用の追加控除を提供しています。",
+        "non_tax_benefits_q": "BOIが提供する非税制インセンティブは何ですか？",
+        "non_tax_benefits_a": "非税制インセンティブには、外国人過半数所有の許可、土地所有の許可、外国人専門家の就労許可・ビザ手続きの簡素化、外国通貨の海外送金許可、国有化に対する保護が含まれます。",
+        "zone_benefits_q": "特別ゾーンへの投資にはさらなるメリットがありますか？",
+        "zone_benefits_a": "はい、東部経済回廊（EEC）、特別経済区（SEZ）、サイエンス＆テクノロジーパークなどの特別ゾーンへの投資には、税制優遇期間の延長、法人税の追加減免、インフラ支援などの強化されたインセンティブが提供されます。"
+      },
+      "compliance": {
+        "reporting_q": "促進を受けた後の報告義務は何ですか？",
+        "reporting_a": "BOI促進企業は、年次事業報告書を提出し、促進証明書に記載された条件を遵守する必要があります。これには、最低投資水準の維持、生産能力要件、雇用条件が含まれます。",
+        "revocation_q": "BOI促進が取り消されるのはどのような場合ですか？",
+        "revocation_a": "促進証明書の条件を遵守しない場合、申請時に虚偽の情報を提供した場合、必要な報告書を提出しない場合、または指定された期間内に事業を開始しない場合、促進が取り消されることがあります。",
+        "extension_q": "BOIインセンティブの期間を延長できますか？",
+        "extension_a": "特定の場合、BOIは特定のインセンティブの延長を承認することがあります。承認された科学技術活動に投資する企業、または対象県に所在する企業は、法人税免除の追加年数の対象となる場合があります。"
+      }
+    },
+    "cta": {
+      "eyebrow": "まだ質問がありますか？",
+      "title": "お手伝いいたします",
+      "description": "タイの投資促進に関するご質問には、専門チームがお答えいたします。",
+      "cta_contact": "お問い合わせ",
+      "cta_call": "電話 0 2553 8111"
+    }
+  },
+  "contact_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb": "お問い合わせ",
+      "eyebrow": "お気軽にどうぞ",
+      "title_1": "BOIに",
+      "title_2": "お問い合わせ",
+      "subtitle": "専門チームが投資促進手続きのすべてのステップをご案内いたします。",
+      "phone_label": "電話",
+      "phone_value": "0 2553 8111",
+      "email_label": "メール",
+      "email_value": "head@boi.go.th",
+      "address_label": "住所",
+      "address_value": "555 ビバワディランシット通り、チャトゥチャック区、バンコク 10900",
+      "hours_label": "営業時間",
+      "hours_value": "月〜金: 08:30–16:30"
+    },
+    "form": {
+      "eyebrow": "メッセージを送る",
+      "title": "どのようなご用件ですか？",
+      "description": "フォームにご記入いただければ、2営業日以内にチームがご連絡いたします。",
+      "map_label": "Google マップ — BOI本部",
+      "name_label": "氏名",
+      "name_placeholder": "氏名を入力してください",
+      "email_label": "メールアドレス",
+      "email_placeholder": "メールアドレスを入力してください",
+      "company_label": "会社名",
+      "company_placeholder": "会社名を入力してください",
+      "subject_label": "件名",
+      "subject_placeholder": "件名を選択してください",
+      "subject_general": "一般的なお問い合わせ",
+      "subject_incentives": "投資インセンティブ",
+      "subject_application": "申請手続き",
+      "subject_visa": "ビザ＆就労許可",
+      "subject_other": "その他",
+      "message_label": "メッセージ",
+      "message_placeholder": "ご用件をお聞かせください...",
+      "required_note": "* 必須項目",
+      "submit": "メッセージを送信"
+    },
+    "offices": {
+      "eyebrow": "オフィス一覧",
+      "title": "世界のBOIオフィス",
+      "description": "世界各地にオフィスを構え、タイへの投資を常にサポートいたします。",
+      "hq_badge": "本部",
+      "headquarters_name": "BOI本部、バンコク",
+      "headquarters_address": "555 ビバワディランシット通り、チャトゥチャック区、バンコク 10900、タイ",
+      "headquarters_phone": "0 2553 8111",
+      "headquarters_email": "head@boi.go.th",
+      "tokyo_name": "東京オフィス",
+      "tokyo_address": "〒107-0052 東京都港区赤坂2-11-3 福田ビル西館8階",
+      "tokyo_phone": "+81 3 3582 1806",
+      "beijing_name": "北京オフィス",
+      "beijing_address": "タイ大使館内、北京市光華路21号 100600",
+      "beijing_phone": "+86 10 6532 3775",
+      "new_york_name": "ニューヨークオフィス",
+      "new_york_address": "7 World Trade Center, 250 Greenwich St, 35th Floor, New York 10007",
+      "new_york_phone": "+1 212 422 9009",
+      "frankfurt_name": "フランクフルトオフィス",
+      "frankfurt_address": "Bethmannstraße 58, 5. OG, 60311 Frankfurt am Main, Germany",
+      "frankfurt_phone": "+49 69 9291 230",
+      "seoul_name": "ソウルオフィス",
+      "seoul_address": "タイ大使館内、ソウル特別市龍山区大使館路42 04401",
+      "seoul_phone": "+82 2 795 2484"
+    }
+  },
+  "success_stories_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_discover": "タイを知る",
+      "breadcrumb": "成功事例",
+      "eyebrow": "投資家の成功",
+      "title_1": "成功",
+      "title_2": "事例",
+      "subtitle": "世界中の大手企業がBOI投資促進を活用してタイでどのように成功しているかをご覧ください。"
+    },
+    "grid": {
+      "filter_all": "全産業",
+      "filter_ev": "EV＆自動車",
+      "filter_digital": "デジタル＆テック",
+      "filter_manufacturing": "製造業",
+      "filter_food": "食品＆農業",
+      "filter_medical": "医療＆ヘルスケア",
+      "read_story": "全文を読む",
+      "stories": {
+        "toyota-ev-manufacturing": {
+          "title": "トヨタのタイにおけるEV製造拠点",
+          "excerpt": "トヨタがBOIインセンティブを活用し、東部経済回廊に東南アジア最大の電気自動車生産施設を設立した経緯。",
+          "investment": "450億バーツ投資",
+          "jobs": "5,000人以上の雇用"
+        },
+        "delta-electronics-smart-factory": {
+          "title": "デルタ電子：スマートファクトリー4.0",
+          "excerpt": "デルタ電子がBOIのA1+促進パッケージを活用し、タイの事業をインダストリー4.0の完全自動化ショーケースに変革。",
+          "investment": "120億バーツ投資",
+          "jobs": "2,200人の雇用"
+        },
+        "google-cloud-data-center": {
+          "title": "Googleクラウドリージョン タイ",
+          "excerpt": "Googleは、BOIのデジタルエコノミーインセンティブの支援を受け、東南アジア本土初のクラウドリージョンにタイを選定。",
+          "investment": "350億バーツ投資",
+          "jobs": "800人以上の雇用"
+        },
+        "cp-foods-innovation-center": {
+          "title": "CPフーズ イノベーション＆サステナビリティセンター",
+          "excerpt": "CPフーズが持続可能なタンパク質生産とスマート農業技術に焦点を当てた世界クラスの食品イノベーションセンターを設立。",
+          "investment": "80億バーツ投資",
+          "jobs": "1,500人の雇用"
+        },
+        "siemens-healthineers-hub": {
+          "title": "シーメンス・ヘルシニアーズ地域拠点",
+          "excerpt": "シーメンス・ヘルシニアーズがBOIの医療技術促進の下、タイをASEAN医療機器流通・サービス拠点に選定。",
+          "investment": "50億バーツ投資",
+          "jobs": "600人の雇用"
+        },
+        "byd-ev-assembly-plant": {
+          "title": "BYDのASEAN初EV組立工場",
+          "excerpt": "BYDがラヨーンにASEAN初の電気自動車組立工場を設立し、年間15万台の生産を目標。",
+          "investment": "180億バーツ投資",
+          "jobs": "3,000人以上の雇用"
+        }
+      }
+    }
+  },
+  "services_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb": "電子サービス",
+      "eyebrow": "デジタルサービス",
+      "title_1": "電子サービス",
+      "title_2": "ハブ",
+      "subtitle": "BOIのデジタルサービスとオンラインプラットフォームにアクセスし、投資促進申請と支援を効率化しましょう。"
+    },
+    "grid": {
+      "eyebrow": "利用可能なサービス",
+      "title": "すべてのサービスをあなたの手元に",
+      "access_service": "サービスにアクセス",
+      "e_investment_name": "e-Investment",
+      "e_investment_desc": "BOI促進申請をオンラインで提出・追跡できます。包括的なデジタルプラットフォームが初回申請から承認後の報告まですべてを処理します。",
+      "visa_work_permit_name": "ビザ＆ワークパーミット",
+      "visa_work_permit_desc": "BOI促進企業の外国人従業員のビザ延長および就労許可の申請・管理を、簡素化されたオンラインシステムで行えます。",
+      "smart_visa_name": "スマートビザ",
+      "smart_visa_desc": "高度人材、投資家、経営者、スタートアップ起業家向けに設計されたスマートビザプログラムに申請できます。",
+      "osos_name": "ワンスタートワンストップ（OSOS）",
+      "osos_desc": "複数の政府サービスに一箇所でアクセス。OSOSは許可、ライセンス、登録の統合支援を提供します。",
+      "hq_portal_name": "HQビジネスポータル",
+      "hq_portal_desc": "タイにおける地域統括本部（ROH）および国際本部（IHQ）の運営のための専用ポータル。",
+      "after_promotion_name": "促進後サービス",
+      "after_promotion_desc": "BOIの承認後サービスポータルを通じて、延長、変更、年次報告など促進プロジェクトを管理できます。",
+      "consultation_name": "相談を予約",
+      "consultation_desc": "BOI投資アドバイザーとの無料相談を予約し、プロジェクト計画や対象インセンティブパッケージについて相談できます。",
+      "tax_calculator_name": "インセンティブ計算ツール",
+      "tax_calculator_desc": "投資の種類、金額、場所に基づいて、潜在的な税制優遇とインセンティブのメリットを試算できます。"
+    },
+    "cta": {
+      "eyebrow": "サポートが必要ですか？",
+      "title": "お手伝いの準備ができています",
+      "description": "投資アドバイザーチームが、すべてのデジタルサービスと申請プロセスをご案内します。",
+      "cta_consult": "相談を予約",
+      "cta_faq": "FAQを見る"
+    }
+  },
+  "search": {
+    "breadcrumb_home": "ホーム",
+    "breadcrumb": "検索結果",
+    "title": "検索結果",
+    "placeholder": "インセンティブ、サービス、ニュースを検索...",
+    "clear": "検索をクリア",
+    "filter_all": "すべて",
+    "filter_incentives": "インセンティブ",
+    "filter_services": "サービス",
+    "filter_news": "ニュース",
+    "filter_events": "イベント",
+    "filter_faq": "よくある質問",
+    "results_count": "{count}件の結果",
+    "results_for": "の検索結果",
+    "no_results_title": "結果が見つかりません",
+    "no_results_desc": "別のキーワードをお試しいただくか、カテゴリをご覧ください"
+  },
+  "privacy": {
+    "breadcrumb_home": "ホーム",
+    "breadcrumb": "プライバシーポリシー",
+    "eyebrow": "法的情報",
+    "title": "プライバシーポリシー",
+    "subtitle": "PDPAに準拠した個人情報の収集、利用、保護について",
+    "last_updated": "最終更新日：2026年3月1日",
+    "sections": {
+      "intro_title": "はじめに",
+      "intro_text": "タイ投資委員会（BOI）は、ウェブサイト訪問者のプライバシー保護に取り組んでいます。このプライバシーポリシーは、タイ個人情報保護法（PDPA）に準拠し、当ウェブサイト訪問時の情報の収集、利用、開示、保護方法を説明します。",
+      "collection_title": "収集する情報",
+      "collection_text": "サービス利用時に自発的に提供される個人情報を収集する場合があります：氏名、メールアドレス、電話番号、会社情報、お問い合わせフォームを通じた投資関連の問い合わせ。",
+      "auto_title": "自動収集情報",
+      "auto_text": "ウェブサイト訪問時に、IPアドレス、ブラウザの種類、OS、参照URL、閲覧ページ、タイムスタンプなどの情報を自動的に収集します。このデータはクッキーや類似技術を通じて収集されます。",
+      "use_title": "情報の利用方法",
+      "use_text": "収集した情報は以下の目的で利用します：サービスの提供と改善、問い合わせへの対応、関連する投資情報の送信、ウェブサイト利用パターンの分析、法的義務の履行。",
+      "sharing_title": "情報の共有",
+      "sharing_text": "個人情報を販売することはありません。法律で義務付けられた政府機関、ウェブサイト運営を支援する認定サービスプロバイダー、裁判所命令または法的手続きにより必要な場合に情報を共有することがあります。",
+      "retention_title": "データの保持",
+      "retention_text": "個人データは、収集目的の達成に必要な期間、または適用法令で要求される期間のみ保持します。監査ログは最低365日間保持されます。",
+      "rights_title": "PDPAに基づく権利",
+      "rights_text": "PDPAに基づき、以下の権利があります：個人データへのアクセス、不正確なデータの訂正要求、データの削除要求、同意の撤回、データポータビリティの要求、個人情報保護委員会への苦情申立て。",
+      "security_title": "データセキュリティ",
+      "security_text": "暗号化、アクセス制御、OWASPに準拠した定期的なセキュリティ評価を含む、適切な技術的・組織的措置を講じて個人データを保護しています。",
+      "contact_title": "お問い合わせ",
+      "contact_text": "プライバシーに関するお問い合わせまたはPDPAの権利行使については、データ保護責任者まで：dpo@boi.go.th またはお問い合わせページをご覧ください。"
+    }
+  },
+  "accessibility_page": {
+    "breadcrumb_home": "ホーム",
+    "breadcrumb": "アクセシビリティ声明",
+    "eyebrow": "コミットメント",
+    "title": "アクセシビリティ声明",
+    "subtitle": "すべての方に投資情報をアクセシブルにするための取り組み",
+    "last_updated": "最終更新日：2026年3月1日",
+    "sections": {
+      "commitment_title": "私たちのコミットメント",
+      "commitment_text": "タイ投資委員会（BOI）は、多様な能力を持つ方々のデジタルアクセシビリティの確保に取り組んでいます。すべてのユーザーの体験を継続的に改善し、関連するアクセシビリティ基準を適用しています。",
+      "standards_title": "基準とコンプライアンス",
+      "standards_text": "このウェブサイトは、Webコンテンツアクセシビリティガイドライン（WCAG）2.1レベルAAへの準拠を目指しています。タイのDGA（デジタル政府庁）のデジタルアクセシビリティ基準にも準拠しています。",
+      "features_title": "アクセシビリティ機能",
+      "features_text": "テキストサイズと間隔の調整、高コントラストとダークモード、キーボードナビゲーション、スクリーンリーダー互換性、画像の代替テキスト、ARIAランドマーク、フォーカスインジケーター、包括的なアクセシビリティウィジェットを含みます。",
+      "widget_title": "アクセシビリティウィジェット",
+      "widget_text": "左下のアイコンからアクセシビリティウィジェットを使用して、閲覧体験をカスタマイズできます。コンテンツスケーリング、フォントサイズ調整、行間と文字間隔の制御、見出しとリンクのハイライト、コントラストモード、グレースケールモード、カーソルハイライト、テキスト読み上げが含まれます。",
+      "feedback_title": "フィードバック",
+      "feedback_text": "このウェブサイトのアクセシビリティに関するフィードバックを歓迎します。accessibility@boi.go.th またはお問い合わせフォームよりご連絡ください。",
+      "ongoing_title": "継続的な取り組み",
+      "ongoing_text": "定期的なアクセシビリティ監査、スタッフのアクセシブルコンテンツ作成トレーニング、支援技術によるテストなど、アクセシビリティの改善に継続的に取り組んでいます。"
+    }
+  },
+  "a11y": {
+    "title": "アクセシビリティ",
+    "subtitle": "表示設定をカスタマイズ",
+    "reset": "デフォルトにリセット",
+    "close": "閉じる",
+    "contentSize": "コンテンツサイズ",
+    "fontSize": "フォントサイズ",
+    "lineHeight": "行間",
+    "letterSpacing": "文字間隔",
+    "highlightHeadings": "見出しをハイライト",
+    "highlightLinks": "リンクをハイライト",
+    "darkContrast": "ダークコントラスト",
+    "lightContrast": "ライトコントラスト",
+    "grayscale": "グレースケール",
+    "highContrast": "ハイコントラスト",
+    "highSaturation": "高彩度",
+    "lowSaturation": "低彩度",
+    "highlightHover": "カーソルハイライト",
+    "textToSpeech": "テキスト読み上げ",
+    "ttsActive": "テキストを選択すると読み上げます",
+    "default": "デフォルト"
+  },
+  "cookie_consent": {
+    "title": "Cookie設定",
+    "description": "当サイトでは体験向上のためCookieを使用しています。続行すると、Cookieの使用に同意したことになります。",
+    "privacy_link": "プライバシーポリシー",
+    "close": "閉じる",
+    "manage_preferences": "Cookie設定を管理",
+    "accept_all": "すべて同意",
+    "accept_selected": "選択したものを同意",
+    "reject_optional": "オプションを拒否",
+    "necessary_label": "必須",
+    "necessary_desc": "ウェブサイトの基本機能とセキュリティに必要です。",
+    "analytics_label": "分析",
+    "analytics_desc": "訪問者がウェブサイトとどのように対話するかを理解するのに役立ちます。",
+    "marketing_label": "マーケティング",
+    "marketing_desc": "パーソナライズされたコンテンツや広告の配信に使用されます。",
+    "functional_label": "機能",
+    "functional_desc": "保存された設定などの拡張機能を有効にします。",
+    "always_on": "常にオン"
+  },
+  "chat": {
+    "title": "BOIアシスタント",
+    "subtitle": "AI投資ガイド",
+    "welcome": "こんにちは！何かお手伝いできますか？",
+    "welcome_desc": "タイへの投資に関するご質問をどうぞ。",
+    "quick_eligibility": "BOI促進の対象になりますか？",
+    "quick_incentives": "どのようなインセンティブがありますか？",
+    "quick_apply": "BOIへの申請方法は？",
+    "placeholder": "タイへの投資について質問...",
+    "send": "送信",
+    "disclaimer": "AIの回答はガイダンスのみです。BOI担当者にご確認ください。",
+    "demo_response": "ご質問ありがとうございます！BOI AIアシスタントとして、タイの投資促進に関する情報をお手伝いします。BOIは最大13年の法人所得税免除、輸入関税免除、外国人所有許可などの非税制特典を含む包括的なインセンティブパッケージを提供しています。特定のインセンティブや申請プロセスについて詳しく知りたいですか？"
+  },
   "language": {
     "th": "ไทย",
     "en": "English",
@@ -474,5 +1013,782 @@
     "de": "Deutsch",
     "fr": "Français",
     "select": "言語を選択"
+  },
+  "thailand_overview": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_discover": "タイを知る",
+      "breadcrumb": "タイ概要",
+      "eyebrow": "国家プロフィール",
+      "title": "タイの概要",
+      "subtitle": "ASEANの中心に位置し、世界クラスのインフラと高度な人材を擁するダイナミックな経済"
+    },
+    "content": {
+      "stat_gdp": "GDP",
+      "stat_gdp_value": "$574B",
+      "stat_population": "人口",
+      "stat_population_value": "71.8M",
+      "stat_fdi": "FDIランキング",
+      "stat_fdi_value": "ASEANトップ3",
+      "stat_ease": "ビジネス環境",
+      "stat_ease_value": "世界第21位",
+      "economy_title": "堅調な経済",
+      "economy_desc": "タイのGDPは5,740億ドルを超え、ASEAN第2位の経済規模を誇ります。年平均3.5%の安定した成長率を維持し、自動車、エレクトロニクス、農業にまたがる多角的な産業基盤を有しています。",
+      "strategic_title": "戦略的立地",
+      "strategic_desc": "ASEAN6億8,000万人の消費市場の中心に位置し、アジアの主要市場への比類なきアクセスを提供します。世界人口の半分に5時間以内のフライトで到達可能です。",
+      "infrastructure_title": "世界クラスのインフラ",
+      "infrastructure_desc": "タイには38の深海港、6つの国際空港、広範な高速道路ネットワーク、バンコクと地方拠点を結ぶ高速鉄道網があります。",
+      "workforce_title": "高度な人材",
+      "workforce_desc": "年間50万人以上のSTEM卒業生を輩出し、3,900万人の労働力を擁しています。政府と産業界の連携や技術研修機関を通じて、人材のスキルアップに積極的に投資しています。",
+      "quality_title": "生活の質",
+      "quality_desc": "アジアで最も住みやすい国の一つとして評価されており、世界クラスの医療、インターナショナルスクール、活気ある文化、駐在員にとって魅力的な生活コストを提供しています。"
+    }
+  },
+  "industries_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_discover": "タイを知る",
+      "breadcrumb": "ターゲット産業",
+      "eyebrow": "投資セクター",
+      "title": "ターゲット産業",
+      "subtitle": "BOI優遇措置の対象となるタイの優先産業セクターをご覧ください"
+    },
+    "grid": {
+      "eyebrow": "10の優先セクター",
+      "title": "タイの未来を牽引する産業",
+      "agriculture_food_name": "農業・食品",
+      "agriculture_food_desc": "農場から食卓まで — タイは世界の台所として、BCG推進の持続可能性を備えた食品加工・農業イノベーションの世界的リーダーです。",
+      "medical_name": "医療・ウェルネス",
+      "medical_desc": "世界クラスの病院、医薬品製造、活発な医療機器産業を擁するアジアの医療ハブです。",
+      "automotive_name": "自動車・EV",
+      "automotive_desc": "アジアのデトロイト — ASEAN最大の自動車生産国であり、専用インセンティブパッケージを備えた地域EV製造ハブへの転換を推進しています。",
+      "electronics_name": "エレクトロニクス・スマートデバイス",
+      "electronics_desc": "ハードディスクドライブ、半導体、集積回路の世界的な主要拠点であり、スマートデバイス製造能力を拡大しています。",
+      "metals_name": "金属・素材",
+      "metals_desc": "タイの製造業エコシステムを支える鉄鋼、アルミニウム、先端素材の包括的なサプライチェーンを有しています。",
+      "chemicals_name": "化学・石油化学",
+      "chemicals_desc": "統合型工業コンプレックスを中心とした東南アジア最大の石油化学産業が東部臨海地域に集積しています。",
+      "utilities_name": "公共事業・エネルギー",
+      "utilities_desc": "太陽光、風力、バイオマスプロジェクトを推進し、グリーンテクノロジーに対するBOI優遇措置の強化によりクリーンエネルギーへの転換を進めています。",
+      "digital_name": "デジタル・テクノロジー",
+      "digital_desc": "タイのデジタル経済はデータセンター、フィンテック、AI/ML、クラウドサービス、ソフトウェア開発が新経済を牽引し、急成長しています。",
+      "creative_name": "クリエイティブ産業",
+      "creative_desc": "アニメーション、ゲーム、映画制作、デザイン — タイのクリエイティブセクターは専用の促進措置とともに急速に成長しています。",
+      "services_name": "高付加価値サービス",
+      "services_desc": "地域統括本部、国際貿易会社、ビジネスプロセスアウトソーシングに対し、特別な非税制インセンティブが提供されます。",
+      "learn_more": "詳しく見る"
+    }
+  },
+  "special_zones": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_discover": "タイを知る",
+      "breadcrumb": "特別経済区",
+      "eyebrow": "戦略的ゾーン",
+      "title": "特別経済区",
+      "subtitle": "タイの指定経済回廊における優遇措置の強化と手続きの簡素化"
+    },
+    "content": {
+      "zones_eyebrow": "投資先",
+      "zones_title": "戦略的立地を選択",
+      "zone_count": "経済特区",
+      "zone_count_value": "15+",
+      "province_count": "対象県",
+      "province_count_value": "30+",
+      "eec_title": "東部経済回廊（EEC）",
+      "eec_desc": "チャチューンサオ、チョンブリ、ラヨーンの3県にまたがるタイの旗艦開発ゾーン — 先端製造業とイノベーションの中心地です。",
+      "eec_benefits": "最長15年間の法人税免除、外国人の土地所有、許可手続きの迅速化、EECiイノベーションゾーン、EECdデジタルパーク",
+      "sez_title": "特別経済区（SEZ）",
+      "sez_desc": "ミャンマー、ラオス、カンボジア、マレーシアなどの近隣諸国との国境貿易と投資を促進するために設計された10の国境ゾーンです。",
+      "sez_benefits": "追加3年間の法人税軽減、輸送費の二重控除、ユーティリティインフラ支援、通関手続きの簡素化",
+      "industrial_title": "工業団地",
+      "industrial_desc": "タイ全土に60以上の管理型工業団地があり、即入居可能な施設、ユーティリティ、包括的なサポートサービスを提供しています。",
+      "industrial_benefits": "プラグアンドプレイのインフラ、ワンストップサービスセンター、環境コンプライアンス支援、労働者宿泊施設"
+    }
+  },
+  "advertorials_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_discover": "タイを知る",
+      "breadcrumb": "記事・特集",
+      "eyebrow": "注目の記事",
+      "title": "記事・インサイト",
+      "subtitle": "タイの投資環境、産業トレンド、成功要因に関する詳細な記事"
+    },
+    "list": {
+      "eyebrow": "最新記事",
+      "title": "注目のインサイト",
+      "filter_all": "すべて",
+      "filter_investment": "投資",
+      "filter_industry": "産業",
+      "filter_policy": "政策",
+      "read_more": "記事を読む",
+      "article_1_title": "タイ、2025年に過去最高の外国直接投資を誘致",
+      "article_1_excerpt": "EV、デジタル、グリーンエネルギーセクターが牽引し、タイのFDI申請件数は23%増加しました。特別経済区全体で成長が見られます。",
+      "article_2_title": "EV産業の活況：ASEANの電気自動車ハブとしてのタイ",
+      "article_2_excerpt": "大手自動車メーカーが東部経済回廊のインセンティブと高度な人材を活用し、EV生産拠点をタイに移転しています。",
+      "article_3_title": "BCG経済に対するBOI新インセンティブパッケージ",
+      "article_3_excerpt": "BOIはバイオ・サーキュラー・グリーンプロジェクトに対する税制インセンティブの強化を発表し、タイの持続可能な開発目標を支援します。",
+      "article_4_title": "スマートエレクトロニクス：タイの次なる成長フロンティア",
+      "article_4_excerpt": "グローバルサプライチェーンが東南アジアに多様化する中、半導体および先端エレクトロニクスへの投資が急増しています。",
+      "article_5_title": "デジタルインフラの拡大がテック投資を促進",
+      "article_5_excerpt": "タイの5G展開とデータセンター拡大が、テクノロジー企業やデジタルサービスに新たな機会を創出しています。",
+      "article_6_title": "BOI、2026年の外国事業規制を更新",
+      "article_6_excerpt": "手続きの簡素化と対象活動の拡大により、タイの国際投資家に対する競争力強化を目指します。"
+    }
+  },
+  "getting_started": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_invest": "今すぐ投資",
+      "breadcrumb": "投資を始める",
+      "eyebrow": "投資ジャーニー",
+      "title": "投資を始める",
+      "subtitle": "BOI投資促進によるタイへの投資のステップバイステップロードマップ"
+    },
+    "content": {
+      "journey_eyebrow": "投資ジャーニー",
+      "journey_title": "お問い合わせから事業開始まで5つのステップ",
+      "step1_title": "調査・計画",
+      "step1_desc": "対象活動を調べ、インセンティブパッケージを理解し、BOI促進カテゴリーとの整合性を評価してください。",
+      "step2_title": "適格性確認",
+      "step2_desc": "適格性チェックツールをご利用いただくか、BOI担当官に相談して、プロジェクトが投資促進の対象となるかを確認してください。",
+      "step3_title": "申請書提出",
+      "step3_desc": "プロジェクトのフィージビリティスタディを含む必要書類とともに、e-Investmentポータルから申請書を提出してください。",
+      "step4_title": "委員会承認",
+      "step4_desc": "申請書はBOI委員会により審査されます。標準的な処理期間は60〜90営業日です。",
+      "step5_title": "証明書発行・事業開始",
+      "step5_desc": "投資促進証明書を受領し、BOIが支援する許可、ビザ、継続的なコンプライアンスサポートのもとで事業を開始してください。",
+      "checklist_title": "必須チェックリスト",
+      "checklist_items": "会社登記書類、プロジェクトフィージビリティスタディ、財務計画（3〜5年）、技術仕様書、環境影響評価、経営陣の情報",
+      "timeline_title": "一般的なタイムライン",
+      "timeline_desc": "申請から投資促進証明書発行まで：60〜90営業日。EECおよび優先産業にはファストトラックが利用可能です。"
+    }
+  },
+  "eligibility_checker": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_invest": "今すぐ投資",
+      "breadcrumb": "適格性チェック",
+      "eyebrow": "インタラクティブツール",
+      "title": "適格性を確認",
+      "subtitle": "数分でお客様の投資プロジェクトがBOI投資促進の対象となるかを確認できます"
+    },
+    "checker": {
+      "step1_title": "産業を選択",
+      "step1_desc": "投資プロジェクトに最も適した産業セクターを選択してください。",
+      "step2_title": "活動を選択",
+      "step2_desc": "実施予定の具体的な事業活動を選択してください。",
+      "step3_title": "結果を確認",
+      "step3_desc": "適格性の状況、促進カテゴリー、利用可能なインセンティブをご確認ください。",
+      "select_industry": "産業を選択してください...",
+      "select_activity": "活動を選択してください...",
+      "check_button": "適格性を確認",
+      "result_eligible": "BOI投資促進の対象です！",
+      "result_category": "促進カテゴリー",
+      "result_incentives": "主なインセンティブ",
+      "result_cta": "今すぐ申請",
+      "result_consult": "相談を予約",
+      "industries": "農業・食品、自動車・EV、デジタル・テクノロジー、エレクトロニクス、医療・ウェルネス、金属・素材、化学、クリエイティブ産業、エネルギー・公共事業、高付加価値サービス"
+    }
+  },
+  "eligible_activities": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_invest": "今すぐ投資",
+      "breadcrumb": "対象事業活動",
+      "eyebrow": "活動一覧",
+      "title": "対象事業活動",
+      "subtitle": "BOI投資促進の対象となる事業活動の包括的な一覧"
+    },
+    "list": {
+      "eyebrow": "活動を検索",
+      "title": "活動を見つける",
+      "search_placeholder": "活動名またはキーワードで検索...",
+      "filter_all": "すべてのカテゴリー",
+      "filter_a1": "カテゴリーA1",
+      "filter_a2": "カテゴリーA2",
+      "filter_a3": "カテゴリーA3",
+      "filter_a4": "カテゴリーA4",
+      "filter_b1": "カテゴリーB1",
+      "filter_b2": "カテゴリーB2",
+      "category": "カテゴリー",
+      "cit_exemption": "法人税免除",
+      "import_duty": "輸入関税",
+      "results_count": "{count}件の活動が見つかりました",
+      "view_details": "詳細を見る"
+    }
+  },
+  "procedures_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_invest": "今すぐ投資",
+      "breadcrumb": "手続き",
+      "eyebrow": "申請プロセス",
+      "title": "投資手続き",
+      "subtitle": "BOI申請プロセス、必要書類、承認スケジュールの詳細ガイド"
+    },
+    "content": {
+      "process_eyebrow": "ステップバイステップ",
+      "process_title": "申請プロセスの概要",
+      "step1_title": "申請前相談",
+      "step1_desc": "プロジェクトの内容を相談し、適格性を確認するため、提出前にBOI担当官との相談を予約してください。",
+      "step2_title": "オンライン申請",
+      "step2_desc": "必要書類とプロジェクト詳細をすべて添付し、e-Investmentポータルから申請書を提出してください。",
+      "step3_title": "委員会審査",
+      "step3_desc": "投資規模とセクターに基づき、該当するBOI小委員会が申請を審査します。",
+      "step4_title": "委員会決定",
+      "step4_desc": "BOI委員会は毎月開催され、投資促進申請を承認します。結果は7営業日以内に通知されます。",
+      "step5_title": "投資促進証明書",
+      "step5_desc": "承認後、投資促進証明書が発行され、BOIインセンティブおよび特典の活用を開始できます。",
+      "documents_title": "必要書類",
+      "documents_list": "申請書（BOI所定様式）、会社登記証明書、株主情報、プロジェクトフィージビリティスタディ、財務諸表（3年分）、技術仕様書、環境評価、工場レイアウト図面",
+      "timeline_title": "処理スケジュール",
+      "timeline_standard": "標準：60〜90営業日",
+      "timeline_fast": "ファストトラック（EEC/優先産業）：30〜45営業日",
+      "timeline_large": "大規模プロジェクト（7億5,000万バーツ超）：委員会承認が必要"
+    }
+  },
+  "forms_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_invest": "今すぐ投資",
+      "breadcrumb": "書類・ダウンロード",
+      "eyebrow": "書類",
+      "title": "書類・ダウンロード",
+      "subtitle": "BOI公式申請書、ガイドライン、関連書類のダウンロード"
+    },
+    "list": {
+      "eyebrow": "公式書類",
+      "title": "ダウンロードセンター",
+      "filter_all": "すべての書類",
+      "filter_application": "申請関連",
+      "filter_operating": "事業運営",
+      "filter_report": "報告書",
+      "filter_other": "その他",
+      "download": "ダウンロード",
+      "file_size": "ファイルサイズ",
+      "last_updated": "更新日"
+    }
+  },
+  "announcements_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_invest": "今すぐ投資",
+      "breadcrumb": "告示",
+      "eyebrow": "公式通知",
+      "title": "BOI告示",
+      "subtitle": "投資委員会からの公式告示、政策更新、規制変更"
+    },
+    "list": {
+      "eyebrow": "最新の更新",
+      "title": "公式告示",
+      "filter_all": "すべて",
+      "filter_board": "委員会告示",
+      "filter_secretary": "事務局長",
+      "filter_office": "事務局告示",
+      "read_more": "告示全文を読む",
+      "published": "公開日"
+    }
+  },
+  "guide_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_invest": "今すぐ投資",
+      "breadcrumb": "投資ガイド",
+      "eyebrow": "総合ガイド",
+      "title": "投資促進ガイド",
+      "subtitle": "BOI投資促進政策、インセンティブ、申請手続きの完全リファレンス"
+    },
+    "content": {
+      "overview_title": "ガイドの概要",
+      "overview_desc": "この総合ガイドでは、BOI投資促進によるタイへの投資について知っておくべきすべてをカバーしています — 対象活動からインセンティブパッケージ、申請手続きまで。",
+      "chapters_title": "ガイドの内容",
+      "ch1_title": "BOIの概要",
+      "ch1_desc": "投資委員会の概要、ミッション、投資促進の枠組み。",
+      "ch2_title": "対象活動とカテゴリー",
+      "ch2_desc": "促進カテゴリー（A1〜A4、B1〜B2）別に整理された促進対象活動の完全一覧。",
+      "ch3_title": "税制インセンティブ",
+      "ch3_desc": "カテゴリー別の法人所得税免除、輸入関税免除、追加税制特典。",
+      "ch4_title": "非税制インセンティブ",
+      "ch4_desc": "外国資本所有、土地所有、就労許可、ビザ手続きの簡素化に関する特典。",
+      "ch5_title": "申請手続き",
+      "ch5_desc": "段階的な申請プロセス、必要書類、処理スケジュール。",
+      "ch6_title": "促進後",
+      "ch6_desc": "コンプライアンス要件、報告義務、BOIの継続的サポートサービス。",
+      "download_pdf": "ガイド全文をダウンロード（PDF）",
+      "download_size": "12.5 MB"
+    }
+  },
+  "apply_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_services": "サービス",
+      "breadcrumb": "オンライン申請",
+      "eyebrow": "e-Investmentポータル",
+      "title": "BOI投資促進を申請",
+      "subtitle": "統合オンラインポータルから投資促進申請を提出・追跡できます"
+    },
+    "content": {
+      "portal_title": "e-Investmentポータル",
+      "portal_desc": "e-Investmentシステムは、すべてのBOI投資促進申請の一元的な窓口です。オンラインで投資プロジェクトの提出、追跡、管理が可能です。",
+      "features_title": "ポータルの機能",
+      "feature1": "オンライン申請の提出",
+      "feature2": "リアルタイムのステータス追跡",
+      "feature3": "書類のアップロードと管理",
+      "feature4": "自動通知とリマインダー",
+      "feature5": "ビザ・就労許可システムとの連携",
+      "login_button": "e-Investmentにログイン",
+      "register_button": "新規アカウント登録",
+      "guide_title": "申請方法",
+      "guide_step1": "e-Investmentアカウントを登録",
+      "guide_step2": "オンラインで申請書を記入",
+      "guide_step3": "必要書類をアップロード",
+      "guide_step4": "提出して確認番号を受け取る",
+      "guide_step5": "ダッシュボードで進捗を追跡"
+    }
+  },
+  "e_investment_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_services": "サービス",
+      "breadcrumb": "e-Investment",
+      "eyebrow": "デジタルサービス",
+      "title": "e-Investmentシステム",
+      "subtitle": "BOIの投資促進管理のための包括的デジタルプラットフォーム"
+    },
+    "content": {
+      "about_title": "e-Investmentについて",
+      "about_desc": "e-Investmentシステムは、BOIの旗艦デジタルサービスプラットフォームであり、投資家が初回申請から促進後のコンプライアンスまで、促進ライフサイクル全体をオンラインで管理できます。",
+      "services_title": "利用可能なサービス",
+      "service1_title": "投資促進申請",
+      "service1_desc": "必要書類をすべて添付して、新規投資促進申請を提出できます。",
+      "service2_title": "事業運営許可",
+      "service2_desc": "機械輸入許可、原材料リスト、生産能力変更の申請が可能です。",
+      "service3_title": "外国人労働者管理",
+      "service3_desc": "外国人労働者の割当、ビザ延長、就労許可申請を管理できます。",
+      "service4_title": "年次報告",
+      "service4_desc": "プロジェクトの事業運営およびコンプライアンス状況に関する年次報告書を提出できます。",
+      "faq_title": "よくある質問",
+      "faq1_q": "e-Investmentへの登録方法は？",
+      "faq1_a": "e-Investmentポータルにアクセスし、「登録」をクリックして、会社情報を入力して登録フォームを完成させてください。",
+      "faq2_q": "必要な書類は何ですか？",
+      "faq2_a": "会社登記証明書、委任状、プロジェクト詳細が必要です。",
+      "faq3_q": "処理にはどのくらいの時間がかかりますか？",
+      "faq3_a": "標準的な申請は、完全な書類提出後60〜90営業日以内に処理されます。"
+    }
+  },
+  "visa_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_services": "サービス",
+      "breadcrumb": "ビザ・就労許可",
+      "eyebrow": "入国管理サービス",
+      "title": "ビザ・就労許可",
+      "subtitle": "BOI促進企業およびその従業員のための迅速なビザ・就労許可サービス"
+    },
+    "content": {
+      "overview_title": "BOIビザサービス",
+      "overview_desc": "BOI促進企業は、ワンストップサービスを通じてビザ・就労許可の迅速な処理が可能であり、処理時間と書類要件が大幅に軽減されます。",
+      "types_title": "ビザカテゴリー",
+      "type1_title": "ノンイミグラントB（ビジネス）",
+      "type1_desc": "BOI促進企業の経営者、管理職、高度人材向け。年次更新で最長2年間有効です。",
+      "type2_title": "ノンイミグラントIB（投資）",
+      "type2_desc": "BOI促進企業の外国人投資家および取締役向け。マルチプルエントリーが可能です。",
+      "type3_title": "就労許可",
+      "type3_desc": "BOI就労許可はOne Start One Stopサービスセンターを通じて3営業日以内に処理されます。",
+      "benefits_title": "BOIビザの特典",
+      "benefit1": "迅速な処理（3営業日）",
+      "benefit2": "BOIユニットでのワンストップサービス",
+      "benefit3": "入国管理局への別途訪問不要",
+      "benefit4": "家族のビザサポート",
+      "benefit5": "e-Investmentによる年次報告の簡素化"
+    }
+  },
+  "smart_visa_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_services": "サービス",
+      "breadcrumb": "スマートビザ",
+      "eyebrow": "人材誘致",
+      "title": "スマートビザ",
+      "subtitle": "高度専門人材、投資家、経営者、スタートアップ起業家のための特別な4年間ビザ"
+    },
+    "content": {
+      "about_title": "スマートビザについて",
+      "about_desc": "スマートビザは、タイのターゲット産業にトップレベルの人材と投資家を誘致するために設計されています。就労許可免除付きの4年間ビザと家族への特別特典を提供します。",
+      "categories_title": "スマートビザのカテゴリー",
+      "cat_t_title": "Smart T（人材）",
+      "cat_t_desc": "ターゲット産業における専門知識を有する高度専門人材で、月額20万バーツ以上の報酬を得ている方が対象です。",
+      "cat_i_title": "Smart I（投資家）",
+      "cat_i_desc": "ターゲット産業に2,000万バーツ以上を投資する外国人投資家が対象です。",
+      "cat_e_title": "Smart E（経営者）",
+      "cat_e_desc": "テクノロジーまたはターゲット産業に5,000万バーツ以上の投資を行う企業の上級経営者が対象です。",
+      "cat_s_title": "Smart S（スタートアップ）",
+      "cat_s_desc": "認定インキュベーターまたはアクセラレーターを通じてタイのスタートアップエコシステムに参加する起業家が対象です。",
+      "cat_o_title": "Smart O（その他）",
+      "cat_o_desc": "スマートビザ保有者の配偶者および扶養家族で、タイでの就労が許可されます。",
+      "benefits_title": "主な特典",
+      "benefit1": "4年間のビザ有効期間",
+      "benefit2": "就労許可不要",
+      "benefit3": "90日届出不要（年1回に変更）",
+      "benefit4": "リエントリーパーミット免除",
+      "benefit5": "配偶者・扶養家族の就労可能"
+    }
+  },
+  "osos_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_services": "サービス",
+      "breadcrumb": "OSOS",
+      "eyebrow": "ワンストップサービス",
+      "title": "One Start One Stop",
+      "subtitle": "すべての投資関連許可と政府承認の一元的な窓口"
+    },
+    "content": {
+      "about_title": "OSOSについて",
+      "about_desc": "One Start One Stop（OSOS）投資センターは、投資家が複数の政府機関から許可、ライセンス、承認を取得するための一元的な窓口を提供します — すべてが一箇所で完結します。",
+      "services_title": "利用可能なサービス",
+      "service1": "会社登記および事業許可",
+      "service2": "ビザおよび就労許可の処理",
+      "service3": "工場許可の申請",
+      "service4": "通関および輸出入手続き",
+      "service5": "税務登録およびコンプライアンス",
+      "service6": "環境許可",
+      "location_title": "所在地・営業時間",
+      "location_address": "チャムチュリスクエアビル18階、パヤタイ通り、パトゥムワン区、バンコク 10330",
+      "location_hours": "月曜日〜金曜日：08:30〜16:30",
+      "location_phone": "+66-2-209-1100",
+      "agencies_title": "連携機関",
+      "agencies_list": "商務省事業開発局、国税局、関税局、雇用局、入国管理局、工業団地公社、工業省工場局"
+    }
+  },
+  "consultation_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_services": "サービス",
+      "breadcrumb": "相談",
+      "eyebrow": "専門家のガイダンス",
+      "title": "相談を予約",
+      "subtitle": "ご都合の良い日時にBOI投資アドバイザーとの個別相談を予約できます"
+    },
+    "content": {
+      "booking_title": "セッションを予約",
+      "booking_desc": "投資アドバイザーは、BOI本部での対面相談、ビデオ会議、電話相談に対応しています。ご希望の日時とトピックをお選びください。",
+      "topics_title": "相談トピック",
+      "topic1": "一般的な投資に関するお問い合わせ",
+      "topic2": "適格性の評価",
+      "topic3": "インセンティブパッケージの確認",
+      "topic4": "申請に関するガイダンス",
+      "topic5": "促進後のコンプライアンス",
+      "topic6": "ビザおよび就労許可に関する支援",
+      "form_name": "お名前",
+      "form_email": "メールアドレス",
+      "form_company": "会社名",
+      "form_topic": "トピックを選択",
+      "form_date": "ご希望の日程",
+      "form_time": "ご希望の時間",
+      "form_message": "追加の詳細",
+      "form_submit": "相談を予約",
+      "note": "相談は無料です。1営業日以内に確認メールをお送りいたします。"
+    }
+  },
+  "matchmaking_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_services": "サービス",
+      "breadcrumb": "ビジネスマッチング",
+      "eyebrow": "ビジネスコネクション",
+      "title": "投資マッチメイキング",
+      "subtitle": "BOIのネットワークを通じて、タイのパートナー、サプライヤー、合弁事業の機会とつながります"
+    },
+    "content": {
+      "about_title": "BOIマッチメイキングサービス",
+      "about_desc": "BOIは、外国人投資家とタイ企業間のビジネスコネクションを促進し、合弁事業、サプライチェーン統合、現地市場参入に適したパートナー探しをお手伝いします。",
+      "services_title": "提供サービス",
+      "service1_title": "サプライヤーマッチング",
+      "service1_desc": "サプライチェーンのニーズに対応する、適格なタイのサプライヤーおよびメーカーを見つけます。",
+      "service2_title": "合弁事業パートナー",
+      "service2_desc": "外国投資パートナーシップを求めるタイの有力企業とつながります。",
+      "service3_title": "工業団地見学ツアー",
+      "service3_desc": "工業団地や候補となる工場用地への訪問をアレンジします。",
+      "service4_title": "ネットワーキングイベント",
+      "service4_desc": "BOI主催の定期的な産業ネットワーキングイベントや投資セミナー。",
+      "cta_title": "マッチメイキングのリクエスト",
+      "cta_desc": "ご要件をご提出いただければ、5営業日以内に適切なマッチング候補をご紹介いたします。",
+      "cta_button": "リクエストを送信"
+    }
+  },
+  "after_promotion_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_services": "サービス",
+      "breadcrumb": "促進後サービス",
+      "eyebrow": "促進後",
+      "title": "促進後サービス",
+      "subtitle": "BOI促進企業のための継続的なサポートとコンプライアンス管理"
+    },
+    "content": {
+      "overview_title": "促進後サポート",
+      "overview_desc": "BOI投資促進証明書の受領後も、許可管理、コンプライアンスガイダンス、管理サービスにより、事業運営を継続的にサポートいたします。",
+      "services_title": "利用可能なサービス",
+      "service1_title": "事業運営許可",
+      "service1_desc": "機械輸入許可、原材料リスト、生産能力変更の申請・管理。",
+      "service2_title": "外国人労働者割当",
+      "service2_desc": "承認済みポジションの管理、外国人専門家の招聘、ビザ・就労許可の更新手続き。",
+      "service3_title": "年次報告",
+      "service3_desc": "事業運営報告書の提出および促進条件のコンプライアンス維持。",
+      "service4_title": "プロジェクト変更",
+      "service4_desc": "生産能力の拡大、製品の追加、スケジュールの延長など、促進証明書の変更を申請できます。",
+      "compliance_title": "コンプライアンス要件",
+      "compliance1": "年次事業報告書の提出",
+      "compliance2": "タイ人雇用比率の最低基準の維持",
+      "compliance3": "投資資本コミットメントの達成",
+      "compliance4": "機械および原材料の輸入報告",
+      "compliance5": "監査に備えた会計記録の保持"
+    }
+  },
+  "hq_portal_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_services": "サービス",
+      "breadcrumb": "HQポータル",
+      "eyebrow": "地域統括本部",
+      "title": "HQビジネスポータル",
+      "subtitle": "タイに地域統括本部を設立する企業のための特別インセンティブ"
+    },
+    "content": {
+      "about_title": "地域統括本部インセンティブ",
+      "about_desc": "タイは、国際本部（IHQ）、地域統括本部（ROH）、国際貿易センター（ITC）を設立する企業に対し、魅力的なパッケージを提供しています。",
+      "types_title": "HQカテゴリー",
+      "type1_title": "国際本部（IHQ）",
+      "type1_desc": "関連企業への経営、技術、サポートサービスに対する法人所得税の完全インセンティブ。",
+      "type2_title": "地域統括本部（ROH）",
+      "type2_desc": "ASEAN全域の地域経営およびサポートサービスに対する法人税率の軽減。",
+      "type3_title": "国際貿易センター（ITC）",
+      "type3_desc": "タイを拠点とする国際調達、販売、流通事業に対する特別インセンティブ。",
+      "benefits_title": "主な特典",
+      "benefit1": "法人所得税率の軽減",
+      "benefit2": "駐在員の個人所得税免除",
+      "benefit3": "最大100%の外国資本所有",
+      "benefit4": "ビザ・就労許可手続きの迅速化",
+      "benefit5": "適格取引に対する外国為替規制の免除"
+    }
+  },
+  "data_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_resources": "資料",
+      "breadcrumb": "投資データ",
+      "eyebrow": "統計・分析",
+      "title": "投資データダッシュボード",
+      "subtitle": "タイの投資統計、トレンド、経済指標をご覧ください"
+    },
+    "dashboard": {
+      "overview_title": "2025年投資概要",
+      "stat1_label": "申請総数",
+      "stat1_value": "1,857",
+      "stat2_label": "総額（バーツ）",
+      "stat2_value": "832B",
+      "stat3_label": "外国プロジェクト",
+      "stat3_value": "1,247",
+      "stat4_label": "タイプロジェクト",
+      "stat4_value": "610",
+      "chart_title": "投資トレンド",
+      "by_industry": "産業別",
+      "by_country": "国別",
+      "by_zone": "地域別",
+      "by_year": "年度別",
+      "top_industries": "上位産業",
+      "top_countries": "上位投資国",
+      "export_data": "データをエクスポート"
+    }
+  },
+  "company_db_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_resources": "資料",
+      "breadcrumb": "企業データベース",
+      "eyebrow": "促進企業",
+      "title": "企業データベース",
+      "subtitle": "タイで事業を展開するBOI促進企業を検索・閲覧できます"
+    },
+    "search": {
+      "title": "企業を検索",
+      "search_placeholder": "会社名で検索...",
+      "filter_industry": "産業で絞り込み",
+      "filter_country": "国で絞り込み",
+      "filter_province": "県で絞り込み",
+      "results_count": "{count}社が見つかりました",
+      "company_name": "会社名",
+      "industry": "産業",
+      "country": "国",
+      "province": "県",
+      "promotion_year": "促進開始年",
+      "view_details": "詳細を見る"
+    }
+  },
+  "publications_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_resources": "資料",
+      "breadcrumb": "出版物",
+      "eyebrow": "ナレッジハブ",
+      "title": "出版物・レポート",
+      "subtitle": "年次報告書、投資レビュー、産業パンフレット、リサーチペーパー"
+    },
+    "list": {
+      "eyebrow": "ドキュメントライブラリ",
+      "title": "出版物を閲覧",
+      "filter_all": "すべて",
+      "filter_annual": "年次報告書",
+      "filter_review": "投資レビュー",
+      "filter_brochure": "パンフレット",
+      "filter_research": "リサーチペーパー",
+      "download": "PDFをダウンロード",
+      "pages": "ページ",
+      "published": "発行日"
+    }
+  },
+  "multimedia_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_resources": "資料",
+      "breadcrumb": "マルチメディア",
+      "eyebrow": "メディアギャラリー",
+      "title": "マルチメディアギャラリー",
+      "subtitle": "タイの投資ポテンシャルを紹介する動画、プレゼンテーション、写真、インフォグラフィックス"
+    },
+    "gallery": {
+      "filter_all": "すべて",
+      "filter_video": "動画",
+      "filter_photo": "写真",
+      "filter_infographic": "インフォグラフィックス",
+      "filter_presentation": "プレゼンテーション",
+      "play_video": "動画を再生",
+      "view_image": "フルサイズで表示",
+      "download": "ダウンロード"
+    }
+  },
+  "offices_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_about": "BOIについて",
+      "breadcrumb": "オフィス",
+      "eyebrow": "グローバルネットワーク",
+      "title": "BOIオフィス",
+      "subtitle": "本部、タイ国内の地方事務所、および世界各地の海外代表事務所"
+    },
+    "content": {
+      "hq_title": "本部 — バンコク",
+      "hq_address": "555 ビバワディランシット通り、チャトゥチャック区、バンコク 10900",
+      "hq_phone": "+66-2-553-8111",
+      "hq_fax": "+66-2-553-8222",
+      "hq_email": "head@boi.go.th",
+      "hq_hours": "月曜日〜金曜日：08:30〜16:30",
+      "regional_title": "地方事務所",
+      "regional_desc": "タイ全土に7つの地方投資センターを展開し、現地でのサポートと相談を提供しています。",
+      "region1": "チェンマイ（北部地域）",
+      "region2": "ナコンラチャシマ（東北部地域）",
+      "region3": "コンケン（東北部地域）",
+      "region4": "チョンブリ（東部地域/EEC）",
+      "region5": "スラタニ（南部地域）",
+      "region6": "ソンクラー（南部国境地域）",
+      "region7": "ナコンサワン（中部地域）",
+      "overseas_title": "海外事務所",
+      "overseas_desc": "アジア、ヨーロッパ、アメリカ大陸、オセアニアに15の海外事務所を展開しています。",
+      "office_tokyo": "東京、日本",
+      "office_osaka": "大阪、日本",
+      "office_beijing": "北京、中国",
+      "office_shanghai": "上海、中国",
+      "office_guangzhou": "広州、中国",
+      "office_taipei": "台北、台湾",
+      "office_seoul": "ソウル、韓国",
+      "office_mumbai": "ムンバイ、インド",
+      "office_stockholm": "ストックホルム、スウェーデン",
+      "office_frankfurt": "フランクフルト、ドイツ",
+      "office_paris": "パリ、フランス",
+      "office_new_york": "ニューヨーク、アメリカ",
+      "office_los_angeles": "ロサンゼルス、アメリカ",
+      "office_sydney": "シドニー、オーストラリア",
+      "office_riyadh": "リヤド、サウジアラビア"
+    }
+  },
+  "careers_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_about": "BOIについて",
+      "breadcrumb": "採用情報",
+      "eyebrow": "チームに参加",
+      "title": "BOIの採用情報",
+      "subtitle": "タイをリードする投資促進機関に参加し、外国投資の未来を形成しましょう"
+    },
+    "content": {
+      "why_title": "BOIで働く理由",
+      "why_desc": "世界の投資を誘致・支援することで、タイの経済成長を推進する組織の一員になりましょう。",
+      "benefit1_title": "社会的インパクト",
+      "benefit1_desc": "タイの投資環境と経済発展に直接貢献できます。",
+      "benefit2_title": "グローバルな経験",
+      "benefit2_desc": "国際的な投資家と協力し、グローバルイベントに参加し、異文化体験を積むことができます。",
+      "benefit3_title": "キャリア成長",
+      "benefit3_desc": "継続的な学習機会、海外研修、キャリアアップの道筋が用意されています。",
+      "benefit4_title": "公務員の福利厚生",
+      "benefit4_desc": "年金、健康保険、家族サポートを含む包括的な福利厚生制度。",
+      "openings_title": "現在の求人",
+      "opening1_title": "投資促進官",
+      "opening1_dept": "投資サービス局",
+      "opening2_title": "デジタルサービス専門官",
+      "opening2_dept": "情報技術部門",
+      "opening3_title": "国際関係官",
+      "opening3_dept": "国際業務局",
+      "apply_button": "今すぐ応募",
+      "how_to_title": "応募方法",
+      "how_to_desc": "政府採用ポータルから応募するか、人事部門（hr@boi.go.th）までお問い合わせください。"
+    }
+  },
+  "press_center_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_about": "BOIについて",
+      "breadcrumb": "プレスセンター",
+      "eyebrow": "メディアリレーションズ",
+      "title": "プレスセンター",
+      "subtitle": "プレスリリース、メディア連絡先、プレスキット、メディア認証情報"
+    },
+    "content": {
+      "releases_title": "最新のプレスリリース",
+      "releases_desc": "タイ投資委員会からの公式プレスリリース。",
+      "kit_title": "プレスキット",
+      "kit_desc": "BOIロゴ、ファクトシート、幹部写真、ブランドガイドラインを含むメディアキットをダウンロードできます。",
+      "kit_download": "プレスキットをダウンロード",
+      "contact_title": "メディア連絡先",
+      "contact_name": "広報部門",
+      "contact_email": "pr@boi.go.th",
+      "contact_phone": "+66-2-553-8111 内線 1180-1184",
+      "accreditation_title": "メディア認証",
+      "accreditation_desc": "BOIイベントの取材を希望する報道関係者の方は、イベント開催日の5営業日前までに認証申請をご提出ください。"
+    }
+  },
+  "procurement_page": {
+    "hero": {
+      "breadcrumb_home": "ホーム",
+      "breadcrumb_about": "BOIについて",
+      "breadcrumb": "調達情報",
+      "eyebrow": "透明性",
+      "title": "調達情報",
+      "subtitle": "政府調達のお知らせ、価格参照情報、入札情報"
+    },
+    "content": {
+      "announcements_title": "現在の調達案件",
+      "announcements_desc": "BOIの現在有効な調達案件と入札機会。",
+      "archive_title": "アーカイブ",
+      "archive_desc": "過去の調達結果と契約締結情報。",
+      "price_title": "価格参照情報",
+      "price_desc": "政府調達品目の標準価格参照情報。",
+      "transparency_title": "透明性へのコミットメント",
+      "transparency_desc": "BOIは、政府調達及び物品管理法（仏暦2560年）に基づき、公正で透明な調達プロセスの実施に努めています。",
+      "no_items": "現在、有効な調達案件はありません。",
+      "check_back": "最新情報については定期的にご確認ください。"
+    }
   }
 }

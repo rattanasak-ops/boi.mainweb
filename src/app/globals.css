@@ -36,8 +36,8 @@
   --color-primary-light: #2a4170;
   --color-accent: #C5A572;
   --color-accent-light: #d9be86;
-  --color-surface: #F8FAFC;
-  --color-surface-alt: #f1f5f9;
+  --color-surface: #f0f2f5;
+  --color-surface-alt: #e8ebf0;
   --color-text-primary: #1B2A4A;
   --color-text-secondary: #475f8f;
   --color-text-muted: #94a3b8;
@@ -70,6 +70,34 @@
 @keyframes slide-up {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== News Section — Ken Burns + Shine ===== */
+@keyframes news-kenburns {
+  0%   { transform: scale(1) translate(0, 0); }
+  50%  { transform: scale(1.08) translate(-1%, -0.5%); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+
+@keyframes news-shine-sweep {
+  0%   { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(200%) skewX(-15deg); }
+}
+
+@keyframes news-badge-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ===== CTA Section — Glow Pulse + Shimmer ===== */
+@keyframes cta-glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(197,165,114,0.3), 0 0 60px rgba(197,165,114,0.1); }
+  50%      { box-shadow: 0 0 35px rgba(197,165,114,0.5), 0 0 80px rgba(197,165,114,0.2); }
+}
+
+@keyframes cta-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
 }
 
 /* ===== Lenis Smooth Scroll ===== */
@@ -131,4 +159,100 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ===== Accessibility Widget CSS (a11y-* prefix) ===== */
+/* Group A — Content Sizing */
+html.a11y-content-0 { zoom: 0.85; }
+html.a11y-content-1 { zoom: 0.9; }
+html.a11y-content-2 { zoom: 1; }
+html.a11y-content-3 { zoom: 1.1; }
+html.a11y-content-4 { zoom: 1.2; }
+html.a11y-content-5 { zoom: 1.3; }
+
+html.a11y-font-0 { font-size: 81.25% !important; }
+html.a11y-font-1 { font-size: 87.5% !important; }
+html.a11y-font-2 { font-size: 100% !important; }
+html.a11y-font-3 { font-size: 112.5% !important; }
+html.a11y-font-4 { font-size: 125% !important; }
+html.a11y-font-5 { font-size: 137.5% !important; }
+
+html.a11y-line-0 body { line-height: 1.2 !important; }
+html.a11y-line-1 body { line-height: 1.4 !important; }
+html.a11y-line-2 body { line-height: 1.6 !important; }
+html.a11y-line-3 body { line-height: 1.8 !important; }
+html.a11y-line-4 body { line-height: 2.0 !important; }
+html.a11y-line-5 body { line-height: 2.4 !important; }
+
+html.a11y-spacing-0 body { letter-spacing: -0.5px !important; }
+html.a11y-spacing-1 body { letter-spacing: 0px !important; }
+html.a11y-spacing-2 body { letter-spacing: 0.5px !important; }
+html.a11y-spacing-3 body { letter-spacing: 1px !important; }
+html.a11y-spacing-4 body { letter-spacing: 1.5px !important; }
+html.a11y-spacing-5 body { letter-spacing: 2.5px !important; }
+
+/* Group B — Content Highlighting */
+html.a11y-highlight-headings h1,
+html.a11y-highlight-headings h2,
+html.a11y-highlight-headings h3,
+html.a11y-highlight-headings h4,
+html.a11y-highlight-headings h5,
+html.a11y-highlight-headings h6 {
+  outline: 3px solid #C5A572 !important;
+  background: rgba(197, 165, 114, 0.08) !important;
+}
+
+html.a11y-highlight-links a {
+  outline: 2px solid #C5A572 !important;
+  text-decoration: underline !important;
+}
+
+/* Group C — Display Modes */
+html.a11y-dark-contrast {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+html.a11y-dark-contrast img,
+html.a11y-dark-contrast video,
+html.a11y-dark-contrast canvas,
+html.a11y-dark-contrast svg image,
+html.a11y-dark-contrast [style*="background-image"],
+html.a11y-dark-contrast .a11y-panel-root {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+
+html.a11y-light-contrast {
+  filter: contrast(1.15) brightness(1.1) !important;
+}
+
+html.a11y-grayscale {
+  filter: grayscale(100%) !important;
+}
+
+html.a11y-high-contrast {
+  filter: contrast(1.4) !important;
+}
+
+html.a11y-high-saturation {
+  filter: saturate(2) !important;
+}
+
+html.a11y-low-saturation {
+  filter: saturate(0.3) !important;
+}
+
+html.a11y-highlight-hover *:hover {
+  outline: 3px solid #C5A572 !important;
+}
+
+/* Screen-reader only live region for state changes */
+.a11y-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

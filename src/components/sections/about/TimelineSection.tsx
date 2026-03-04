@@ -172,7 +172,7 @@ export default function TimelineSection() {
         style={{ y: bgY }}
       >
         <Image
-          src="/images/stats/bangkok-night.jpg"
+          src="/images/hero/bangkok-aerial-night.jpg"
           alt=""
           fill
           className="object-cover"

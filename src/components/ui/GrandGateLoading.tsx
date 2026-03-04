@@ -6,11 +6,11 @@
  * PERFORMANCE RULE: Animate ONLY transform + opacity (GPU compositor)
  * ZERO boxShadow / filter / width / height animations = 60fps guaranteed
  *
- * 4 steps, ~3.5s total:
- *   Step 0 (0–1.2s):   Logo stroke draw + text fade in
- *   Step 1 (1.2–1.8s): Glow intensifies (opacity on pre-rendered glow divs)
- *   Step 2 (1.8–3.0s): Doors slide open (translateX) + content scale down
- *   Step 3 (3.0–3.5s): Overlay fades out (opacity) → hero visible
+ * 4 steps, ~5.6s total (cinematic pacing):
+ *   Step 0 (0–1.5s):   Logo stroke draw + text fade in
+ *   Step 1 (1.5–2.4s): Glow intensifies (opacity on pre-rendered glow divs)
+ *   Step 2 (2.4–4.8s): Curtain reveal — skewX + translateX (bottom opens wider)
+ *   Step 3 (4.8–5.6s): Overlay fades out (opacity) → hero visible
  *
  * Shows once per session (sessionStorage).
  */
@@ -22,6 +22,8 @@ const SESSION_KEY = "boi-grand-gate-seen";
 
 /* Premium easing — slow start, dramatic decel */
 const EASE = [0.25, 1, 0.5, 1] as [number, number, number, number];
+/* Extra-cinematic easing for curtain reveal */
+const CURTAIN_EASE = [0.16, 1, 0.3, 1] as [number, number, number, number];
 
 export default function GrandGateLoading() {
   const [step, setStep] = useState(0);
@@ -37,13 +39,13 @@ export default function GrandGateLoading() {
   useEffect(() => {
     if (dismissed) return;
     const t = timerRef.current;
-    t.push(setTimeout(() => setStep(1), 1200));
-    t.push(setTimeout(() => setStep(2), 1800));
-    t.push(setTimeout(() => setStep(3), 3000));
+    t.push(setTimeout(() => setStep(1), 1500));
+    t.push(setTimeout(() => setStep(2), 2400));
+    t.push(setTimeout(() => setStep(3), 4800));
     t.push(setTimeout(() => {
       sessionStorage.setItem(SESSION_KEY, "1");
       setStep(4);
-    }, 3500));
+    }, 5600));
     return () => t.forEach(clearTimeout);
   }, [dismissed]);
 
@@ -57,7 +59,7 @@ export default function GrandGateLoading() {
         pointerEvents: step >= 3 ? "none" : "auto",
       }}
       animate={{ opacity: step >= 3 ? 0 : 1 }}
-      transition={{ duration: 0.5, ease: EASE }}
+      transition={{ duration: 0.7, ease: EASE }}
       aria-hidden="true"
     >
       {/* ════════════════════════════════════════
@@ -66,8 +68,11 @@ export default function GrandGateLoading() {
       <motion.div
         className="absolute top-0 left-0 w-[50.5%] h-full bg-[#0B1122]"
         style={{ willChange: "transform" }}
-        animate={{ x: step >= 2 ? "-102%" : "0%" }}
-        transition={{ duration: 1.2, ease: EASE }}
+        animate={{
+          x: step >= 2 ? "-105%" : "0%",
+          skewX: step >= 2 ? -12 : 0,
+        }}
+        transition={{ duration: 2.2, ease: CURTAIN_EASE }}
       >
         {/* Static subtle pattern */}
         <svg
@@ -109,8 +114,11 @@ export default function GrandGateLoading() {
       <motion.div
         className="absolute top-0 right-0 w-[50.5%] h-full bg-[#0B1122]"
         style={{ willChange: "transform" }}
-        animate={{ x: step >= 2 ? "102%" : "0%" }}
-        transition={{ duration: 1.2, ease: EASE }}
+        animate={{
+          x: step >= 2 ? "105%" : "0%",
+          skewX: step >= 2 ? 12 : 0,
+        }}
+        transition={{ duration: 2.2, ease: CURTAIN_EASE }}
       >
         {/* Static subtle pattern */}
         <svg
@@ -184,7 +192,7 @@ export default function GrandGateLoading() {
           scale: step >= 2 ? 0.9 : 1,
           y: step >= 2 ? -20 : 0,
         }}
-        transition={{ duration: 0.4, ease: EASE }}
+        transition={{ duration: 0.6, ease: EASE }}
       >
         {/* BOI Logo — stroke draw (pathLength is GPU-friendly) */}
         <svg viewBox="0 0 100 86" className="w-24 h-20 sm:w-32 sm:h-28" fill="none">

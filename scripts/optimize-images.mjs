@@ -12,9 +12,9 @@
  *   - Sharpen for crispness after resize
  *
  * Usage:
- *   npm run optimize              — optimize + color grade all images
+ *   npm run optimize              — optimize all images (no color grading)
  *   npm run optimize -- --dry     — preview without changing files
- *   npm run optimize -- --no-grade — optimize only, skip color grading
+ *   npm run optimize -- --grade   — optimize + apply EEC color grading
  *
  * Sizing rules:
  *   hero/   → max 1920px width (full-bleed, Next.js handles responsive)
@@ -33,7 +33,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..", "public", "images");
 const DRY_RUN = process.argv.includes("--dry");
-const SKIP_GRADE = process.argv.includes("--no-grade");
+const APPLY_GRADE = process.argv.includes("--grade");
 
 /* ── Sizing rules per folder ── */
 function getMaxWidth(filePath) {
@@ -103,7 +103,7 @@ function fmt(bytes) {
 async function main() {
   console.log(`\n🖼  BOI Image Optimizer + EEC Color Grading`);
   console.log(`   Root: ${ROOT}`);
-  console.log(`   Color Grade: ${SKIP_GRADE ? "OFF (--no-grade)" : "ON (EEC cinematic profile)"}`);
+  console.log(`   Color Grade: ${APPLY_GRADE ? "ON (EEC cinematic profile)" : "OFF (use --grade to enable)"}`);
   if (DRY_RUN) console.log(`   Mode: DRY RUN (no files will be changed)\n`);
   else console.log(`   Mode: OPTIMIZE\n`);
 
@@ -135,8 +135,8 @@ async function main() {
         pipeline = pipeline.resize({ width: maxW, withoutEnlargement: true });
       }
 
-      // Apply EEC-style color grading (unless --no-grade flag)
-      if (!SKIP_GRADE) {
+      // Apply EEC-style color grading (only when --grade flag is used)
+      if (APPLY_GRADE) {
         pipeline = applyColorGrade(pipeline);
       }
 
@@ -154,9 +154,9 @@ async function main() {
       const saved = beforeSize - afterSize;
       const pct = ((saved / beforeSize) * 100).toFixed(0);
 
-      // Always write when color grading is active (even if size increases slightly)
-      // Only skip writing if no-grade AND file didn't shrink
-      const shouldWrite = !SKIP_GRADE || saved > 0;
+      // Write when color grading is active (even if size increases slightly)
+      // Or when file actually got smaller
+      const shouldWrite = APPLY_GRADE || saved > 0;
       if (!DRY_RUN && shouldWrite) {
         await sharp(outputBuffer).toFile(filePath);
       }

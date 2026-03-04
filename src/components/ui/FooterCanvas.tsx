@@ -1,336 +1,519 @@
 "use client";
 
-import { useRef, useEffect, useCallback } from "react";
+import { useRef, useEffect } from "react";
 
 // ===================================================================
-// FooterCanvas — "The Open Gateway" Interactive Golden Network
+// FooterCanvas — "Thailand: The Investment Hub"
 // ===================================================================
-// Big Idea: "Gate Keeper → Gate Opener — Thailand Opens for You"
+// ประเทศไทย = จุดศูนย์กลาง  |  จุดรอบข้าง = นักลงทุนทั่วโลก
+// แสง/พลังงานไหลเข้าหาไทยตลอดเวลา = เงินทุนไหลเข้า
 //
-// Visual Metaphor:
-//   - Golden particles = โอกาสการลงทุน (investment opportunities)
-//   - Connection lines = เครือข่ายที่ BOI เชื่อมให้ (BOI network)
-//   - Mouse = "คุณ" (นักลงทุน) — เมื่อเข้ามา เครือข่ายจะเปิดต้อนรับ
-//   - Bloom effect = "ประตูเปิด" ทุกที่ที่คุณไป
+// Idle: จางๆ พอมองเห็น flow
+// Mouse in: ทุกอย่างสว่างขึ้น + center ตามเมาส์ + flow เร็วขึ้น
+// Click center: Pulse wave + flash ทุกเส้น
 //
-// Act As: P3 (UI Designer) + P4 (Motion Designer) + P5 (Architect)
+// Technique: Pre-rendered glow textures + multi-pass lines (NO shadowBlur)
 // ===================================================================
 
-interface Particle {
+// --- Colors ---
+const GOLD = [197, 165, 114] as const;
+const GOLD_WARM = [235, 215, 175] as const;
+const GOLD_HOT = [255, 230, 180] as const;
+
+const rgba = (c: readonly number[], a: number) =>
+  `rgba(${c[0]},${c[1]},${c[2]},${Math.max(0, Math.min(1, a))})`;
+
+// --- Node positions (% of canvas) — 10 per side ---
+const LEFT_POS: [number, number][] = [
+  [0.04, 0.10], [0.15, 0.07],
+  [0.06, 0.27], [0.19, 0.25],
+  [0.03, 0.43], [0.17, 0.41],
+  [0.07, 0.60], [0.21, 0.58],
+  [0.04, 0.77], [0.16, 0.82],
+];
+const RIGHT_POS: [number, number][] = [
+  [0.96, 0.10], [0.85, 0.07],
+  [0.94, 0.27], [0.81, 0.25],
+  [0.97, 0.43], [0.83, 0.41],
+  [0.93, 0.60], [0.79, 0.58],
+  [0.96, 0.77], [0.84, 0.82],
+];
+const NODE_SIZES = [5, 7, 6, 8, 5, 7, 6, 9, 5, 7];
+
+// --- Types ---
+interface OuterNode {
+  baseX: number;
+  baseY: number;
   x: number;
   y: number;
-  vx: number;
-  vy: number;
   radius: number;
-  baseRadius: number;
+  brightness: number;
+  flashTimer: number;
+}
+interface Pulse {
+  nodeIdx: number;
+  t: number;
+  speed: number;
+  size: number;
+}
+interface Wave {
+  radius: number;
+  max: number;
   opacity: number;
-  baseOpacity: number;
 }
 
-// Design tokens — Gold #C5A572
-const GOLD = { r: 197, g: 165, b: 114 };
-
-// Interaction parameters
-const CONNECTION_DIST = 150;
-const MOUSE_BLOOM_RADIUS = 200;
-const MOUSE_GLOW_RADIUS = 150;
-
-// Performance: particles count
-const PARTICLE_COUNT_DESKTOP = 60;
-const PARTICLE_COUNT_MOBILE = 28;
+// --- Bezier point ---
+const bezPt = (
+  t: number,
+  ax: number, ay: number,
+  cx: number, cy: number,
+  bx: number, by: number
+) => {
+  const u = 1 - t;
+  return {
+    x: u * u * ax + 2 * u * t * cx + t * t * bx,
+    y: u * u * ay + 2 * u * t * cy + t * t * by,
+  };
+};
 
 export default function FooterCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const mouseRef = useRef({ x: -9999, y: -9999, active: false });
-  const particlesRef = useRef<Particle[]>([]);
-  const rafRef = useRef<number>(0);
-  const visibleRef = useRef(false);
-  const dimsRef = useRef({ w: 0, h: 0 });
+  const mouse = useRef({ x: -9999, y: -9999, in: false });
+  const state = useRef({
+    bright: 0.25,
+    flow: 0.8,
+    cX: 0, cY: 0,
+    cBaseX: 0, cBaseY: 0,
+    cVx: 0, cVy: 0,
+    cBright: 0.3,
+  });
+  const nodes = useRef<OuterNode[]>([]);
+  const cps = useRef<{ cx: number; cy: number }[]>([]);
+  const pulses = useRef<Pulse[]>([]);
+  const wave = useRef<Wave | null>(null);
+  const raf = useRef(0);
+  const vis = useRef(false);
+  const dim = useRef({ w: 0, h: 0 });
+  const glowCache = useRef<Map<string, HTMLCanvasElement>>(new Map());
 
-  // --------------------------------------------------
-  // P4 (Motion Designer): สร้าง particles ด้วย randomness ที่ควบคุมได้
-  // --------------------------------------------------
-  const createParticles = useCallback((w: number, h: number) => {
-    const count = w < 768 ? PARTICLE_COUNT_MOBILE : PARTICLE_COUNT_DESKTOP;
-    const particles: Particle[] = [];
-
-    for (let i = 0; i < count; i++) {
-      const baseRadius = Math.random() * 1.5 + 0.5;
-      const baseOpacity = Math.random() * 0.25 + 0.1;
-
-      particles.push({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.2,
-        radius: baseRadius,
-        baseRadius,
-        opacity: baseOpacity,
-        baseOpacity,
-      });
-    }
-
-    particlesRef.current = particles;
-  }, []);
-
-  // --------------------------------------------------
-  // P5 (Architect): Main effect — resize, mouse, observer, animation loop
-  // --------------------------------------------------
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const cvs = canvasRef.current;
+    if (!cvs) return;
+    const par = cvs.parentElement;
+    if (!par) return;
+    const c = cvs.getContext("2d", { alpha: true });
+    if (!c) return;
 
-    const parent = canvas.parentElement;
-    if (!parent) return;
-
-    const ctx = canvas.getContext("2d", { alpha: true });
-    if (!ctx) return;
-
-    // WCAG: respect reduced motion
-    const reducedMotion = window.matchMedia(
+    const noMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
+    // --- Glow texture factory ---
+    const glow = (r: number, col: readonly number[], key: string) => {
+      if (glowCache.current.has(key)) return glowCache.current.get(key)!;
+      const sz = Math.ceil(r * 4);
+      const oc = document.createElement("canvas");
+      oc.width = sz;
+      oc.height = sz;
+      const g = oc.getContext("2d")!;
+      const gr = g.createRadialGradient(sz / 2, sz / 2, 0, sz / 2, sz / 2, sz / 2);
+      gr.addColorStop(0, rgba(col, 1));
+      gr.addColorStop(0.12, rgba(col, 0.7));
+      gr.addColorStop(0.35, rgba(col, 0.25));
+      gr.addColorStop(0.65, rgba(col, 0.06));
+      gr.addColorStop(1, rgba(col, 0));
+      g.fillStyle = gr;
+      g.fillRect(0, 0, sz, sz);
+      glowCache.current.set(key, oc);
+      return oc;
+    };
+
     // --- Resize ---
-    const resize = () => {
-      const rect = parent.getBoundingClientRect();
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      const w = rect.width;
-      const h = rect.height;
+    const fit = () => {
+      const r = par.getBoundingClientRect();
+      const d = Math.min(devicePixelRatio || 1, 2);
+      cvs.width = r.width * d;
+      cvs.height = r.height * d;
+      cvs.style.width = r.width + "px";
+      cvs.style.height = r.height + "px";
+      c.setTransform(d, 0, 0, d, 0, 0);
 
-      canvas.width = w * dpr;
-      canvas.height = h * dpr;
-      canvas.style.width = `${w}px`;
-      canvas.style.height = `${h}px`;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const w = r.width, h = r.height;
+      dim.current = { w, h };
+      glowCache.current.clear();
 
-      dimsRef.current = { w, h };
-      createParticles(w, h);
+      // Center
+      const s = state.current;
+      s.cBaseX = w * 0.5;
+      s.cBaseY = h * 0.45;
+      s.cX = s.cBaseX;
+      s.cY = s.cBaseY;
+
+      // Nodes
+      const mob = w < 768;
+      const lc = mob ? 5 : 10;
+      const rc = mob ? 5 : 10;
+      const ns: OuterNode[] = [];
+
+      for (let i = 0; i < lc; i++) {
+        const idx = mob ? i * 2 : i;
+        ns.push({
+          baseX: LEFT_POS[idx][0] * w,
+          baseY: LEFT_POS[idx][1] * h,
+          x: LEFT_POS[idx][0] * w,
+          y: LEFT_POS[idx][1] * h,
+          radius: NODE_SIZES[idx] || 6,
+          brightness: 0.25,
+          flashTimer: 0,
+        });
+      }
+      for (let i = 0; i < rc; i++) {
+        const idx = mob ? i * 2 : i;
+        ns.push({
+          baseX: RIGHT_POS[idx][0] * w,
+          baseY: RIGHT_POS[idx][1] * h,
+          x: RIGHT_POS[idx][0] * w,
+          y: RIGHT_POS[idx][1] * h,
+          radius: NODE_SIZES[idx] || 6,
+          brightness: 0.25,
+          flashTimer: 0,
+        });
+      }
+      nodes.current = ns;
+
+      // Bezier control points
+      const cp: { cx: number; cy: number }[] = [];
+      for (let i = 0; i < ns.length; i++) {
+        const n = ns[i];
+        const dx = s.cBaseX - n.baseX;
+        const dy = s.cBaseY - n.baseY;
+        const mx = (n.baseX + s.cBaseX) / 2;
+        const my = (n.baseY + s.cBaseY) / 2;
+        const len = Math.sqrt(dx * dx + dy * dy) || 1;
+        const perpX = (-dy / len) * len * 0.18;
+        const perpY = (dx / len) * len * 0.18;
+        const dir = i % 2 === 0 ? 1 : -1;
+        cp.push({ cx: mx + perpX * dir, cy: my + perpY * dir });
+      }
+      cps.current = cp;
+
+      // Flow pulses
+      const ps: Pulse[] = [];
+      for (let i = 0; i < ns.length; i++) {
+        const count = 2 + (i % 2);
+        for (let j = 0; j < count; j++) {
+          ps.push({
+            nodeIdx: i,
+            t: j / count + (i * 0.037) % 0.3,
+            speed: 0.0018 + (i % 3) * 0.0005,
+            size: 3 + (i % 3),
+          });
+        }
+      }
+      pulses.current = ps;
     };
+    fit();
 
-    resize();
+    let rt: ReturnType<typeof setTimeout>;
+    const onR = () => { clearTimeout(rt); rt = setTimeout(fit, 200); };
+    window.addEventListener("resize", onR);
 
-    let resizeTimer: ReturnType<typeof setTimeout>;
-    const onResize = () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(resize, 250);
+    // --- Mouse ---
+    const onM = (e: MouseEvent) => {
+      const r = par.getBoundingClientRect();
+      mouse.current = { x: e.clientX - r.left, y: e.clientY - r.top, in: true };
     };
-    window.addEventListener("resize", onResize);
+    const onL = () => { mouse.current.in = false; };
+    par.addEventListener("mousemove", onM);
+    par.addEventListener("mouseleave", onL);
 
-    // --- Mouse tracking on parent (footer) ---
-    // Canvas is pointer-events:none → links still work
-    const onMouseMove = (e: MouseEvent) => {
-      const rect = parent.getBoundingClientRect();
-      mouseRef.current = {
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top,
-        active: true,
-      };
+    // --- Click ---
+    const onC = (e: MouseEvent) => {
+      const r = par.getBoundingClientRect();
+      const cx = e.clientX - r.left;
+      const cy = e.clientY - r.top;
+      const s = state.current;
+      const dx = cx - s.cX, dy = cy - s.cY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 80) {
+        wave.current = {
+          radius: 0,
+          max: Math.max(dim.current.w, dim.current.h) * 0.85,
+          opacity: 1,
+        };
+      }
     };
-    const onMouseLeave = () => {
-      mouseRef.current.active = false;
-    };
+    par.addEventListener("click", onC);
 
-    parent.addEventListener("mousemove", onMouseMove);
-    parent.addEventListener("mouseleave", onMouseLeave);
-
-    // --- IntersectionObserver: animate only when visible ---
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        visibleRef.current = entry.isIntersecting;
-      },
+    // --- Visibility ---
+    const obs = new IntersectionObserver(
+      ([e]) => { vis.current = e.isIntersecting; },
       { threshold: 0.05 }
     );
-    observer.observe(canvas);
+    obs.observe(cvs);
 
-    // --------------------------------------------------
-    // P4 (Motion Designer): Animation loop — 60fps, GPU-friendly
-    // --------------------------------------------------
-    const draw = () => {
-      rafRef.current = requestAnimationFrame(draw);
-      if (!visibleRef.current) return;
+    // ========================
+    // DRAW HELPERS
+    // ========================
 
-      const { w, h } = dimsRef.current;
-      if (w === 0 || h === 0) return;
+    // Multi-pass glowing bezier (no shadowBlur)
+    const drawCurve = (
+      x0: number, y0: number,
+      cpx: number, cpy: number,
+      x1: number, y1: number,
+      alpha: number
+    ) => {
+      c.lineCap = "round";
 
-      ctx.clearRect(0, 0, w, h);
+      // Outer soft glow
+      c.beginPath();
+      c.moveTo(x0, y0);
+      c.quadraticCurveTo(cpx, cpy, x1, y1);
+      c.strokeStyle = rgba(GOLD, alpha * 0.25);
+      c.lineWidth = 7;
+      c.stroke();
 
-      const particles = particlesRef.current;
-      const mouse = mouseRef.current;
+      // Mid glow
+      c.beginPath();
+      c.moveTo(x0, y0);
+      c.quadraticCurveTo(cpx, cpy, x1, y1);
+      c.strokeStyle = rgba(GOLD, alpha * 0.5);
+      c.lineWidth = 3.5;
+      c.stroke();
 
-      // --- Update particle positions + bloom ---
-      for (const p of particles) {
-        // Drift
-        p.x += p.vx;
-        p.y += p.vy;
+      // Core
+      c.beginPath();
+      c.moveTo(x0, y0);
+      c.quadraticCurveTo(cpx, cpy, x1, y1);
+      c.strokeStyle = rgba(GOLD_WARM, alpha * 0.8);
+      c.lineWidth = 1.2;
+      c.stroke();
+    };
 
-        // Wrap edges
-        if (p.x < -10) p.x = w + 10;
-        else if (p.x > w + 10) p.x = -10;
-        if (p.y < -10) p.y = h + 10;
-        else if (p.y > h + 10) p.y = -10;
+    // ========================
+    // ANIMATION LOOP
+    // ========================
+    const tick = () => {
+      raf.current = requestAnimationFrame(tick);
+      if (!vis.current) return;
 
-        // Mouse bloom — "ประตูเปิดเมื่อคุณเข้ามา"
-        if (mouse.active) {
-          const dx = p.x - mouse.x;
-          const dy = p.y - mouse.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
+      const { w, h } = dim.current;
+      if (!w || !h) return;
 
-          if (dist < MOUSE_BLOOM_RADIUS) {
-            const t = 1 - dist / MOUSE_BLOOM_RADIUS;
-            // Ease: cubic for smoother bloom
-            const ease = t * t * (3 - 2 * t);
-            const targetR = p.baseRadius * (1 + ease * 2);
-            const targetO = Math.min(p.baseOpacity + ease * 0.55, 0.9);
-            p.radius += (targetR - p.radius) * 0.08;
-            p.opacity += (targetO - p.opacity) * 0.08;
-          } else {
-            p.radius += (p.baseRadius - p.radius) * 0.04;
-            p.opacity += (p.baseOpacity - p.opacity) * 0.04;
+      c.clearRect(0, 0, w, h);
+
+      const s = state.current;
+      const m = mouse.current;
+      const ns = nodes.current;
+      const cp = cps.current;
+      const ps = pulses.current;
+      const wv = wave.current;
+      const time = Date.now() * 0.001;
+
+      // --- Update state ---
+      const tBright = m.in ? 1.0 : 0.25;
+      const tFlow = m.in ? 2.5 : 0.8;
+      const tCBright = m.in ? 1.0 : 0.3;
+
+      s.bright += (tBright - s.bright) * 0.03;
+      s.flow += (tFlow - s.flow) * 0.03;
+      s.cBright += (tCBright - s.cBright) * 0.03;
+
+      // Spring physics for center follow
+      const spring = 0.012;
+      const damp = 0.88;
+
+      if (m.in) {
+        const tx = s.cBaseX + (m.x - s.cBaseX) * 0.2;
+        const ty = s.cBaseY + (m.y - s.cBaseY) * 0.2;
+        s.cVx += (tx - s.cX) * spring;
+        s.cVy += (ty - s.cY) * spring;
+      } else {
+        s.cVx += (s.cBaseX - s.cX) * spring;
+        s.cVy += (s.cBaseY - s.cY) * spring;
+      }
+      s.cVx *= damp;
+      s.cVy *= damp;
+      s.cX += s.cVx;
+      s.cY += s.cVy;
+
+      // Wave boost
+      const waveBoost = wv && wv.opacity > 0.01 ? wv.opacity : 0;
+
+      // --- 1. Connection curves ---
+      for (let i = 0; i < ns.length; i++) {
+        const n = ns[i];
+        const p = cp[i];
+        // Per-connection breathing
+        const breath = 0.015 * Math.sin(time * 0.8 + i * 0.6);
+        const alpha = (0.05 + breath) * s.bright + waveBoost * 0.12;
+        drawCurve(n.x, n.y, p.cx, p.cy, s.cX, s.cY, alpha);
+      }
+
+      // --- 2. Flow pulses ---
+      for (const p of ps) {
+        p.t += p.speed * (s.flow + waveBoost * 4);
+        if (p.t >= 1) p.t -= 1;
+
+        const n = ns[p.nodeIdx];
+        const ctrl = cp[p.nodeIdx];
+
+        // Head
+        const pos = bezPt(p.t, n.x, n.y, ctrl.cx, ctrl.cy, s.cX, s.cY);
+        const tex = glow(p.size * 2.5, GOLD_WARM, `p${Math.round(p.size)}`);
+        c.globalAlpha = s.bright * 0.55;
+        c.drawImage(tex, pos.x - tex.width / 2, pos.y - tex.height / 2);
+
+        // Trail (4 positions behind)
+        for (let k = 1; k <= 4; k++) {
+          const tt = p.t - k * 0.025;
+          if (tt < 0) continue;
+          const tp = bezPt(tt, n.x, n.y, ctrl.cx, ctrl.cy, s.cX, s.cY);
+          c.globalAlpha = s.bright * 0.55 * (1 - k * 0.22);
+          const trailTex = glow(
+            p.size * (2.5 - k * 0.3),
+            GOLD,
+            `t${Math.round((p.size - k * 0.3) * 10)}`
+          );
+          c.drawImage(trailTex, tp.x - trailTex.width / 2, tp.y - trailTex.height / 2);
+        }
+        c.globalAlpha = 1;
+      }
+
+      // --- 3. Outer nodes ---
+      for (let i = 0; i < ns.length; i++) {
+        const n = ns[i];
+        const breath = 0.08 * Math.sin(time * 1.5 + i * 0.7);
+        const targetB = s.bright * 0.55 + breath;
+        n.brightness += (targetB - n.brightness) * 0.05;
+
+        // Flash from wave
+        if (n.flashTimer > 0) {
+          n.flashTimer -= 0.015;
+          n.brightness = Math.min(1, n.brightness + n.flashTimer * 0.8);
+        }
+
+        // Outer glow
+        const outerTex = glow(n.radius * 3, GOLD, `no${n.radius}`);
+        c.globalAlpha = n.brightness * 0.7;
+        c.drawImage(outerTex, n.x - outerTex.width / 2, n.y - outerTex.height / 2);
+
+        // Core dot
+        c.globalAlpha = n.brightness;
+        c.beginPath();
+        c.arc(n.x, n.y, n.radius * 0.35, 0, Math.PI * 2);
+        c.fillStyle = rgba(GOLD_WARM, 0.9);
+        c.fill();
+        c.globalAlpha = 1;
+      }
+
+      // --- 4. Center node (Thailand) ---
+      const cBreath = 0.06 * Math.sin(time * 1.2);
+      const cb = s.cBright + cBreath;
+
+      // Layer 1: Large outer glow
+      const g1 = glow(70, GOLD, "c1");
+      c.globalAlpha = cb * 0.4;
+      c.drawImage(g1, s.cX - g1.width / 2, s.cY - g1.height / 2);
+
+      // Layer 2: Mid glow
+      const g2 = glow(40, GOLD_WARM, "c2");
+      c.globalAlpha = cb * 0.6;
+      c.drawImage(g2, s.cX - g2.width / 2, s.cY - g2.height / 2);
+
+      // Layer 3: Inner glow
+      const g3 = glow(20, GOLD_HOT, "c3");
+      c.globalAlpha = cb * 0.85;
+      c.drawImage(g3, s.cX - g3.width / 2, s.cY - g3.height / 2);
+
+      // Core dot
+      c.globalAlpha = cb;
+      c.beginPath();
+      c.arc(s.cX, s.cY, 5, 0, Math.PI * 2);
+      c.fillStyle = rgba(GOLD_HOT, 0.95);
+      c.fill();
+
+      // Subtle ring
+      c.beginPath();
+      c.arc(s.cX, s.cY, 22 + cBreath * 30, 0, Math.PI * 2);
+      c.strokeStyle = rgba(GOLD, cb * 0.12);
+      c.lineWidth = 1;
+      c.stroke();
+      c.globalAlpha = 1;
+
+      // --- 5. Pulse wave (click) ---
+      if (wv && wv.opacity > 0.01) {
+        wv.radius += 5;
+        wv.opacity = Math.max(0, 1 - wv.radius / wv.max);
+
+        if (wv.opacity > 0.01) {
+          // Multi-ring glow wave
+          for (let r = 0; r < 3; r++) {
+            c.beginPath();
+            c.arc(s.cX, s.cY, wv.radius + r * 4, 0, Math.PI * 2);
+            c.strokeStyle = rgba(GOLD_WARM, wv.opacity * (0.4 - r * 0.12));
+            c.lineWidth = 4 - r * 1.2;
+            c.stroke();
+          }
+
+          // Flash outer nodes when wave reaches them
+          for (const n of ns) {
+            const dist = Math.sqrt((n.x - s.cX) ** 2 + (n.y - s.cY) ** 2);
+            if (Math.abs(dist - wv.radius) < 20) {
+              n.flashTimer = 0.9;
+            }
           }
         } else {
-          p.radius += (p.baseRadius - p.radius) * 0.04;
-          p.opacity += (p.baseOpacity - p.opacity) * 0.04;
+          wave.current = null;
         }
-      }
-
-      // --- Mouse glow — "แสงสว่างที่ BOI ส่องให้" ---
-      if (mouse.active) {
-        const glow = ctx.createRadialGradient(
-          mouse.x,
-          mouse.y,
-          0,
-          mouse.x,
-          mouse.y,
-          MOUSE_GLOW_RADIUS
-        );
-        glow.addColorStop(
-          0,
-          `rgba(${GOLD.r},${GOLD.g},${GOLD.b},0.07)`
-        );
-        glow.addColorStop(
-          0.5,
-          `rgba(${GOLD.r},${GOLD.g},${GOLD.b},0.03)`
-        );
-        glow.addColorStop(
-          1,
-          `rgba(${GOLD.r},${GOLD.g},${GOLD.b},0)`
-        );
-        ctx.beginPath();
-        ctx.arc(mouse.x, mouse.y, MOUSE_GLOW_RADIUS, 0, Math.PI * 2);
-        ctx.fillStyle = glow;
-        ctx.fill();
-      }
-
-      // --- Connection lines — "เครือข่ายที่ BOI เชื่อมให้" ---
-      ctx.lineWidth = 0.5;
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distSq = dx * dx + dy * dy;
-
-          if (distSq < CONNECTION_DIST * CONNECTION_DIST) {
-            const dist = Math.sqrt(distSq);
-            let alpha = (1 - dist / CONNECTION_DIST) * 0.1;
-
-            // Brighten connections near mouse
-            if (mouse.active) {
-              const mx = (particles[i].x + particles[j].x) / 2;
-              const my = (particles[i].y + particles[j].y) / 2;
-              const md = Math.sqrt(
-                (mx - mouse.x) ** 2 + (my - mouse.y) ** 2
-              );
-              if (md < MOUSE_BLOOM_RADIUS) {
-                const influence = 1 - md / MOUSE_BLOOM_RADIUS;
-                alpha += influence * influence * 0.2;
-              }
-            }
-
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(${GOLD.r},${GOLD.g},${GOLD.b},${alpha})`;
-            ctx.stroke();
-          }
-        }
-      }
-
-      // --- Mouse → particle connections — "BOI เชื่อมคุณกับโอกาส" ---
-      if (mouse.active) {
-        ctx.lineWidth = 0.6;
-        for (const p of particles) {
-          const dx = p.x - mouse.x;
-          const dy = p.y - mouse.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-
-          if (dist < MOUSE_BLOOM_RADIUS * 0.7) {
-            const t = 1 - dist / (MOUSE_BLOOM_RADIUS * 0.7);
-            const alpha = t * t * 0.25;
-            ctx.beginPath();
-            ctx.moveTo(mouse.x, mouse.y);
-            ctx.lineTo(p.x, p.y);
-            ctx.strokeStyle = `rgba(${GOLD.r},${GOLD.g},${GOLD.b},${alpha})`;
-            ctx.stroke();
-          }
-        }
-      }
-
-      // --- Draw particles — "จุดแต่ละจุดคือโอกาส" ---
-      for (const p of particles) {
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${GOLD.r},${GOLD.g},${GOLD.b},${p.opacity})`;
-        ctx.fill();
       }
     };
 
-    // --------------------------------------------------
-    // Reduced motion: static render only (WCAG)
-    // --------------------------------------------------
-    if (reducedMotion) {
-      const ps = particlesRef.current;
-
-      // Static particles
-      for (const p of ps) {
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.baseRadius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${GOLD.r},${GOLD.g},${GOLD.b},${p.baseOpacity})`;
-        ctx.fill();
-      }
-
-      // Static connections
-      ctx.lineWidth = 0.5;
-      for (let i = 0; i < ps.length; i++) {
-        for (let j = i + 1; j < ps.length; j++) {
-          const dx = ps[i].x - ps[j].x;
-          const dy = ps[i].y - ps[j].y;
-          const distSq = dx * dx + dy * dy;
-          if (distSq < CONNECTION_DIST * CONNECTION_DIST) {
-            const dist = Math.sqrt(distSq);
-            const alpha = (1 - dist / CONNECTION_DIST) * 0.08;
-            ctx.beginPath();
-            ctx.moveTo(ps[i].x, ps[i].y);
-            ctx.lineTo(ps[j].x, ps[j].y);
-            ctx.strokeStyle = `rgba(${GOLD.r},${GOLD.g},${GOLD.b},${alpha})`;
-            ctx.stroke();
-          }
-        }
-      }
+    // ========================
+    // START / STATIC
+    // ========================
+    if (!noMotion) {
+      raf.current = requestAnimationFrame(tick);
     } else {
-      rafRef.current = requestAnimationFrame(draw);
+      // Static render (WCAG reduced motion)
+      const s = state.current;
+      const ns = nodes.current;
+      const cp = cps.current;
+
+      for (let i = 0; i < ns.length; i++) {
+        c.beginPath();
+        c.moveTo(ns[i].x, ns[i].y);
+        c.quadraticCurveTo(cp[i].cx, cp[i].cy, s.cBaseX, s.cBaseY);
+        c.strokeStyle = rgba(GOLD, 0.05);
+        c.lineWidth = 2;
+        c.stroke();
+      }
+      for (const n of ns) {
+        c.beginPath();
+        c.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
+        c.fillStyle = rgba(GOLD, 0.25);
+        c.fill();
+      }
+      c.beginPath();
+      c.arc(s.cBaseX, s.cBaseY, 12, 0, Math.PI * 2);
+      c.fillStyle = rgba(GOLD_WARM, 0.4);
+      c.fill();
     }
 
-    // --- Cleanup (P5: ป้องกัน memory leak) ---
+    // ========================
+    // CLEANUP
+    // ========================
     return () => {
-      cancelAnimationFrame(rafRef.current);
-      clearTimeout(resizeTimer);
-      window.removeEventListener("resize", onResize);
-      parent.removeEventListener("mousemove", onMouseMove);
-      parent.removeEventListener("mouseleave", onMouseLeave);
-      observer.disconnect();
+      cancelAnimationFrame(raf.current);
+      clearTimeout(rt);
+      window.removeEventListener("resize", onR);
+      par.removeEventListener("mousemove", onM);
+      par.removeEventListener("mouseleave", onL);
+      par.removeEventListener("click", onC);
+      obs.disconnect();
+      glowCache.current.clear();
     };
-  }, [createParticles]);
+  }, []);
 
   return (
     <canvas

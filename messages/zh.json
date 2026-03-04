@@ -79,22 +79,32 @@
     "bottom_line": "2025年数据 — 泰国投资促进委员会"
   },
   "why_thailand": {
-    "subtitle": "发现泰国",
-    "title_1": "为什么领先企业",
-    "title_2": "选择泰国",
-    "description": "凭借世界级基础设施、有竞争力的优惠政策以及位于东盟中心的战略位置，泰国被评为东南亚顶级投资目的地之一。",
-    "strategic_location": "战略位置",
-    "strategic_location_desc": "东盟门户 — 覆盖7亿+消费者，连接亚太主要贸易路线",
-    "digital_infra": "数字基础设施",
-    "digital_infra_desc": "全国5G覆盖、EEC数字园区、智慧工业园区和世界级物流网络",
-    "incentives": "有竞争力的优惠政策",
-    "incentives_desc": "企业所得税减免最长13年、机械设备免税进口以及非税收优惠",
-    "workforce": "高素质人才",
-    "workforce_desc": "STEM毕业生、有竞争力的劳动力成本和政府支持的培训计划",
+    "subtitle": "开启您的未来",
+    "title_1": "全球顶级投资者",
+    "title_2": "已经选择了泰国",
+    "description": "2024年，超过3,137家企业向泰国投入330亿美元——创10年新高。以下是他们毫不犹豫的原因。",
+    "strategic_location": "解锁7亿+消费者",
+    "strategic_location_desc": "您不只是进入泰国——您正在打开通往世界增长最快消费市场的大门。东盟属于您。",
+    "strategic_location_stat": "700M+",
+    "workforce": "每年50万STEM毕业生",
+    "workforce_desc": "以极具竞争力的成本获得世界级人才。您的未来团队已在这里，训练有素，整装待发。",
+    "workforce_stat": "500K+",
+    "digital_infra": "全国5G覆盖。面向未来。",
+    "digital_infra_desc": "从EEC智慧园区到全国5G——基础设施不仅支持您的雄心，更加速它的实现。",
+    "digital_infra_stat": "99.9%",
+    "incentives": "13年。零企业所得税。",
+    "incentives_desc": "最长13年免税期、机械免税进口、100%外资控股。您的利润归您所有。",
+    "incentives_stat": "13yr",
+    "quality_of_life": "住在全世界都想来的地方",
+    "quality_of_life_desc": "国际学校、世界级医疗，以及让人才蓬勃发展而非仅仅生存的生活成本。",
+    "quality_of_life_stat": "#1",
+    "stats_invested_label": "2024年投资额",
+    "stats_projects_label": "获批项目",
+    "stats_fdi_label": "FDI占比",
+    "stats_growth_label": "同比增长率",
+    "social_proof_title": "加入2024年选择泰国的3,137+家企业",
     "investor_protection": "投资者保护",
-    "investor_protection_desc": "强大的知识产权法律、与40+国家的双边投资条约以及透明的法规",
-    "quality_of_life": "生活品质",
-    "quality_of_life_desc": "世界闻名的好客之道、国际学校、现代化医疗和充满活力的文化"
+    "investor_protection_desc": "强大的知识产权法律、与40+国家的双边投资条约以及透明的法规"
   },
   "news": {
     "subtitle": "最新动态",
@@ -113,20 +123,41 @@
     "news_4_excerpt": "500亿日元扩建项目，利用BOI智能汽车制造优惠政策。"
   },
   "services": {
-    "subtitle": "快速访问",
-    "title": "电子服务",
+    "subtitle": "打开所有服务通道",
+    "title": "数字服务通道",
+    "tagline": "每项服务，随时随地",
     "einvestment": "e-Investment",
-    "einvestment_desc": "在线申请投资促进",
+    "einvestment_desc": "在线申请投资促进，实时追踪进度",
+    "einvestment_status": "立即申请",
+    "einvestment_stat": "年均10,000+申请",
+    "einvestment_counter_label": "件/年",
+    "einvestment_cta": "打开申请系统",
     "visa": "签证和工作许可",
-    "visa_desc": "签证和工作许可服务",
+    "visa_desc": "面向外国投资者的完整签证和工作许可服务",
+    "visa_status": "服务可用",
+    "visa_stat": "全天候在线",
+    "visa_cta": "立即开始",
     "smart_visa": "智慧签证",
-    "smart_visa_desc": "人才和专家特别签证",
+    "smart_visa_desc": "专家、高管和投资者特别签证",
+    "smart_visa_status": "正在接受申请",
+    "smart_visa_stat": "快速通道30天",
+    "smart_visa_cta": "立即申请",
     "osos": "OSOS",
-    "osos_desc": "一站式投资服务中心",
+    "osos_desc": "一站式服务 — 所有服务集于一处",
+    "osos_status": "一站式",
+    "osos_stat": "一站式服务",
+    "osos_cta": "进入服务中心",
     "matchmaking": "Business Matching",
-    "matchmaking_desc": "为您的企业匹配合作伙伴和供应商",
+    "matchmaking_desc": "为您的企业找到合适的合作伙伴和供应商",
+    "matchmaking_status": "自动匹配",
+    "matchmaking_stat": "500+合作伙伴",
+    "matchmaking_cta": "寻找合作伙伴",
     "incentive_calc": "Incentive Calculator",
-    "incentive_calc_desc": "计算您的投资优惠"
+    "incentive_calc_desc": "仅需2分钟即可计算您的投资优惠",
+    "incentive_calc_status": "免费工具",
+    "incentive_calc_stat": "仅需2分钟",
+    "incentive_calc_placeholder": "业务类型...",
+    "incentive_calc_cta": "立即计算"
   },
   "cta": {
     "subtitle": "开始投资",
@@ -465,6 +496,514 @@
       "address_short": "维巴瓦迪兰实路，曼谷"
     }
   },
+  "news_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_resources": "资源",
+      "breadcrumb": "新闻与动态",
+      "eyebrow": "最新动态",
+      "title_1": "新闻与",
+      "title_2": "动态",
+      "subtitle": "了解BOI最新公告、政策变化和泰国投资新闻。"
+    },
+    "list": {
+      "search_placeholder": "搜索新闻文章...",
+      "category_all": "全部",
+      "category_announcement": "公告",
+      "category_policy": "政策",
+      "category_investment": "投资",
+      "category_event": "活动",
+      "category_industry": "产业",
+      "featured": "精选",
+      "read_more": "阅读更多",
+      "prev_page": "上一页",
+      "next_page": "下一页",
+      "articles": {
+        "boi-approves-new-ev-incentives-2026": {
+          "title": "BOI批准2026年新电动汽车激励方案",
+          "excerpt": "增强税收优惠并扩大对泰国日益增长的电动汽车生态系统中制造商和供应链合作伙伴的支持。",
+          "date": "2026年2月28日"
+        },
+        "digital-economy-zone-expansion": {
+          "title": "数字经济区扩展至5个新府",
+          "excerpt": "BOI宣布将数字经济区扩展至清迈、孔敬、普吉、宋卡和呵叻。",
+          "date": "2026年2月25日"
+        },
+        "thailand-auto-manufacturing-milestone": {
+          "title": "泰国达成汽车制造里程碑",
+          "excerpt": "泰国汽车产业年产量突破200万辆，巩固其「亚洲底特律」的地位。",
+          "date": "2026年2月20日"
+        },
+        "international-investment-conference-2026": {
+          "title": "2026年国际投资大会公布",
+          "excerpt": "BOI将于今年4月在曼谷举办年度泰国投资大会，届时将有全球产业领袖发表主旨演讲。",
+          "date": "2026年2月15日"
+        },
+        "foreign-investment-q4-2025-report": {
+          "title": "2025年第四季度外国投资激增25%",
+          "excerpt": "BOI最新数据显示，在电动汽车和数字技术项目推动下，外国直接投资实现强劲增长。",
+          "date": "2026年2月10日"
+        },
+        "smart-visa-program-updates": {
+          "title": "智慧签证计划更新：2026年新福利",
+          "excerpt": "智慧签证计划现已扩大AI和机器人专业人士的申请资格，并增强了家属福利。",
+          "date": "2026年2月5日"
+        }
+      }
+    },
+    "detail": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_news": "新闻与动态",
+      "sample_title": "BOI批准2026年新电动汽车激励方案",
+      "sample_category": "政策",
+      "sample_date": "2026年2月28日",
+      "reading_time": "阅读时间5分钟",
+      "sample_lead": "泰国投资促进委员会批准了一项全面的新激励方案，旨在加速电动汽车产业增长，为制造商和供应链合作伙伴提供增强的税收优惠和扩大的支持措施。",
+      "sample_heading_1": "新方案主要亮点",
+      "sample_paragraph_1": "新电动汽车激励方案包括将符合条件的投资企业所得税免除期延长至最长13年，以及对电动汽车生产所需的机械和原材料免征进口关税。该方案还为电池技术和充电基础设施的研发活动引入了额外扣除。",
+      "highlight_label": "关键数据",
+      "sample_highlight": "预计新方案将在未来五年内吸引超过1,500亿泰铢的新投资，并在电动汽车领域创造超过30,000个高技能岗位。",
+      "sample_heading_2": "扩大的支持措施",
+      "sample_paragraph_2": "除税收激励外，BOI还推出一系列非税收措施，包括简化电动汽车相关项目的许可审批流程、为外国专家提供专门的签证便利，以及加强与政府部门的协调以加快项目审批。",
+      "sample_paragraph_3": "该方案体现了泰国致力于成为电动汽车制造和创新区域中心的承诺，支持国家到2030年实现国内汽车产量30%为电动汽车的目标。",
+      "tags_label": "标签",
+      "back_to_news": "返回所有新闻",
+      "share_label": "分享本文",
+      "related_topics": "相关主题",
+      "topic_incentives": "投资优惠政策概览",
+      "topic_ev": "泰国电动汽车产业",
+      "topic_activities": "符合条件的业务活动",
+      "newsletter_eyebrow": "保持关注",
+      "newsletter_title": "订阅BOI电子报",
+      "newsletter_desc": "将最新投资新闻和动态直接发送到您的邮箱。",
+      "newsletter_placeholder": "输入您的电子邮箱",
+      "newsletter_cta": "立即订阅"
+    },
+    "related": {
+      "eyebrow": "继续阅读",
+      "title": "相关文章",
+      "view_all": "查看所有新闻"
+    }
+  },
+  "events_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_resources": "资源",
+      "breadcrumb": "活动与研讨会",
+      "eyebrow": "即将举办的活动",
+      "title_1": "活动与",
+      "title_2": "研讨会",
+      "subtitle": "参加BOI活动、研讨会和会议，与行业领袖建立联系并发掘投资机会。"
+    },
+    "list": {
+      "filter_all": "所有活动",
+      "filter_upcoming": "即将举办",
+      "filter_seminar": "研讨会",
+      "filter_workshop": "工作坊",
+      "filter_conference": "会议",
+      "upcoming": "即将举办",
+      "view_details": "查看详情",
+      "events": {
+        "thailand-investment-conference-2026": {
+          "title": "2026泰国投资大会",
+          "description": "年度首屈一指的盛会，汇聚全球投资者、政策制定者和行业领袖，共同探索泰国的投资前景。",
+          "date": "2026年4月15日至17日",
+          "time": "09:00 – 17:00",
+          "location": "诗丽吉王后国家会议中心（QSNCC），曼谷",
+          "capacity": "500+位参会者"
+        },
+        "ev-industry-workshop": {
+          "title": "电动汽车产业投资工作坊",
+          "description": "涵盖电动汽车激励方案、供应链机遇以及BOI促进申请流程的实操工作坊。",
+          "date": "2026年4月8日",
+          "time": "13:00 – 16:30",
+          "location": "BOI总部",
+          "capacity": "80个席位"
+        },
+        "digital-economy-seminar": {
+          "title": "数字经济投资研讨会",
+          "description": "了解泰国数字经济优惠政策、特别区域以及AI、云计算和数据中心投资机遇。",
+          "date": "2026年3月25日",
+          "time": "09:30 – 12:00",
+          "location": "线上（Zoom）",
+          "capacity": "不限人数"
+        },
+        "smart-manufacturing-expo": {
+          "title": "2026智能制造博览会",
+          "description": "探索塑造泰国制造业未来的最新自动化、机器人和工业4.0技术。",
+          "date": "2026年3月18日至20日",
+          "time": "10:00 – 18:00",
+          "location": "BITEC，曼谷",
+          "capacity": "1,000+位参观者"
+        },
+        "investor-briefing-q1-2026": {
+          "title": "季度投资者简报 — 2026年第一季度",
+          "description": "全面概述泰国投资表现、新政策以及本季度经济展望。",
+          "date": "2026年3月10日",
+          "time": "14:00 – 15:30",
+          "location": "线上（Zoom）",
+          "capacity": "300个席位"
+        },
+        "boi-international-roadshow": {
+          "title": "BOI国际投资路演",
+          "description": "多城市路演，包含与BOI官员的一对一咨询以及泰国投资优势的演示。",
+          "date": "2026年2月28日至3月5日",
+          "time": "全天",
+          "location": "东京、首尔、新加坡",
+          "capacity": "仅限邀请"
+        }
+      }
+    }
+  },
+  "faq_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb": "常见问题",
+      "eyebrow": "帮助中心",
+      "title_1": "常见",
+      "title_2": "问题",
+      "subtitle": "查找有关BOI投资促进、优惠政策和申请流程的常见问题解答。",
+      "search_placeholder": "搜索答案..."
+    },
+    "content": {
+      "categories_label": "分类",
+      "cat_general": "一般问题",
+      "cat_eligibility": "资格条件",
+      "cat_application": "申请流程",
+      "cat_incentives": "优惠政策",
+      "cat_compliance": "合规要求",
+      "general": {
+        "what_is_boi_q": "什么是泰国投资促进委员会（BOI）？",
+        "what_is_boi_a": "泰国投资促进委员会（BOI）是隶属于总理府的政府机构，负责促进和推动泰国的国内外投资。BOI成立于1966年，为各行业符合条件的企业提供税收和非税收优惠政策。",
+        "who_can_apply_q": "谁可以申请BOI投资促进？",
+        "who_can_apply_a": "泰国和外国投资者均可申请BOI投资促进。申请者必须在泰国已注册公司或正在设立公司。商业活动必须属于BOI的符合条件活动清单。",
+        "how_long_q": "BOI申请流程需要多长时间？",
+        "how_long_a": "标准处理时间约为完整申请提交之日起40至60个工作日。复杂项目或需要额外审查的项目可能需要更长时间。BOI为某些高优先级项目提供加速处理通道。"
+      },
+      "eligibility": {
+        "eligible_activities_q": "哪些商业活动符合BOI促进条件？",
+        "eligible_activities_a": "BOI促进涵盖农业、制造业、服务业和技术等多个领域的广泛商业活动。符合条件的活动清单定期更新，并根据提供的优惠水平分为不同类别（A1+、A1、A2、A3、A4、B1、B2）。",
+        "minimum_investment_q": "是否有最低投资金额要求？",
+        "minimum_investment_a": "是的，最低投资资本（不含土地和流动资金）一般为100万泰铢。但根据类别和业务类型，部分活动可能有更高的最低要求。",
+        "foreign_ownership_q": "外国投资者可以100%控股公司吗？",
+        "foreign_ownership_a": "可以，BOI促进的制造业和特定服务业企业可以100%外资持股。这是BOI促进的主要优势之一，为泰国《外国商业法》的限制提供了例外条款。"
+      },
+      "application": {
+        "how_to_apply_q": "如何申请BOI促进？",
+        "how_to_apply_a": "申请可通过e-Investment系统在线提交，或亲自前往BOI办事处提交。您需要填写申请表、提供可行性研究报告，并提交财务预测和公司注册文件等证明材料。",
+        "documents_needed_q": "申请需要哪些文件？",
+        "documents_needed_a": "所需文件包括：BOI申请表、可行性研究报告、财务预测、公司注册文件（或设立前协议）、项目实施计划以及环境影响评估（适用活动）。",
+        "processing_time_q": "我可以追踪申请状态吗？",
+        "processing_time_a": "可以，您可以通过e-Investment门户追踪申请状态。BOI还会指派一名项目官员作为您在整个过程中的联系人，提供状态更新。"
+      },
+      "incentives": {
+        "tax_exemption_q": "有哪些税收优惠？",
+        "tax_exemption_a": "BOI提供根据活动类别3至13年的企业所得税免除、机械和原材料进口关税免除，以及研发、培训和基础设施建设费用的额外扣除。",
+        "non_tax_benefits_q": "BOI提供哪些非税收优惠？",
+        "non_tax_benefits_a": "非税收优惠包括：允许外资多数持股、允许拥有土地、为外国专家提供便利的工作许可和签证、允许向境外汇出外币以及国有化保护。",
+        "zone_benefits_q": "在特别区域投资有额外优惠吗？",
+        "zone_benefits_a": "是的，在东部经济走廊（EEC）、特别经济区（SEZ）和科技园区等特别区域的投资可享受增强的优惠政策，包括延长税收减免期限、额外企业所得税减免和基础设施支持。"
+      },
+      "compliance": {
+        "reporting_q": "获得促进后有哪些报告要求？",
+        "reporting_a": "BOI促进企业必须提交年度运营报告，并遵守促进证书中规定的条件。这包括维持最低投资水平、生产能力要求和雇佣条件。",
+        "revocation_q": "在什么情况下BOI促进会被撤销？",
+        "revocation_a": "如果企业未遵守促进证书中的条件、在申请中提供虚假信息、未提交必要报告或未在规定时限内开始运营，促进可能被撤销。",
+        "extension_q": "我可以延长BOI优惠期限吗？",
+        "extension_a": "在某些情况下，BOI可能批准特定优惠的延长。投资于获批科技活动的企业或位于目标府的企业，可能有资格获得额外年限的企业所得税免除。"
+      }
+    },
+    "cta": {
+      "eyebrow": "还有疑问？",
+      "title": "我们随时为您服务",
+      "description": "我们的专家团队随时准备为您解答有关泰国投资促进的任何问题。",
+      "cta_contact": "联系我们",
+      "cta_call": "致电 0 2553 8111"
+    }
+  },
+  "contact_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb": "联系我们",
+      "eyebrow": "与我们联系",
+      "title_1": "联系",
+      "title_2": "BOI",
+      "subtitle": "我们的专家团队随时为您提供投资促进全流程指导。",
+      "phone_label": "电话",
+      "phone_value": "0 2553 8111",
+      "email_label": "邮箱",
+      "email_value": "head@boi.go.th",
+      "address_label": "地址",
+      "address_value": "曼谷乍都乍区维巴瓦迪兰实路555号 10900",
+      "hours_label": "办公时间",
+      "hours_value": "周一至周五: 08:30–16:30"
+    },
+    "form": {
+      "eyebrow": "发送消息",
+      "title": "我们能为您做什么？",
+      "description": "填写表格，我们的团队将在2个工作日内回复您。",
+      "map_label": "谷歌地图 — BOI总部",
+      "name_label": "姓名",
+      "name_placeholder": "请输入您的姓名",
+      "email_label": "电子邮箱",
+      "email_placeholder": "请输入您的电子邮箱",
+      "company_label": "公司名称",
+      "company_placeholder": "请输入您的公司名称",
+      "subject_label": "主题",
+      "subject_placeholder": "请选择主题",
+      "subject_general": "一般咨询",
+      "subject_incentives": "投资优惠政策",
+      "subject_application": "申请流程",
+      "subject_visa": "签证与工作许可",
+      "subject_other": "其他",
+      "message_label": "留言",
+      "message_placeholder": "请告诉我们您需要什么帮助...",
+      "required_note": "* 必填项",
+      "submit": "发送消息"
+    },
+    "offices": {
+      "eyebrow": "办事处",
+      "title": "BOI全球办事处",
+      "description": "我们在全球设有办事处，始终在您身边支持您的泰国投资。",
+      "hq_badge": "总部",
+      "headquarters_name": "BOI总部，曼谷",
+      "headquarters_address": "泰国曼谷乍都乍区维巴瓦迪兰实路555号 10900",
+      "headquarters_phone": "0 2553 8111",
+      "headquarters_email": "head@boi.go.th",
+      "tokyo_name": "东京办事处",
+      "tokyo_address": "〒107-0052 东京都港区赤坂2-11-3 福田大厦西馆8层",
+      "tokyo_phone": "+81 3 3582 1806",
+      "beijing_name": "北京办事处",
+      "beijing_address": "泰国大使馆，北京市光华路21号 100600",
+      "beijing_phone": "+86 10 6532 3775",
+      "new_york_name": "纽约办事处",
+      "new_york_address": "7 World Trade Center, 250 Greenwich St, 35th Floor, New York 10007",
+      "new_york_phone": "+1 212 422 9009",
+      "frankfurt_name": "法兰克福办事处",
+      "frankfurt_address": "Bethmannstraße 58, 5. OG, 60311 Frankfurt am Main, Germany",
+      "frankfurt_phone": "+49 69 9291 230",
+      "seoul_name": "首尔办事处",
+      "seoul_address": "泰国大使馆，首尔龙山区大使馆路42号 04401",
+      "seoul_phone": "+82 2 795 2484"
+    }
+  },
+  "success_stories_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_discover": "发现泰国",
+      "breadcrumb": "成功案例",
+      "eyebrow": "投资者成功",
+      "title_1": "成功",
+      "title_2": "案例",
+      "subtitle": "了解来自世界各地的领先企业如何通过BOI投资促进在泰国蓬勃发展。"
+    },
+    "grid": {
+      "filter_all": "所有行业",
+      "filter_ev": "电动汽车与汽车",
+      "filter_digital": "数字与科技",
+      "filter_manufacturing": "制造业",
+      "filter_food": "食品与农业",
+      "filter_medical": "医疗与健康",
+      "read_story": "阅读完整故事",
+      "stories": {
+        "toyota-ev-manufacturing": {
+          "title": "丰田在泰国的电动汽车制造中心",
+          "excerpt": "丰田如何利用BOI优惠政策在东部经济走廊建立东南亚最大的电动汽车生产设施。",
+          "investment": "450亿泰铢投资",
+          "jobs": "5,000+个就业岗位"
+        },
+        "delta-electronics-smart-factory": {
+          "title": "台达电子：智能工厂4.0",
+          "excerpt": "台达电子利用BOI的A1+促进方案，将其泰国业务转型为全自动化的工业4.0展示基地。",
+          "investment": "120亿泰铢投资",
+          "jobs": "2,200个就业岗位"
+        },
+        "google-cloud-data-center": {
+          "title": "谷歌云泰国区域",
+          "excerpt": "谷歌在BOI数字经济优惠政策的支持下，选择泰国作为东南亚大陆首个云区域。",
+          "investment": "350亿泰铢投资",
+          "jobs": "800+个就业岗位"
+        },
+        "cp-foods-innovation-center": {
+          "title": "正大食品创新与可持续发展中心",
+          "excerpt": "正大食品建立了一个专注于可持续蛋白质生产和智慧农业技术的世界级食品创新中心。",
+          "investment": "80亿泰铢投资",
+          "jobs": "1,500个就业岗位"
+        },
+        "siemens-healthineers-hub": {
+          "title": "西门子医疗区域中心",
+          "excerpt": "西门子医疗在BOI医疗技术促进政策下，选择泰国作为其东盟医疗设备分销和服务中心。",
+          "investment": "50亿泰铢投资",
+          "jobs": "600个就业岗位"
+        },
+        "byd-ev-assembly-plant": {
+          "title": "比亚迪在东盟的首个电动汽车组装厂",
+          "excerpt": "比亚迪在罗勇建立了其在东盟的首个电动汽车组装厂，目标年产15万辆。",
+          "investment": "180亿泰铢投资",
+          "jobs": "3,000+个就业岗位"
+        }
+      }
+    }
+  },
+  "services_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb": "电子服务",
+      "eyebrow": "数字服务",
+      "title_1": "电子服务",
+      "title_2": "中心",
+      "subtitle": "访问BOI的数字服务和在线平台，简化投资促进申请和支持流程。"
+    },
+    "grid": {
+      "eyebrow": "可用服务",
+      "title": "所有服务尽在指尖",
+      "access_service": "访问服务",
+      "e_investment_name": "e-Investment",
+      "e_investment_desc": "在线提交和跟踪您的BOI促进申请。全面的数字平台处理从初始申请到批准后报告的所有事务。",
+      "visa_work_permit_name": "签证与工作许可",
+      "visa_work_permit_desc": "通过我们简化的在线系统，为BOI促进企业的外籍员工申请和管理签证延期及工作许可。",
+      "smart_visa_name": "智慧签证",
+      "smart_visa_desc": "申请专为高技能专业人士、投资者、高管和初创企业家设计的智慧签证计划。",
+      "osos_name": "一站式服务（OSOS）",
+      "osos_desc": "在一个地点获取多项政府服务。OSOS提供许可证、执照和注册的协调援助。",
+      "hq_portal_name": "总部商务门户",
+      "hq_portal_desc": "泰国区域运营总部（ROH）和国际总部（IHQ）运营的专用门户。",
+      "after_promotion_name": "促进后服务",
+      "after_promotion_desc": "通过BOI的批准后服务门户管理您的促进项目，包括延期、修改和年度报告。",
+      "consultation_name": "预约咨询",
+      "consultation_desc": "预约与BOI投资顾问的免费咨询，讨论您的项目计划和符合条件的优惠方案。",
+      "tax_calculator_name": "优惠计算器",
+      "tax_calculator_desc": "根据您的投资类型、金额和地点，估算您的潜在税收节省和优惠收益。"
+    },
+    "cta": {
+      "eyebrow": "需要帮助？",
+      "title": "我们随时准备为您服务",
+      "description": "我们的投资顾问团队随时为您提供每项数字服务和申请流程的指导。",
+      "cta_consult": "预约咨询",
+      "cta_faq": "浏览常见问题"
+    }
+  },
+  "search": {
+    "breadcrumb_home": "首页",
+    "breadcrumb": "搜索结果",
+    "title": "搜索结果",
+    "placeholder": "搜索优惠政策、服务、新闻...",
+    "clear": "清除搜索",
+    "filter_all": "全部",
+    "filter_incentives": "优惠政策",
+    "filter_services": "服务",
+    "filter_news": "新闻",
+    "filter_events": "活动",
+    "filter_faq": "常见问题",
+    "results_count": "找到 {count} 条结果",
+    "results_for": "关于",
+    "no_results_title": "未找到结果",
+    "no_results_desc": "请尝试其他关键词或浏览我们的分类"
+  },
+  "privacy": {
+    "breadcrumb_home": "首页",
+    "breadcrumb": "隐私政策",
+    "eyebrow": "法律",
+    "title": "隐私政策",
+    "subtitle": "我们如何根据PDPA收集、使用和保护您的个人信息",
+    "last_updated": "最后更新：2026年3月1日",
+    "sections": {
+      "intro_title": "简介",
+      "intro_text": "泰国投资促进委员会（BOI）致力于保护网站访问者的隐私。本隐私政策说明我们在您访问网站时如何收集、使用、披露和保护您的信息，符合泰国《个人数据保护法》（PDPA）。",
+      "collection_title": "我们收集的信息",
+      "collection_text": "我们可能收集您在使用服务时自愿提供的个人信息，包括：姓名、电子邮件、电话号码、公司信息以及通过联系表单提交的投资相关咨询。",
+      "auto_title": "自动收集的信息",
+      "auto_text": "当您访问我们的网站时，我们会自动收集某些信息，包括IP地址、浏览器类型、操作系统、引荐URL、浏览页面和时间戳。这些数据通过Cookie和类似技术收集。",
+      "use_title": "信息使用方式",
+      "use_text": "我们使用收集的信息来：提供和改善服务、回应咨询和顾问请求、发送相关投资信息和更新、分析网站使用模式以及遵守法律义务。",
+      "sharing_title": "信息共享",
+      "sharing_text": "我们不出售您的个人信息。我们可能与法律要求的政府机构、协助网站运营的授权服务提供商以及法院命令或法律程序要求的情况共享信息。",
+      "retention_title": "数据保留",
+      "retention_text": "我们仅在实现收集目的所需的期限内或适用法律法规要求的期限内保留个人数据。审计日志保留至少365天。",
+      "rights_title": "您在PDPA下的权利",
+      "rights_text": "根据PDPA，您有权：访问您的个人数据、要求更正不准确的数据、要求删除数据、撤回同意、要求数据可移植性以及向个人数据保护委员会投诉。",
+      "security_title": "数据安全",
+      "security_text": "我们采取适当的技术和组织措施保护您的个人数据，包括加密、访问控制和符合OWASP标准的定期安全评估。",
+      "contact_title": "联系我们",
+      "contact_text": "如有隐私相关咨询或行使PDPA权利，请联系我们的数据保护官：dpo@boi.go.th 或访问我们的联系页面。"
+    }
+  },
+  "accessibility_page": {
+    "breadcrumb_home": "首页",
+    "breadcrumb": "无障碍声明",
+    "eyebrow": "承诺",
+    "title": "无障碍声明",
+    "subtitle": "我们致力于让每个人都能获取投资信息",
+    "last_updated": "最后更新：2026年3月1日",
+    "sections": {
+      "commitment_title": "我们的承诺",
+      "commitment_text": "泰国投资促进委员会（BOI）致力于确保不同能力人群的数字无障碍访问。我们不断改善所有用户的体验，并应用相关的无障碍标准。",
+      "standards_title": "标准与合规",
+      "standards_text": "本网站致力于符合Web内容无障碍指南（WCAG）2.1 AA级标准。我们还遵守泰国DGA（数字政府发展局）的数字无障碍标准。",
+      "features_title": "无障碍功能",
+      "features_text": "我们的网站包含以下无障碍功能：可调文字大小和间距、高对比度和深色模式、键盘导航支持、屏幕阅读器兼容性、图片替代文本、ARIA地标和标签、焦点指示器以及全面的无障碍小部件。",
+      "widget_title": "无障碍小部件",
+      "widget_text": "使用左下角的无障碍小部件自定义您的浏览体验。功能包括：内容缩放、字体大小调整、行高和字间距控制、标题和链接突出显示、对比度模式、灰度模式、光标突出显示和文字转语音。",
+      "feedback_title": "反馈",
+      "feedback_text": "欢迎您对本网站的无障碍性提供反馈。请联系：accessibility@boi.go.th 或使用我们网站上的联系表单。",
+      "ongoing_title": "持续努力",
+      "ongoing_text": "我们持续努力改善无障碍性，包括定期无障碍审计、员工无障碍内容创建培训以及辅助技术测试。"
+    }
+  },
+  "a11y": {
+    "title": "无障碍",
+    "subtitle": "自定义显示设置",
+    "reset": "恢复默认",
+    "close": "关闭",
+    "contentSize": "内容大小",
+    "fontSize": "字体大小",
+    "lineHeight": "行高",
+    "letterSpacing": "字间距",
+    "highlightHeadings": "突出标题",
+    "highlightLinks": "突出链接",
+    "darkContrast": "深色对比",
+    "lightContrast": "浅色对比",
+    "grayscale": "灰度",
+    "highContrast": "高对比度",
+    "highSaturation": "高饱和度",
+    "lowSaturation": "低饱和度",
+    "highlightHover": "高亮光标",
+    "textToSpeech": "文字转语音",
+    "ttsActive": "选择文字即可朗读",
+    "default": "默认"
+  },
+  "cookie_consent": {
+    "title": "Cookie设置",
+    "description": "我们使用Cookie来提升您的体验。继续使用即表示您同意我们使用Cookie。",
+    "privacy_link": "隐私政策",
+    "close": "关闭",
+    "manage_preferences": "管理Cookie偏好设置",
+    "accept_all": "全部接受",
+    "accept_selected": "接受已选",
+    "reject_optional": "拒绝可选",
+    "necessary_label": "必要",
+    "necessary_desc": "网站核心功能和安全所必需。",
+    "analytics_label": "分析",
+    "analytics_desc": "帮助我们了解访问者如何与网站互动。",
+    "marketing_label": "营销",
+    "marketing_desc": "用于投放个性化内容和广告。",
+    "functional_label": "功能",
+    "functional_desc": "启用保存偏好设置等增强功能。",
+    "always_on": "始终开启"
+  },
+  "chat": {
+    "title": "BOI助手",
+    "subtitle": "AI投资指南",
+    "welcome": "您好！有什么可以帮您？",
+    "welcome_desc": "欢迎咨询泰国投资相关问题。",
+    "quick_eligibility": "我是否符合BOI促进条件？",
+    "quick_incentives": "有哪些优惠政策？",
+    "quick_apply": "如何申请BOI？",
+    "placeholder": "咨询泰国投资...",
+    "send": "发送",
+    "disclaimer": "AI回复仅供参考，请向BOI官员核实。",
+    "demo_response": "感谢您的提问！作为BOI AI助手，我可以为您提供泰国投资促进的相关信息。BOI提供全面的优惠套餐，包括最长13年的企业所得税减免、进口关税减免以及外资控股许可等非税收优惠。您想了解更多具体优惠政策或申请流程吗？"
+  },
   "language": {
     "th": "ไทย",
     "en": "English",
@@ -474,5 +1013,782 @@
     "de": "Deutsch",
     "fr": "Français",
     "select": "选择语言"
+  },
+  "thailand_overview": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_discover": "发现泰国",
+      "breadcrumb": "泰国概览",
+      "eyebrow": "国家概况",
+      "title": "泰国概览",
+      "subtitle": "位于东盟核心的活力经济体，拥有世界级基础设施和高素质劳动力"
+    },
+    "content": {
+      "stat_gdp": "GDP",
+      "stat_gdp_value": "$574B",
+      "stat_population": "人口",
+      "stat_population_value": "71.8M",
+      "stat_fdi": "FDI排名",
+      "stat_fdi_value": "东盟前三",
+      "stat_ease": "营商便利度",
+      "stat_ease_value": "全球第21位",
+      "economy_title": "强劲的经济",
+      "economy_desc": "泰国GDP超过5,740亿美元，是东盟第二大经济体。经济年均增长3.5%，拥有涵盖汽车、电子和农业的多元化产业基础。",
+      "strategic_title": "战略位置",
+      "strategic_desc": "位于东盟6.8亿消费者市场的核心，泰国提供通往亚洲主要市场的无与伦比的通道。5小时飞行可覆盖全球一半人口。",
+      "infrastructure_title": "世界级基础设施",
+      "infrastructure_desc": "泰国拥有38个深水港、6个国际机场、完善的高速公路网络，以及连接曼谷与区域枢纽的高速铁路线路不断扩展。",
+      "workforce_title": "高素质劳动力",
+      "workforce_desc": "每年超过50万名STEM毕业生，劳动力总数达3,900万。泰国通过政企合作和技术院校大力投资人才技能提升。",
+      "quality_title": "生活品质",
+      "quality_desc": "位列亚洲最宜居国家之列，拥有世界级医疗、国际学校、多元文化以及适宜外籍人士的生活成本。"
+    }
+  },
+  "industries_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_discover": "发现泰国",
+      "breadcrumb": "目标产业",
+      "eyebrow": "投资领域",
+      "title": "目标产业",
+      "subtitle": "探索泰国的重点产业领域，符合条件的活动可享受BOI增强优惠政策"
+    },
+    "grid": {
+      "eyebrow": "十大优先产业",
+      "title": "驱动泰国未来的产业",
+      "agriculture_food_name": "农业与食品",
+      "agriculture_food_desc": "从农场到餐桌——泰国是世界厨房，也是全球食品加工和农业创新的领导者，以BCG理念推动可持续发展。",
+      "medical_name": "医疗与健康",
+      "medical_desc": "亚洲医疗枢纽，拥有世界级医院、制药生产及蓬勃发展的医疗器械产业。",
+      "automotive_name": "汽车与EV",
+      "automotive_desc": "亚洲底特律——东盟最大的汽车生产国，正加速转型为区域EV制造中心，并配套专项激励方案。",
+      "electronics_name": "电子与智能设备",
+      "electronics_desc": "全球硬盘驱动器、半导体和集成电路的重要生产基地，智能设备制造能力持续增强。",
+      "metals_name": "金属与材料",
+      "metals_desc": "完善的钢铁、铝和先进材料供应链，有力支撑泰国制造业生态体系。",
+      "chemicals_name": "化工与石化",
+      "chemicals_desc": "东南亚最大的石化产业，以东部海岸的综合工业园区为核心。",
+      "utilities_name": "公共事业与能源",
+      "utilities_desc": "正在向清洁能源转型，太阳能、风能和生物质能项目可享受BOI绿色技术增强优惠。",
+      "digital_name": "数字与科技",
+      "digital_desc": "泰国数字经济蓬勃发展，数据中心、金融科技、AI/ML、云服务和软件开发驱动新经济。",
+      "creative_name": "创意产业",
+      "creative_desc": "动画、游戏、影视制作和设计——泰国创意产业快速增长，并享有专项促进措施。",
+      "services_name": "高附加值服务",
+      "services_desc": "区域总部、国际贸易公司和业务流程外包，可享受特别非税收优惠。",
+      "learn_more": "了解更多"
+    }
+  },
+  "special_zones": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_discover": "发现泰国",
+      "breadcrumb": "特别经济区",
+      "eyebrow": "战略区域",
+      "title": "特别经济区",
+      "subtitle": "在泰国指定经济走廊享受增强优惠政策和简化审批流程"
+    },
+    "content": {
+      "zones_eyebrow": "投资目的地",
+      "zones_title": "选择您的战略位置",
+      "zone_count": "经济区",
+      "zone_count_value": "15+",
+      "province_count": "覆盖府",
+      "province_count_value": "30+",
+      "eec_title": "东部经济走廊（EEC）",
+      "eec_desc": "泰国旗舰开发区，横跨北柳、春武里和罗勇三府——先进制造和创新的核心区域。",
+      "eec_benefits": "最长15年企业所得税免除、外国人土地所有权、快速审批通道、EECi创新区、EECd数字园区",
+      "sez_title": "特别经济区（SEZ）",
+      "sez_desc": "10个边境经济区，旨在促进与缅甸、老挝、柬埔寨和马来西亚等邻国的跨境贸易和投资。",
+      "sez_benefits": "额外3年企业所得税减免、运输成本双倍扣除、公共基础设施支持、简化海关手续",
+      "industrial_title": "工业园区",
+      "industrial_desc": "泰国全境60余个管理型工业园区，提供标准厂房、公共设施和全面的配套服务。",
+      "industrial_benefits": "即插即用基础设施、一站式服务中心、环保合规支持、员工住宿设施"
+    }
+  },
+  "advertorials_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_discover": "发现泰国",
+      "breadcrumb": "专题文章",
+      "eyebrow": "特色文章",
+      "title": "专题文章与洞察",
+      "subtitle": "深度解读泰国投资环境、产业趋势和成功要素"
+    },
+    "list": {
+      "eyebrow": "最新文章",
+      "title": "精选洞察",
+      "filter_all": "全部",
+      "filter_investment": "投资",
+      "filter_industry": "产业",
+      "filter_policy": "政策",
+      "read_more": "阅读全文",
+      "article_1_title": "2025年泰国吸引外国直接投资创历史新高",
+      "article_1_excerpt": "在EV、数字和绿色能源领域的推动下，泰国FDI申请量增长23%，遍及各特别经济区。",
+      "article_2_title": "EV产业繁荣：泰国成为东盟电动汽车中心",
+      "article_2_excerpt": "各大汽车制造商纷纷将EV生产转移至泰国，借助东部经济走廊的优惠政策和技术人才优势。",
+      "article_3_title": "BOI推出BCG经济新激励方案",
+      "article_3_excerpt": "BOI宣布为生物-循环-绿色项目提供增强税收优惠，助力泰国可持续发展目标。",
+      "article_4_title": "智能电子：泰国的下一个增长前沿",
+      "article_4_excerpt": "随着全球供应链向东南亚多元化布局，半导体和先进电子投资大幅增长。",
+      "article_5_title": "数字基础设施扩展带动科技投资",
+      "article_5_excerpt": "泰国的5G部署和数据中心扩建为科技企业和数字服务创造新机遇。",
+      "article_6_title": "BOI更新2026年外商投资法规",
+      "article_6_excerpt": "简化审批流程和扩大符合条件的活动范围，旨在提升泰国对国际投资者的竞争力。"
+    }
+  },
+  "getting_started": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_invest": "立即投资",
+      "breadcrumb": "开始投资",
+      "eyebrow": "投资旅程",
+      "title": "开始投资",
+      "subtitle": "通过BOI促进在泰国投资的分步指南"
+    },
+    "content": {
+      "journey_eyebrow": "您的投资旅程",
+      "journey_title": "从咨询到运营的五个步骤",
+      "step1_title": "研究与规划",
+      "step1_desc": "了解符合条件的活动，研究优惠方案，评估您的项目是否符合BOI促进类别。",
+      "step2_title": "资格审查",
+      "step2_desc": "使用我们的资格检查工具或咨询BOI官员，确认您的项目是否符合投资促进条件。",
+      "step3_title": "提交申请",
+      "step3_desc": "通过e-Investment门户提交申请，并附上项目可行性研究报告等所需文件。",
+      "step4_title": "委员会审批",
+      "step4_desc": "您的申请将由BOI委员会审核。标准审批时间为60至90个工作日。",
+      "step5_title": "颁发证书与开始运营",
+      "step5_desc": "获得促进证书后即可开始运营，BOI将协助办理许可证、签证，并提供持续的合规支持。",
+      "checklist_title": "必备清单",
+      "checklist_items": "公司注册文件、项目可行性研究报告、财务预测（3-5年）、技术规格说明、环境影响评估、管理团队信息",
+      "timeline_title": "参考时间表",
+      "timeline_desc": "从提交申请到获得促进证书：60-90个工作日。EEC和优先产业可享受快速审批通道。"
+    }
+  },
+  "eligibility_checker": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_invest": "立即投资",
+      "breadcrumb": "资格检查",
+      "eyebrow": "互动工具",
+      "title": "检查您的资格",
+      "subtitle": "几分钟内即可了解您的投资项目是否符合BOI促进条件"
+    },
+    "checker": {
+      "step1_title": "选择产业",
+      "step1_desc": "选择与您的投资项目最匹配的产业领域。",
+      "step2_title": "选择活动",
+      "step2_desc": "选择您计划从事的具体商业活动。",
+      "step3_title": "查看结果",
+      "step3_desc": "查看您的资格状态、促进类别和可享受的优惠政策。",
+      "select_industry": "请选择产业...",
+      "select_activity": "请选择活动...",
+      "check_button": "检查资格",
+      "result_eligible": "符合BOI促进条件！",
+      "result_category": "促进类别",
+      "result_incentives": "主要优惠",
+      "result_cta": "立即申请",
+      "result_consult": "预约咨询",
+      "industries": "农业与食品、汽车与EV、数字与科技、电子、医疗与健康、金属与材料、化工、创意产业、能源与公共事业、高附加值服务"
+    }
+  },
+  "eligible_activities": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_invest": "立即投资",
+      "breadcrumb": "符合条件的活动",
+      "eyebrow": "活动清单",
+      "title": "符合条件的活动",
+      "subtitle": "BOI投资促进符合条件的商业活动完整清单"
+    },
+    "list": {
+      "eyebrow": "搜索活动",
+      "title": "查找您的活动",
+      "search_placeholder": "按活动名称或关键词搜索...",
+      "filter_all": "全部类别",
+      "filter_a1": "A1类",
+      "filter_a2": "A2类",
+      "filter_a3": "A3类",
+      "filter_a4": "A4类",
+      "filter_b1": "B1类",
+      "filter_b2": "B2类",
+      "category": "类别",
+      "cit_exemption": "企业所得税免除",
+      "import_duty": "进口关税",
+      "results_count": "{count} 项活动",
+      "view_details": "查看详情"
+    }
+  },
+  "procedures_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_invest": "立即投资",
+      "breadcrumb": "办理流程",
+      "eyebrow": "申请流程",
+      "title": "投资办理流程",
+      "subtitle": "BOI申请流程、所需文件和审批时间表详细指南"
+    },
+    "content": {
+      "process_eyebrow": "分步说明",
+      "process_title": "申请流程概览",
+      "step1_title": "申请前咨询",
+      "step1_desc": "在提交申请前，预约与BOI官员的咨询会议，讨论您的项目并确认资格。",
+      "step2_title": "在线申请",
+      "step2_desc": "通过e-Investment门户提交申请，附上所有所需文件和项目详细信息。",
+      "step3_title": "委员会审核",
+      "step3_desc": "您的申请将由相关BOI分委员会根据投资规模和行业进行审核。",
+      "step4_title": "委员会决议",
+      "step4_desc": "BOI委员会每月召开会议审批促进申请。审批结果将在7个工作日内通知。",
+      "step5_title": "颁发促进证书",
+      "step5_desc": "获得审批后，领取促进证书并开始享受BOI优惠政策。",
+      "documents_title": "所需文件",
+      "documents_list": "申请表（BOI格式）、公司注册证书、股东信息、项目可行性研究报告、财务报表（3年）、技术规格说明、环境评估报告、工厂布局图",
+      "timeline_title": "审批时间表",
+      "timeline_standard": "标准：60-90个工作日",
+      "timeline_fast": "快速通道（EEC/优先产业）：30-45个工作日",
+      "timeline_large": "大型项目（>7.5亿泰铢）：需委员会审批"
+    }
+  },
+  "forms_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_invest": "立即投资",
+      "breadcrumb": "表格与下载",
+      "eyebrow": "文件资料",
+      "title": "表格与下载",
+      "subtitle": "下载BOI官方申请表格、指南和辅助文件"
+    },
+    "list": {
+      "eyebrow": "官方表格",
+      "title": "下载中心",
+      "filter_all": "全部表格",
+      "filter_application": "申请类",
+      "filter_operating": "运营类",
+      "filter_report": "报告类",
+      "filter_other": "其他",
+      "download": "下载",
+      "file_size": "文件大小",
+      "last_updated": "更新时间"
+    }
+  },
+  "announcements_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_invest": "立即投资",
+      "breadcrumb": "公告",
+      "eyebrow": "官方通知",
+      "title": "BOI公告",
+      "subtitle": "泰国投资促进委员会的官方公告、政策更新和法规变更"
+    },
+    "list": {
+      "eyebrow": "最新更新",
+      "title": "官方公告",
+      "filter_all": "全部",
+      "filter_board": "委员会公告",
+      "filter_secretary": "秘书长公告",
+      "filter_office": "办公室公告",
+      "read_more": "阅读全文",
+      "published": "发布日期"
+    }
+  },
+  "guide_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_invest": "立即投资",
+      "breadcrumb": "投资指南",
+      "eyebrow": "综合指南",
+      "title": "投资促进指南",
+      "subtitle": "BOI投资促进政策、优惠方案和申请流程的完整参考指南"
+    },
+    "content": {
+      "overview_title": "指南概述",
+      "overview_desc": "本综合指南涵盖通过BOI促进在泰国投资所需了解的全部内容——从符合条件的活动到优惠方案和申请流程。",
+      "chapters_title": "指南目录",
+      "ch1_title": "BOI简介",
+      "ch1_desc": "泰国投资促进委员会概况、使命和投资促进框架。",
+      "ch2_title": "符合条件的活动与类别",
+      "ch2_desc": "按促进类别（A1-A4、B1-B2）分类的促进活动完整清单。",
+      "ch3_title": "税收优惠",
+      "ch3_desc": "各类别的企业所得税免除、进口关税免除及额外税收优惠。",
+      "ch4_title": "非税收优惠",
+      "ch4_desc": "外资持股、土地所有权、工作许可及签证便利等优惠。",
+      "ch5_title": "申请流程",
+      "ch5_desc": "分步申请流程、所需文件及审批时间表。",
+      "ch6_title": "获得促进后",
+      "ch6_desc": "合规要求、报告义务和BOI持续支持服务。",
+      "download_pdf": "下载完整指南（PDF）",
+      "download_size": "12.5 MB"
+    }
+  },
+  "apply_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_services": "服务",
+      "breadcrumb": "在线申请",
+      "eyebrow": "e-Investment门户",
+      "title": "申请BOI促进",
+      "subtitle": "通过我们的统一在线门户提交和跟踪您的投资促进申请"
+    },
+    "content": {
+      "portal_title": "e-Investment门户",
+      "portal_desc": "e-Investment系统是您所有BOI促进申请的统一入口。在线提交、跟踪和管理您的投资项目。",
+      "features_title": "门户功能",
+      "feature1": "在线提交申请",
+      "feature2": "实时状态跟踪",
+      "feature3": "文件上传与管理",
+      "feature4": "自动通知与提醒",
+      "feature5": "与签证和工作许可系统对接",
+      "login_button": "登录e-Investment",
+      "register_button": "注册新账户",
+      "guide_title": "如何申请",
+      "guide_step1": "注册e-Investment账户",
+      "guide_step2": "在线填写申请表",
+      "guide_step3": "上传所需文件",
+      "guide_step4": "提交并获取确认编号",
+      "guide_step5": "通过控制面板跟踪进度"
+    }
+  },
+  "e_investment_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_services": "服务",
+      "breadcrumb": "e-Investment",
+      "eyebrow": "数字服务",
+      "title": "e-Investment系统",
+      "subtitle": "BOI全面的投资促进数字化管理平台"
+    },
+    "content": {
+      "about_title": "关于e-Investment",
+      "about_desc": "e-Investment系统是BOI的旗舰数字服务平台，使投资者能够在线管理从初始申请到促进后合规的整个促进生命周期。",
+      "services_title": "可用服务",
+      "service1_title": "促进申请",
+      "service1_desc": "提交新的投资促进申请及所有所需文件。",
+      "service2_title": "运营许可",
+      "service2_desc": "申请机器进口许可、原材料进口清单和生产能力变更。",
+      "service3_title": "外籍员工管理",
+      "service3_desc": "管理外籍员工配额、签证延期和工作许可申请。",
+      "service4_title": "年度报告",
+      "service4_desc": "提交项目运营和合规状态的必要年度报告。",
+      "faq_title": "常见问题",
+      "faq1_q": "如何注册e-Investment？",
+      "faq1_a": "访问e-Investment门户，点击「注册」，填写公司信息完成注册。",
+      "faq2_q": "需要哪些文件？",
+      "faq2_a": "公司注册证书、授权签字人文件和项目详细信息。",
+      "faq3_q": "审批需要多长时间？",
+      "faq3_a": "标准申请自提交完整材料之日起60-90个工作日内完成审批。"
+    }
+  },
+  "visa_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_services": "服务",
+      "breadcrumb": "签证与工作许可",
+      "eyebrow": "出入境服务",
+      "title": "签证与工作许可",
+      "subtitle": "为BOI促进企业及其员工提供的简化签证和工作许可服务"
+    },
+    "content": {
+      "overview_title": "BOI签证服务",
+      "overview_desc": "BOI促进企业可通过我们的单一窗口服务享受加速签证和工作许可办理，大幅缩短处理时间并简化文件要求。",
+      "types_title": "签证类别",
+      "type1_title": "非移民B类签证（商务）",
+      "type1_desc": "适用于BOI促进企业的高管、经理和技术人员。有效期最长2年，可每年续签。",
+      "type2_title": "非移民IB类签证（投资）",
+      "type2_desc": "适用于BOI促进企业的外国投资者和董事会成员。允许多次入境。",
+      "type3_title": "工作许可",
+      "type3_desc": "BOI工作许可通过一站式服务中心3个工作日内即可办理。",
+      "benefits_title": "BOI签证优势",
+      "benefit1": "加速办理（3个工作日）",
+      "benefit2": "BOI单位单一窗口服务",
+      "benefit3": "无需另行前往移民局",
+      "benefit4": "家属签证支持",
+      "benefit5": "年度报告通过e-Investment简化办理"
+    }
+  },
+  "smart_visa_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_services": "服务",
+      "breadcrumb": "SMART Visa",
+      "eyebrow": "人才引进",
+      "title": "SMART Visa",
+      "subtitle": "面向高技能专业人才、投资者、高管和初创企业家的4年特别签证"
+    },
+    "content": {
+      "about_title": "关于SMART Visa",
+      "about_desc": "SMART Visa旨在吸引顶尖人才和投资者前往泰国目标产业。提供4年签证，免工作许可，并为家属提供特别待遇。",
+      "categories_title": "SMART Visa类别",
+      "cat_t_title": "SMART T（人才型）",
+      "cat_t_desc": "在目标产业拥有专业技能且月薪不低于200,000泰铢的高技能专业人才。",
+      "cat_i_title": "SMART I（投资型）",
+      "cat_i_desc": "在目标产业投资不低于2,000万泰铢的外国投资者。",
+      "cat_e_title": "SMART E（高管型）",
+      "cat_e_desc": "在科技或目标产业投资不低于5,000万泰铢企业的高级管理人员。",
+      "cat_s_title": "SMART S（初创型）",
+      "cat_s_desc": "通过认可的孵化器或加速器加入泰国初创企业生态系统的创业者。",
+      "cat_o_title": "SMART O（其他）",
+      "cat_o_desc": "SMART Visa持有人的配偶和受抚养人，可在泰国工作。",
+      "benefits_title": "主要优势",
+      "benefit1": "4年签证有效期",
+      "benefit2": "无需工作许可",
+      "benefit3": "免除90天报到（改为每年报到）",
+      "benefit4": "免除再入境许可",
+      "benefit5": "配偶和受抚养人可工作"
+    }
+  },
+  "osos_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_services": "服务",
+      "breadcrumb": "OSOS",
+      "eyebrow": "一站式服务",
+      "title": "一站式投资服务中心",
+      "subtitle": "投资相关许可和政府审批的单一联络窗口"
+    },
+    "content": {
+      "about_title": "关于OSOS",
+      "about_desc": "一站式投资服务中心（OSOS）为投资者提供一个集中办理多个政府机构许可证、执照和审批的统一场所——所有服务汇集于一处。",
+      "services_title": "可用服务",
+      "service1": "公司注册和营业执照",
+      "service2": "签证和工作许可办理",
+      "service3": "工厂许可证申请",
+      "service4": "海关和进出口手续",
+      "service5": "税务登记和合规",
+      "service6": "环境许可",
+      "location_title": "地址与办公时间",
+      "location_address": "曼谷巴吞旺区帕亚泰路尚趣里广场大厦18层 10330",
+      "location_hours": "周一至周五：08:30 - 16:30",
+      "location_phone": "+66-2-209-1100",
+      "agencies_title": "合作政府机构",
+      "agencies_list": "商业发展厅、税务厅、海关厅、就业厅、移民局、工业园区管理局、工业厅"
+    }
+  },
+  "consultation_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_services": "服务",
+      "breadcrumb": "预约咨询",
+      "eyebrow": "专家指导",
+      "title": "预约咨询",
+      "subtitle": "在您方便的时间预约与BOI投资顾问的一对一咨询"
+    },
+    "content": {
+      "booking_title": "预约您的咨询",
+      "booking_desc": "我们的投资顾问可提供BOI总部面谈、视频咨询或电话咨询服务。请选择您偏好的时间和咨询主题。",
+      "topics_title": "咨询主题",
+      "topic1": "一般投资咨询",
+      "topic2": "资格评估",
+      "topic3": "优惠方案评审",
+      "topic4": "申请指导",
+      "topic5": "促进后合规",
+      "topic6": "签证和工作许可协助",
+      "form_name": "姓名",
+      "form_email": "电子邮箱",
+      "form_company": "公司名称",
+      "form_topic": "选择主题",
+      "form_date": "偏好日期",
+      "form_time": "偏好时间",
+      "form_message": "补充说明",
+      "form_submit": "预约咨询",
+      "note": "咨询服务免费。您将在1个工作日内收到确认邮件。"
+    }
+  },
+  "matchmaking_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_services": "服务",
+      "breadcrumb": "商业配对",
+      "eyebrow": "商务对接",
+      "title": "投资商业配对",
+      "subtitle": "通过BOI的网络平台对接泰国合作伙伴、供应商和合资机会"
+    },
+    "content": {
+      "about_title": "BOI商业配对服务",
+      "about_desc": "BOI促进外国投资者与泰国企业之间的商务对接，帮助您找到合适的合资伙伴、供应链整合方案和本地市场进入途径。",
+      "services_title": "服务内容",
+      "service1_title": "供应商配对",
+      "service1_desc": "为您的供应链需求匹配合格的泰国供应商和制造商。",
+      "service2_title": "合资伙伴",
+      "service2_desc": "对接寻求外资合作的成熟泰国企业。",
+      "service3_title": "工业园区考察",
+      "service3_desc": "安排工业园区实地考察和潜在厂区参观。",
+      "service4_title": "交流活动",
+      "service4_desc": "BOI定期举办产业交流活动和投资研讨会。",
+      "cta_title": "申请配对",
+      "cta_desc": "提交您的需求，我们的团队将在5个工作日内为您匹配合适的对象。",
+      "cta_button": "提交申请"
+    }
+  },
+  "after_promotion_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_services": "服务",
+      "breadcrumb": "促进后服务",
+      "eyebrow": "促进后管理",
+      "title": "促进后服务",
+      "subtitle": "为BOI促进企业提供持续的支持和合规管理服务"
+    },
+    "content": {
+      "overview_title": "促进后支持",
+      "overview_desc": "获得BOI促进证书后，我们的团队将继续在许可证管理、合规指导和行政服务方面为您的运营提供支持。",
+      "services_title": "可用服务",
+      "service1_title": "运营许可",
+      "service1_desc": "申请和管理机器进口许可、原材料清单和生产能力变更。",
+      "service2_title": "外籍员工配额",
+      "service2_desc": "管理批准的岗位、引进外国专家以及办理签证/工作许可续签。",
+      "service3_title": "年度报告",
+      "service3_desc": "提交必要的运营报告，确保符合促进条件要求。",
+      "service4_title": "项目变更",
+      "service4_desc": "申请变更促进证书内容，包括产能扩大、产品新增或时间延期。",
+      "compliance_title": "合规要求",
+      "compliance1": "提交年度运营报告",
+      "compliance2": "维持最低泰籍员工比例",
+      "compliance3": "达到投资资本承诺",
+      "compliance4": "报告机器和原材料进口情况",
+      "compliance5": "保存审计会计记录"
+    }
+  },
+  "hq_portal_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_services": "服务",
+      "breadcrumb": "总部门户",
+      "eyebrow": "区域总部",
+      "title": "总部商务门户",
+      "subtitle": "为在泰国设立区域总部的企业提供特别优惠"
+    },
+    "content": {
+      "about_title": "区域总部优惠",
+      "about_desc": "泰国为在境内设立国际总部（IHQ）、区域运营总部（ROH）和国际贸易中心（ITC）的企业提供极具吸引力的优惠方案。",
+      "types_title": "总部类别",
+      "type1_title": "国际总部（IHQ）",
+      "type1_desc": "为关联企业提供管理、技术和支持服务可享受全额企业所得税优惠。",
+      "type2_title": "区域运营总部（ROH）",
+      "type2_desc": "面向东盟区域管理和支持服务可享受优惠企业税率。",
+      "type3_title": "国际贸易中心（ITC）",
+      "type3_desc": "以泰国为基地的国际采购、销售和分销业务可享受特别优惠。",
+      "benefits_title": "主要优势",
+      "benefit1": "优惠企业所得税税率",
+      "benefit2": "外籍人员个人所得税减免",
+      "benefit3": "允许100%外资持股",
+      "benefit4": "简化签证和工作许可办理",
+      "benefit5": "符合条件的交易免受外汇管制"
+    }
+  },
+  "data_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_resources": "资源",
+      "breadcrumb": "投资数据",
+      "eyebrow": "统计与分析",
+      "title": "投资数据仪表板",
+      "subtitle": "探索泰国投资统计数据、趋势和经济指标"
+    },
+    "dashboard": {
+      "overview_title": "2025年投资概览",
+      "stat1_label": "申请总数",
+      "stat1_value": "1,857",
+      "stat2_label": "总金额（泰铢）",
+      "stat2_value": "832B",
+      "stat3_label": "外资项目",
+      "stat3_value": "1,247",
+      "stat4_label": "泰资项目",
+      "stat4_value": "610",
+      "chart_title": "投资趋势",
+      "by_industry": "按产业",
+      "by_country": "按国家",
+      "by_zone": "按区域",
+      "by_year": "按年份",
+      "top_industries": "重点产业",
+      "top_countries": "主要投资来源国",
+      "export_data": "导出数据"
+    }
+  },
+  "company_db_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_resources": "资源",
+      "breadcrumb": "企业数据库",
+      "eyebrow": "促进企业",
+      "title": "企业数据库",
+      "subtitle": "搜索和查阅在泰运营的BOI促进企业"
+    },
+    "search": {
+      "title": "搜索企业",
+      "search_placeholder": "按企业名称搜索...",
+      "filter_industry": "按产业筛选",
+      "filter_country": "按国家筛选",
+      "filter_province": "按府筛选",
+      "results_count": "找到 {count} 家企业",
+      "company_name": "企业名称",
+      "industry": "产业",
+      "country": "国家",
+      "province": "府",
+      "promotion_year": "促进年份",
+      "view_details": "查看详情"
+    }
+  },
+  "publications_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_resources": "资源",
+      "breadcrumb": "出版物",
+      "eyebrow": "知识中心",
+      "title": "出版物与报告",
+      "subtitle": "年度报告、投资评论、产业手册和研究论文"
+    },
+    "list": {
+      "eyebrow": "文件库",
+      "title": "浏览出版物",
+      "filter_all": "全部",
+      "filter_annual": "年度报告",
+      "filter_review": "投资评论",
+      "filter_brochure": "宣传手册",
+      "filter_research": "研究论文",
+      "download": "下载PDF",
+      "pages": "页",
+      "published": "出版日期"
+    }
+  },
+  "multimedia_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_resources": "资源",
+      "breadcrumb": "多媒体",
+      "eyebrow": "媒体库",
+      "title": "多媒体库",
+      "subtitle": "展示泰国投资潜力的视频、演示文稿、照片和信息图表"
+    },
+    "gallery": {
+      "filter_all": "全部",
+      "filter_video": "视频",
+      "filter_photo": "照片",
+      "filter_infographic": "信息图表",
+      "filter_presentation": "演示文稿",
+      "play_video": "播放视频",
+      "view_image": "查看原图",
+      "download": "下载"
+    }
+  },
+  "offices_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_about": "关于BOI",
+      "breadcrumb": "办事处",
+      "eyebrow": "全球布局",
+      "title": "BOI办事处",
+      "subtitle": "总部、泰国各地区办事处和全球海外代表处"
+    },
+    "content": {
+      "hq_title": "总部——曼谷",
+      "hq_address": "曼谷乍都乍区维巴瓦迪兰实路555号 10900",
+      "hq_phone": "+66-2-553-8111",
+      "hq_fax": "+66-2-553-8222",
+      "hq_email": "head@boi.go.th",
+      "hq_hours": "周一至周五：08:30 - 16:30",
+      "regional_title": "地区办事处",
+      "regional_desc": "泰国全境7个地区投资中心提供本地支持和咨询服务。",
+      "region1": "清迈（北部地区）",
+      "region2": "呵叻（东北部地区）",
+      "region3": "孔敬（东北部地区）",
+      "region4": "春武里（东部地区/EEC）",
+      "region5": "素叻他尼（南部地区）",
+      "region6": "宋卡（南部边境地区）",
+      "region7": "那空沙旺（中部地区）",
+      "overseas_title": "海外办事处",
+      "overseas_desc": "亚洲、欧洲、美洲和大洋洲共15个海外办事处。",
+      "office_tokyo": "日本东京",
+      "office_osaka": "日本大阪",
+      "office_beijing": "中国北京",
+      "office_shanghai": "中国上海",
+      "office_guangzhou": "中国广州",
+      "office_taipei": "中国台北",
+      "office_seoul": "韩国首尔",
+      "office_mumbai": "印度孟买",
+      "office_stockholm": "瑞典斯德哥尔摩",
+      "office_frankfurt": "德国法兰克福",
+      "office_paris": "法国巴黎",
+      "office_new_york": "美国纽约",
+      "office_los_angeles": "美国洛杉矶",
+      "office_sydney": "澳大利亚悉尼",
+      "office_riyadh": "沙特阿拉伯利雅得"
+    }
+  },
+  "careers_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_about": "关于BOI",
+      "breadcrumb": "招聘信息",
+      "eyebrow": "加入我们",
+      "title": "BOI招聘",
+      "subtitle": "加入泰国领先的投资促进机构，共同塑造外国投资的未来"
+    },
+    "content": {
+      "why_title": "为什么加入BOI",
+      "why_desc": "成为通过吸引和支持全球投资推动泰国经济增长的机构的一员。",
+      "benefit1_title": "有影响力的工作",
+      "benefit1_desc": "直接影响泰国的投资格局和经济发展。",
+      "benefit2_title": "国际视野",
+      "benefit2_desc": "与国际投资者合作，参加全球活动，获得跨文化工作经验。",
+      "benefit3_title": "职业发展",
+      "benefit3_desc": "持续学习机会、海外培训和职业晋升通道。",
+      "benefit4_title": "公务员福利",
+      "benefit4_desc": "完善的福利体系，包括养老金、医疗保险和家庭保障。",
+      "openings_title": "当前职位",
+      "opening1_title": "投资促进官员",
+      "opening1_dept": "投资服务局",
+      "opening2_title": "数字服务专员",
+      "opening2_dept": "信息技术处",
+      "opening3_title": "国际关系官员",
+      "opening3_dept": "国际事务局",
+      "apply_button": "立即申请",
+      "how_to_title": "如何申请",
+      "how_to_desc": "通过政府招聘门户提交申请，或联系人力资源处：hr@boi.go.th"
+    }
+  },
+  "press_center_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_about": "关于BOI",
+      "breadcrumb": "新闻中心",
+      "eyebrow": "媒体关系",
+      "title": "新闻中心",
+      "subtitle": "新闻发布、媒体联系人、媒体资料包和媒体认证信息"
+    },
+    "content": {
+      "releases_title": "最新新闻发布",
+      "releases_desc": "泰国投资促进委员会的官方新闻发布。",
+      "kit_title": "媒体资料包",
+      "kit_desc": "下载我们的媒体资料包，包括BOI标识、概况资料、领导层照片和品牌指南。",
+      "kit_download": "下载媒体资料包",
+      "contact_title": "媒体联系",
+      "contact_name": "公共关系处",
+      "contact_email": "pr@boi.go.th",
+      "contact_phone": "+66-2-553-8111 分机 1180-1184",
+      "accreditation_title": "媒体认证",
+      "accreditation_desc": "申请BOI活动媒体认证的记者，请在活动前至少5个工作日提交证件。"
+    }
+  },
+  "procurement_page": {
+    "hero": {
+      "breadcrumb_home": "首页",
+      "breadcrumb_about": "关于BOI",
+      "breadcrumb": "政府采购",
+      "eyebrow": "透明公开",
+      "title": "政府采购",
+      "subtitle": "政府采购公告、价格参考和招标信息"
+    },
+    "content": {
+      "announcements_title": "当前采购项目",
+      "announcements_desc": "BOI的在进行中的采购公告和投标机会。",
+      "archive_title": "历史档案",
+      "archive_desc": "往期采购结果和合同授予记录。",
+      "price_title": "价格参考",
+      "price_desc": "政府采购项目标准价格参考。",
+      "transparency_title": "透明承诺",
+      "transparency_desc": "BOI致力于依据佛历2560年《政府采购和物资管理法》实行公正、透明的采购流程。",
+      "no_items": "目前暂无进行中的采购公告。",
+      "check_back": "请定期查看最新更新。"
+    }
   }
 }
