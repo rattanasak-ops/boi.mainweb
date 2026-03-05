@@ -2,6 +2,10 @@
 .env
 .env.local
 .env.production
+.env.development
+.env.staging
+.env.test
+.env*.local
 
 # Dependencies
 node_modules/
@@ -19,10 +23,13 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Debug
+# Debug / Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+*.log
+logs/
 
 # Team workflow
 checkin.txt
@@ -38,3 +45,9 @@ docker-compose.override.yml
 *.swp
 *.swo
 *~
+*.bak
+*.tmp
+.cache/
+coverage/
+.turbo/
+.vercel/

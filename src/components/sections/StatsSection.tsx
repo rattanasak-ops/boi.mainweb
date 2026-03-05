@@ -100,7 +100,7 @@ export default function StatsSection() {
         style={{ y: bgY }}
       >
         <Image
-          src="/images/hero/bangkok-aerial-night.jpg"
+          src="/images/hero/stats-bg.webp"
           alt=""
           fill
           className="object-cover"
