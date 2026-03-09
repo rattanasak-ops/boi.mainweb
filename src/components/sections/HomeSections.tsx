@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, lazy, Suspense, type ComponentType } from "react";
+import { useState, useEffect, type ComponentType } from "react";
 import StatsSection from "@/components/sections/StatsSection";
 import WhyThailandSection from "@/components/sections/WhyThailandSection";
 import QuickServicesSection from "@/components/sections/QuickServicesSection";
@@ -30,7 +30,6 @@ function getStoredOrder(): string[] {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (!stored) return DEFAULT_ORDER;
     const parsed = JSON.parse(stored) as string[];
-    // Validate — only keep known IDs, add missing ones at the end
     const validIds = new Set(DEFAULT_ORDER);
     const filtered = parsed.filter((id) => validIds.has(id));
     const missing = DEFAULT_ORDER.filter((id) => !filtered.includes(id));

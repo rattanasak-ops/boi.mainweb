@@ -5,7 +5,6 @@ import { useState, useRef, useEffect } from "react";
 import {
   Sun,
   Moon,
-  Monitor,
   Paintbrush,
   LayoutGrid,
   ChevronDown,
@@ -24,7 +23,6 @@ import {
 const COLOR_MODE_OPTIONS: { value: ColorMode; icon: typeof Sun; label: string }[] = [
   { value: "light", icon: Sun, label: "Light" },
   { value: "dark", icon: Moon, label: "Dark" },
-  { value: "system", icon: Monitor, label: "System" },
 ];
 
 const MOOD_OPTIONS = (Object.keys(MOOD_META) as Mood[]).map((key) => ({
@@ -139,7 +137,7 @@ export default function ThemeToggle() {
               <div className="p-5 space-y-5">
                 {/* Color Mode */}
                 <Section icon={Sun} title="Color Mode">
-                  <div className="grid grid-cols-3 gap-2">
+                  <div className="grid grid-cols-2 gap-2">
                     {COLOR_MODE_OPTIONS.map(({ value, icon: Icon, label }) => (
                       <button
                         key={value}

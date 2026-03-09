@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Sync Tailwind dark: variant with data-theme attribute */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 /* ===== BOI Design System ===== */
 /* Navy #1B2A4A + Gold #C5A572 + Light BG #F8FAFC */
 /* Font: Noto Sans Thai + Inter */
@@ -36,8 +39,8 @@
   --color-primary-light: #2a4170;
   --color-accent: #C5A572;
   --color-accent-light: #d9be86;
-  --color-surface: #f0f2f5;
-  --color-surface-alt: #e8ebf0;
+  --color-surface: #F8FAFC;
+  --color-surface-alt: #f0f2f6;
   --color-text-primary: #1B2A4A;
   --color-text-secondary: #475f8f;
   --color-text-muted: #94a3b8;
@@ -120,10 +123,19 @@ html.lenis, html.lenis body {
   overflow: hidden;
 }
 
-/* ===== Theme Transition ===== */
+/* ===== Theme & Template Transition ===== */
 html {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
+
+/* Smooth transition when switching site templates (public site only) */
+body:not([data-admin]) {
+  transition: background-color 0.4s ease, color 0.4s ease, font-family 0.3s ease;
+}
+
+/* Template-aware semantic variables (set by ThemeProvider JS) */
+/* --color-primary, --color-accent, etc. are overridden per template */
+/* --tmpl-header-bg, --tmpl-header-text, --tmpl-card-radius, etc. */
 
 /* ===== Dark Mode Tokens (TOR 4.2.12) ===== */
 html[data-theme="dark"] {
@@ -148,6 +160,26 @@ html[data-theme="dark"] {
 /* White/light backgrounds → dark surface */
 html[data-theme="dark"] :is(.bg-white, .bg-gray-50, .bg-gray-100, .bg-gray-200) {
   background-color: #1E293B !important;
+}
+
+/* Semi-transparent white backgrounds → semi-transparent dark */
+html[data-theme="dark"] .bg-white\/70 {
+  background-color: rgba(30, 41, 59, 0.7) !important;
+}
+html[data-theme="dark"] .bg-white\/80 {
+  background-color: rgba(30, 41, 59, 0.8) !important;
+}
+html[data-theme="dark"] .bg-white\/85 {
+  background-color: rgba(30, 41, 59, 0.85) !important;
+}
+html[data-theme="dark"] .bg-white\/90 {
+  background-color: rgba(30, 41, 59, 0.9) !important;
+}
+html[data-theme="dark"] .bg-white\/95 {
+  background-color: rgba(30, 41, 59, 0.95) !important;
+}
+html[data-theme="dark"] .bg-white\/98 {
+  background-color: rgba(30, 41, 59, 0.98) !important;
 }
 
 /* Navy light tones → deep dark */
@@ -352,12 +384,24 @@ html[data-layout="dashboard"] {
    The CSS custom properties above are available for components to consume directly. */
 
 /* ===== Base styles ===== */
-body {
+/* Scoped: only apply theme tokens to public site, NOT admin panel */
+body:not([data-admin]) {
   background-color: var(--color-surface);
   color: var(--color-text-primary);
   font-family: var(--font-sans);
+}
+
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Admin Panel — Isolated Dark Theme ===== */
+/* WCAG AAA contrast: #F1F5F9 on #0F1629 = 15.4:1 */
+body[data-admin] {
+  background-color: #0F1629;
+  color: #F1F5F9;
+  font-family: var(--font-sans);
 }
 
 /* ===== Skip to main content (WCAG) ===== */
