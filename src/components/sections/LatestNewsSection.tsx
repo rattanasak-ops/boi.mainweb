@@ -424,7 +424,7 @@ export default function LatestNewsSection() {
   const tCommon = useTranslations("common");
 
   return (
-    <section className="py-24 sm:py-32 bg-white relative overflow-hidden">
+    <section className="py-16 sm:py-24 bg-white dark:bg-navy-900 relative overflow-hidden">
       <div className="mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
         {/* ================================================
             HEADER — Split layout: title left, CTA right

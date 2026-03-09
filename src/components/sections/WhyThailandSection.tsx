@@ -610,107 +610,22 @@ function BrandItem({ brand }: { brand: InvestorBrand }) {
    ══════════════════════════════════════════════════════════ */
 
 function LogoMarquee({ t }: { t: ReturnType<typeof useTranslations> }) {
-  const BRANDS_PER_SET = 4;
-  const totalSets = Math.ceil(investorBrands.length / BRANDS_PER_SET);
-  const [currentSet, setCurrentSet] = useState(0);
-
-  const brandSets = useMemo(() => {
-    const sets: InvestorBrand[][] = [];
-    for (let i = 0; i < totalSets; i++) {
-      sets.push(
-        investorBrands.slice(i * BRANDS_PER_SET, (i + 1) * BRANDS_PER_SET)
-      );
-    }
-    return sets;
-  }, [totalSets]);
-
-  const goToSet = useCallback(
-    (dir: -1 | 1) => {
-      setCurrentSet((prev) =>
-        Math.max(0, Math.min(totalSets - 1, prev + dir))
-      );
-    },
-    [totalSets]
-  );
-
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7, ease: EASE_OUT }}
-      className="mt-16 sm:mt-20 lg:mt-24"
+      className="mt-10 sm:mt-14 lg:mt-16"
     >
-      <p className="text-center text-sm text-navy-400 mb-8 font-medium tracking-wide">
+      <p className="text-center text-sm text-navy-400 dark:text-white/30 mb-5 font-medium tracking-wide">
         {t("social_proof_title")}
       </p>
 
-      <div className="relative group/carousel">
-        {/* Arrow Left */}
-        <button
-          onClick={() => goToSet(-1)}
-          className={`absolute left-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 backdrop-blur-sm border border-navy-100/50 shadow-lg flex items-center justify-center transition-all duration-300 hover:bg-gold-50 hover:border-gold-300 hover:shadow-gold-200/30 ${
-            currentSet > 0
-              ? "opacity-100"
-              : "opacity-0 pointer-events-none"
-          }`}
-          aria-label="Scroll left"
-        >
-          <svg className="w-4 h-4 text-navy-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-
-        {/* Arrow Right */}
-        <button
-          onClick={() => goToSet(1)}
-          className={`absolute right-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 backdrop-blur-sm border border-navy-100/50 shadow-lg flex items-center justify-center transition-all duration-300 hover:bg-gold-50 hover:border-gold-300 hover:shadow-gold-200/30 ${
-            currentSet < totalSets - 1
-              ? "opacity-100"
-              : "opacity-0 pointer-events-none"
-          }`}
-          aria-label="Scroll right"
-        >
-          <svg className="w-4 h-4 text-navy-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-
-        {/* Carousel track */}
-        <div className="overflow-hidden px-10 sm:px-14">
-          <motion.div
-            className="flex"
-            animate={{ x: `${currentSet * -100}%` }}
-            transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-          >
-            {brandSets.map((set, setIdx) => (
-              <div
-                key={setIdx}
-                className="flex items-center justify-center w-full shrink-0 py-4"
-              >
-                {set.map((brand) => (
-                  <BrandItem key={brand.name} brand={brand} />
-                ))}
-              </div>
-            ))}
-          </motion.div>
-        </div>
-
-        {/* Set indicators */}
-        <div className="flex justify-center gap-2 mt-4">
-          {brandSets.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrentSet(idx)}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                idx === currentSet
-                  ? "bg-navy-500 w-6"
-                  : "bg-navy-200 hover:bg-navy-300 w-2"
-              }`}
-              aria-label={`Go to set ${idx + 1}`}
-            />
-          ))}
-        </div>
+      <div className="flex flex-wrap items-center justify-center gap-x-1 sm:gap-x-2">
+        {investorBrands.map((brand) => (
+          <BrandItem key={brand.name} brand={brand} />
+        ))}
       </div>
     </motion.div>
   );
@@ -725,10 +640,10 @@ export default function WhyThailandSection() {
   const tCommon = useTranslations("common");
 
   return (
-    <section className="relative py-24 sm:py-32 lg:py-40 bg-surface overflow-hidden">
-      {/* Background accent */}
-      <div className="absolute top-0 right-0 w-2/3 h-1/2 bg-gradient-to-bl from-gold-100/40 via-gold-50/20 to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-1/2 h-1/3 bg-gradient-to-tr from-navy-100/20 to-transparent pointer-events-none" />
+    <section className="relative pt-12 pb-8 sm:pt-16 sm:pb-10 lg:pt-20 lg:pb-12 bg-surface dark:bg-navy-900 overflow-hidden">
+      {/* Background accent (light mode only) */}
+      <div className="absolute top-0 right-0 w-2/3 h-1/2 bg-gradient-to-bl from-gold-100/40 via-gold-50/20 to-transparent pointer-events-none dark:hidden" />
+      <div className="absolute bottom-0 left-0 w-1/2 h-1/3 bg-gradient-to-tr from-navy-100/20 to-transparent pointer-events-none dark:hidden" />
 
       <div className="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
         {/* ═══ SECTION HEADER ═══ */}

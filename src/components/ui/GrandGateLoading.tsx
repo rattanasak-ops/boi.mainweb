@@ -17,6 +17,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import BOILogo from "@/components/ui/BOILogo";
 
 const SESSION_KEY = "boi-grand-gate-seen";
 
@@ -194,62 +195,19 @@ export default function GrandGateLoading() {
         }}
         transition={{ duration: 0.6, ease: EASE }}
       >
-        {/* BOI Logo — stroke draw (pathLength is GPU-friendly) */}
-        <svg viewBox="0 0 100 86" className="w-24 h-20 sm:w-32 sm:h-28" fill="none">
-          <defs>
-            <linearGradient id="gl-g" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#F5D76E" />
-              <stop offset="50%" stopColor="#E8C547" />
-              <stop offset="100%" stopColor="#D4A017" />
-            </linearGradient>
-          </defs>
-          <motion.ellipse
-            cx="40" cy="50" rx="34" ry="20" transform="rotate(-42 40 50)"
-            stroke="url(#gl-g)" strokeWidth="5" strokeLinecap="round"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
-          />
-          <motion.ellipse
-            cx="46" cy="42" rx="27" ry="16" transform="rotate(-28 46 42)"
-            stroke="url(#gl-g)" strokeWidth="4.5" strokeLinecap="round"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
-          />
-          <motion.ellipse
-            cx="52" cy="35" rx="21" ry="13" transform="rotate(-14 52 35)"
-            stroke="url(#gl-g)" strokeWidth="4" strokeLinecap="round"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: EASE }}
-          />
-        </svg>
-
-        {/* Title — single element, no letter-by-letter */}
-        <motion.p
-          className="mt-6 text-sm sm:text-base tracking-[0.3em] uppercase font-semibold text-gold-400/70"
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7, ease: EASE }}
-        >
-          Board of Investment
-        </motion.p>
-
-        {/* Gold divider — use scaleX instead of width (GPU only) */}
         <motion.div
-          className="mt-4 h-px w-32 bg-gradient-to-r from-transparent via-gold-500/40 to-transparent"
-          initial={{ opacity: 0, scaleX: 0 }}
-          animate={{ opacity: 1, scaleX: 1 }}
-          transition={{ duration: 0.6, delay: 0.8, ease: EASE }}
-        />
+          initial={{ opacity: 0, y: 10, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: EASE }}
+        >
+          <BOILogo variant="footer" interactive={false} className="h-20 w-auto sm:h-28 brightness-0 invert" />
+        </motion.div>
 
-        {/* Tagline */}
         <motion.p
-          className="mt-3 text-[11px] sm:text-xs tracking-[0.35em] uppercase text-white/30 font-medium"
+          className="mt-5 text-[11px] sm:text-xs tracking-[0.35em] uppercase text-white/30 font-medium"
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.9, ease: EASE }}
+          transition={{ duration: 0.5, delay: 0.7, ease: EASE }}
         >
           Thailand Opens for You
         </motion.p>

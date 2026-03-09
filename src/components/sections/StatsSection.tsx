@@ -91,7 +91,7 @@ export default function StatsSection() {
   };
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden">
+    <section ref={sectionRef} className="relative overflow-hidden bg-surface dark:bg-navy-900">
       {/* ================================================
           BACKGROUND — Parallax Bangkok at night (LIGHTER)
           ================================================ */}
@@ -118,14 +118,14 @@ export default function StatsSection() {
       {/* ================================================
           CONTENT
           ================================================ */}
-      <div className="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20 py-24 sm:py-32">
+      <div className="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20 py-16 sm:py-24">
         {/* ── Section header — Gate Opening title reveal ── */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: EASE_OUT }}
-          className="text-center mb-16 sm:mb-20"
+          className="text-center mb-10 sm:mb-14"
         >
           <motion.p
             className="text-gold-400 font-medium text-sm tracking-[0.25em] uppercase mb-4"
@@ -370,7 +370,7 @@ export default function StatsSection() {
           className="block w-full h-[60px] sm:h-[80px] lg:h-[100px]"
           aria-hidden="true"
         >
-          <polygon points="0,100 1600,100 0,0" className="fill-surface" />
+          <polygon points="0,100 1600,100 0,0" className="fill-surface dark:fill-navy-900" />
         </svg>
       </div>
     </section>

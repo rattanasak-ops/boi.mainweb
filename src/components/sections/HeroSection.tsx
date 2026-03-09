@@ -518,7 +518,7 @@ export default function HeroSection() {
             <AnimatePresence mode="wait">
               <motion.p
                 key={`sub-${current}`}
-                className="text-base sm:text-lg lg:text-xl text-white/60 max-w-xl mx-auto leading-relaxed"
+                className="text-base sm:text-lg lg:text-xl text-white max-w-xl mx-auto leading-relaxed drop-shadow-[0_1px_3px_rgba(0,0,0,0.4)]"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
@@ -565,7 +565,7 @@ export default function HeroSection() {
             {/* Prev */}
             <button
               onClick={goPrev}
-              className="p-2.5 rounded-full border border-white/15 text-white/40 hover:text-white hover:border-gold-400/50 hover:bg-white/5 backdrop-blur-sm transition-all duration-300"
+              className="p-2.5 rounded-full border border-white/30 text-white/70 hover:text-white hover:border-gold-400/50 hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
               aria-label="Previous slide"
             >
               <ChevronLeft className="h-4 w-4" />
@@ -579,8 +579,8 @@ export default function HeroSection() {
                   onClick={() => goTo(i)}
                   className={`relative h-1 rounded-full overflow-hidden transition-all duration-500 ${
                     i === current
-                      ? "w-12 bg-white/20"
-                      : "w-6 bg-white/10 hover:bg-white/20"
+                      ? "w-12 bg-white/35"
+                      : "w-6 bg-white/20 hover:bg-white/35"
                   }`}
                   aria-label={`Slide ${i + 1}`}
                 >
@@ -603,16 +603,16 @@ export default function HeroSection() {
             {/* Next */}
             <button
               onClick={goNext}
-              className="p-2.5 rounded-full border border-white/15 text-white/40 hover:text-white hover:border-gold-400/50 hover:bg-white/5 backdrop-blur-sm transition-all duration-300"
+              className="p-2.5 rounded-full border border-white/30 text-white/70 hover:text-white hover:border-gold-400/50 hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
               aria-label="Next slide"
             >
               <ChevronRight className="h-4 w-4" />
             </button>
 
             {/* Slide counter */}
-            <span className="text-xs text-white/30 font-mono tracking-wider ml-1">
+            <span className="text-xs text-white/60 font-mono tracking-wider ml-1">
               {String(current + 1).padStart(2, "0")}
-              <span className="mx-1 text-gold-500/40">/</span>
+              <span className="mx-1 text-gold-500/60">/</span>
               {String(SLIDES.length).padStart(2, "0")}
             </span>
           </div>
@@ -629,7 +629,7 @@ export default function HeroSection() {
           className="block w-full h-[80px] sm:h-[100px] lg:h-[120px]"
           aria-hidden="true"
         >
-          <polygon points="0,120 1600,120 1600,0" className="fill-navy-900" />
+          <polygon points="0,120 1600,120 1600,0" className="fill-surface dark:fill-navy-900" />
         </svg>
       </div>
     </section>

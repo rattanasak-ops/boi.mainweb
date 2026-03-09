@@ -270,7 +270,7 @@ export default function CTASection() {
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
 
   return (
-    <section ref={sectionRef} className="relative py-32 sm:py-40 overflow-hidden">
+    <section ref={sectionRef} className="relative py-24 sm:py-32 overflow-hidden">
       {/* ================================================
           BACKGROUND — Parallax temple image
           ================================================ */}

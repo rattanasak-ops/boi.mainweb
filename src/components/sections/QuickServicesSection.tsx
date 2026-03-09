@@ -976,10 +976,10 @@ export default function QuickServicesSection() {
   const prefersReduced = useReducedMotion();
 
   return (
-    <section className="relative py-24 sm:py-32 lg:py-40 bg-navy-950 overflow-hidden">
+    <section className="relative py-16 sm:py-24 lg:py-32 bg-surface dark:bg-navy-950 overflow-hidden">
       {/* ── BG: Gradient mesh ── */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 hidden dark:block"
         style={{
           background:
             "radial-gradient(ellipse at 25% 20%, rgba(27,42,74,0.5) 0%, transparent 50%), radial-gradient(ellipse at 75% 80%, rgba(27,42,74,0.3) 0%, transparent 50%)",
@@ -989,7 +989,7 @@ export default function QuickServicesSection() {
 
       {/* ── BG: Grid lines ── */}
       <div
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.02] hidden dark:block"
         style={{
           backgroundImage:
             "linear-gradient(rgba(197,165,114,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(197,165,114,0.4) 1px, transparent 1px)",
@@ -1000,36 +1000,40 @@ export default function QuickServicesSection() {
 
       {/* ── BG: Gold radial accent ── */}
       <div
-        className="absolute top-0 left-1/4 w-[900px] h-[500px] pointer-events-none"
+        className="absolute top-0 left-1/4 w-[900px] h-[500px] pointer-events-none hidden dark:block"
         style={{
           background: "radial-gradient(ellipse, rgba(197,165,114,0.07) 0%, transparent 65%)",
         }}
         aria-hidden="true"
       />
 
-      {/* ── BG: Floating particles ── */}
-      {!prefersReduced && <FloatingParticles />}
-
-      {/* ── BG: Animated vertical lines ── */}
-      <div
-        className="absolute right-8 sm:right-12 lg:right-20 top-0 w-px h-full bg-gold-500/[0.06]"
-        aria-hidden="true"
-      >
-        <motion.div
-          className="absolute left-0 w-full h-40 bg-gradient-to-b from-transparent via-gold-400/40 to-transparent"
-          animate={{ top: ["100%", "-160px"] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "linear", repeatDelay: 2 }}
-        />
+      {/* ── BG: Floating particles (dark only) ── */}
+      <div className="hidden dark:block">
+        {!prefersReduced && <FloatingParticles />}
       </div>
-      <div
-        className="absolute left-8 sm:left-12 lg:left-20 top-0 w-px h-full bg-gold-500/[0.04]"
-        aria-hidden="true"
-      >
-        <motion.div
-          className="absolute left-0 w-full h-32 bg-gradient-to-b from-transparent via-gold-400/20 to-transparent"
-          animate={{ top: ["-128px", "100%"] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "linear", repeatDelay: 3 }}
-        />
+
+      {/* ── BG: Animated vertical lines (dark only) ── */}
+      <div className="hidden dark:block">
+        <div
+          className="absolute right-8 sm:right-12 lg:right-20 top-0 w-px h-full bg-gold-500/[0.06]"
+          aria-hidden="true"
+        >
+          <motion.div
+            className="absolute left-0 w-full h-40 bg-gradient-to-b from-transparent via-gold-400/40 to-transparent"
+            animate={{ top: ["100%", "-160px"] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "linear", repeatDelay: 2 }}
+          />
+        </div>
+        <div
+          className="absolute left-8 sm:left-12 lg:left-20 top-0 w-px h-full bg-gold-500/[0.04]"
+          aria-hidden="true"
+        >
+          <motion.div
+            className="absolute left-0 w-full h-32 bg-gradient-to-b from-transparent via-gold-400/20 to-transparent"
+            animate={{ top: ["-128px", "100%"] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "linear", repeatDelay: 3 }}
+          />
+        </div>
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1600px] px-6 sm:px-10 lg:px-20">
@@ -1045,22 +1049,22 @@ export default function QuickServicesSection() {
           }
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: EASE_OUT }}
-          className="mb-14 sm:mb-20 max-w-3xl"
+          className="mb-10 sm:mb-14 max-w-3xl"
         >
-          <p className="text-gold-400 font-medium text-sm tracking-[0.2em] uppercase mb-4">
+          <p className="text-gold-600 dark:text-gold-400 font-medium text-sm tracking-[0.2em] uppercase mb-4">
             {t("subtitle")}
           </p>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-900 dark:text-white tracking-tight">
             {t("title")}
           </h2>
           <motion.div
-            className="mt-6 h-[2px] w-20 bg-gradient-to-r from-gold-500 to-transparent origin-left"
+            className="mt-6 h-[2px] w-20 bg-gradient-to-r from-gold-600 dark:from-gold-500 to-transparent origin-left"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3, ease: EASE_OUT }}
           />
-          <p className="mt-4 text-white/25 text-base tracking-wide">{t("tagline")}</p>
+          <p className="mt-4 text-navy-400 dark:text-white/25 text-base tracking-wide">{t("tagline")}</p>
         </motion.div>
 
         {/* ═══════════ BENTO GRID ═══════════
@@ -1088,7 +1092,7 @@ export default function QuickServicesSection() {
           className="block w-full h-[50px] sm:h-[60px] lg:h-[80px]"
           aria-hidden="true"
         >
-          <polygon points="0,80 1600,80 1600,0" className="fill-white" />
+          <polygon points="0,80 1600,80 1600,0" className="fill-surface dark:fill-navy-900" />
         </svg>
       </div>
     </section>
