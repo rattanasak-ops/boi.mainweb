@@ -11,11 +11,11 @@ const cspDirectives = [
   "font-src 'self' https://fonts.gstatic.com",
   "connect-src 'self' https://openrouter.ai https://api.openrouter.ai",
   "media-src 'self'",
-  "frame-src 'none'",
+  "frame-src 'self'",
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
-  "frame-ancestors 'none'",
+  "frame-ancestors 'self'",
 ].join("; ");
 
 const securityHeaders = [
