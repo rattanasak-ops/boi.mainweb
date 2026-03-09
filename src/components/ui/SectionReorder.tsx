@@ -3,18 +3,23 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, Reorder } from "framer-motion";
 import { GripVertical, LayoutList, X, RotateCcw, Lock } from "lucide-react";
-import { REORDERABLE_SECTIONS } from "@/components/sections/HomeSections";
+import { SECTION_REGISTRY } from "@/config/section-registry";
+import { SECTION_CONFIG_STORAGE_KEY } from "@/config/template-presets";
 
-const STORAGE_KEY = "boi-section-order";
-const DEFAULT_ORDER = REORDERABLE_SECTIONS.map((s) => s.id);
+const SECTION_ICONS: Record<string, string> = { stats: "📊", "why-thailand": "🌏", services: "⚡", news: "📰" };
+const REORDERABLE_SECTIONS = SECTION_REGISTRY.filter((s) => !s.locked)
+  .map((s) => ({ id: s.id, label: s.name.en, icon: SECTION_ICONS[s.id] ?? "📄" }));
+
+const DEFAULT_ORDER = REORDERABLE_SECTIONS.map((s) => s.id as string);
 
 function getStoredOrder(): string[] {
   try {
-    const stored = localStorage.getItem(STORAGE_KEY);
+    const stored = localStorage.getItem(SECTION_CONFIG_STORAGE_KEY);
     if (!stored) return DEFAULT_ORDER;
-    const parsed = JSON.parse(stored) as string[];
+    const parsed = JSON.parse(stored);
+    if (!parsed?.order) return DEFAULT_ORDER;
     const validIds = new Set(DEFAULT_ORDER);
-    const filtered = parsed.filter((id) => validIds.has(id));
+    const filtered = (parsed.order as string[]).filter((id: string) => validIds.has(id));
     const missing = DEFAULT_ORDER.filter((id) => !filtered.includes(id));
     return [...filtered, ...missing];
   } catch {
@@ -22,7 +27,7 @@ function getStoredOrder(): string[] {
   }
 }
 
-const sectionMap = new Map(REORDERABLE_SECTIONS.map((s) => [s.id, s]));
+const sectionMap = new Map<string, (typeof REORDERABLE_SECTIONS)[number]>(REORDERABLE_SECTIONS.map((s) => [s.id as string, s]));
 
 export default function SectionReorder() {
   const [isOpen, setIsOpen] = useState(false);
