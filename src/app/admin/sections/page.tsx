@@ -353,6 +353,11 @@ export default function AdminSectionsPage() {
   const [changeCount, setChangeCount] = useState(0);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
+  // Section data lookup — used by handlers below
+  const sectionMap = new Map(SECTION_REGISTRY.map((s) => [s.id, s]));
+  const heroSection = sectionMap.get("hero")!;
+  const ctaSection = sectionMap.get("cta")!;
+
   // Load config from localStorage
   useEffect(() => {
     const tmpl = localStorage.getItem(SITE_TEMPLATE_STORAGE_KEY) ?? DEFAULT_SITE_TEMPLATE;
@@ -366,9 +371,20 @@ export default function AdminSectionsPage() {
 
   // Send update to preview iframe
   const sendToPreview = useCallback(
-    (newVariants: Record<string, string>, newOrder: SectionId[]) => {
+    (newVariants: Record<string, string>, newOrder: SectionId[], scrollTo?: SectionId) => {
       iframeRef.current?.contentWindow?.postMessage(
-        { type: "boi-preview-update", variants: newVariants, order: newOrder },
+        { type: "boi-preview-update", variants: newVariants, order: newOrder, scrollTo },
+        "*"
+      );
+    },
+    []
+  );
+
+  // Tell preview iframe to scroll to a section and highlight it
+  const scrollPreviewTo = useCallback(
+    (sectionId: SectionId) => {
+      iframeRef.current?.contentWindow?.postMessage(
+        { type: "boi-preview-scroll", sectionId },
         "*"
       );
     },
@@ -377,13 +393,11 @@ export default function AdminSectionsPage() {
 
   // Save config
   const saveConfig = useCallback(
-    (newVariants: Record<string, string>, newOrder: SectionId[]) => {
+    (newVariants: Record<string, string>, newOrder: SectionId[], scrollTo?: SectionId) => {
       const config: CustomSectionConfig = { variants: newVariants, order: newOrder };
       localStorage.setItem(SECTION_CONFIG_STORAGE_KEY, JSON.stringify(config));
-      sendToPreview(newVariants, newOrder);
+      sendToPreview(newVariants, newOrder, scrollTo);
       setChangeCount((c) => c + 1);
-      setToast("บันทึกแล้ว");
-      setTimeout(() => setToast(null), 1500);
     },
     [sendToPreview]
   );
@@ -393,9 +407,13 @@ export default function AdminSectionsPage() {
     (sectionId: SectionId, variantId: VariantId) => {
       const newVariants = { ...variants, [sectionId]: variantId };
       setVariants(newVariants);
-      saveConfig(newVariants, order);
+      saveConfig(newVariants, order, sectionId);
+      const sectionDef = sectionMap.get(sectionId);
+      const variantMeta = sectionDef?.variants.find((v) => v.id === variantId);
+      setToast(`✅ ${sectionDef?.name.th ?? sectionId} → ${variantMeta?.name.th ?? variantId}`);
+      setTimeout(() => setToast(null), 2000);
     },
-    [variants, order, saveConfig]
+    [variants, order, saveConfig, sectionMap]
   );
 
   // Template quick-switch
@@ -435,11 +453,6 @@ export default function AdminSectionsPage() {
     },
     [variants, saveConfig]
   );
-
-  // Section data lookup
-  const sectionMap = new Map(SECTION_REGISTRY.map((s) => [s.id, s]));
-  const heroSection = sectionMap.get("hero")!;
-  const ctaSection = sectionMap.get("cta")!;
 
   return (
     <div className="-m-8 flex h-[calc(100vh-64px)]">
@@ -535,7 +548,11 @@ export default function AdminSectionsPage() {
               onVariantChange={handleVariantChange}
               locked
               expanded={expandedSection === "hero"}
-              onToggle={() => setExpandedSection(expandedSection === "hero" ? null : "hero")}
+              onToggle={() => {
+                const next = expandedSection === "hero" ? null : "hero";
+                setExpandedSection(next);
+                if (next) scrollPreviewTo("hero");
+              }}
             />
 
             {/* ── Reorderable Sections ── */}
@@ -574,11 +591,11 @@ export default function AdminSectionsPage() {
                         onVariantChange={handleVariantChange}
                         locked={false}
                         expanded={expandedSection === sectionId}
-                        onToggle={() =>
-                          setExpandedSection(
-                            expandedSection === sectionId ? null : sectionId
-                          )
-                        }
+                        onToggle={() => {
+                          const next = expandedSection === sectionId ? null : sectionId;
+                          setExpandedSection(next);
+                          if (next) scrollPreviewTo(sectionId);
+                        }}
                         showGrip
                       />
                     </Reorder.Item>
@@ -594,7 +611,11 @@ export default function AdminSectionsPage() {
               onVariantChange={handleVariantChange}
               locked
               expanded={expandedSection === "cta"}
-              onToggle={() => setExpandedSection(expandedSection === "cta" ? null : "cta")}
+              onToggle={() => {
+                const next = expandedSection === "cta" ? null : "cta";
+                setExpandedSection(next);
+                if (next) scrollPreviewTo("cta");
+              }}
             />
           </div>
         </div>
