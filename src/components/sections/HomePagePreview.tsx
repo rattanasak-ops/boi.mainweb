@@ -81,6 +81,9 @@ export default function HomePagePreview() {
       if (e.data?.type === "boi-preview-scroll") {
         scrollAndHighlight(e.data.sectionId);
       }
+      if (e.data?.type === "boi-preview-theme") {
+        document.documentElement.setAttribute("data-theme", e.data.theme);
+      }
     };
     window.addEventListener("message", onMessage);
 

@@ -14,6 +14,8 @@ import {
   Layers,
   Palette,
   Zap,
+  Sun,
+  Moon,
 } from "lucide-react";
 import {
   SECTION_REGISTRY,
@@ -349,6 +351,7 @@ export default function AdminSectionsPage() {
   const [order, setOrder] = useState<SectionId[]>([...REORDERABLE_SECTION_IDS]);
   const [toast, setToast] = useState<string | null>(null);
   const [previewMode, setPreviewMode] = useState<"desktop" | "mobile">("desktop");
+  const [previewTheme, setPreviewTheme] = useState<"light" | "dark">("light");
   const [expandedSection, setExpandedSection] = useState<SectionId | null>(null);
   const [changeCount, setChangeCount] = useState(0);
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -374,6 +377,18 @@ export default function AdminSectionsPage() {
     (newVariants: Record<string, string>, newOrder: SectionId[], scrollTo?: SectionId) => {
       iframeRef.current?.contentWindow?.postMessage(
         { type: "boi-preview-update", variants: newVariants, order: newOrder, scrollTo },
+        "*"
+      );
+    },
+    []
+  );
+
+  // Toggle theme in preview iframe
+  const togglePreviewTheme = useCallback(
+    (theme: "light" | "dark") => {
+      setPreviewTheme(theme);
+      iframeRef.current?.contentWindow?.postMessage(
+        { type: "boi-preview-theme", theme },
         "*"
       );
     },
@@ -630,7 +645,33 @@ export default function AdminSectionsPage() {
             <span className="text-sm font-medium text-white/50">Live Preview</span>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
+            {/* Theme toggle */}
+            <div className="flex items-center bg-white/[0.04] rounded-lg border border-white/[0.06] p-0.5">
+              <button
+                onClick={() => togglePreviewTheme("light")}
+                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs transition-all ${
+                  previewTheme === "light"
+                    ? "bg-amber-500/20 text-amber-400"
+                    : "text-white/30 hover:text-white/50"
+                }`}
+              >
+                <Sun className="w-3.5 h-3.5" />
+                Light
+              </button>
+              <button
+                onClick={() => togglePreviewTheme("dark")}
+                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs transition-all ${
+                  previewTheme === "dark"
+                    ? "bg-indigo-500/20 text-indigo-400"
+                    : "text-white/30 hover:text-white/50"
+                }`}
+              >
+                <Moon className="w-3.5 h-3.5" />
+                Dark
+              </button>
+            </div>
+
             {/* Device toggle */}
             <div className="flex items-center bg-white/[0.04] rounded-lg border border-white/[0.06] p-0.5">
               <button

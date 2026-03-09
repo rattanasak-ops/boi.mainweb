@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { inter, notoSansThai } from "@/lib/fonts";
+import ThemeProvider, { ThemeScript } from "@/components/providers/ThemeProvider";
 import "../globals.css";
 
 export const metadata = {
@@ -16,8 +17,9 @@ export default async function PreviewLayout({
   const messages = await getMessages({ locale: "th" });
 
   return (
-    <html lang="th" className={`${inter.variable} ${notoSansThai.variable}`}>
+    <html lang="th" className={`${inter.variable} ${notoSansThai.variable}`} suppressHydrationWarning>
       <head>
+        <ThemeScript />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -26,9 +28,11 @@ export default async function PreviewLayout({
         />
       </head>
       <body className="antialiased">
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
